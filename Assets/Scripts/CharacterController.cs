@@ -19,8 +19,8 @@ public class CharacterController : MonoBehaviour
 		animator.SetBool("actionToWalk", true);
         
         actionQueue = new Queue<ActionInfo>();
-		actionQueue.Enqueue(new ActionInfo(1, new Vector3(4, 0, 0)));
-		actionQueue.Enqueue(new ActionInfo(2, new Vector3(-4, 0, 0)));
+		actionQueue.Enqueue(new ActionInfo(1, new Vector3(3, 1, 0)));
+//		actionQueue.Enqueue(new ActionInfo(2, new Vector3(-4, 0, 0)));
        
 		if (actionQueue.Count > 0) {
 			nextAction = actionQueue.Dequeue();
@@ -38,7 +38,6 @@ public class CharacterController : MonoBehaviour
 			if (Vector3.Distance(transform.position, nextAction.location) < 1 && !actionStarted) {
 				actionStarted = true;
 				animator.SetInteger("nextAction", nextAction.id);
-				print("arrived action location, current action: " + nextAction.id);
 			}
 		}
 
@@ -48,4 +47,5 @@ public class CharacterController : MonoBehaviour
 	{
 		GUI.Label (new Rect (10, 5,1000, 20), transform.position.ToString());
 	}
+	
 }
