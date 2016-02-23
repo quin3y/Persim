@@ -19,8 +19,8 @@ public class CharacterController : MonoBehaviour
 		animator.SetBool("actionToWalk", true);
         
         actionQueue = new Queue<ActionInfo>();
-		actionQueue.Enqueue(new ActionInfo(1, new Vector3(3, 1, 0)));
-//		actionQueue.Enqueue(new ActionInfo(2, new Vector3(-4, 0, 0)));
+		actionQueue.Enqueue(new ActionInfo("Open door", 1, new Vector3(3, 1, 0), "Door"));
+		actionQueue.Enqueue(new ActionInfo("Lie down", 2, new Vector3(-4, 0, 0), "Cube"));
        
 		if (actionQueue.Count > 0) {
 			nextAction = actionQueue.Dequeue();

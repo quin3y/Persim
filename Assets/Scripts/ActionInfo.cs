@@ -3,13 +3,18 @@ using System;
 
 public class ActionInfo
 {
-    public int id;
-    public Vector3 location;
+	public string name {get; set;}
+	public int id {get; set;}
+	public Vector3 location {get; set;}
+	public string obj {get; set;}
 
-    public ActionInfo(int id, Vector3 loc) {
+
+    public ActionInfo(string name, int id, Vector3 loc, string obj) {
+		this.name = name;
         this.id = id;
         this.location = loc;
+		this.obj = obj;
     }
+	
 }
-
 

@@ -5,8 +5,7 @@ public class ActionEvents : StateMachineBehaviour {
     
 	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-		GameObject character = GameObject.Find("Anna");
-		CharacterController characterController = character.GetComponent<CharacterController>();
+		CharacterController characterController = GameObject.Find("Anna").GetComponent<CharacterController>();
         
 		// Do this when the last action begins
         if (characterController.actionQueue.Count == 0) {
@@ -23,8 +22,7 @@ public class ActionEvents : StateMachineBehaviour {
 
 	// OnStateExit is called when a transition ends and the state machine finishes evaluating this state
 	override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-		GameObject character = GameObject.Find("Anna");
-		CharacterController characterController = character.GetComponent<CharacterController>();
+		CharacterController characterController = GameObject.Find("Anna").GetComponent<CharacterController>();
 		characterController.actionStarted = false;
 		animator.SetInteger("nextAction", 0);
         
