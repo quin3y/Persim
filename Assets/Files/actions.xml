@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+  <action id="1" name="Turn on light" />
+  <action id="1" name="Pick up right" />
+  <action id="1" name="Put down right" />
+
+  <action id="2" name="Lie down" />
+
+  <action id="3" name="Idle" />
+  
+</actions>
