@@ -12,12 +12,16 @@ namespace UnityStandardAssets.Characters.ThirdPerson
     {
 		public NavMeshAgent navAgent { get; private set; } // the navmesh agent required for the path finding
         public ThirdPersonCharacter character { get; private set; } // the character we are controlling
-        public Transform target; // target to aim for
-
-		Animator animator;
+		public Animator animator;
 		public Queue<ActionInfo> actionQueue;
 		public ActionInfo nextAction;
+
+		public GameObject leftObject;
+		public GameObject rightObject;
+
 		public bool actionStarted = false;
+		public bool willPutDownLeftObject;
+		public bool willPutDownRightObject;
 
         // Use this for initialization
         private void Start()
@@ -28,9 +32,11 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			animator.SetBool("actionToWalk", true);
 			
 			actionQueue = new Queue<ActionInfo>();
-			actionQueue.Enqueue(new ActionInfo("Open door", 1, new Vector3(3, 1, 0), "Door"));
-			actionQueue.Enqueue(new ActionInfo("Lie down", 2, new Vector3(-4, 0, 0), "Cube"));
-			actionQueue.Enqueue(new ActionInfo("Idle", 3, new Vector3(1, 0, -4), "Table"));
+			actionQueue.Enqueue(new ActionInfo("Turn on light", 1, GameObject.Find("Light Switch").transform.position, "Light Switch"));
+			actionQueue.Enqueue(new ActionInfo("Pick up", 1, GameObject.Find("Glass").transform.position, "Glass"));
+			actionQueue.Enqueue(new ActionInfo("Put down", 1, GameObject.Find("Glass").transform.position, "Glass"));
+			actionQueue.Enqueue(new ActionInfo("Lie down", 2, GameObject.Find("Cube").transform.position, "Cube"));
+			actionQueue.Enqueue(new ActionInfo("Idle", 3, GameObject.Find("Table").transform.position, "Table"));
 
 			if (actionQueue.Count > 0) {
 				nextAction = actionQueue.Dequeue();
@@ -40,6 +46,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			navAgent.updateRotation = false;
 			navAgent.updatePosition = true;
 			navAgent.destination = nextAction.location;
+
         }
 
 
@@ -47,27 +54,19 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         private void Update()
         {
 			if (nextAction != null) {
-				if (Vector3.Distance(transform.position, nextAction.location) < 1 && !actionStarted) {
+				character.Move(navAgent.desiredVelocity, false, false);
+
+				if (Vector3.Distance(transform.position, nextAction.location) < 1.5 && !actionStarted) {
+					navAgent.Stop();
 					actionStarted = true;
 					animator.SetInteger("nextAction", nextAction.id);
 				}
 			}
+			else {
+				// We still need to call the character's move function, but we send zeroed input as the move param.
+				character.Move(Vector3.zero, false, false);
+			}
 
-			if (target != null){
-			//	navAgent.SetDestination(target.position);
-				character.Move(navAgent.desiredVelocity, false, false);
-            }
-            else {
-                // We still need to call the character's move function, but we send zeroed input as the move param.
-                character.Move(Vector3.zero, false, false);
-            }
-
-        }
-
-
-        public void SetTarget(Transform target)
-        {
-            this.target = target;
         }
 
 		void OnGUI()
@@ -75,27 +74,4 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			GUI.Label (new Rect (10, 5,1000, 20), transform.position.ToString());
 		}
     }
-}
-
-
-public class CharacterController : MonoBehaviour 
-{
-
-
-	// Use this for initialization
-	void Start() 
-	{	
-
-		
-	}
-	
-	// Update is called once per frame
-	void Update() 
-	{
-
-		
-	}
-	
-
-	
 }
