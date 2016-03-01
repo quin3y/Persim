@@ -30,6 +30,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				if (characterController.nextAction.name == "Turn off light" && isOn) {
 					light.intensity = 0;
 					isOn = false;
+					print("light off");
+
 				}
 
 			}

@@ -44,19 +44,21 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				nextAction = actionQueue.Dequeue();
 				navAgent.destination = nextAction.location;
 			}
+
         }
 
 
         // Update is called once per frame
         private void Update()
         {
+
 			if (nextAction != null) {
 				character.Move(navAgent.desiredVelocity, false, false);
-
 				if (Vector3.Distance(transform.position, nextAction.location) < 1.5 && !actionStarted) {
 					navAgent.Stop();
 					actionStarted = true;
-					animator.SetInteger("nextAction", nextAction.id);
+					animator.SetInteger("nextAction", nextAction.animation);
+					print("character stop");
 				}
 			}
 			else {
@@ -78,11 +80,13 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 		public void CreateActionQueue() {
 			actionQueue = new Queue<ActionInstance>();
-			actionQueue.Enqueue(new ActionInstance(allActions[0], "Light switch"));
-			actionQueue.Enqueue(new ActionInstance(allActions[1], "Glass"));
-			actionQueue.Enqueue(new ActionInstance(allActions[2], "Glass"));
-			actionQueue.Enqueue(new ActionInstance(allActions[3], "Cube"));
-			actionQueue.Enqueue(new ActionInstance(allActions[4], "Table"));
+			actionQueue.Enqueue(new ActionInstance(allActions[1], "Bathroom light switch"));
+			actionQueue.Enqueue(new ActionInstance(allActions[3], "Bathroom sink"));
+			actionQueue.Enqueue(new ActionInstance(allActions[4], "Towel rack"));
+			actionQueue.Enqueue(new ActionInstance(allActions[2], "Bathroom light switch"));
+			actionQueue.Enqueue(new ActionInstance(allActions[0], "Table"));
+//			actionQueue.Enqueue(new ActionInstance(allActions[7], "Toilet"));
+
 		}
     }
 }

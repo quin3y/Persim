@@ -5,8 +5,9 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 {
 	public class Action
 	{
-		public string name {get; set;}
 		public int id {get; set;}
+		public string name {get; set;}
+		public int animation {get; set;}
 	}
 }
 

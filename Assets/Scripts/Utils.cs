@@ -16,6 +16,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 					Action action = new Action();
 					action.id = Int32.Parse(reader.GetAttribute(0));
 					action.name = reader.GetAttribute(1);
+					action.animation = Int32.Parse(reader.GetAttribute(2));
 
 					actionList.Add(action);
 				}

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
 	public class ActionEvents : StateMachineBehaviour {
@@ -13,7 +14,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 	        if (characterController.actionQueue.Count == 0) {
 				characterController.nextAction = null;
 				animator.SetBool("actionToWalk", false);
-				animator.SetBool("actionToIdle", true);
 	        }
 
 			if (characterController.nextAction.name == "Put down left") {
@@ -22,6 +22,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			if (characterController.nextAction.name == "Put down right") {
 				characterController.willPutDownRightObject = true;
 			}
+
 	    }
 
 		// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -60,6 +61,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				characterController.nextAction = characterController.actionQueue.Dequeue();
 				characterController.navAgent.destination = characterController.nextAction.location;
 				characterController.navAgent.Resume();
+
+				Debug.Log("next action = " + characterController.nextAction.name);
 			}
 	    }
 
