@@ -56,6 +56,16 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 							                                 float.Parse(reader.GetAttribute(1)),
 							                                 float.Parse(reader.GetAttribute(2)));
 						}
+						else if (reader.Name == "character-position") {
+							obj.characterPosition = new Vector3(float.Parse(reader.GetAttribute(0)),
+							                                 float.Parse(reader.GetAttribute(1)),
+							                                 float.Parse(reader.GetAttribute(2)));
+						}
+						else if (reader.Name == "character-rotation") {
+							obj.characterRotation = new Vector3(float.Parse(reader.GetAttribute(0)),
+							                                 float.Parse(reader.GetAttribute(1)),
+							                                 float.Parse(reader.GetAttribute(2)));
+						}
 					}
 
 					objects.Add(obj.name, obj);

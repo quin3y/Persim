@@ -19,7 +19,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		}
 
 		void OnTriggerEnter(Collider col) {
-			if (this.gameObject.name == characterController.nextAction.obj) {
+			if (this.gameObject.name == characterController.nextAction.obj.name) {
 				if (col.gameObject.name == "EthanLeftHand" && characterController.nextAction.name == "Pick up left") {
 					characterController.leftObject = this.gameObject;
 					transform.parent = col.gameObject.transform;

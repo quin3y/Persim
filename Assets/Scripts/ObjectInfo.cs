@@ -10,5 +10,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		public Vector3 rotation {get; set;}
 		public Vector3 inHandPosition {get; set;}
 		public Vector3 inHandRotation {get; set;}
+		public Vector3 characterPosition {get; set;}
+		public Vector3 characterRotation {get; set;}
 	}
 }

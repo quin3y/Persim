@@ -54,7 +54,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 			if (nextAction != null) {
 				character.Move(navAgent.desiredVelocity, false, false);
-				if (Vector3.Distance(transform.position, nextAction.location) < 1.5 && !actionStarted) {
+				if (Vector3.Distance(transform.position, nextAction.location) < nextAction.characterDistance && !actionStarted) {
 					navAgent.Stop();
 					actionStarted = true;
 					animator.SetInteger("nextAction", nextAction.animation);
@@ -80,12 +80,12 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 		public void CreateActionQueue() {
 			actionQueue = new Queue<ActionInstance>();
-			actionQueue.Enqueue(new ActionInstance(allActions[1], "Bathroom light switch"));
-			actionQueue.Enqueue(new ActionInstance(allActions[3], "Bathroom sink"));
-			actionQueue.Enqueue(new ActionInstance(allActions[4], "Towel rack"));
-			actionQueue.Enqueue(new ActionInstance(allActions[2], "Bathroom light switch"));
-			actionQueue.Enqueue(new ActionInstance(allActions[0], "Table"));
-//			actionQueue.Enqueue(new ActionInstance(allActions[7], "Toilet"));
+			actionQueue.Enqueue(new ActionInstance(allActions[1], allObjects["Bathroom light switch"]));
+			actionQueue.Enqueue(new ActionInstance(allActions[7], allObjects["Toilet"]));
+			actionQueue.Enqueue(new ActionInstance(allActions[3], allObjects["Bathroom sink"]));
+			actionQueue.Enqueue(new ActionInstance(allActions[4], allObjects["Towel rack"]));
+			actionQueue.Enqueue(new ActionInstance(allActions[2], allObjects["Bathroom light switch"]));
+			actionQueue.Enqueue(new ActionInstance(allActions[0], allObjects["Table"]));
 
 		}
     }

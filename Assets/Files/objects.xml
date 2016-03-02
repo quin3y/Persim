@@ -1,12 +1,48 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <objects>
-  <object name="Glass">
-    <position x="-11" y="1.1" z="-16" />
-    <rotation x="270" y="126" z="250" />
+  <object name="Bathroom light switch">
+    <position x="0" y="0" z="0" />
+    <rotation x="0" y="0" z="0" />
     <in-hand-position x="0" y="0" z="0" />
-    <in-hand-rotation x="90" y="0" z="90" />
+    <in-hand-rotation x="0" y="0" z="0" />
+    <character-position x="0" y="0" z="0" />
+    <character-rotation x="0" y="0" z="0" />
   </object>
 
+  <object name="Bathroom sink">
+    <position x="0" y="0" z="0" />
+    <rotation x="0" y="0" z="0" />
+    <in-hand-position x="0" y="0" z="0" />
+    <in-hand-rotation x="0" y="0" z="0" />
+    <character-position x="-13.7" y="0" z="-11.68" />
+    <character-rotation x="0" y="0" z="0" />
+  </object>
+  
+  <object name="Toilet">
+    <position x="0" y="0" z="0" />
+    <rotation x="0" y="0" z="0" />
+    <in-hand-position x="0" y="0" z="0" />
+    <in-hand-rotation x="0" y="0" z="0" />
+    <character-position x="-13.42" y="0" z="-15.8" />
+    <character-rotation x="0" y="0" z="0" />
+  </object>
+  
+  <object name="Towel rack">
+    <position x="0" y="0" z="0" />
+    <rotation x="0" y="0" z="0" />
+    <in-hand-position x="0" y="0" z="0" />
+    <in-hand-rotation x="0" y="0" z="0" />
+    <character-position x="0" y="0" z="0" />
+    <character-rotation x="0" y="0" z="0" />
+  </object>
+  
+  <object name="Table">
+    <position x="0" y="0" z="0" />
+    <rotation x="0" y="0" z="0" />
+    <in-hand-position x="0" y="0" z="0" />
+    <in-hand-rotation x="0" y="0" z="0" />
+    <character-position x="0" y="0" z="0" />
+    <character-rotation x="0" y="0" z="0" />
+  </object>
   
 </objects>
-
