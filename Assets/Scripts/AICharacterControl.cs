@@ -58,7 +58,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 					navAgent.Stop();
 					actionStarted = true;
 					animator.SetInteger("nextAction", nextAction.animation);
-					print("character stop");
+//					print("character stop");
+
 				}
 			}
 			else {
@@ -81,9 +82,9 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		public void CreateActionQueue() {
 			actionQueue = new Queue<ActionInstance>();
 			actionQueue.Enqueue(new ActionInstance(allActions[1], allObjects["Bathroom light switch"]));
-			actionQueue.Enqueue(new ActionInstance(allActions[7], allObjects["Toilet"]));
-			actionQueue.Enqueue(new ActionInstance(allActions[3], allObjects["Bathroom sink"]));
-			actionQueue.Enqueue(new ActionInstance(allActions[4], allObjects["Towel rack"]));
+//			actionQueue.Enqueue(new ActionInstance(allActions[7], allObjects["Toilet"]));
+			actionQueue.Enqueue(new ActionInstance(allActions[5], allObjects["Bathroom sink"]));
+			actionQueue.Enqueue(new ActionInstance(allActions[6], allObjects["Towel rack"]));
 			actionQueue.Enqueue(new ActionInstance(allActions[2], allObjects["Bathroom light switch"]));
 			actionQueue.Enqueue(new ActionInstance(allActions[0], allObjects["Table"]));
 

@@ -22,7 +22,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			if (characterController.nextAction.name == "Put down right") {
 				characterController.willPutDownRightObject = true;
 			}
-
 	    }
 
 		// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
