@@ -14,5 +14,17 @@
   <action id="11" name="Use computer" animation="11" />
   <action id="12" name="Drink" animation="12" />
   <action id="13" name="Text" animation="13" />
-    
+  <action id="14" name="Shave" animation="14" />
+  <action id="15" name="Get Water" animation="15" />
+  <action id="16" name="Squeeze toothpaste" animation="16" />
+  <action id="17" name="Brush teeth" animation="17" />
+  <action id="18" name="Gargle" animation="18" />
+  <action id="19" name="Pick up right" animation="19" />
+  <action id="20" name="Put down right" animation="20" />
+  <action id="21" name="Comb hair" animation="21" />
+  <action id="22" name="Flush toilet" animation="22" />
+  <action id="23" name="Take a pill" animation="23" />
+
+  
+  
 </actions>
