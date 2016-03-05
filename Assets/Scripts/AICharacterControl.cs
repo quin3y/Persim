@@ -26,6 +26,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		public bool willPutDownLeftObject;
 		public bool willPutDownRightObject;
 
+		Camera[] cameras;
+
         // Use this for initialization
         private void Start()
         {
@@ -45,20 +47,23 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				navAgent.destination = nextAction.location;
 			}
 
+			cameras = FindObjectsOfType(typeof(Camera)) as Camera[];
+			Array.Sort(cameras, delegate(Camera cam1, Camera cam2) {
+				return cam1.name.CompareTo(cam2.name);
+			});
+
         }
 
 
         // Update is called once per frame
         private void Update()
         {
-
 			if (nextAction != null) {
 				character.Move(navAgent.desiredVelocity, false, false);
 				if (Vector3.Distance(transform.position, nextAction.location) < nextAction.characterDistance && !actionStarted) {
 					navAgent.Stop();
 					actionStarted = true;
 					animator.SetInteger("nextAction", nextAction.animation);
-//					print("character stop");
 
 				}
 			}
@@ -66,7 +71,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				// We still need to call the character's move function, but we send zeroed input as the move param.
 				character.Move(Vector3.zero, false, false);
 			}
-
+			SwitchCamera();
         }
 
 		void OnGUI()
@@ -88,6 +93,28 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			actionQueue.Enqueue(new ActionInstance(allActions[2], allObjects["Bathroom light switch"]));
 			actionQueue.Enqueue(new ActionInstance(allActions[0], allObjects["Table"]));
 
+		}
+
+		public void SwitchCamera() {
+//			if (Input.GetKeyDown("1")) {
+//				cameras[0].enabled = true;
+//				cameras[1].enabled = false;
+//				
+//				
+//			}
+//			else if (Input.GetKeyDown("2")) {
+//				cameras[0].enabled = false;
+//				cameras[1].enabled = true;
+//				
+//			}
+			if (transform.position.x < 4.76f && transform.position.z < 6f) {
+				cameras[0].enabled = false;
+				cameras[1].enabled = true;
+			}
+			else {
+				cameras[0].enabled = true;
+				cameras[1].enabled = false;
+			}
 		}
     }
 }
