@@ -7,7 +7,7 @@
   <action id="4"  name="Wipe hands" animation="4" />
   <action id="5"  name="Wash face" animation="5" />
   <action id="6"  name="Wipe face" animation="6" />  
-  <action id="7"  name="Open door" animation="7" />
+  <action id="7"  name="Take a pill" animation="7" />
   <action id="8"  name="Sit down" animation="8" />
   <action id="9"  name="Stand up" animation="9" />
   <action id="10" name="Use toilet" animation="10" />
@@ -23,7 +23,6 @@
   <action id="20" name="Put down right" animation="20" />
   <action id="21" name="Comb hair" animation="21" />
   <action id="22" name="Flush toilet" animation="22" />
-  <action id="23" name="Take a pill" animation="23" />
 
   
   

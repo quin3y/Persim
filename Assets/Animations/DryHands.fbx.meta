@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 502fa7cf167cd41659b913d441c0f3cb
-timeCreated: 1456590915
+guid: 9823932aee2cc4a21ab99c2e4101e90e
+timeCreated: 1456590916
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -137,7 +137,7 @@ ModelImporter:
     400126: iPiMocap:Spine1
     400128: iPiMocap:Spine2
     400130: //RootNode
-    7400000: WipeFace
+    7400000: DryHands
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -163,10 +163,10 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: WipeFace
+      name: DryHands
       takeName: iPi Default Take
       firstFrame: 0
-      lastFrame: 195
+      lastFrame: 139
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -764,29 +764,29 @@ ModelImporter:
         length: 0
         modified: 0
     skeleton:
-    - name: Wipe face(Clone)
+    - name: Wipe hands(Clone)
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: iPiMocap:Hips
-      position: {x: -.000647589564, y: .907997668, z: .0130063891}
-      rotation: {x: -.0693097934, y: -.0641522631, z: .00883562118, w: .995491147}
-      scale: {x: 1, y: .99999994, z: 1}
+      position: {x: -.000819519162, y: .901971161, z: .0114476085}
+      rotation: {x: -.0487416498, y: -.0214427505, z: -.00524906768, w: .998567462}
+      scale: {x: .99999994, y: 1, z: 1}
       transformModified: 1
     - name: iPiMocap:LeftUpLeg
       position: {x: -.0930678248, y: .0393294692, z: -.00767166074}
-      rotation: {x: .114301533, y: .00354398671, z: -.0104733035, w: .9933846}
+      rotation: {x: .0946083143, y: .00500855222, z: .0148737328, w: .995390892}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: iPiMocap:LeftLeg
       position: {x: -.00744772004, y: -.444625199, z: 2.88709998e-07}
-      rotation: {x: .066586934, y: .00579624996, z: .00531382766, w: .997749627}
+      rotation: {x: .0694886819, y: .00764333364, z: .00333609059, w: .997547865}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: iPiMocap:LeftFoot
       position: {x: -1.1920929e-07, y: -.436591595, z: 3.27825489e-07}
-      rotation: {x: -.063788712, y: .0436718501, z: .0208840463, w: .996788681}
+      rotation: {x: -.0756519809, y: .0284718424, z: .0136138247, w: .996634722}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: iPiMocap:LeftToeBase
@@ -801,22 +801,22 @@ ModelImporter:
       transformModified: 1
     - name: iPiMocap:RightUpLeg
       position: {x: .0930686742, y: .0393266678, z: -.00767162349}
-      rotation: {x: .115233988, y: -.00917014573, z: .0123936506, w: .99321872}
+      rotation: {x: .0785348266, y: -.00111641944, z: .0410863534, w: .996063769}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: iPiMocap:RightLeg
       position: {x: .00744713098, y: -.444622189, z: 2.53319712e-07}
-      rotation: {x: .0954056308, y: -.00762547925, z: .00319383107, w: .995404184}
+      rotation: {x: .11144609, y: -.000227569704, z: -.00131606008, w: .993769586}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: iPiMocap:RightFoot
       position: {x: -2.23517382e-08, y: -.436591476, z: 3.27825489e-07}
-      rotation: {x: -.0184702277, y: -.00875036791, z: -.00418484397, w: .999782383}
+      rotation: {x: -.0728808865, y: -.0389404446, z: -.0186239444, w: .996406138}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: iPiMocap:RightToeBase
       position: {x: 5.21540571e-08, y: -.043688301, z: .091357924}
-      rotation: {x: -.0241636354, y: 2.09547646e-09, z: 3.72529074e-09, w: .999708056}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: iPiMocap:EffectorRToe
@@ -831,27 +831,27 @@ ModelImporter:
       transformModified: 1
     - name: iPiMocap:Spine1
       position: {x: -0, y: .0793945193, z: .00414722413}
-      rotation: {x: .0283836089, y: .0142157096, z: .00744613633, w: .999468267}
+      rotation: {x: .016694596, y: .00539549161, z: .0108322678, w: .99978739}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: iPiMocap:Spine2
       position: {x: -0, y: .098241441, z: -.0218675807}
-      rotation: {x: .0944384411, y: .0471742861, z: .0245342106, w: .99410969}
+      rotation: {x: .0527422503, y: .0179865807, z: .035476055, w: .997815728}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: iPiMocap:LeftShoulder
       position: {x: -.0223504491, y: .213645592, z: .07319621}
-      rotation: {x: -3.43425222e-09, y: -9.31322908e-10, z: .127736717, w: .991808116}
+      rotation: {x: -2.50292898e-09, y: 1.20178345e-16, z: .123615585, w: .992330194}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: iPiMocap:LeftArm
       position: {x: -.130574495, y: .030644659, z: -.0495854989}
-      rotation: {x: .071671553, y: -.0395965129, z: -.135489151, w: .987389565}
+      rotation: {x: .0174853709, y: -.0136635713, z: -.15654476, w: .987421632}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: iPiMocap:LeftForeArm
       position: {x: -.277366489, y: -.00098502636, z: -.00240345881}
-      rotation: {x: .0317702107, y: .0273478888, z: .0104948478, w: .999065876}
+      rotation: {x: -.00558138918, y: .0285953861, z: .0130439904, w: .99949038}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: iPiMocap:LeftHand
@@ -861,7 +861,7 @@ ModelImporter:
       transformModified: 1
     - name: iPiMocap:LeftHandIndex1
       position: {x: -.0896766707, y: .00784242153, z: .0249072406}
-      rotation: {x: -.00651881425, y: -.0425496884, z: -.0958809033, w: .994461596}
+      rotation: {x: -.00651861588, y: -.0425489172, z: -.0958779901, w: .994461954}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: iPiMocap:LeftHandIndex2
@@ -901,7 +901,7 @@ ModelImporter:
       transformModified: 1
     - name: iPiMocap:LeftHandPinky1
       position: {x: -.0800418854, y: -.00608313084, z: -.0352424793}
-      rotation: {x: .00685731275, y: .0913903415, z: -.0938819945, w: .991356134}
+      rotation: {x: .00685718656, y: .0913907588, z: -.0938822255, w: .991356075}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: iPiMocap:LeftHandPinky2
@@ -941,7 +941,7 @@ ModelImporter:
       transformModified: 1
     - name: iPiMocap:LeftHandThumb1
       position: {x: -.0185501594, y: -.0140409507, z: .0140628191}
-      rotation: {x: -.151511714, y: .0531521104, z: -.177799553, w: .970879197}
+      rotation: {x: -.0793720707, y: .0510639884, z: -.0830281079, w: .992068052}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: iPiMocap:LeftHandThumb2
@@ -976,17 +976,17 @@ ModelImporter:
       transformModified: 1
     - name: iPiMocap:RightShoulder
       position: {x: .0223504696, y: .213645592, z: .07319621}
-      rotation: {x: .00436227024, y: -.0463503785, z: -.131797507, w: .990182817}
+      rotation: {x: .00146045384, y: -.0271625854, z: -.134997219, w: .990472555}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: iPiMocap:RightArm
       position: {x: .130597591, y: .0306499004, z: -.0495940782}
-      rotation: {x: .12380638, y: .0199820176, z: .100890756, w: .986961961}
+      rotation: {x: .0658134818, y: .0139420861, z: .0827396289, w: .994297981}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: iPiMocap:RightForeArm
       position: {x: .277366489, y: -.00098490715, z: -.00240345486}
-      rotation: {x: .0867172331, y: -.0215663519, z: -.0146419657, w: .995891869}
+      rotation: {x: .0418129936, y: -.0225513279, z: -.0136883026, w: .998777151}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: iPiMocap:RightHand
@@ -996,7 +996,7 @@ ModelImporter:
       transformModified: 1
     - name: iPiMocap:RightHandIndex1
       position: {x: .0896766186, y: .00784254074, z: .0249072406}
-      rotation: {x: -.00651881285, y: .0425494723, z: .0958809406, w: .994461656}
+      rotation: {x: -.00651884871, y: .0425491519, z: .0958805829, w: .994461656}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: iPiMocap:RightHandIndex2
@@ -1036,7 +1036,7 @@ ModelImporter:
       transformModified: 1
     - name: iPiMocap:RightHandPinky1
       position: {x: .0800419375, y: -.00608301209, z: -.0352424681}
-      rotation: {x: .00685739703, y: -.0913910642, z: .093883276, w: .991355956}
+      rotation: {x: .00685741892, y: -.091391705, z: .0938855708, w: .991355717}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: iPiMocap:RightHandPinky2
@@ -1076,7 +1076,7 @@ ModelImporter:
       transformModified: 1
     - name: iPiMocap:RightHandThumb1
       position: {x: .0185501594, y: -.0140409507, z: .0140628191}
-      rotation: {x: -.189498171, y: -.0360524282, z: .235631645, w: .952506363}
+      rotation: {x: -.120563403, y: -.0568923429, z: .135122642, w: .98181957}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: iPiMocap:RightHandThumb2

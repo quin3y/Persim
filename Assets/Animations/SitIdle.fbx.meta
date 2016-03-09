@@ -141,7 +141,7 @@ ModelImporter:
     400130: mixamorig:Spine1
     400132: mixamorig:Spine2
     400134: //RootNode
-    7400000: UseToilet
+    7400000: SitIdle
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -164,7 +164,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: UseToilet
+      name: SitIdle
       takeName: mixamo.com
       firstFrame: 0
       lastFrame: 89
