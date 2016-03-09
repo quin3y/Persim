@@ -35,6 +35,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			characterController.actionStarted = false;
 			animator.SetInteger("nextAction", 0);
 
+			// If the character is about to put down the object, detach it from the hand
 			if (characterController.willPutDownLeftObject) {
 				characterController.leftObject.transform.parent = null;
 				characterController.leftObject.transform.position =
@@ -56,6 +57,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				characterController.willPutDownRightObject = false;
 			}
 	        
+			// Set the location of the next action as the character's destination
 	        if (characterController.actionQueue.Count > 0) {
 				characterController.nextAction = characterController.actionQueue.Dequeue();
 				characterController.navAgent.destination = characterController.nextAction.location;

@@ -51,7 +51,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			Array.Sort(cameras, delegate(Camera cam1, Camera cam2) {
 				return cam1.name.CompareTo(cam2.name);
 			});
-
         }
 
 
@@ -76,9 +75,10 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 		void OnGUI()
 		{
-			GUI.Label (new Rect (10, 5,1000, 20), transform.position.ToString());
+//			GUI.Label (new Rect (10, 5,1000, 20), transform.position.ToString());
 		}
 
+		// Read configuration data of actions and objects
 		public void Init() {
 			allActions = Utils.ReadActionXml();
 			allObjects = Utils.ReadObjectXml();
@@ -95,18 +95,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 		}
 
+		// Switch camera based on the character's position
 		public void SwitchCamera() {
-//			if (Input.GetKeyDown("1")) {
-//				cameras[0].enabled = true;
-//				cameras[1].enabled = false;
-//				
-//				
-//			}
-//			else if (Input.GetKeyDown("2")) {
-//				cameras[0].enabled = false;
-//				cameras[1].enabled = true;
-//				
-//			}
 			if (transform.position.x < 4.76f && transform.position.z < 6f) {
 				cameras[0].enabled = false;
 				cameras[1].enabled = true;

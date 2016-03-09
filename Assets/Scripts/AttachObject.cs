@@ -6,7 +6,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 	public class AttachObject : MonoBehaviour {
 		AICharacterControl characterController;
 
-
 		// Use this for initialization
 		void Start () {
 			characterController = GameObject.Find("Ethan").GetComponent<AICharacterControl>();
@@ -20,6 +19,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 		void OnTriggerEnter(Collider col) {
 			if (this.gameObject.name == characterController.nextAction.obj.name) {
+				// If the character is about to pick up the object, attach the object to the hand
 				if (col.gameObject.name == "EthanLeftHand" && characterController.nextAction.name == "Pick up left") {
 					characterController.leftObject = this.gameObject;
 					transform.parent = col.gameObject.transform;
