@@ -61,7 +61,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 	        if (characterController.actionQueue.Count > 0) {
 				characterController.nextAction = characterController.actionQueue.Dequeue();
 				characterController.navAgent.destination = characterController.nextAction.location;
-				characterController.navAgent.Resume();
+//				characterController.navAgent.Resume();
 
 				Debug.Log("next action = " + characterController.nextAction.name);
 			}

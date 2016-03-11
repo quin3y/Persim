@@ -62,24 +62,19 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 //
 //				}
 
-
-
 				if (!navAgent.pathPending) {
 					if (navAgent.remainingDistance <= navAgent.stoppingDistance) {
-					//	if (!navAgent.hasPath || navAgent.velocity.sqrMagnitude == 0f)
+						if (!navAgent.hasPath || navAgent.velocity.sqrMagnitude == 0f)
 						{
-							character.Move(Vector3.zero, false, false);
-							navAgent.Stop();
+							actionStarted = true;
+							animator.SetInteger("nextAction", nextAction.animation);
 
-							animator.SetFloat("Turn", 0);
-//							Vector3 direction = new Vector3(-1, 0, -1).normalized;
+//							Vector3 direction = new Vector3(1, 0, 1).normalized;
 //							Quaternion lookRotation = Quaternion.LookRotation(direction);
-//							transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 10f);
+//							transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 20f);
 						}
 					}
 				}
-
-
 
 			}
 			else {
@@ -110,11 +105,11 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 		public void CreateActionQueue() {
 			actionQueue = new Queue<ActionInstance>();
-//			actionQueue.Enqueue(new ActionInstance(allActions[1], allObjects["Bathroom light switch"]));
+			actionQueue.Enqueue(new ActionInstance(allActions[1], allObjects["Bathroom light switch"]));
 //			actionQueue.Enqueue(new ActionInstance(allActions[7], allObjects["Toilet"]));
-//			actionQueue.Enqueue(new ActionInstance(allActions[5], allObjects["Bathroom sink"]));
-//			actionQueue.Enqueue(new ActionInstance(allActions[6], allObjects["Towel rack"]));
-//			actionQueue.Enqueue(new ActionInstance(allActions[2], allObjects["Bathroom light switch"]));
+			actionQueue.Enqueue(new ActionInstance(allActions[5], allObjects["Bathroom sink"]));
+			actionQueue.Enqueue(new ActionInstance(allActions[6], allObjects["Towel rack"]));
+			actionQueue.Enqueue(new ActionInstance(allActions[2], allObjects["Bathroom light switch"]));
 			actionQueue.Enqueue(new ActionInstance(allActions[0], allObjects["Table"]));
 
 		}
