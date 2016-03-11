@@ -8,7 +8,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		public string name {get; set;}
 		public int id {get; set;}
 		public int animation {get; set;}
-		public float characterDistance {get; set;}
 		public ObjectInfo obj {get; set;}
 		public Vector3 location {get; set;}
 		
@@ -17,15 +16,16 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			this.id = action.id;
 			this.animation = action.animation;
 			this.obj = obj;
-			
+
+			Vector3 loc;
 			if (obj.characterPosition.x == 0 && obj.characterPosition.z == 0) {
-				this.location = GameObject.Find(obj.name).transform.position;
-				this.characterDistance = 1.5f;
+				loc = GameObject.Find(obj.name).transform.position;
 			}
 			else {
-				this.location = obj.characterPosition;
-				this.characterDistance = 0.2f;
+				loc = obj.characterPosition;
 			}
+			loc.y = 0;
+			this.location = loc;
 		}
 		
 	}

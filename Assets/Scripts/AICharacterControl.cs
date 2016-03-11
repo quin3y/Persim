@@ -38,11 +38,11 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				nextAction = actionQueue.Dequeue();
 				navAgent.destination = nextAction.location;
 			}
+			Vector3 dest = GameObject.Find("helper").transform.position; ////////////
+			dest.y = 0;
+			navAgent.destination = dest;
+			print(navAgent.destination);
 
-			cameras = FindObjectsOfType(typeof(Camera)) as Camera[];
-			Array.Sort(cameras, delegate(Camera cam1, Camera cam2) {
-				return cam1.name.CompareTo(cam2.name);
-			});
         }
 
 
@@ -61,17 +61,16 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 //					transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 10f);
 //
 //				}
-
+				print(navAgent.remainingDistance);
 				if (!navAgent.pathPending) {
 					if (navAgent.remainingDistance <= navAgent.stoppingDistance) {
 						if (!navAgent.hasPath || navAgent.velocity.sqrMagnitude == 0f)
 						{
-							actionStarted = true;
 							animator.SetInteger("nextAction", nextAction.animation);
 
-//							Vector3 direction = new Vector3(1, 0, 1).normalized;
-//							Quaternion lookRotation = Quaternion.LookRotation(direction);
-//							transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 20f);
+							Vector3 direction = navAgent.destination - transform.position;
+							Quaternion lookRotation = Quaternion.LookRotation(direction);
+							transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 20f);
 						}
 					}
 				}
@@ -81,12 +80,12 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				// We still need to call the character's move function, but we send zeroed input as the move param.
 				character.Move(Vector3.zero, false, false);
 			}
-			SwitchCamera();
+			UseRightCamera();
         }
 
 		void OnGUI()
 		{
-//			GUI.Label (new Rect (10, 5,1000, 20), transform.position.ToString());
+			GUI.Label (new Rect (10, 5,1000, 20), transform.position.ToString());
 		}
 
 		// Read configuration data of actions and objects
@@ -101,21 +100,28 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			navAgent = GetComponentInChildren<NavMeshAgent>();
 			navAgent.updateRotation = false;
 			navAgent.updatePosition = true;
+
+			// Get all cameras and set only one camera active
+			cameras = FindObjectsOfType(typeof(Camera)) as Camera[];
+			Array.Sort(cameras, delegate(Camera cam1, Camera cam2) {
+				return cam1.name.CompareTo(cam2.name);
+			});
+			UseRightCamera();
 		}
 
 		public void CreateActionQueue() {
 			actionQueue = new Queue<ActionInstance>();
 			actionQueue.Enqueue(new ActionInstance(allActions[1], allObjects["Bathroom light switch"]));
 //			actionQueue.Enqueue(new ActionInstance(allActions[7], allObjects["Toilet"]));
-			actionQueue.Enqueue(new ActionInstance(allActions[5], allObjects["Bathroom sink"]));
-			actionQueue.Enqueue(new ActionInstance(allActions[6], allObjects["Towel rack"]));
-			actionQueue.Enqueue(new ActionInstance(allActions[2], allObjects["Bathroom light switch"]));
+//			actionQueue.Enqueue(new ActionInstance(allActions[5], allObjects["Bathroom sink"]));
+//			actionQueue.Enqueue(new ActionInstance(allActions[6], allObjects["Towel rack"]));
+//			actionQueue.Enqueue(new ActionInstance(allActions[2], allObjects["Bathroom light switch"]));
 			actionQueue.Enqueue(new ActionInstance(allActions[0], allObjects["Table"]));
 
 		}
 
 		// Switch camera based on the character's position
-		public void SwitchCamera() {
+		public void UseRightCamera() {
 			if (transform.position.x < 4.76f && transform.position.z < 6f) {
 				cameras[0].enabled = false;
 				cameras[1].enabled = true;
