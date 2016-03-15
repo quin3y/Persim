@@ -38,11 +38,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				nextAction = actionQueue.Dequeue();
 				navAgent.destination = nextAction.location;
 			}
-			Vector3 dest = GameObject.Find("helper").transform.position; ////////////
-			dest.y = 0;
-			navAgent.destination = dest;
-			print(navAgent.destination);
-
         }
 
 
@@ -61,12 +56,12 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 //					transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 10f);
 //
 //				}
-				print(navAgent.remainingDistance);
 				if (!navAgent.pathPending) {
 					if (navAgent.remainingDistance <= navAgent.stoppingDistance) {
 						if (!navAgent.hasPath || navAgent.velocity.sqrMagnitude == 0f)
 						{
 							animator.SetInteger("nextAction", nextAction.animation);
+							print("setting next action = " + nextAction.name);
 
 							Vector3 direction = navAgent.destination - transform.position;
 							Quaternion lookRotation = Quaternion.LookRotation(direction);
@@ -111,11 +106,17 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 		public void CreateActionQueue() {
 			actionQueue = new Queue<ActionInstance>();
-			actionQueue.Enqueue(new ActionInstance(allActions[1], allObjects["Bathroom light switch"]));
+//			actionQueue.Enqueue(new ActionInstance(allActions[1], allObjects["Bathroom light switch"]));
 //			actionQueue.Enqueue(new ActionInstance(allActions[7], allObjects["Toilet"]));
 //			actionQueue.Enqueue(new ActionInstance(allActions[5], allObjects["Bathroom sink"]));
 //			actionQueue.Enqueue(new ActionInstance(allActions[6], allObjects["Towel rack"]));
 //			actionQueue.Enqueue(new ActionInstance(allActions[2], allObjects["Bathroom light switch"]));
+
+
+			actionQueue.Enqueue(new ActionInstance(allActions[8], allObjects["Computer chair"]));
+			actionQueue.Enqueue(new ActionInstance(allActions[11], allObjects["Computer chair"]));
+			actionQueue.Enqueue(new ActionInstance(allActions[9], allObjects["Computer chair"]));
+
 			actionQueue.Enqueue(new ActionInstance(allActions[0], allObjects["Table"]));
 
 		}

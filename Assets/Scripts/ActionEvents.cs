@@ -9,18 +9,24 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 		override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 			AICharacterControl characterController = GameObject.Find("Ethan").GetComponent<AICharacterControl>();
-	        
-			// Do this when the last action begins
-	        if (characterController.actionQueue.Count == 0) {
-				characterController.nextAction = null;
-				animator.SetBool("actionToWalk", false);
-	        }
 
 			if (characterController.nextAction.name == "Put down left") {
 				characterController.willPutDownLeftObject = true;
 			}
 			if (characterController.nextAction.name == "Put down right") {
 				characterController.willPutDownRightObject = true;
+			}
+
+			if (characterController.nextAction.name == "Sit down") {
+				Debug.Log("after sitting down ====== " + characterController.actionQueue.Peek().animation);
+				animator.SetInteger("nextAction", characterController.actionQueue.Peek().animation);
+			}
+
+
+			// When the last action begins
+			if (characterController.actionQueue.Count == 0) {
+				characterController.nextAction = null;
+				animator.SetBool("actionToWalk", false);
 			}
 	    }
 
@@ -33,7 +39,16 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 			AICharacterControl characterController = GameObject.Find("Ethan").GetComponent<AICharacterControl>();
 			characterController.actionStarted = false;
-			animator.SetInteger("nextAction", 0);
+
+			Debug.Log(characterController.nextAction.name);
+			if (characterController.nextAction.name == "Sit down") {
+				Debug.Log("after sitting down " + characterController.actionQueue.Peek().animation);
+				animator.SetInteger("nextAction", characterController.actionQueue.Peek().animation);
+			}
+			else {
+				animator.SetInteger("nextAction", 0);
+			}
+
 
 			// If the character is about to put down the object, detach it from the hand
 			if (characterController.willPutDownLeftObject) {
