@@ -74,5 +74,29 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			reader.Close();
 			return objects;
 		}
+
+		public static List<Activity> ReadActivityXml() {
+			List<Activity> activityList = new List<Activity>();
+			XmlReader reader = XmlReader.Create("Assets/Files/activities.xml");
+			
+			while (reader.Read()) {
+				if (reader.NodeType == XmlNodeType.Element && reader.Name == "activity") {
+					Activity act = new Activity();
+					act.id = Int32.Parse(reader.GetAttribute(0));
+					act.name = reader.GetAttribute(1);
+					
+					while (reader.NodeType != XmlNodeType.EndElement) {
+						reader.Read();
+						if (reader.Name == "action") {
+							act.actionIds.Add(Int32.Parse(reader.GetAttribute(0)));
+							act.objectNames.Add(reader.GetAttribute(1));
+						}
+					}
+					activityList.Add(act);
+				}
+			}
+			reader.Close();
+			return activityList;
+		}
 	}
 }

@@ -50,8 +50,17 @@
     <rotation x="0" y="0" z="0" />
     <in-hand-position x="0" y="0" z="0" />
     <in-hand-rotation x="0" y="0" z="0" />
-    <character-position x="0" y="0" z="0" />
+    <character-position x="15" y="0" z="17.2" />
     <character-rotation x="0" y="0" z="0" />
+  </object>
+  
+  <object name="Couch">
+    <position x="0" y="0" z="0" />
+    <rotation x="0" y="0" z="0" />
+    <in-hand-position x="0" y="0" z="0" />
+    <in-hand-rotation x="0" y="0" z="0" />
+    <character-position x="10.45" y="0" z="14.34" />
+    <character-rotation x="0" y="0" z="-1" />
   </object>
   
 </objects>

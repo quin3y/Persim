@@ -23,16 +23,16 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				if (col.gameObject.name == "EthanLeftHand" && characterController.nextAction.name == "Pick up left") {
 					characterController.leftObject = this.gameObject;
 					transform.parent = col.gameObject.transform;
-					transform.localPosition = characterController.allObjects[this.gameObject.name].inHandPosition;
+					transform.localPosition = characterController.activityPlayback.objects[this.gameObject.name].inHandPosition;
 					transform.localRotation = 
-						Quaternion.Euler(characterController.allObjects[this.gameObject.name].inHandRotation);
+						Quaternion.Euler(characterController.activityPlayback.objects[this.gameObject.name].inHandRotation);
 				}
 				if (col.gameObject.name == "EthanRightHand" && characterController.nextAction.name == "Pick up right") {
 					characterController.rightObject = this.gameObject;
 					transform.parent = col.gameObject.transform;
-					transform.localPosition = characterController.allObjects[this.gameObject.name].inHandPosition;
+					transform.localPosition = characterController.activityPlayback.objects[this.gameObject.name].inHandPosition;
 					transform.localRotation =
-						Quaternion.Euler(characterController.allObjects[this.gameObject.name].inHandRotation);
+						Quaternion.Euler(characterController.activityPlayback.objects[this.gameObject.name].inHandRotation);
 				}
 			}
 
