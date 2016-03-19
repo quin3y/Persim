@@ -1,153 +1,152 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <activities>
-  <activity id="0" name="Getting up">
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-  </activity>
-  
-  <activity id="1" name="Bathing">
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-  </activity>
-  
-  <activity id="2" name="Brushing teeth">
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-  </activity>
-  
-  <activity id="3" name="Washing face">
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-  </activity>
-  
-  <activity id="4" name="Dressing">
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-  </activity>
-  
-  <activity id="5" name="Undressing">
+  <activity id="0" name="Bathing">
     <action id="0" object="Table" />
     <action id="0" object="Table" />
     <action id="0" object="Table" />
   </activity>
 
-  <activity id="6" name="Washing hands">
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-  </activity>
-  
-  <activity id="7" name="Drinking water">
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-  </activity>
-  
-  <activity id="8" name="Eating a meal">
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-  </activity>
-  
-  <activity id="9" name="Combing hair">
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-  </activity>
-  
-  <activity id="10" name="Shaving">
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-  </activity>
-  
-  <activity id="11" name="Going to bed">
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-  </activity>
-  
-  <activity id="12" name="Using bathroom">
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-  </activity>
-  
-  <activity id="13" name="Leaving home">
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-  </activity>
-  
-  <activity id="14" name="Using cellphone">
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-  </activity>
-  
-  <activity id="15" name="Using computer">
+  <activity id="1" name="Brushing teeth">
     <action id="0" object="Table" />
     <action id="0" object="Table" />
     <action id="0" object="Table" />
   </activity>
 
-  <activity id="16" name="Watching TV">
+  <activity id="2" name="Cleaning countertops">
+    <action id="0" object="Table" />
+    <action id="0" object="Table" />
+    <action id="0" object="Table" />
+  </activity>
+
+  <activity id="3" name="Combing hair">
+    <action id="0" object="Table" />
+    <action id="0" object="Table" />
+    <action id="0" object="Table" />
+  </activity>
+
+  <activity id="4" name="Doing laundry">
+    <action id="0" object="Table" />
+    <action id="0" object="Table" />
+    <action id="0" object="Table" />
+  </activity>
+
+  <activity id="5" name="Dressing">
+    <action id="0" object="Table" />
+    <action id="0" object="Table" />
+    <action id="0" object="Table" />
+  </activity>
+
+  <activity id="6" name="Drinking water">
+    <action id="0" object="Table" />
+    <action id="0" object="Table" />
+    <action id="0" object="Table" />
+  </activity>
+
+  <activity id="7" name="Eating a meal">
+    <action id="0" object="Table" />
+    <action id="0" object="Table" />
+    <action id="0" object="Table" />
+  </activity>
+
+  <activity id="8" name="Falling down">
+    <action id="0" object="Table" />
+    <action id="0" object="Table" />
+    <action id="0" object="Table" />
+  </activity>
+
+  <activity id="9" name="Getting up">
+    <action id="0" object="Table" />
+    <action id="0" object="Table" />
+    <action id="0" object="Table" />
+  </activity>
+  
+  <activity id="10" name="Going to bed">
+    <action id="0" object="Table" />
+    <action id="0" object="Table" />
+    <action id="0" object="Table" />
+  </activity>
+
+  <activity id="11" name="Leaving home">
+    <action id="0" object="Table" />
+    <action id="0" object="Table" />
+    <action id="0" object="Table" />
+  </activity>
+  
+  <activity id="12" name="Preparing a meal">
+    <action id="0" object="Table" />
+    <action id="0" object="Table" />
+    <action id="0" object="Table" />
+  </activity>
+
+  <activity id="13" name="Shaving">
+    <action id="0" object="Table" />
+    <action id="0" object="Table" />
+    <action id="0" object="Table" />
+  </activity>
+
+  <activity id="14" name="Taking medication">
+    <action id="0" object="Table" />
+    <action id="0" object="Table" />
+    <action id="0" object="Table" />
+  </activity>
+
+ <activity id="15" name="Taking out trash">
+    <action id="0" object="Table" />
+    <action id="0" object="Table" />
+    <action id="0" object="Table" />
+  </activity>
+
+  <activity id="16" name="Undressing">
+    <action id="0" object="Table" />
+    <action id="0" object="Table" />
+    <action id="0" object="Table" />
+  </activity>
+
+  <activity id="17" name="Using bathroom">
+    <action id="0" object="Table" />
+    <action id="0" object="Table" />
+    <action id="0" object="Table" />
+  </activity>
+
+  <activity id="18" name="Using cellphone">
+    <action id="13" object="Mobile phone" />
+  </activity>
+
+  <activity id="19" name="Using computer">
+    <action id="0" object="Table" />
+    <action id="0" object="Table" />
+    <action id="0" object="Table" />
+  </activity>
+
+  <activity id="20" name="Vacuuming floors">
+    <action id="0" object="Table" />
+    <action id="0" object="Table" />
+    <action id="0" object="Table" />
+  </activity>
+
+  <activity id="21" name="Washing dishes">
+    <action id="0" object="Table" />
+    <action id="0" object="Table" />
+    <action id="0" object="Table" />
+  </activity>
+
+  <activity id="22" name="Washing face">
+    <action id="0" object="Table" />
+    <action id="0" object="Table" />
+    <action id="0" object="Table" />
+  </activity>
+
+  <activity id="23" name="Washing hands">
+    <action id="0" object="Table" />
+    <action id="0" object="Table" />
+    <action id="0" object="Table" />
+  </activity>  
+
+  <activity id="24" name="Watching TV">
     <action id="8" object="Couch" />
     <action id="10" object="Couch" />
     <action id="9" object="Couch" />
   </activity>
   
-  <activity id="17" name="Preparing a meal">
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-  </activity>
-  
-  <activity id="18" name="Washing dishes">
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-  </activity>
-  
-  <activity id="19" name="Cleaning countertops">
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-  </activity>
-  
-  <activity id="20" name="Doing laundry">
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-  </activity>
-  
-  <activity id="21" name="Taking medication">
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-  </activity>
-  
-  <activity id="22" name="Taking out trash">
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-  </activity>
-  
-  <activity id="23" name="Vacuuming floors">
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-  </activity>
-  
-  <activity id="24" name="Falling down">
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-  </activity>
   
 </activities>

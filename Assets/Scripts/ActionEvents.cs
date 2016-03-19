@@ -21,6 +21,16 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				animator.SetInteger("nextAction", characterController.activityPlayback.actionQueue.Peek().animation);
 			}
 
+			// Show the mobile phone
+			if (characterController.nextAction.name == "Text") {
+				characterController.mobilePhone.SetActive(true);
+
+				GameObject.Find("Mobile phone").transform.localPosition = 
+					characterController.activityPlayback.objects["Mobile phone"].inHandPosition;
+				GameObject.Find("Mobile phone").transform.localRotation = 
+					Quaternion.Euler(characterController.activityPlayback.objects["Mobile phone"].inHandRotation);
+			}
+
 
 			// When the last action begins
 			if (characterController.activityPlayback.actionQueue.Count == 0) {
@@ -44,6 +54,12 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			else {
 				animator.SetInteger("nextAction", 0);
 			}
+
+			// Hide the mobile phone
+			if (characterController.nextAction.name == "Text") {
+				characterController.mobilePhone.SetActive(false);
+			}
+
 
 
 			// If the character is about to put down the object, detach it from the hand

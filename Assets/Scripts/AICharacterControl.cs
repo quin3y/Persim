@@ -12,6 +12,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		public ActivityPlayback activityPlayback;
 		public ActionInstance nextAction = null;
 		public bool activityFinished = false;
+		public LinkedList<Int32> activityQueue;
 
 		public NavMeshAgent navAgent { get; private set; } // the navmesh agent required for the path finding
         public ThirdPersonCharacter character { get; private set; } // the character we are controlling
@@ -21,41 +22,41 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		public bool willPutDownLeftObject;
 		public bool willPutDownRightObject;
 
+		public GameObject mobilePhone;
+
 		Camera[] cameras;
 
-        // Use this for initialization
-		// 0.  Getting up
-		// 1.  Bathing
-		// 2.  Brushing teeth
-		// 3.  Washing face
-		// 4.  Dressing
-		// 5.  Undressing
-		// 6.  Washing hands
-		// 7.  Drinking water
-		// 8.  Eating a meal
-		// 9.  Combing hair
-		// 10. Shaving
-		// 11. Going to bed
-		// 12. Toileting
-		// 13. Leaving home
-		// 14. Using cellphone
-		// 15. Using computer
-		// 16. Watching TV
-		// 17. Preparing a meal
-		// 18. Washing dishes
-		// 19. Cleaning countertops
-		// 20. Doing laundry
-		// 21. Taking medication
-		// 22. Taking out trash
-		// 23. Vacuuming floors
-		// 24. Falling down
+		// 0.  Bathing
+		// 1.  Brushing teeth
+		// 2.  Cleaning countertops
+		// 3.  Combing hair
+		// 4.  Doing laundry
+		// 5.  Dressing
+		// 6.  Drinking water
+		// 7.  Eating a meal
+		// 8.  Falling down
+		// 9.  Getting up
+		// 10. Going to bed
+		// 11. Leaving home
+		// 12. Preparing a meal
+		// 13. Shaving
+		// 14. Taking medication
+		// 15. Taking out trash
+		// 16. Undressing
+		// 17. Using bathroom
+		// 18. Using cellphone
+		// 19. Using computer
+		// 20. Vacuuming floors
+		// 21. Washing dishes
+		// 22. Washing face
+		// 23. Washing hands
+		// 24. Watching TV
+
         private void Start() {
 			Init();
-			PlayActivity(16);
+			PlayActivity(18);
         }
 
-
-        // Update is called once per frame
         private void Update() {
 			if (nextAction != null) {
 				character.Move(navAgent.desiredVelocity, false, false);
@@ -85,6 +86,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			activityPlayback = new ActivityPlayback();
 			activityPlayback.Init();
 
+			activityQueue = new LinkedList<Int32>();
+
 			character = GetComponent<ThirdPersonCharacter>();
 			animator = GetComponentInChildren<Animator>();
 			animator.SetBool("actionToWalk", true);
@@ -99,6 +102,9 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				return cam1.name.CompareTo(cam2.name);
 			});
 			UseRightCamera();
+
+			// Hide the mobile phone
+			mobilePhone.SetActive(false);
 		}
 
 		private void PlayActivity(int id) {

@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -25,11 +26,11 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				actionQueue.Enqueue(new ActionInstance(actions[activities[id].actionIds[i]],
 				                                       objects[activities[id].objectNames[i]]));
 			}
-//			actionQueue.Enqueue(new ActionInstance(actions[0], objects["Table"]));
+			actionQueue.Enqueue(new ActionInstance(actions[0], objects["Table"]));
 		}
 
-		public void CreateActionQueue() {
-
+		public String GetActivityName(int id) {
+			return activities[id].name;
 		}
 	}
 }
