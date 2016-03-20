@@ -13,6 +13,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		public ActionInstance nextAction = null;
 		public bool activityFinished = false;
 		public LinkedList<Int32> activityQueue;
+		private bool arrivedAtDestination;
 
 		public NavMeshAgent navAgent { get; private set; } // the navmesh agent required for the path finding
         public ThirdPersonCharacter character { get; private set; } // the character we are controlling
@@ -54,24 +55,37 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
         private void Start() {
 			Init();
-			PlayActivity(18);
+			PlayActivity(17);
         }
 
         private void Update() {
 			if (nextAction != null) {
 				character.Move(navAgent.desiredVelocity, false, false);
+				print(navAgent.desiredVelocity);
 				if (!navAgent.pathPending) {
 					if (navAgent.remainingDistance <= navAgent.stoppingDistance) {
-						if (!navAgent.hasPath || navAgent.velocity.sqrMagnitude == 0f)
-						{						
-							// Rotate the character
+						print (Vector3.Distance(transform.position, nextAction.location));
+						if (Vector3.Distance(transform.position, nextAction.location) > 0.2f && !arrivedAtDestination) {
+							character.Move((nextAction.location - transform.position)/3, false, false);
+						}
+						else {
+							arrivedAtDestination = true;
 							Quaternion lookRotation = Quaternion.LookRotation(nextAction.obj.characterRotation);
 							transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 20f);
 
-							// Play animation
 							animator.SetInteger("nextAction", nextAction.animation);
 						}
+
+//						if (!navAgent.hasPath || navAgent.velocity.sqrMagnitude == 0f) {						
+//							// Rotate the character
+//							Quaternion lookRotation = Quaternion.LookRotation(nextAction.obj.characterRotation);
+//							transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 20f);
+//
+//							// Play animation
+//							animator.SetInteger("nextAction", nextAction.animation);
+//						}
 					}
+
 				}
 			}
 			else {

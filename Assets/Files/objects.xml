@@ -39,10 +39,10 @@
   <object name="Mobile phone">
     <position x="0" y="0" z="0" />
     <rotation x="0" y="0" z="0" />
-    <in-hand-position x="-0.029" y="0.106" z="-0.068" />
-    <in-hand-rotation x="331.435" y="13.075" z="322.4" />
+    <in-hand-position x="-0.02" y="0.11" z="-0.077" />
+    <in-hand-rotation x="338.88" y="14.52" z="317.77" />
     <character-position x="12" y="0" z="14" />
-    <character-rotation x="0" y="0" z="-1" />
+    <character-rotation x="0" y="0" z="0" />
   </object>
   
   <object name="Table">
@@ -59,8 +59,8 @@
     <rotation x="0" y="0" z="0" />
     <in-hand-position x="0" y="0" z="0" />
     <in-hand-rotation x="0" y="0" z="0" />
-    <character-position x="1.48" y="0" z="1.07" />
-    <character-rotation x="0" y="0" z="0" />
+    <character-position x="1.6" y="0" z="1.1" />
+    <character-rotation x="1" y="0" z="0" />
   </object>
   
   <object name="Towel rack">

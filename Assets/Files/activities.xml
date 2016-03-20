@@ -103,9 +103,9 @@
   </activity>
 
   <activity id="17" name="Using bathroom">
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
+    <action id="8" object="Toilet" />
+    <action id="10" object="Toilet" />
+    <action id="9" object="Toilet" />
   </activity>
 
   <activity id="18" name="Using cellphone">
