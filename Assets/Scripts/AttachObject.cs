@@ -9,7 +9,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		// Use this for initialization
 		void Start () {
 			characterController = GameObject.Find("Ethan").GetComponent<AICharacterControl>();
-
 		}
 		
 		// Update is called once per frame
@@ -35,8 +34,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 						Quaternion.Euler(characterController.activityPlayback.objects[this.gameObject.name].inHandRotation);
 				}
 			}
-
-			
 		}
 	}
 }

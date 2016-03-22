@@ -43,9 +43,9 @@
   </activity>
 
   <activity id="7" name="Eating a meal">
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
+    <action id="8" object="Table" />
+    <action id="10" object="Table" />
+    <action id="9" object="Table" />
   </activity>
 
   <activity id="8" name="Falling down">
@@ -61,9 +61,9 @@
   </activity>
   
   <activity id="10" name="Going to bed">
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
+    <action id="8" object="Bed" />
+    <action id="10" object="Bed" />
+    <action id="9" object="Bed" />
   </activity>
 
   <activity id="11" name="Leaving home">
@@ -113,9 +113,9 @@
   </activity>
 
   <activity id="19" name="Using computer">
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
+    <action id="8" object="Computer desk" />
+    <action id="11" object="Computer desk" />
+    <action id="9" object="Computer desk" />
   </activity>
 
   <activity id="20" name="Vacuuming floors">
@@ -131,15 +131,12 @@
   </activity>
 
   <activity id="22" name="Washing face">
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
+    <action id="1" object="Bathroom light switch" />
   </activity>
 
   <activity id="23" name="Washing hands">
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
+    <action id="23" object="Doorknob" />
+    <action id="1" object="Bathroom light switch" />
   </activity>  
 
   <activity id="24" name="Watching TV">

@@ -25,7 +25,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 		public GameObject mobilePhone;
 
-		Camera[] cameras;
+		private Camera[] cameras;
+		private int currentCamera = 0;
 
 		// 0.  Bathing
 		// 1.  Brushing teeth
@@ -61,38 +62,30 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         private void Update() {
 			if (nextAction != null) {
 				character.Move(navAgent.desiredVelocity, false, false);
-				print(navAgent.desiredVelocity);
 				if (!navAgent.pathPending) {
 					if (navAgent.remainingDistance <= navAgent.stoppingDistance) {
-						print (Vector3.Distance(transform.position, nextAction.location));
 						if (Vector3.Distance(transform.position, nextAction.location) > 0.2f && !arrivedAtDestination) {
-							character.Move((nextAction.location - transform.position)/3, false, false);
+							character.Move((nextAction.location - transform.position), false, false);
 						}
 						else {
 							arrivedAtDestination = true;
+							print ("arrived");
+
+							// Rotate the character
 							Quaternion lookRotation = Quaternion.LookRotation(nextAction.obj.characterRotation);
 							transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 20f);
 
+							// Play animation
 							animator.SetInteger("nextAction", nextAction.animation);
 						}
-
-//						if (!navAgent.hasPath || navAgent.velocity.sqrMagnitude == 0f) {						
-//							// Rotate the character
-//							Quaternion lookRotation = Quaternion.LookRotation(nextAction.obj.characterRotation);
-//							transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 20f);
-//
-//							// Play animation
-//							animator.SetInteger("nextAction", nextAction.animation);
-//						}
 					}
-
 				}
 			}
 			else {
 				// We still need to call the character's move function, but we send zeroed input as the move param.
 				character.Move(Vector3.zero, false, false);
 			}
-			UseRightCamera();
+			SetCamera();
         }
 
 		// Read configuration data of actions and objects
@@ -115,7 +108,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			Array.Sort(cameras, delegate(Camera cam1, Camera cam2) {
 				return cam1.name.CompareTo(cam2.name);
 			});
-			UseRightCamera();
+			print (cameras.Length);
+			SetCamera();
 
 			// Hide the mobile phone
 			mobilePhone.SetActive(false);
@@ -132,15 +126,22 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		}
 
 		// Switch camera based on the character's position
-		private void UseRightCamera() {
-			if (transform.position.x < 4.76f && transform.position.z < 6f) {
-				cameras[0].enabled = false;
-				cameras[1].enabled = true;
+		private void SetCamera() {
+			if (transform.position.x < 4.6f && transform.position.z > 2.8f && transform.position.z < 5.22f) {
+				UseCamera(1);
+			}
+			else if (transform.position.x < 4.6f && transform.position.z <= 2.8f) {
+				UseCamera(2);
 			}
 			else {
-				cameras[0].enabled = true;
-				cameras[1].enabled = false;
+				UseCamera(0);
 			}
+		}
+
+		private void UseCamera(int id) {
+			cameras[currentCamera].enabled = false;
+			cameras[id].enabled = true;
+			currentCamera = id;
 		}
 
 		void OnGUI() {

@@ -23,6 +23,8 @@
   <action id="20" name="Put down right" animation="20" />
   <action id="21" name="Comb hair" animation="21" />
   <action id="22" name="Flush toilet" animation="22" />
+  <action id="23" name="Open door" animation="23" />
+  <action id="24" name="Close door" animation="24" />
 
   
   
