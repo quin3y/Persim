@@ -54,6 +54,15 @@
     <character-rotation x="-1" y="0" z="0" />
   </object>
   
+  <object name="Front door">
+    <position x="0" y="0" z="0" />
+    <rotation x="0" y="0" z="0" />
+    <in-hand-position x="0" y="0" z="0" />
+    <in-hand-rotation x="0" y="0" z="0" />
+    <character-position x="6" y="0" z="15" />
+    <character-rotation x="0" y="0" z="1" />
+  </object>
+  
   <object name="Mobile phone">
     <position x="0" y="0" z="0" />
     <rotation x="0" y="0" z="0" />
@@ -63,12 +72,30 @@
     <character-rotation x="0" y="0" z="0" />
   </object>
   
+  <object name="Kitchen cup">
+    <position x="0" y="0" z="0" />
+    <rotation x="0" y="0" z="0" />
+    <in-hand-position x="0" y="0" z="0" />
+    <in-hand-rotation x="0" y="0" z="0" />
+    <character-position x="1.46" y="0" z="7.22" />
+    <character-rotation x="-1" y="0" z="0" />
+  </object>
+  
+  <object name="Rack">
+    <position x="0" y="0" z="0" />
+    <rotation x="0" y="0" z="0" />
+    <in-hand-position x="0" y="0" z="0" />
+    <in-hand-rotation x="0" y="0" z="0" />
+    <character-position x="11.1" y="0" z="1.5" />
+    <character-rotation x="0" y="0" z="0" />
+  </object>
+  
   <object name="Table">
     <position x="0" y="0" z="0" />
     <rotation x="0" y="0" z="0" />
     <in-hand-position x="0" y="0" z="0" />
     <in-hand-rotation x="0" y="0" z="0" />
-    <character-position x="2.83" y="0" z="12.82" />
+    <character-position x="2.02" y="0" z="13.46" />
     <character-rotation x="0" y="0" z="0" />
   </object>
   
@@ -88,6 +115,15 @@
     <in-hand-rotation x="0" y="0" z="0" />
     <character-position x="1.17" y="0" z="2.9" />
     <character-rotation x="-1" y="0" z="0" />
+  </object>
+  
+  <object name="Washer">
+    <position x="0" y="0" z="0" />
+    <rotation x="0" y="0" z="0" />
+    <in-hand-position x="0" y="0" z="0" />
+    <in-hand-rotation x="0" y="0" z="0" />
+    <character-position x="0" y="0" z="0" />
+    <character-rotation x="1" y="0" z="0" />
   </object>
   
 </objects>

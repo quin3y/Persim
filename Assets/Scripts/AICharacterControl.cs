@@ -25,9 +25,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 		public GameObject mobilePhone;
 
-		private Camera[] cameras;
-		private int currentCamera = 0;
-
 		// 0.  Bathing
 		// 1.  Brushing teeth
 		// 2.  Cleaning countertops
@@ -53,10 +50,11 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		// 22. Washing face
 		// 23. Washing hands
 		// 24. Watching TV
+		// 25. Patrol
 
         private void Start() {
 			Init();
-			PlayActivity(17);
+			PlayActivity(25);
         }
 
         private void Update() {
@@ -69,7 +67,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 						}
 						else {
 							arrivedAtDestination = true;
-							print ("arrived");
 
 							// Rotate the character
 							Quaternion lookRotation = Quaternion.LookRotation(nextAction.obj.characterRotation);
@@ -85,7 +82,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				// We still need to call the character's move function, but we send zeroed input as the move param.
 				character.Move(Vector3.zero, false, false);
 			}
-			SetCamera();
         }
 
 		// Read configuration data of actions and objects
@@ -103,14 +99,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			navAgent.updateRotation = false;
 			navAgent.updatePosition = true;
 
-			// Get all cameras and set only one camera active
-			cameras = FindObjectsOfType(typeof(Camera)) as Camera[];
-			Array.Sort(cameras, delegate(Camera cam1, Camera cam2) {
-				return cam1.name.CompareTo(cam2.name);
-			});
-			print (cameras.Length);
-			SetCamera();
-
 			// Hide the mobile phone
 			mobilePhone.SetActive(false);
 		}
@@ -123,25 +111,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				navAgent.destination = nextAction.location;
 				activityFinished = false;
 			}
-		}
-
-		// Switch camera based on the character's position
-		private void SetCamera() {
-			if (transform.position.x < 4.6f && transform.position.z > 2.8f && transform.position.z < 5.22f) {
-				UseCamera(1);
-			}
-			else if (transform.position.x < 4.6f && transform.position.z <= 2.8f) {
-				UseCamera(2);
-			}
-			else {
-				UseCamera(0);
-			}
-		}
-
-		private void UseCamera(int id) {
-			cameras[currentCamera].enabled = false;
-			cameras[id].enabled = true;
-			currentCamera = id;
 		}
 
 		void OnGUI() {

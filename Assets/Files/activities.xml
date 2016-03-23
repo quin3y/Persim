@@ -145,5 +145,18 @@
     <action id="9" object="Couch" />
   </activity>
   
+  <activity id="25" name="Patrol">
+    <action id="19" object="Bathroom sink" />
+    <action id="19" object="Toilet" />
+    <action id="19" object="Washer" />
+    <action id="19" object="Bed" />
+    <action id="19" object="Rack" />
+    <action id="19" object="Couch" />
+    <action id="19" object="Computer desk" />
+    <action id="19" object="Front door" />
+    <action id="19" object="Table" />
+    <action id="19" object="Kitchen cup" />
+  </activity>
+  
   
 </activities>
