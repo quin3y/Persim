@@ -10,9 +10,9 @@ namespace UnityStandardAssets.Characters.ThirdPerson
     [RequireComponent(typeof (ThirdPersonCharacter))]
     public class AICharacterControl : MonoBehaviour {
 		public ActivityPlayback activityPlayback;
+		public ActivityPlaylist playlist;
 		public ActionInstance nextAction = null;
 		public bool activityFinished = false;
-		public LinkedList<Int32> activityQueue;
 		private bool arrivedAtDestination;
 
 		public NavMeshAgent navAgent { get; private set; } // the navmesh agent required for the path finding
@@ -84,12 +84,11 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			}
         }
 
-		// Read configuration data of actions and objects
 		private void Init() {
 			activityPlayback = new ActivityPlayback();
 			activityPlayback.Init();
 
-			activityQueue = new LinkedList<Int32>();
+			playlist = new ActivityPlaylist();
 
 			character = GetComponent<ThirdPersonCharacter>();
 			animator = GetComponentInChildren<Animator>();
