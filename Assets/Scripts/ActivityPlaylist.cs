@@ -16,9 +16,25 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			playlist.Add(id);
 		}
 
-		// Delete the n-th element in the playlist
-		public void DeleteActivity(int n) {
-			playlist.RemoveAt(n);
+		// Delete the element at index
+		public void DeleteActivity(int index) {
+			if (playlist.Count > index) {
+				playlist.RemoveAt(index);
+			}
+			else {
+				Debug.Log("Activity index error");
+			}
+		}
+
+		public int Pop() {
+			if (playlist.Count > 0) {
+				int n = playlist[0];
+				playlist.RemoveAt(0);
+				return n;
+			}
+			else {
+				return -1;
+			}
 		}
 
 		// Clear the playlist
