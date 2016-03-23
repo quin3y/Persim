@@ -26,6 +26,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			}
 		}
 
+		// Returns the first activity's id and removes it
 		public int Pop() {
 			if (playlist.Count > 0) {
 				int n = playlist[0];
@@ -45,6 +46,10 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		// Insert current activity's id to the front
 		public void RepeatCurrentActivity(int id) {
 			playlist.Insert(0, id);
+		}
+
+		public int[] GetList() {
+			return playlist.ToArray();
 		}
 
 		public int Count() {
