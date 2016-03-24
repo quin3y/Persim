@@ -5,7 +5,6 @@ using System.Collections;
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
 	public class ActionEvents : StateMachineBehaviour {
-	    
 		 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 		override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 			AICharacterControl characterController = GameObject.Find("Ethan").GetComponent<AICharacterControl>();
@@ -31,11 +30,10 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 					Quaternion.Euler(characterController.activityPlayback.objects["Mobile phone"].inHandRotation);
 			}
 
-
 			// When the last action begins
 			if (characterController.activityPlayback.actionQueue.Count == 0) {
-				characterController.nextAction = null;
-				animator.SetBool("actionToWalk", false);
+//				characterController.nextAction = null;
+//				animator.SetBool("actionToWalk", false);
 			}
 	    }
 
@@ -91,8 +89,19 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 				Debug.Log("next action = " + characterController.nextAction.name);
 			}
-			else {
-				characterController.activityFinished = true;
+
+			else {    // Activity finished
+				Debug.Log("finish");
+				// Start next activity
+				if (characterController.playlist.Count() > 0) {
+					characterController.PlayActivity(characterController.playlist.Pop());
+				}
+				// End of simulation
+				else {
+					animator.SetInteger("nextAction", 0);
+					characterController.nextAction = null;
+					characterController.currentActivity = -1;
+				}
 			}
 	    }
 

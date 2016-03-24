@@ -11,8 +11,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
     public class AICharacterControl : MonoBehaviour {
 		public ActivityPlayback activityPlayback;
 		public ActivityPlaylist playlist;
-		public bool activityFinished = false;
-		public int currentActivity;
+		public int currentActivity = -1;
 
 		public ActionInstance nextAction = null;
 		private bool arrivedAtDestination;
@@ -56,7 +55,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
         private void Start() {
 			Init();
-			PlayActivity(25);
+			PlayActivity(playlist.Pop());
         }
 
         private void Update() {
@@ -91,6 +90,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			activityPlayback.Init();
 
 			playlist = new ActivityPlaylist();
+			playlist.AddActivity(25);
+//			playlist.AddActivity(18);
 
 			character = GetComponent<ThirdPersonCharacter>();
 			animator = GetComponentInChildren<Animator>();
@@ -104,13 +105,14 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			mobilePhone.SetActive(false);
 		}
 
-		private void PlayActivity(int id) {
+		public void PlayActivity(int id) {
 			activityPlayback.CreateActionSequence(id);
 			
 			if (activityPlayback.actionQueue.Count > 0) {
 				nextAction = activityPlayback.actionQueue.Dequeue();
 				navAgent.destination = nextAction.location;
-				activityFinished = false;
+				currentActivity = id;
+				print("starting activity " + id);
 			}
 		}
 

@@ -5,8 +5,7 @@ using System.Collections.Generic;
 
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
-	public class ActivityPlayback
-	{
+	public class ActivityPlayback {
 		public List<Action> actions;
 		public List<Activity> activities;
 		public Dictionary<string, ObjectInfo> objects;
@@ -26,7 +25,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				actionQueue.Enqueue(new ActionInstance(actions[activities[id].actionIds[i]],
 				                                       objects[activities[id].objectNames[i]]));
 			}
-			actionQueue.Enqueue(new ActionInstance(actions[0], objects["Table"]));
 		}
 
 		public String GetActivityName(int id) {
