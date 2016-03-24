@@ -14,7 +14,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		public int currentActivity = -1;
 
 		public ActionInstance nextAction = null;
-		private bool arrivedAtDestination;
+		public bool arrivedAtDestination;
 
 		public NavMeshAgent navAgent { get; private set; } // the navmesh agent required for the path finding
         public ThirdPersonCharacter character { get; private set; } // the character we are controlling
@@ -34,7 +34,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		// 5.  Dressing
 		// 6.  Drinking water
 		// 7.  Eating a meal
-		// 8.  Falling down
+		// 8.  Falling
 		// 9.  Getting up
 		// 10. Going to bed
 		// 11. Leaving home
@@ -90,8 +90,16 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			activityPlayback.Init();
 
 			playlist = new ActivityPlaylist();
-			playlist.AddActivity(25);
+//			playlist.AddActivity(3);
+//			playlist.AddActivity(8);
+//			playlist.AddActivity(13);
+//			playlist.AddActivity(17);
 //			playlist.AddActivity(18);
+//			playlist.AddActivity(19);
+//			playlist.AddActivity(22);
+//			playlist.AddActivity(23);
+//			playlist.AddActivity(24);
+			playlist.AddActivity(25);
 
 			character = GetComponent<ThirdPersonCharacter>();
 			animator = GetComponentInChildren<Animator>();
@@ -106,13 +114,18 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		}
 
 		public void PlayActivity(int id) {
+			if (id < 0) {
+				print("Illegal activity id");
+				return;
+			}
+
 			activityPlayback.CreateActionSequence(id);
 			
 			if (activityPlayback.actionQueue.Count > 0) {
 				nextAction = activityPlayback.actionQueue.Dequeue();
 				navAgent.destination = nextAction.location;
 				currentActivity = id;
-				print("starting activity " + id);
+//				print("starting activity " + id);
 			}
 		}
 

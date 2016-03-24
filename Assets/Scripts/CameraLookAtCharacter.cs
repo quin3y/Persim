@@ -11,11 +11,11 @@ public class CameraLookAtCharacter : MonoBehaviour {
 	
 	// Update is called once per frame
 	void LateUpdate () {
-		if (target.position.x < 5.2f && target.position.z >= 2.8f && target.position.z < 5.6f) {
+		if (target.position.x < 5.2f && target.position.z >= 2.2f && target.position.z < 5.6f) {
 			transform.position = new Vector3(1.26f, 1.8f, 0.6f);
 			transform.rotation = Quaternion.Euler(new Vector3(17.73f, 22.64f, 1.25f));
 		}
-		else if (target.position.x < 5.2f && target.position.z < 2.8f) {
+		else if (target.position.x < 5.2f && target.position.z < 2.2f) {
 			transform.position = new Vector3(2.985f, 1.8f, 5.264f);
 			transform.rotation = Quaternion.Euler(new Vector3(15.94f, 180f, 0.62f));
 		}

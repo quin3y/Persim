@@ -19,9 +19,9 @@
   </activity>
 
   <activity id="3" name="Combing hair">
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
+    <action id="1" object="Bathroom light switch" />
+    <action id="21" object="Bathroom sink" />
+    <action id="2" object="Bathroom light switch" />
   </activity>
 
   <activity id="4" name="Doing laundry">
@@ -48,10 +48,8 @@
     <action id="9" object="Table" />
   </activity>
 
-  <activity id="8" name="Falling down">
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
+  <activity id="8" name="Falling">
+    <action id="25" object="Bathroom light switch" />
   </activity>
 
   <activity id="9" name="Getting up">
@@ -79,9 +77,9 @@
   </activity>
 
   <activity id="13" name="Shaving">
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
+    <action id="1" object="Bathroom light switch" />
+    <action id="14" object="Bathroom sink" />
+    <action id="2" object="Bathroom light switch" />
   </activity>
 
   <activity id="14" name="Taking medication">
@@ -106,6 +104,8 @@
     <action id="8" object="Toilet" />
     <action id="10" object="Toilet" />
     <action id="9" object="Toilet" />
+    <action id="3" object="Bathroom sink" />
+    <action id="4" object="Towel rack" />
   </activity>
 
   <activity id="18" name="Using cellphone">
@@ -132,11 +132,16 @@
 
   <activity id="22" name="Washing face">
     <action id="1" object="Bathroom light switch" />
+    <action id="5" object="Bathroom sink" />
+    <action id="6" object="Towel rack" />
+    <action id="2" object="Bathroom light switch" />
   </activity>
 
   <activity id="23" name="Washing hands">
-    <action id="23" object="Doorknob" />
     <action id="1" object="Bathroom light switch" />
+    <action id="3" object="Bathroom sink" />
+    <action id="4" object="Towel rack" />
+    <action id="2" object="Bathroom light switch" />
   </activity>  
 
   <activity id="24" name="Watching TV">

@@ -45,6 +45,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		// OnStateExit is called when a transition ends and the state machine finishes evaluating this state
 		override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 			AICharacterControl characterController = GameObject.Find("Ethan").GetComponent<AICharacterControl>();
+			characterController.arrivedAtDestination = false;
 
 			if (characterController.nextAction.name == "Sit down") {
 				animator.SetInteger("nextAction", characterController.activityPlayback.actionQueue.Peek().animation);

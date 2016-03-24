@@ -219,7 +219,7 @@ ModelImporter:
     400208: R UpperArm
     400210: Spine
     400212: Spine1
-    7400000: DeathA
+    7400000: Fall
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -242,7 +242,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: DeathA
+      name: Fall
       takeName: Take 001
       firstFrame: 0
       lastFrame: 54
