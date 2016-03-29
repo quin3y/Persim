@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
-	public class ActivityPlaylist{
+	public class ActivityPlaylist {
 		private List<int> playlist;
 
 		public ActivityPlaylist() {

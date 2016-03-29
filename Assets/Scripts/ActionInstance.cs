@@ -3,8 +3,7 @@ using System.Collections;
 
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
-	public class ActionInstance
-	{
+	public class ActionInstance {
 		public string name {get; set;}
 		public int id {get; set;}
 		public int animation {get; set;}
@@ -27,6 +26,5 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			loc.y = 0;
 			this.location = loc;
 		}
-		
 	}
 }

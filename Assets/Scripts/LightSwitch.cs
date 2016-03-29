@@ -12,7 +12,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		void Start () {
 			characterController = GameObject.Find("Ethan").GetComponent<AICharacterControl>();
 			light = GameObject.Find("Light").GetComponent<Light>();
-
 		}
 		
 		// Update is called once per frame
@@ -31,11 +30,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 					light.intensity = 0;
 					isOn = false;
 					print("light off");
-
 				}
-
 			}
-
 		}
 	}
 }

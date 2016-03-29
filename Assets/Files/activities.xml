@@ -20,7 +20,9 @@
 
   <activity id="3" name="Combing hair">
     <action id="1" object="Bathroom light switch" />
-    <action id="21" object="Bathroom sink" />
+    <action id="19" object="Comb" />
+    <action id="21" object="Comb" />
+    <action id="20" object="Comb" />
     <action id="2" object="Bathroom light switch" />
   </activity>
 

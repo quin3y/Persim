@@ -4,12 +4,11 @@ using System.Collections;
 public class CameraLookAtCharacter : MonoBehaviour {
 	private Transform target;
 
-	// Use this for initialization
 	void Start () {
 		target = GameObject.Find("Ethan").transform;
 	}
-	
-	// Update is called once per frame
+
+	// Change camera's position and rotation based on the character's position
 	void LateUpdate () {
 		if (target.position.x < 5.2f && target.position.z >= 2.2f && target.position.z < 5.6f) {
 			transform.position = new Vector3(1.26f, 1.8f, 0.6f);

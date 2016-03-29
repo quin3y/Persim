@@ -60,7 +60,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			}
 
 
-
 			// If the character is about to put down the object, detach it from the hand
 			if (characterController.willPutDownLeftObject) {
 				characterController.leftObject.transform.parent = null;

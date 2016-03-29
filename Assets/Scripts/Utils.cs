@@ -5,8 +5,7 @@ using System.Collections.Generic;
 
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
-	public class Utils
-	{
+	public class Utils {
 		public static List<Action> ReadActionXml() {
 			List<Action> actionList = new List<Action>();
 			XmlReader reader = XmlReader.Create("Assets/Files/actions.xml");
