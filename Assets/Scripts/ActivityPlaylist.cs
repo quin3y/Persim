@@ -4,11 +4,16 @@ using System.Collections.Generic;
 
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
-	public class ActivityPlaylist{
+	public class ActivityPlaylist : MonoBehaviour{
 		private List<int> playlist;
-
+		public bool popped = false;
 		public ActivityPlaylist() {
 			playlist = new List<int>();
+		}
+		void Start ()
+		{
+
+		//playlist = new List<int>();
 		}
 
 		// Param: activity's id
@@ -31,6 +36,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			if (playlist.Count > 0) {
 				int n = playlist[0];
 				playlist.RemoveAt(0);
+				popped = true;
 				return n;
 			}
 			else {

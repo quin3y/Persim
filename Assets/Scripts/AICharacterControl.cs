@@ -90,16 +90,17 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			activityPlayback.Init();
 
 			playlist = new ActivityPlaylist();
-//			playlist.AddActivity(3);
+//		playlist.AddActivity(3);
 //			playlist.AddActivity(8);
 //			playlist.AddActivity(13);
 //			playlist.AddActivity(17);
 //			playlist.AddActivity(18);
 //			playlist.AddActivity(19);
 //			playlist.AddActivity(22);
-//			playlist.AddActivity(23);
+	//		playlist.AddActivity(23);
 //			playlist.AddActivity(24);
-			playlist.AddActivity(25);
+//			playlist.AddActivity(25);
+
 
 			character = GetComponent<ThirdPersonCharacter>();
 			animator = GetComponentInChildren<Animator>();
@@ -130,7 +131,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		}
 
 		void OnGUI() {
-			GUI.Label (new Rect (10, 5,1000, 20), transform.position.ToString());
+			//GUI.Label (new Rect (10, 5,1000, 20), transform.position.ToString());
 		}
     }
 }
