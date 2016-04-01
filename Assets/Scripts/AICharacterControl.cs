@@ -26,33 +26,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 		public GameObject mobilePhone;
 
-		// 0.  Bathing
-		// 1.  Brushing teeth
-		// 2.  Cleaning countertops
-		// 3.  Combing hair
-		// 4.  Doing laundry
-		// 5.  Dressing
-		// 6.  Drinking water
-		// 7.  Eating a meal
-		// 8.  Falling
-		// 9.  Getting up
-		// 10. Going to bed
-		// 11. Leaving home
-		// 12. Preparing a meal
-		// 13. Shaving
-		// 14. Taking medication
-		// 15. Taking out trash
-		// 16. Undressing
-		// 17. Using bathroom
-		// 18. Using cellphone
-		// 19. Using computer
-		// 20. Vacuuming floors
-		// 21. Washing dishes
-		// 22. Washing face
-		// 23. Washing hands
-		// 24. Watching TV
-		// 25. Patrol
-
         private void Start() {
 			Init();
 			PlayActivity(playlist.Pop());
@@ -89,21 +62,51 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			activityPlayback = new ActivityPlayback();
 			activityPlayback.Init();
 
+			// 0.  Bathing
+			// 1.  Brushing teeth
+			// 2.  Cleaning countertops
+			// 3.  Combing hair
+			// 4.  Doing laundry
+			// 5.  Dressing
+			// 6.  Drinking water
+			// 7.  Eating a meal
+			// 8.  Falling
+			// 9.  Getting up
+			// 10. Going to bed
+			// 11. Leaving home
+			// 12. Preparing a meal
+			// 13. Shaving
+			// 14. Taking medication
+			// 15. Taking out trash
+			// 16. Undressing
+			// 17. Using bathroom
+			// 18. Using cellphone
+			// 19. Using computer
+			// 20. Vacuuming floors
+			// 21. Washing dishes
+			// 22. Washing face
+			// 23. Washing hands
+			// 24. Watching TV
+			// 25. Patrol
+
 			playlist = new ActivityPlaylist();
 //			playlist.AddActivity(3);
+//			playlist.AddActivity(6);
 //			playlist.AddActivity(8);
+			playlist.AddActivity(10);
 //			playlist.AddActivity(13);
+//			playlist.AddActivity(14);
 //			playlist.AddActivity(17);
 //			playlist.AddActivity(18);
 //			playlist.AddActivity(19);
 //			playlist.AddActivity(22);
 //			playlist.AddActivity(23);
 //			playlist.AddActivity(24);
-			playlist.AddActivity(25);
+//			playlist.AddActivity(25);
 
 			character = GetComponent<ThirdPersonCharacter>();
 			animator = GetComponentInChildren<Animator>();
-			animator.SetBool("actionToWalk", true);
+			animator.SetBool("actionFinished", true);
 			
 			navAgent = GetComponentInChildren<NavMeshAgent>();
 			navAgent.updateRotation = false;

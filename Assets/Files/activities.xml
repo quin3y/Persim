@@ -7,7 +7,7 @@
   </activity>
 
   <activity id="1" name="Brushing teeth">
-    <action id="0" object="Table" />
+    <action id="0" object="Bathroom sink" />
     <action id="0" object="Table" />
     <action id="0" object="Table" />
   </activity>
@@ -39,9 +39,9 @@
   </activity>
 
   <activity id="6" name="Drinking water">
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
+    <action id="19" object="Kitchen cup" />
+    <action id="18" object="Kitchen cup" />
+    <action id="20" object="Kitchen cup" />
   </activity>
 
   <activity id="7" name="Eating a meal">
@@ -61,9 +61,10 @@
   </activity>
   
   <activity id="10" name="Going to bed">
-    <action id="8" object="Bed" />
-    <action id="10" object="Bed" />
-    <action id="9" object="Bed" />
+    <action id="24" object="Bedroom door" />
+    <action id="25" object="Bed" />
+    <action id="23" object="Bedroom door" />
+    <action id="0" object="Couch" />
   </activity>
 
   <activity id="11" name="Leaving home">
@@ -85,9 +86,12 @@
   </activity>
 
   <activity id="14" name="Taking medication">
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
-    <action id="0" object="Table" />
+    <action id="19" object="Kitchen cup" />
+    <action id="7" object="Kitchen cup" />
+    <action id="20" object="Kitchen cup" />
+    <action id="19" object="Kitchen cup" />
+    <action id="18" object="Kitchen cup" />
+    <action id="20" object="Kitchen cup" />
   </activity>
 
  <activity id="15" name="Taking out trash">
@@ -106,6 +110,7 @@
     <action id="8" object="Toilet" />
     <action id="10" object="Toilet" />
     <action id="9" object="Toilet" />
+    <action id="22" object="Toilet handle" />
     <action id="3" object="Bathroom sink" />
     <action id="4" object="Towel rack" />
   </activity>

@@ -27,6 +27,15 @@
     <character-rotation x="-1" y="0" z="0" />
   </object>
   
+  <object name="Bedroom door">
+    <position x="0" y="0" z="0" />
+    <rotation x="0" y="0" z="0" />
+    <in-hand-position x="0" y="0" z="0" />
+    <in-hand-rotation x="0" y="0" z="0" />
+    <character-position x="9" y="0" z="4.75" />
+    <character-rotation x="-1" y="0" z="0" />
+  </object>
+  
   <object name="Comb">
     <position x="0" y="0" z="0" />
     <rotation x="0" y="0" z="0" />
@@ -78,15 +87,15 @@
     <in-hand-position x="-0.02" y="0.11" z="-0.077" />
     <in-hand-rotation x="338.88" y="14.52" z="317.77" />
     <character-position x="7" y="0" z="12" />
-    <character-rotation x="0" y="0" z="0" />
+    <character-rotation x="0" y="0" z="1" />
   </object>
   
   <object name="Kitchen cup">
-    <position x="0" y="0" z="0" />
-    <rotation x="0" y="0" z="0" />
-    <in-hand-position x="0" y="0" z="0" />
-    <in-hand-rotation x="0" y="0" z="0" />
-    <character-position x="1.46" y="0" z="7.22" />
+    <position x="1.06" y="0.92" z="7.4" />
+    <rotation x="270" y="0" z="0" />
+    <in-hand-position x="-0.034" y="0.107" z="0" />
+    <in-hand-rotation x="10.023" y="180" z="180" />
+    <character-position x="1.63" y="0" z="7.14" />
     <character-rotation x="-1" y="0" z="0" />
   </object>
   
@@ -96,7 +105,7 @@
     <in-hand-position x="0" y="0" z="0" />
     <in-hand-rotation x="0" y="0" z="0" />
     <character-position x="11.1" y="0" z="1.5" />
-    <character-rotation x="0" y="0" z="0" />
+    <character-rotation x="0" y="0" z="-1" />
   </object>
   
   <object name="Table">
@@ -105,7 +114,7 @@
     <in-hand-position x="0" y="0" z="0" />
     <in-hand-rotation x="0" y="0" z="0" />
     <character-position x="2.02" y="0" z="13.46" />
-    <character-rotation x="0" y="0" z="0" />
+    <character-rotation x="1" y="0" z="0" />
   </object>
   
   <object name="Toilet">
@@ -115,6 +124,15 @@
     <in-hand-rotation x="0" y="0" z="0" />
     <character-position x="1.6" y="0" z="1.1" />
     <character-rotation x="1" y="0" z="0" />
+  </object>
+  
+  <object name="Toilet handle">
+    <position x="0" y="0" z="0" />
+    <rotation x="0" y="0" z="0" />
+    <in-hand-position x="0" y="0" z="0" />
+    <in-hand-rotation x="0" y="0" z="0" />
+    <character-position x="1.6" y="0" z="1.1" />
+    <character-rotation x="-1" y="0" z="0" />
   </object>
   
   <object name="Towel rack">

@@ -20,7 +20,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		void OnTriggerEnter(Collider col) {
 			if (this.gameObject.name == characterController.nextAction.obj.name) {
 				if (col.gameObject.name == "EthanRightHand" && characterController.nextAction.name == "Open door") {
-					Object.Destroy(GameObject.Find("Door"));
+				    print("open the door");
 				}
 			}
 		}

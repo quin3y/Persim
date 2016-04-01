@@ -32,6 +32,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 					transform.localPosition = characterController.activityPlayback.objects[this.gameObject.name].inHandPosition;
 					transform.localRotation =
 						Quaternion.Euler(characterController.activityPlayback.objects[this.gameObject.name].inHandRotation);
+					print("picked up " + this.gameObject.name);
 				}
 			}
 		}

@@ -29,12 +29,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				GameObject.Find("Mobile phone").transform.localRotation = 
 					Quaternion.Euler(characterController.activityPlayback.objects["Mobile phone"].inHandRotation);
 			}
-
-			// When the last action begins
-			if (characterController.activityPlayback.actionQueue.Count == 0) {
-//				characterController.nextAction = null;
-//				animator.SetBool("actionToWalk", false);
-			}
 	    }
 
 		// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

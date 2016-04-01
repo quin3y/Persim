@@ -11,7 +11,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		// Use this for initialization
 		void Start () {
 			characterController = GameObject.Find("Ethan").GetComponent<AICharacterControl>();
-			light = GameObject.Find("Light").GetComponent<Light>();
+			light = GameObject.Find("Bathroom light").GetComponent<Light>();
 		}
 		
 		// Update is called once per frame
@@ -22,7 +22,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		void OnTriggerEnter(Collider col) {
 			if (col.gameObject.name == "EthanRightHand") {
 				if (characterController.nextAction.name == "Turn on light" && !isOn) {
-					light.intensity = 1;
+					light.intensity = 2;
 					isOn = true;
 					print("light on");
 				}
