@@ -6,13 +6,25 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 {
 	public class Activity {
 		public int id {get; set;}
-		public String name {get; set;}
+		public string name {get; set;}
 		public List<Int32> actionIds;
-		public List<String> objectNames;
+		public List<string> objectNames;
 
 		public Activity() {
 			actionIds = new List<Int32>();
-			objectNames = new List<String>();
+			objectNames = new List<string>();
+		}
+
+		public void AddAction() {
+			actionIds.Add(1);
+			objectNames.Add("Bathroom light switch");
+		}
+
+		public void DeleteAction(int index) {
+			if (actionIds.Count == 0)    return;
+
+			actionIds.RemoveAt(index);
+			objectNames.RemoveAt(index);
 		}
 	}
 }

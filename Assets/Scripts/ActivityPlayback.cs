@@ -27,8 +27,12 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			}
 		}
 
-		public String GetActivityName(int id) {
+		public string GetActivityName(int id) {
 			return activities[id].name;
+		}
+
+		public List<string> GetObjectList() {
+			return new List<string>(objects.Keys);
 		}
 	}
 }

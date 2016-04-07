@@ -131,9 +131,5 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 //				print("starting activity " + id);
 			}
 		}
-
-		void OnGUI() {
-			GUI.Label (new Rect (10, 5,1000, 20), transform.position.ToString());
-		}
     }
 }
