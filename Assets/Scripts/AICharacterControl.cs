@@ -90,14 +90,14 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			// 25. Patrol
 
 			playlist = new ActivityPlaylist();
-//			playlist.AddActivity(3);
+			playlist.AddActivity(3);
 //			playlist.AddActivity(6);
 //			playlist.AddActivity(8);
 //			playlist.AddActivity(10);
 //			playlist.AddActivity(13);
 //			playlist.AddActivity(14);
 //			playlist.AddActivity(17);
-			playlist.AddActivity(18);
+//			playlist.AddActivity(18);
 //			playlist.AddActivity(19);
 //			playlist.AddActivity(22);
 //			playlist.AddActivity(23);
