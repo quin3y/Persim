@@ -9,6 +9,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
     [RequireComponent(typeof (NavMeshAgent))]
     [RequireComponent(typeof (ThirdPersonCharacter))]
     public class AICharacterControl : MonoBehaviour {
+		public TimeSpan startTime;
+
 		public ActivityPlayback activityPlayback;
 		public ActivityPlaylist playlist;
 		public int currentActivity = -1;
@@ -21,9 +23,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		public Animator animator;
 		public GameObject leftObject = null;
 		public GameObject rightObject = null;
-		public bool willPutDownLeftObject;
-		public bool willPutDownRightObject;
-
 		public GameObject mobilePhone;
 
         private void Start() {
@@ -36,10 +35,12 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				character.Move(navAgent.desiredVelocity, false, false);
 				if (!navAgent.pathPending) {
 					if (navAgent.remainingDistance <= navAgent.stoppingDistance) {
-						if (Vector3.Distance(transform.position, nextAction.location) > 0.2f && !arrivedAtDestination) {
+						if (Vector3.Distance(transform.position, nextAction.location) > 0.25f && !arrivedAtDestination) {
 							character.Move((nextAction.location - transform.position), false, false);
+//							print("=== " + Vector3.Distance(transform.position, nextAction.location));
 						}
 						else {
+//							print("====== " + Vector3.Distance(transform.position, nextAction.location));
 							arrivedAtDestination = true;
 
 							// Rotate the character
@@ -90,8 +91,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			// 25. Patrol
 
 			playlist = new ActivityPlaylist();
-			playlist.AddActivity(3);
-//			playlist.AddActivity(6);
+//			playlist.AddActivity(3);
+			playlist.AddActivity(6);
 //			playlist.AddActivity(8);
 //			playlist.AddActivity(10);
 //			playlist.AddActivity(13);
@@ -114,6 +115,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 			// Hide the mobile phone
 			mobilePhone.SetActive(false);
+
+			startTime = new TimeSpan(0, 8, 20, 0, 0);
 		}
 
 		public void PlayActivity(int id) {

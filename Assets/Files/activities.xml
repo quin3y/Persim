@@ -40,7 +40,7 @@
 
   <activity id="6" name="Drinking water">
     <action id="19" object="Kitchen cup" />
-    <action id="18" object="Kitchen cup" />
+    <action id="12" object="Kitchen cup" />
     <action id="20" object="Kitchen cup" />
   </activity>
 
@@ -80,9 +80,9 @@
   </activity>
 
   <activity id="13" name="Shaving">
-    <action id="1" object="Bathroom light switch" />
-    <action id="14" object="Bathroom sink" />
-    <action id="2" object="Bathroom light switch" />
+    <action id="19" object="Bathroom cup" />
+    <action id="14" object="Bathroom cup" />
+    <action id="20" object="Bathroom cup" />
   </activity>
 
   <activity id="14" name="Taking medication">

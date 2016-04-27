@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System;
 using System.Collections;
 
 namespace UnityStandardAssets.Characters.ThirdPerson
@@ -25,6 +26,30 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				isOn = false;
 				print("light off");
 			}
+		}
+
+		// Attach the object to character's right hand
+		void PickUpRight() {
+			string objName = characterController.nextAction.obj.name;
+			GameObject obj = GameObject.Find(objName);
+			characterController.rightObject = obj;
+			obj.transform.parent = GameObject.Find("EthanRightHand").transform;
+			obj.transform.localPosition = characterController.activityPlayback.objects[objName].inHandPosition;
+			obj.transform.localRotation =
+				Quaternion.Euler(characterController.activityPlayback.objects[objName].inHandRotation);
+
+			print(characterController.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))) + ", " + objName + ", picked up right");
+		}
+
+		// Detach the object from character's right hand
+		void PutDownRight() {
+			GameObject obj = characterController.rightObject;
+			characterController.rightObject = null;
+			obj.transform.parent = null;
+			obj.transform.position = characterController.activityPlayback.objects[obj.name].position;
+			obj.transform.rotation = Quaternion.Euler(characterController.activityPlayback.objects[obj.name].rotation);
+
+			print(characterController.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))) + ", " + obj.name + ", put down right");
 		}
 	}
 }

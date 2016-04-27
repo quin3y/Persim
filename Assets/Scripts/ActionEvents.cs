@@ -9,13 +9,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 			AICharacterControl characterController = GameObject.Find("Ethan").GetComponent<AICharacterControl>();
 
-			if (characterController.nextAction.name == "Put down left") {
-				characterController.willPutDownLeftObject = true;
-			}
-			if (characterController.nextAction.name == "Put down right") {
-				characterController.willPutDownRightObject = true;
-			}
-
 			if (characterController.nextAction.name == "Sit down") {
 				animator.SetInteger("nextAction", characterController.activityPlayback.actionQueue.Peek().animation);
 			}
@@ -51,29 +44,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			// Hide the mobile phone
 			if (characterController.nextAction.name == "Text") {
 				characterController.mobilePhone.SetActive(false);
-			}
-
-
-			// If the character is about to put down the object, detach it from the hand
-			if (characterController.willPutDownLeftObject) {
-				characterController.leftObject.transform.parent = null;
-				characterController.leftObject.transform.position =
-					characterController.activityPlayback.objects[characterController.leftObject.name].position;
-				characterController.leftObject.transform.rotation =
-					Quaternion.Euler(characterController.activityPlayback.objects[characterController.leftObject.name].rotation);
-
-				characterController.leftObject = null;
-				characterController.willPutDownLeftObject = false;
-			}
-			if (characterController.willPutDownRightObject) {
-				characterController.rightObject.transform.parent = null;
-				characterController.rightObject.transform.position =
-					characterController.activityPlayback.objects[characterController.rightObject.name].position;
-				characterController.rightObject.transform.rotation =
-					Quaternion.Euler(characterController.activityPlayback.objects[characterController.rightObject.name].rotation);
-
-				characterController.rightObject = null;
-				characterController.willPutDownRightObject = false;
 			}
 	        
 			// Set the location of the next action as the character's destination
