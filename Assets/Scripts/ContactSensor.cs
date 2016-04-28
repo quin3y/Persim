@@ -1,27 +1,28 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ContactSensor : MonoBehaviour {
+namespace UnityStandardAssets.Characters.ThirdPerson
+{
+	public class ContactSensor : MonoBehaviour {
+		AICharacterControl characterController;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 
-	void OnTriggerEnter(Collider col) {
-		if (col.gameObject.tag == "Door frame") {
-			print("door closed");
+		// Use this for initialization
+		void Start () {
+			characterController = GetComponent<AICharacterControl>();
+
 		}
-	}
 
-	void OnTriggerExit(Collider col) {
-		if (col.gameObject.tag == "Door frame") {
-			print("door opened");
+		void OnTriggerEnter(Collider col) {
+			if (col.gameObject.tag == "Door frame") {
+				print("door closed");
+			}
+		}
+
+		void OnTriggerExit(Collider col) {
+			if (col.gameObject.tag == "Door frame") {
+				print("door opened");
+			}
 		}
 	}
 }

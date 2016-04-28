@@ -5,26 +5,27 @@ using System.Collections;
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
 	public class AnimationEvents : MonoBehaviour {
+		StateSpace stateSpace;
 		AICharacterControl characterController;
-		Light light;
-		bool isOn;
 
 		// Use this for initialization
 		void Start () {
+			stateSpace = GameObject.Find("Camera").GetComponent<StateSpace>();
 			characterController = GetComponent<AICharacterControl>();
-			light = GameObject.Find("Bathroom light").GetComponent<Light>();
 		}
 
 		void TurnOnOffLight() {
-			if (characterController.nextAction.name == "Turn on light" && !isOn) {
-				light.intensity = 2;
-				isOn = true;
-				print("light on");
+			string lightName = characterController.nextAction.obj.name;
+
+			if (characterController.nextAction.name == "Turn on light") {
+				GameObject.Find(lightName.Substring(0, lightName.Length - 7)).GetComponent<Light>().intensity = 2;
+				stateSpace.AddDataRecord(stateSpace.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))),
+					lightName, "on");
 			}
-			if (characterController.nextAction.name == "Turn off light" && isOn) {
-				light.intensity = 0;
-				isOn = false;
-				print("light off");
+			if (characterController.nextAction.name == "Turn off light") {
+				GameObject.Find(lightName.Substring(0, lightName.Length - 7)).GetComponent<Light>().intensity = 0;
+				stateSpace.AddDataRecord(stateSpace.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))),
+					lightName, "off");
 			}
 		}
 
@@ -38,7 +39,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			obj.transform.localRotation =
 				Quaternion.Euler(characterController.activityPlayback.objects[objName].inHandRotation);
 
-			print(characterController.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))) + ", " + objName + ", picked up right");
+			print(stateSpace.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))) + ", " + objName + ", picked up right");
 		}
 
 		// Detach the object from character's right hand
@@ -49,7 +50,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			obj.transform.position = characterController.activityPlayback.objects[obj.name].position;
 			obj.transform.rotation = Quaternion.Euler(characterController.activityPlayback.objects[obj.name].rotation);
 
-			print(characterController.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))) + ", " + obj.name + ", put down right");
+			print(stateSpace.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))) + ", " + obj.name + ", put down right");
 		}
 	}
 }

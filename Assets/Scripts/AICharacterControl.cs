@@ -3,14 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
     [RequireComponent(typeof (NavMeshAgent))]
     [RequireComponent(typeof (ThirdPersonCharacter))]
     public class AICharacterControl : MonoBehaviour {
-		public TimeSpan startTime;
-
 		public ActivityPlayback activityPlayback;
 		public ActivityPlaylist playlist;
 		public int currentActivity = -1;
@@ -37,10 +34,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 					if (navAgent.remainingDistance <= navAgent.stoppingDistance) {
 						if (Vector3.Distance(transform.position, nextAction.location) > 0.25f && !arrivedAtDestination) {
 							character.Move((nextAction.location - transform.position), false, false);
-//							print("=== " + Vector3.Distance(transform.position, nextAction.location));
 						}
 						else {
-//							print("====== " + Vector3.Distance(transform.position, nextAction.location));
 							arrivedAtDestination = true;
 
 							// Rotate the character
@@ -97,13 +92,16 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 //			playlist.AddActivity(10);
 //			playlist.AddActivity(13);
 //			playlist.AddActivity(14);
-//			playlist.AddActivity(17);
+			playlist.AddActivity(17);
 //			playlist.AddActivity(18);
-//			playlist.AddActivity(19);
+			playlist.AddActivity(19);
 //			playlist.AddActivity(22);
 //			playlist.AddActivity(23);
 //			playlist.AddActivity(24);
 //			playlist.AddActivity(25);
+
+
+
 
 			character = GetComponent<ThirdPersonCharacter>();
 			animator = GetComponentInChildren<Animator>();
@@ -115,8 +113,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 			// Hide the mobile phone
 			mobilePhone.SetActive(false);
-
-			startTime = new TimeSpan(0, 8, 20, 0, 0);
 		}
 
 		public void PlayActivity(int id) {

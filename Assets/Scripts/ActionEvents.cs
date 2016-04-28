@@ -51,7 +51,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				characterController.nextAction = characterController.activityPlayback.actionQueue.Dequeue();
 				characterController.navAgent.destination = characterController.nextAction.location;
 
-				Debug.Log("next action = " + characterController.nextAction.name);
+//				Debug.Log("next action = " + characterController.nextAction.name);
 			}
 
 			else {    // Activity finished
