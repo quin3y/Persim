@@ -55,7 +55,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			}
 
 			else {    // Activity finished
-				Debug.Log("finish");
 				// Start next activity
 				if (characterController.playlist.Count() > 0) {
 					characterController.PlayActivity(characterController.playlist.Pop());
