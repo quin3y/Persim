@@ -2,6 +2,7 @@
 using System;
 using System.Xml;
 using System.Collections.Generic;
+using System.Text;
 
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
@@ -96,6 +97,37 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			}
 			reader.Close();
 			return activityList;
+		}
+
+		//writes new xml file called activitesCopy according to list of activities passed in
+		public static void SaveActivityConfiguration(List<Activity> activities) {
+//			Debug.Log ("Saving Activity Configuration");
+			XmlTextWriter writer = new XmlTextWriter("Assets/Files/activitiesCopy.xml", Encoding.UTF8); //making XmlWriter
+			writer.Formatting = Formatting.Indented; //making the sure the xml file will be indented
+			writer.WriteStartDocument(); //writes <?xml version="1.0" encoding="utf-8"?>
+			writer.WriteStartElement("activities"); // writes <activities>
+			for (int i = 0; i < activities.Count; i++) {
+				// writes <activity id="id#" name="activityName"> for each activity 
+				writer.WriteStartElement("activity");
+				writer.WriteAttributeString("id", i.ToString());
+				writer.WriteAttributeString("name", activities[i].name);
+
+				List<Int32> actions = activities[i].actionIds; //getting all the actions for the ith activity
+				List<string> objectNames = activities[i].objectNames; //getting all the object names for the ith activity
+
+				for (int j = 0; j < actions.Count; j++) { 
+					//writes <action id="id#" object="objectName" />
+					writer.WriteStartElement("action");
+					writer.WriteAttributeString("id", actions[j].ToString ());
+					writer.WriteAttributeString("object", objectNames[j]);
+					writer.WriteEndElement();
+				}
+
+				writer.WriteEndElement(); //writes </activity>
+			}
+
+			writer.WriteEndElement(); // writes </activities>
+			writer.Close(); //close file
 		}
 	}
 }

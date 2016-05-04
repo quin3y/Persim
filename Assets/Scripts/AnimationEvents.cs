@@ -7,11 +7,16 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 	public class AnimationEvents : MonoBehaviour {
 		StateSpace stateSpace;
 		AICharacterControl characterController;
+		GameObject bedroomDoor;
+		Animator bedroomDoorAnimator;
 
 		// Use this for initialization
 		void Start () {
 			stateSpace = GameObject.Find("Camera").GetComponent<StateSpace>();
 			characterController = GetComponent<AICharacterControl>();
+			bedroomDoor = GameObject.Find("Bedroom door");
+			bedroomDoorAnimator = bedroomDoor.GetComponent<Animator>();
+			bedroomDoorAnimator.SetBool ("open", true);
 		}
 
 		void TurnOnOffLight() {
@@ -51,6 +56,16 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			obj.transform.rotation = Quaternion.Euler(characterController.activityPlayback.objects[obj.name].rotation);
 
 			print(stateSpace.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))) + ", " + obj.name + ", put down right");
+		}
+
+		//closes bedroom door
+		void CloseDoor() {
+			bedroomDoorAnimator.SetBool("open", false);
+		}
+
+		//opens bedroom door
+		void OpenDoor() {
+			bedroomDoorAnimator.SetBool("open", true);
 		}
 	}
 }

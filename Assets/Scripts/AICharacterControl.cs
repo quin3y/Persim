@@ -86,17 +86,29 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			// 25. Patrol
 
 			playlist = new ActivityPlaylist();
+
+			PlayerPrefs.DeleteAll();
+			Debug.Log("Cleared PlayerPrefs");
+
+			//adding activites that weren't finished previous run
+			if (PlayerPrefs.GetInt("prevRun") == 1) {
+				for (int i = 0; i <= PlayerPrefs.GetInt("previousLastIndex"); i++) {
+					Debug.Log("Adding activity " + PlayerPrefs.GetInt("playlistIndex" + i) + " to playlist because it wasn't finished last run");
+					playlist.AddActivity(PlayerPrefs.GetInt ("playlistIndex" + i));
+				}
+			}
+				
 //			playlist.AddActivity(3);
 //			playlist.AddActivity(6);
 //			playlist.AddActivity(8);
-//			playlist.AddActivity(10);
+			playlist.AddActivity(10);
 //			playlist.AddActivity(13);
 //			playlist.AddActivity(14);
 //			playlist.AddActivity(17);
 //			playlist.AddActivity(18);
 //			playlist.AddActivity(19);
 //			playlist.AddActivity(22);
-			playlist.AddActivity(23);
+//			playlist.AddActivity(23);
 //			playlist.AddActivity(24);
 //			playlist.AddActivity(25);
 
