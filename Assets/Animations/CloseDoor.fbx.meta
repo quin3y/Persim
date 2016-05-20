@@ -1,9 +1,9 @@
 fileFormatVersion: 2
-guid: d1841f3f7a2414b438049d5c80fdeefc
-timeCreated: 1458158906
+guid: 164f5743c25c9884cb632fce039ca3e2
+timeCreated: 1462308429
 licenseType: Free
 ModelImporter:
-  serializedVersion: 18
+  serializedVersion: 19
   fileIDToRecycleName:
     100000: Chest
     100002: //RootNode
@@ -137,7 +137,7 @@ ModelImporter:
     400126: RShoulder
     400128: RThigh
     400130: RToe
-    7400000: CloseDoor
+    7400000: iPi Default Take
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -146,6 +146,7 @@ ModelImporter:
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
+    resampleRotations: 1
     optimizeGameObjects: 0
     motionNodeName: 
     animationImportErrors: 
@@ -156,22 +157,23 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     animationCompression: 3
-    animationRotationError: .5
-    animationPositionError: .5
-    animationScaleError: .5
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: CloseDoor
+      name: iPi Default Take
       takeName: iPi Default Take
       firstFrame: 0
-      lastFrame: 124
+      lastFrame: 66
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -184,7 +186,14 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.46190476
+        functionName: CloseDoor
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1
@@ -320,6 +329,7 @@ ModelImporter:
         weight: 0
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -340,9 +350,8 @@ ModelImporter:
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
-    splitTangentsAcrossUV: 1
     normalImportMode: 0
-    tangentImportMode: 1
+    tangentImportMode: 3
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
@@ -764,342 +773,342 @@ ModelImporter:
         length: 0
         modified: 0
     skeleton:
-    - name: CloseDoor(Clone)
+    - name: CloseDoorNew(Clone)
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Hip
-      position: {x: .00127652287, y: .904804945, z: .0127275586}
-      rotation: {x: -.0631324351, y: -.0107875308, z: .0191045161, w: .997763991}
-      scale: {x: 1, y: 1, z: 1.00000012}
+      position: {x: -0.0025670454, y: 0.90013325, z: 0.012329161}
+      rotation: {x: -0.059123263, y: -0.02921551, z: -0.025192624, w: 0.997505}
+      scale: {x: 1, y: 1.0000001, z: 0.99999994}
       transformModified: 1
     - name: LowerSpine
-      position: {x: -0, y: .08802367, z: -.0476335175}
+      position: {x: -0, y: 0.08802367, z: -0.047633518}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: MiddleSpine
-      position: {x: -0, y: .0803285316, z: .00419601472}
-      rotation: {x: .0310065951, y: .00185127417, z: .00755507266, w: .99948895}
+      position: {x: -0, y: 0.08032853, z: 0.0041960147}
+      rotation: {x: 0.03228568, y: 0.006134661, z: 0.012961091, w: 0.9993758}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Chest
-      position: {x: -0, y: .0993972868, z: -.0221248381}
-      rotation: {x: .103160039, y: .00640051486, z: .0250392798, w: .994328976}
+      position: {x: -0, y: 0.09939729, z: -0.022124838}
+      rotation: {x: 0.10749157, y: 0.020491565, z: 0.043116987, w: 0.9930592}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: LClavicle
-      position: {x: -.0226133894, y: .21615909, z: .0740573406}
-      rotation: {x: .00118752173, y: .00726718083, z: .12732695, w: .991833508}
+      position: {x: -0.02261339, y: 0.21615909, z: 0.07405734}
+      rotation: {x: 0, y: 0, z: 0.12830888, w: 0.99173427}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: LShoulder
-      position: {x: -.1321107, y: .0310051888, z: -.0501688607}
-      rotation: {x: -.0448394604, y: -.00372816692, z: -.135370269, w: .989772916}
+      position: {x: -0.1321107, y: 0.031005189, z: -0.05016886}
+      rotation: {x: 0.21538264, y: -0.045869537, z: -0.14241423, w: 0.96499974}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: LForearm
-      position: {x: -.280629694, y: -.000996671966, z: -.002431734}
-      rotation: {x: -.0406797677, y: .0323993042, z: .00261884974, w: .998643339}
+      position: {x: -0.2806297, y: -0.000996672, z: -0.002431734}
+      rotation: {x: -0.042339217, y: 0.022918861, z: -0.0066483747, w: 0.99881834}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: LHand
-      position: {x: -.234104097, y: .000679268676, z: -.00140199601}
+      position: {x: -0.2341041, y: 0.0006792687, z: -0.001401996}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: LFinger0
-      position: {x: -.0187684093, y: -.0142060993, z: .0142282601}
-      rotation: {x: -.0275389776, y: -.242683098, z: -.142244101, w: .959225297}
+      position: {x: -0.01876841, y: -0.014206099, z: 0.01422826}
+      rotation: {x: -0.027538683, y: -0.24268305, z: -0.14224415, w: 0.9592253}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: LFinger01
-      position: {x: -.034944918, y: -.0114775002, z: .026347151}
+      position: {x: -0.034944918, y: -0.0114775, z: 0.026347151}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: LFinger02
-      position: {x: -.0230111592, y: -.0082336301, z: .0165787004}
+      position: {x: -0.02301116, y: -0.00823363, z: 0.0165787}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: EffectorLFinger0
-      position: {x: -.0169214197, y: -.00582487974, z: .0115870088}
+      position: {x: -0.01692142, y: -0.0058248797, z: 0.011587009}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: LFinger1
-      position: {x: -.0907317251, y: .00793473329, z: .0252002683}
-      rotation: {x: -.0797367245, y: .249823794, z: -.106793754, w: .959075272}
+      position: {x: -0.090731725, y: 0.007934733, z: 0.025200268}
+      rotation: {x: -0.103444986, y: 0.23488753, z: -0.26201463, w: 0.93030924}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: LFinger11
-      position: {x: -.0339384079, y: -.00827588048, z: .00598006789}
+      position: {x: -0.033938408, y: -0.0082758805, z: 0.005980068}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: LFinger12
-      position: {x: -.0231688097, y: -.00565215293, z: .00408415077}
+      position: {x: -0.02316881, y: -0.005652153, z: 0.004084151}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: EffectorLFinger1
-      position: {x: -.0164868105, y: -.00492167193, z: .00267435005}
+      position: {x: -0.01648681, y: -0.004921672, z: 0.00267435}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: LFinger2
-      position: {x: -.0920861214, y: .00916349422, z: .00219425606}
+      position: {x: -0.09208612, y: 0.009163494, z: 0.002194256}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: LFinger21
-      position: {x: -.0419629365, y: .000116974799, z: -.000247825781}
+      position: {x: -0.041962937, y: 0.0001169748, z: -0.00024782578}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: LFinger22
-      position: {x: -.0232589003, y: 7.06504725e-05, z: -.000141550088}
+      position: {x: -0.0232589, y: 0.00007065047, z: -0.00014155009}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: EffectorLFinger2
-      position: {x: -.0208918191, y: -.00147516292, z: 2.80525001e-05}
+      position: {x: -0.02089182, y: -0.0014751629, z: 0.0000280525}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: LFinger3
-      position: {x: -.0872704312, y: .00611423282, z: -.0206461679}
+      position: {x: -0.08727043, y: 0.006114233, z: -0.020646168}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: LFinger31
-      position: {x: -.0380768701, y: -.00192793098, z: -.00238383096}
+      position: {x: -0.03807687, y: -0.001927931, z: -0.002383831}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: LFinger32
-      position: {x: -.0216974895, y: -.00109141599, z: -.00136357499}
+      position: {x: -0.02169749, y: -0.001091416, z: -0.001363575}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: EffectorLFinger3
-      position: {x: -.0191849191, y: -.00235881703, z: -.000906849396}
+      position: {x: -0.01918492, y: -0.002358817, z: -0.0009068494}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: LFinger4
-      position: {x: -.0809835866, y: -.0061547379, z: -.0356570892}
-      rotation: {x: .0068572741, y: .0913910866, z: -.0938833579, w: .991355956}
+      position: {x: -0.08098359, y: -0.006154738, z: -0.03565709}
+      rotation: {x: 0.006857022, y: 0.09139017, z: -0.09388219, w: 0.9913562}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: LFinger41
-      position: {x: -.0234209802, y: -.00488419272, z: -.00646517565}
+      position: {x: -0.02342098, y: -0.0048841927, z: -0.0064651757}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: LFinger42
-      position: {x: -.0171745196, y: -.00357710198, z: -.00474387081}
+      position: {x: -0.01717452, y: -0.003577102, z: -0.004743871}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: EffectorLFinger4
-      position: {x: -.0152437994, y: -.00418851292, z: -.00349727808}
+      position: {x: -0.015243799, y: -0.004188513, z: -0.003497278}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Neck
-      position: {x: -0, y: .223987505, z: -.00465816772}
+      position: {x: -0, y: 0.2239875, z: -0.0046581677}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Head
-      position: {x: 3.38635004e-07, y: .126488402, z: .0344047397}
+      position: {x: 0.000000338635, y: 0.1264884, z: 0.03440474}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: EffectorHead
-      position: {x: -7.73250861e-07, y: .176737189, z: .00527599221}
+      position: {x: -0.00000077325086, y: 0.17673719, z: 0.005275992}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: RClavicle
-      position: {x: .0226134099, y: .21615909, z: .0740573406}
-      rotation: {x: .00179857586, y: -.0175963212, z: -.132501677, w: .991024971}
+      position: {x: 0.02261341, y: 0.21615909, z: 0.07405734}
+      rotation: {x: 0.0022469468, y: -0.030035049, z: -0.13530006, w: 0.9903468}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: RShoulder
-      position: {x: .132133991, y: .0310105477, z: -.0501775406}
-      rotation: {x: -.0106036859, y: .00564272422, z: .108016171, w: .99407661}
+      position: {x: 0.13213399, y: 0.031010548, z: -0.05017754}
+      rotation: {x: 0.21843779, y: 0.027650308, z: 0.08935916, w: 0.9713575}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: RForearm
-      position: {x: .280629694, y: -.000996439252, z: -.00243173004}
-      rotation: {x: -.0099143507, y: -.0283186119, z: -.0089504607, w: .999509692}
+      position: {x: 0.2806297, y: -0.0009964393, z: -0.00243173}
+      rotation: {x: -0.012342534, y: -0.024376016, z: 0.005614358, w: 0.99961096}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: RHand
-      position: {x: .234104097, y: .000679501507, z: -.00140199193}
+      position: {x: 0.2341041, y: 0.0006795015, z: -0.0014019919}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: RFinger0
-      position: {x: .0187684093, y: -.0142060993, z: .0142282601}
-      rotation: {x: -.0275388826, y: .242681295, z: .142243639, w: .959225893}
+      position: {x: 0.01876841, y: -0.014206099, z: 0.01422826}
+      rotation: {x: -0.027539128, y: 0.24268137, z: 0.1422445, w: 0.9592257}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: RFinger01
-      position: {x: .0349449776, y: -.0114775002, z: .0263471603}
+      position: {x: 0.034944978, y: -0.0114775, z: 0.02634716}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: RFinger02
-      position: {x: .0230111592, y: -.00823351368, z: .0165787097}
+      position: {x: 0.02301116, y: -0.008233514, z: 0.01657871}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: EffectorRFinger0
-      position: {x: .0169214197, y: -.00582487974, z: .0115870088}
+      position: {x: 0.01692142, y: -0.0058248797, z: 0.011587009}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: RFinger1
-      position: {x: .0907316655, y: .00793484971, z: .0252002683}
-      rotation: {x: -.0878774375, y: -.253752381, z: .147558212, w: .951900125}
+      position: {x: 0.090731665, y: 0.00793485, z: 0.025200268}
+      rotation: {x: -0.10491325, y: -0.22732234, z: 0.2808238, w: 0.926529}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: RFinger11
-      position: {x: .0339384079, y: -.00827588048, z: .00598006789}
+      position: {x: 0.033938408, y: -0.0082758805, z: 0.005980068}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: RFinger12
-      position: {x: .0231688097, y: -.00565215293, z: .00408414891}
+      position: {x: 0.02316881, y: -0.005652153, z: 0.004084149}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: EffectorRFinger1
-      position: {x: .0164868105, y: -.00492167193, z: .00267434795}
+      position: {x: 0.01648681, y: -0.004921672, z: 0.002674348}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: RFinger2
-      position: {x: .0920861214, y: .00916360971, z: .00219425792}
+      position: {x: 0.09208612, y: 0.00916361, z: 0.002194258}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: RFinger21
-      position: {x: .0419629365, y: .0001170912, z: -.000247825781}
+      position: {x: 0.041962937, y: 0.0001170912, z: -0.00024782578}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: RFinger22
-      position: {x: .0232589003, y: 7.06504725e-05, z: -.000141548298}
+      position: {x: 0.0232589, y: 0.00007065047, z: -0.0001415483}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: EffectorRFinger2
-      position: {x: .0208918191, y: -.00147516292, z: 2.80525001e-05}
+      position: {x: 0.02089182, y: -0.0014751629, z: 0.0000280525}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: RFinger3
-      position: {x: .0872704312, y: .00611434877, z: -.0206461679}
+      position: {x: 0.08727043, y: 0.006114349, z: -0.020646168}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: RFinger31
-      position: {x: .0380768701, y: -.00192781491, z: -.00238383096}
+      position: {x: 0.03807687, y: -0.0019278149, z: -0.002383831}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: RFinger32
-      position: {x: .0216974895, y: -.00109141599, z: -.00136357499}
+      position: {x: 0.02169749, y: -0.001091416, z: -0.001363575}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: EffectorRFinger3
-      position: {x: .0191849191, y: -.00235870085, z: -.000906849396}
+      position: {x: 0.01918492, y: -0.0023587008, z: -0.0009068494}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: RFinger4
-      position: {x: .0809835866, y: -.00615462102, z: -.0356570892}
-      rotation: {x: .0068571968, y: -.091390498, z: .093885459, w: .991355836}
+      position: {x: 0.08098359, y: -0.006154621, z: -0.03565709}
+      rotation: {x: 0.0068573076, y: -0.09139081, z: 0.09388328, w: 0.99135596}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: RFinger41
-      position: {x: .0234209802, y: -.00488419272, z: -.00646517565}
+      position: {x: 0.02342098, y: -0.0048841927, z: -0.0064651757}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: RFinger42
-      position: {x: .0171745196, y: -.00357698486, z: -.00474387081}
+      position: {x: 0.01717452, y: -0.0035769849, z: -0.004743871}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: EffectorRFinger4
-      position: {x: .0152437994, y: -.00418851292, z: -.00349727808}
+      position: {x: 0.015243799, y: -0.004188513, z: -0.003497278}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: LThigh
-      position: {x: -.0941627398, y: .0397921614, z: -.00776191754}
-      rotation: {x: .110329263, y: .00356055587, z: -.0178813096, w: .993727863}
+      position: {x: -0.09416274, y: 0.03979216, z: -0.0077619175}
+      rotation: {x: 0.09130212, y: -0.0043744273, z: 0.019477602, w: 0.9956232}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: LShin
-      position: {x: -.00753533887, y: -.449856102, z: 2.92800792e-07}
-      rotation: {x: .0972194597, y: .0029190944, z: -.000769020349, w: .995258391}
+      position: {x: -0.007535339, y: -0.4498561, z: 0.0000002928008}
+      rotation: {x: 0.11622372, y: -0.0041771517, z: 0.00011341291, w: 0.99321425}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: LFoot
-      position: {x: -1.18468492e-07, y: -.441727966, z: 3.32134903e-07}
-      rotation: {x: -.136495307, y: .0475841798, z: .0227563102, w: .98923552}
+      position: {x: -0.00000011846849, y: -0.44172797, z: 0.0000003321349}
+      rotation: {x: -0.123893514, y: 0.059939448, z: 0.028663786, w: 0.99006873}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: LToe
-      position: {x: 2.18236593e-08, y: -.0442024507, z: .0924330726}
+      position: {x: 0.00000002182366, y: -0.04420245, z: 0.09243307}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: EffectorLToe
-      position: {x: 2.18236593e-08, y: 3.81914091e-08, z: .0620094575}
+      position: {x: 0.00000002182366, y: 0.00000003819141, z: 0.062009457}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: RThigh
-      position: {x: .0941636041, y: .03978936, z: -.00776187982}
-      rotation: {x: .0961782262, y: .00283923466, z: .0342351571, w: .994771183}
+      position: {x: 0.094163604, y: 0.03978936, z: -0.00776188}
+      rotation: {x: 0.10348451, y: 0.0031474677, z: 0.07722426, w: 0.99162364}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: RShin
-      position: {x: .00753474142, y: -.449852973, z: 2.56427995e-07}
-      rotation: {x: .155783802, y: .00340967788, z: -.000436449423, w: .98778522}
+      position: {x: 0.0075347414, y: -0.44985297, z: 0.000000256428}
+      rotation: {x: 0.121209785, y: 0.0030878002, z: -0.0013963907, w: 0.9926212}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: RFoot
-      position: {x: -2.53861092e-08, y: -.441727787, z: 3.32134903e-07}
-      rotation: {x: -.0350170583, y: -.0508226082, z: -.0243039187, w: .997797668}
+      position: {x: -0.00000002538611, y: -0.4417278, z: 0.0000003321349}
+      rotation: {x: -0.13519189, y: -0.067070484, z: -0.03207296, w: 0.9880264}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: RToe
-      position: {x: 5.09218694e-08, y: -.0442022793, z: .092432715}
-      rotation: {x: -.0631529391, y: 0, z: -0, w: .9980039}
-      scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
-    - name: EffectorRToe
-      position: {x: 3.63727679e-08, y: 1.273047e-08, z: .0620095097}
+      position: {x: 0.00000005092187, y: -0.04420228, z: 0.092432715}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    armTwist: .5
-    foreArmTwist: .5
-    upperLegTwist: .5
-    legTwist: .5
-    armStretch: .0500000007
-    legStretch: .0500000007
+    - name: EffectorRToe
+      position: {x: 0.000000036372768, y: 0.00000001273047, z: 0.06200951}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
     feetSpacing: 0
     rootMotionBoneName: 
     hasTranslationDoF: 0
