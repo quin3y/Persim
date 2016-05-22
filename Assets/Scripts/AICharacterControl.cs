@@ -108,7 +108,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 //			playlist.AddActivity(18);
 //			playlist.AddActivity(19);
 //			playlist.AddActivity(22);
-			playlist.AddActivity(23);
+//			playlist.AddActivity(23);
 //			playlist.AddActivity(24);
 //			playlist.AddActivity(25);
 

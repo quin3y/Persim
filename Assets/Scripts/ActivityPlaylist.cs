@@ -4,25 +4,15 @@ using System.Collections.Generic;
 
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
-<<<<<<< HEAD
-	public class ActivityPlaylist : MonoBehaviour{
-		private List<int> playlist;
-		public bool popped = false;
-=======
 	public class ActivityPlaylist {
 		private List<int> playlist;
 		private int lastIndexInPlaylist;
+		public bool popped = false;
 
->>>>>>> Josh-Experiment
 		public ActivityPlaylist() {
 			playlist = new List<int>();
 			lastIndexInPlaylist = -1;
 			PlayerPrefs.SetInt("lastIndexInPlaylist", lastIndexInPlaylist);
-		}
-		void Start ()
-		{
-
-		//playlist = new List<int>();
 		}
 
 		// Param: activity's id
@@ -61,12 +51,10 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		// Returns the first activity's id and removes it
 		public int Pop() {
 			//Debug.Log ("Pop Called");
+			popped = true;
 			if (playlist.Count > 0) {
 				int n = playlist[0];
 				playlist.RemoveAt(0);
-<<<<<<< HEAD
-				popped = true;
-=======
 				lastIndexInPlaylist--;
 				PlayerPrefs.SetInt("lastIndexInPlaylist", lastIndexInPlaylist);
 				PlayerPrefs.DeleteKey("playlistIndex0");
@@ -82,7 +70,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 					}
 				}
 
->>>>>>> Josh-Experiment
 				return n;
 			}
 			else {
