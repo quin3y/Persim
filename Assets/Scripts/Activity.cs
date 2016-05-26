@@ -7,6 +7,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 	public class Activity {
 		public int id {get; set;}
 		public string name {get; set;}
+		public string objectName {get; set;}
 		public List<Int32> actionIds;
 		public List<string> objectNames;
 

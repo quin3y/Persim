@@ -24,7 +24,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
         private void Start() {
 			Init();
-			PlayActivity(playlist.Pop());
+			//PlayActivity(playlist.Pop());
         }
 
         private void Update() {
@@ -128,8 +128,9 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		}
 
 		public void PlayActivity(int id) {
+			
 			if (id < 0) {
-				print("Illegal activity id");
+				print("Illegal activity id, less than 0?"+ id);
 				return;
 			}
 
