@@ -1,1 +1,0 @@
-UnityStandardAssets.Characters.ThirdPerson.DataRecord
