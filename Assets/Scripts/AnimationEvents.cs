@@ -16,7 +16,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			characterController = GetComponent<AICharacterControl>();
 			bedroomDoor = GameObject.Find("Bedroom door");
 			bedroomDoorAnimator = bedroomDoor.GetComponent<Animator>();
-			bedroomDoorAnimator.SetBool ("open", true);
+			bedroomDoorAnimator.SetBool("bedroomDoorOpen", true);
+			print("oooooo");
 		}
 
 		void TurnOnOffLight() {
@@ -60,12 +61,12 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 		//closes bedroom door
 		void CloseDoor() {
-			bedroomDoorAnimator.SetBool("open", false);
+			bedroomDoorAnimator.SetBool("bedroomDoorOpen", false);
 		}
 
 		//opens bedroom door
 		void OpenDoor() {
-			bedroomDoorAnimator.SetBool("open", true);
+			bedroomDoorAnimator.SetBool("bedroomDoorOpen", true);
 		}
 	}
 }
