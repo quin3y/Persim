@@ -46,12 +46,12 @@ public class MenuGUI : MonoBehaviour {
 	void Start()
 		{
 			// Not sure why this loop for making the activity nameList doesn't work. Maybe it runs before the other list is initiated?
-			/*
+
 			for (int i = 0;i<Playlist.activityPlayback.activities.Count;i++  ){
 				NameList.Add (Playlist.activityPlayback.activities[i].name);
 
-			}*/
-			NameList.Add("Brushing Teeth");
+			}
+			/*NameList.Add("Brushing Teeth");
 			NameList.Add("Bathing");
 			NameList.Add("Cleaning countertops");
 			NameList.Add("Combing hair");
@@ -75,7 +75,7 @@ public class MenuGUI : MonoBehaviour {
 			NameList.Add("Washing face");
 			NameList.Add("Washing hands");
 			NameList.Add("Watching TV");
-			NameList.Add("Patrol");
+			NameList.Add("Patrol");*/
 			NameList.Sort ();
 			Screen.SetResolution(1280, 800, true);
 		}
@@ -183,7 +183,7 @@ public class MenuGUI : MonoBehaviour {
 					}
 				}
 				if (!play) {
-					if (GUI.Button (new Rect (Screen.width-149, 38, 40, 27), "", "pause")) {
+					if (GUI.Button (new Rect (Screen.width-149, 38, 41, 28), "", "pause")) {
 						prevTime = Time.timeScale;
 						Time.timeScale = 0;
 						play = true;
@@ -193,7 +193,7 @@ public class MenuGUI : MonoBehaviour {
 					if (Time.timeScale < 64) {
 						Time.timeScale = Time.timeScale * 2;
 					} else
-						Time.timeScale = 100;
+						Time.timeScale = 64;
 				}
 				if (GUI.Button (new Rect (Screen.width-188, 37, 40, 27), "", "slowd")) {
 					Time.timeScale = Time.timeScale/2;
@@ -213,35 +213,35 @@ public class MenuGUI : MonoBehaviour {
 				if (GUI.Button (new Rect (55, Screen.height - 100, 150, 50), "Back","menuButton")) {
 					menu = !menu;
 				}
-				if (GUI.Button (new Rect (53, 120, 150, 50), "Characters","menuButton")) {
+				if (GUI.Button (new Rect (60, 140, 150, 50), "Characters","menuButton")) {
 					charScreenUp = true;
 					objectScreenUp = false;
 					actionScreenUp = false;
 					activityScreenUp = false;
 					contextsScreenUp = false;
 				}
-				if (GUI.Button (new Rect (53, 180, 150, 50), "Objects","menuButton")) {
+				if (GUI.Button (new Rect (60, 200, 150, 50), "Objects","menuButton")) {
 					charScreenUp = false;
 					objectScreenUp = true;
 					actionScreenUp = false;
 					activityScreenUp = false;
 					contextsScreenUp = false;
 				}
-				if (GUI.Button (new Rect (53, 240, 150, 50), "Actions","menuButton")) {
+				if (GUI.Button (new Rect (60, 260, 150, 50), "Actions","menuButton")) {
 					charScreenUp = false;
 					objectScreenUp = false;
 					actionScreenUp = true;
 					activityScreenUp = false;
 					contextsScreenUp = false;
 				}
-				if (GUI.Button (new Rect (53, 300, 150, 50), "Activities","menuButton")) {
+				if (GUI.Button (new Rect (60, 320, 150, 50), "Activities","menuButton")) {
 					charScreenUp = false;
 					objectScreenUp = false;
 					actionScreenUp = false;
 					activityScreenUp = true;
 					contextsScreenUp = false;
 				}
-				if (GUI.Button (new Rect (53, 360, 150, 50), "Contexts","menuButton")) {
+				if (GUI.Button (new Rect (60, 380, 150, 50), "Contexts","menuButton")) {
 					charScreenUp = false;
 					objectScreenUp = false;
 					actionScreenUp = false;
@@ -249,10 +249,10 @@ public class MenuGUI : MonoBehaviour {
 					contextsScreenUp = true;
 				}
 				if (charScreenUp){
-					GUI.Box (new Rect ( 500, 140, 100, 210), "", "char1");
-					GUI.Box (new Rect ( 650, 140, 100, 210), "", "char1");
-					GUI.Box (new Rect (500, 360, 100, 210), "", "char1");
-					GUI.Box (new Rect ( 650, 360, 100, 210), "", "char1");
+					GUI.Box (new Rect ( 500, 180, 100, 210), "", "char1");
+					GUI.Box (new Rect ( 650, 180, 100, 210), "", "char1");
+					GUI.Box (new Rect (500, 400, 100, 210), "", "char1");
+					GUI.Box (new Rect ( 650, 400, 100, 210), "", "char1");
 				}
 				if (objectScreenUp) {
 					int scrollViewHeightObj = 126 + Playlist.activityPlayback.GetObjectList().Count * 46;
@@ -316,7 +316,7 @@ public class MenuGUI : MonoBehaviour {
 							} else {
 								hovering = false;
 							}
-							if (hovering&&!activityPopup) { //if hovering bring up the action popup menu logic
+							if (hovering&&!activityPopup&&!objectPopup) { //if hovering bring up the action popup menu logic
 
 								if (GUI.Button (new Rect (1050, 136+ 22 * (height), 18, 18), "", "x")) {
 									Playlist.activityPlayback.activities [i].DeleteAction (j);
