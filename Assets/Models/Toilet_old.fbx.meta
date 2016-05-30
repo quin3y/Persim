@@ -1,17 +1,38 @@
 fileFormatVersion: 2
-guid: 581c309a9f4db416f8c32f1f3f01ade6
-timeCreated: 1464612008
+guid: 6494e98bce03d443ab3ce39b9ba97c04
+timeCreated: 1458434140
 licenseType: Free
 ModelImporter:
-  serializedVersion: 19
+  serializedVersion: 18
   fileIDToRecycleName:
-    100000: Circle02
-    100002: //RootNode
-    400000: Circle02
-    400002: //RootNode
-    2300000: Circle02
-    3300000: Circle02
+    100000: ChamferCy0
+    100002: ChamferCyl
+    100004: Circle02
+    100006: Cylinder01
+    100008: Cylinder02
+    100010: //RootNode
+    400000: ChamferCy0
+    400002: ChamferCyl
+    400004: Circle02
+    400006: Cylinder01
+    400008: Cylinder02
+    400010: //RootNode
+    2300000: ChamferCy0
+    2300002: ChamferCyl
+    2300004: Circle02
+    2300006: Cylinder01
+    2300008: Cylinder02
+    3300000: ChamferCy0
+    3300002: ChamferCyl
+    3300004: Circle02
+    3300006: Cylinder01
+    3300008: Cylinder02
     4300000: Circle02
+    4300002: ChamferCyl
+    4300004: Cylinder01
+    4300006: ChamferCy0
+    4300008: Cylinder02
+    9500000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
@@ -19,7 +40,6 @@ ModelImporter:
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
-    resampleRotations: 1
     optimizeGameObjects: 0
     motionNodeName: 
     animationImportErrors: 
@@ -27,9 +47,9 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     animationCompression: 1
-    animationRotationError: 0.5
-    animationPositionError: 0.5
-    animationScaleError: 0.5
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
     clipAnimations: []
@@ -53,24 +73,25 @@ ModelImporter:
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
     normalImportMode: 0
-    tangentImportMode: 3
+    tangentImportMode: 1
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
     human: []
     skeleton: []
-    armTwist: 0.5
-    foreArmTwist: 0.5
-    upperLegTwist: 0.5
-    legTwist: 0.5
-    armStretch: 0.05
-    legStretch: 0.05
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
     feetSpacing: 0
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
