@@ -41,7 +41,7 @@ public class MenuGUI : MonoBehaviour {
 
 
 	TimeSpan timeSpan;
-		DateTime todayTime; //= DateTime.Today.Add(timeSpan);
+	DateTime todayTime; //= DateTime.Today.Add(timeSpan);
 	
 	void Start()
 		{

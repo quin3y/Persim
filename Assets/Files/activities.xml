@@ -62,7 +62,7 @@
   
   <activity id="10" name="Going to bed">
     <action id="24" object="Bedroom door" />
-    <action id="25" object="Bed" />
+    <action id="26" object="Bed" />
     <action id="23" object="Bedroom door" />
     <action id="0" object="Couch" />
   </activity>
@@ -155,19 +155,6 @@
     <action id="8" object="Couch" />
     <action id="10" object="Couch" />
     <action id="9" object="Couch" />
-  </activity>
-  
-  <activity id="25" name="Patrol">
-    <action id="19" object="Bathroom sink" />
-    <action id="19" object="Toilet" />
-    <action id="19" object="Washer" />
-    <action id="19" object="Bed" />
-    <action id="19" object="Rack" />
-    <action id="19" object="Couch" />
-    <action id="19" object="Computer desk" />
-    <action id="19" object="Front door" />
-    <action id="19" object="Table" />
-    <action id="19" object="Kitchen cup" />
   </activity>
   
   

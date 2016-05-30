@@ -1,4 +1,0 @@
-UnityStandardAssets.Characters.ThirdPerson.DataRecord
-UnityStandardAssets.Characters.ThirdPerson.DataRecord
-UnityStandardAssets.Characters.ThirdPerson.DataRecord
-UnityStandardAssets.Characters.ThirdPerson.DataRecord

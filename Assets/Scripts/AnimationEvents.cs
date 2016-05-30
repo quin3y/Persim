@@ -17,7 +17,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			bedroomDoor = GameObject.Find("Bedroom door");
 			bedroomDoorAnimator = bedroomDoor.GetComponent<Animator>();
 			bedroomDoorAnimator.SetBool("bedroomDoorOpen", true);
-			print("oooooo");
 		}
 
 		void TurnOnOffLight() {

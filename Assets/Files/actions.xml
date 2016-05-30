@@ -26,6 +26,11 @@
   <action id="23" name="Open door" animation="23" />
   <action id="24" name="Close door" animation="24" />
   <action id="25" name="Fall" animation="25" />
+  <action id="26" name="Lie down" animation="26" />
+  <action id="27" name="Turn off lamp" animation="27" />
+  <action id="28" name="Sleep" animation="28" />
+  <action id="29" name="Get up" animation="29" />
+
 
   
   
