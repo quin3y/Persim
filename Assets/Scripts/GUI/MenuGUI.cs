@@ -46,12 +46,12 @@ public class MenuGUI : MonoBehaviour {
 	void Start()
 		{
 			// Not sure why this loop for making the activity nameList doesn't work. Maybe it runs before the other list is initiated?
-
+			/*Debug.Log (Playlist.activityPlayback.activities.Count);
 			for (int i = 0;i<Playlist.activityPlayback.activities.Count;i++  ){
 				NameList.Add (Playlist.activityPlayback.activities[i].name);
 
 			}
-			/*NameList.Add("Brushing Teeth");
+			NameList.Add("Brushing Teeth");
 			NameList.Add("Bathing");
 			NameList.Add("Cleaning countertops");
 			NameList.Add("Combing hair");
@@ -76,7 +76,7 @@ public class MenuGUI : MonoBehaviour {
 			NameList.Add("Washing hands");
 			NameList.Add("Watching TV");
 			NameList.Add("Patrol");*/
-			NameList.Sort ();
+			//NameList.Sort ();
 			Screen.SetResolution(1280, 800, true);
 		}
 
@@ -120,11 +120,11 @@ public class MenuGUI : MonoBehaviour {
 				}
 		
 				//Creates Scroll view box of buttons of the activities
-				int scrollViewHeight = 42 + NameList.Count * 36;
+				int scrollViewHeight = 42 + Playlist.activityPlayback.activities.Count * 36;
 				scrollPosition = GUI.BeginScrollView (new Rect (Screen.width - 220, 100, 230, 460), scrollPosition, new Rect (Screen.width - 110, 40, 200, scrollViewHeight));
-				for (int i = 0; i < NameList.Count; i++) {
-					if (GUI.Button (new Rect (Screen.width - 90, 52 + 36 * i, 186, 30), NameList [i])) {
-						toDoList.Add (NameList [i]);
+				for (int i = 0; i < Playlist.activityPlayback.activities.Count; i++) {
+					if (GUI.Button (new Rect (Screen.width - 90, 52 + 36 * i, 186, 30), Playlist.activityPlayback.activities[i].name)) {
+						toDoList.Add (Playlist.activityPlayback.activities[i].name);
 						Playlist.playlist.AddActivity (i);
 						Debug.Log ("i is " +i);
 					}
