@@ -46,38 +46,10 @@ public class MenuGUI : MonoBehaviour {
 	void Start()
 		{
 			// Not sure why this loop for making the activity nameList doesn't work. Maybe it runs before the other list is initiated?
-			/*Debug.Log (Playlist.activityPlayback.activities.Count);
-			for (int i = 0;i<Playlist.activityPlayback.activities.Count;i++  ){
+			/*for (int i = 0;i<Playlist.activityPlayback.activities.Count;i++  ){
 				NameList.Add (Playlist.activityPlayback.activities[i].name);
-
-			}
-			NameList.Add("Brushing Teeth");
-			NameList.Add("Bathing");
-			NameList.Add("Cleaning countertops");
-			NameList.Add("Combing hair");
-			NameList.Add("Doing laundry");
-			NameList.Add("Dressing");
-			NameList.Add("Drinking water");
-			NameList.Add("Eating a meal");
-			NameList.Add("Falling");
-			NameList.Add("Getting up");
-			NameList.Add("Going to bed");
-			NameList.Add("Leaving home");
-			NameList.Add("Preparing a meal");
-			NameList.Add("Taking medication");
-			NameList.Add("Taking out trash");
-			NameList.Add("Undressing");
-			NameList.Add("Using bathroom");
-			NameList.Add("Using cellphone");
-			NameList.Add("Using computer");
-			NameList.Add("Vacuuming floors");
-			NameList.Add("Washing dishes");
-			NameList.Add("Washing face");
-			NameList.Add("Washing hands");
-			NameList.Add("Watching TV");
-			NameList.Add("Patrol");*/
-			//NameList.Sort ();
-			Screen.SetResolution(1280, 800, true);
+			}*/
+			Screen.SetResolution(1280, 800, false);
 		}
 
 		void Update()
@@ -87,6 +59,10 @@ public class MenuGUI : MonoBehaviour {
 			timeSpan = TimeSpan.FromSeconds(time);
 			DateTime todayTime = DateTime.Today.Add(timeSpan);
 			timeText = todayTime.ToString("hh:mm tt");
+			for (int i = 0;i<Playlist.activityPlayback.activities.Count;i++  ){
+				NameList.Add (Playlist.activityPlayback.activities[i].name);
+
+			}
 
 		}
 			
@@ -175,7 +151,7 @@ public class MenuGUI : MonoBehaviour {
 							if (Time.timeScale == 0) {
 								Time.timeScale = prevTime;
 							}
-							Playlist.PlayActivity (NameList.IndexOf (toDoList [0]));
+							Playlist.PlayActivity (NameList.IndexOf(toDoList [0]));
 							Playlist.playlist.Pop();
 							play = false;
 							needsPlay = false;
@@ -196,7 +172,9 @@ public class MenuGUI : MonoBehaviour {
 						Time.timeScale = 64;
 				}
 				if (GUI.Button (new Rect (Screen.width-188, 37, 40, 27), "", "slowd")) {
-					Time.timeScale = Time.timeScale/2;
+					if (Time.timeScale > 1) {
+						Time.timeScale = Time.timeScale / 2;
+					}
 				}
 				if (GUI.Button (new Rect (Screen.width-72, 37, 40, 27), "", "redo")) {
 					toDoList.Insert (0, toDoList [0]);
@@ -210,38 +188,38 @@ public class MenuGUI : MonoBehaviour {
 			//Main Menu
 			if (menu) {
 				GUI.Box(new Rect (0, 0, Screen.width, Screen.height), "", "mainMenu");
-				if (GUI.Button (new Rect (55, Screen.height - 100, 150, 50), "Back","menuButton")) {
+				if (GUI.Button (new Rect (55f/1280f*Screen.width, 700f/800f*Screen.height, 150f/1280f*Screen.width, 50f/800f*Screen.height), "Back","menuButton")) {
 					menu = !menu;
 				}
-				if (GUI.Button (new Rect (60, 140, 150, 50), "Characters","menuButton")) {
+				if (GUI.Button (new Rect ((60f/1280f)*Screen.width, (140f/800f)*Screen.height, (150f/1280f)*Screen.width, (50f/800f)*Screen.height), "Characters","menuButton")) {
 					charScreenUp = true;
 					objectScreenUp = false;
 					actionScreenUp = false;
 					activityScreenUp = false;
 					contextsScreenUp = false;
 				}
-				if (GUI.Button (new Rect (60, 200, 150, 50), "Objects","menuButton")) {
+				if (GUI.Button (new Rect ((60f/1280f)*Screen.width, (200f/800f)*Screen.height, (150f/1280f)*Screen.width, (50f/800f)*Screen.height), "Objects","menuButton")) {
 					charScreenUp = false;
 					objectScreenUp = true;
 					actionScreenUp = false;
 					activityScreenUp = false;
 					contextsScreenUp = false;
 				}
-				if (GUI.Button (new Rect (60, 260, 150, 50), "Actions","menuButton")) {
+				if (GUI.Button (new Rect ((60f/1280f)*Screen.width, (260f/800f)*Screen.height, (150f/1280f)*Screen.width, (50f/800f)*Screen.height), "Actions","menuButton")) {
 					charScreenUp = false;
 					objectScreenUp = false;
 					actionScreenUp = true;
 					activityScreenUp = false;
 					contextsScreenUp = false;
 				}
-				if (GUI.Button (new Rect (60, 320, 150, 50), "Activities","menuButton")) {
+				if (GUI.Button (new Rect ((60f/1280f)*Screen.width, (320f/800f)*Screen.height, (150f/1280f)*Screen.width, (50f/800f)*Screen.height), "Activities","menuButton")) {
 					charScreenUp = false;
 					objectScreenUp = false;
 					actionScreenUp = false;
 					activityScreenUp = true;
 					contextsScreenUp = false;
 				}
-				if (GUI.Button (new Rect (60, 380, 150, 50), "Contexts","menuButton")) {
+				if (GUI.Button (new Rect ((60f/1280f)*Screen.width, (380f/800f)*Screen.height, (150f/1280f)*Screen.width, (50f/800f)*Screen.height), "Contexts","menuButton")) {
 					charScreenUp = false;
 					objectScreenUp = false;
 					actionScreenUp = false;
@@ -249,14 +227,14 @@ public class MenuGUI : MonoBehaviour {
 					contextsScreenUp = true;
 				}
 				if (charScreenUp){
-					GUI.Box (new Rect ( 500, 180, 100, 210), "", "char1");
-					GUI.Box (new Rect ( 650, 180, 100, 210), "", "char1");
-					GUI.Box (new Rect (500, 400, 100, 210), "", "char1");
-					GUI.Box (new Rect ( 650, 400, 100, 210), "", "char1");
+					GUI.Box (new Rect ( 500f/1280f*Screen.width, 180f/800f*Screen.height, 140f/1280f*Screen.width, 210f/800f*Screen.height), "", "char1");
+					GUI.Box (new Rect ( 650f/1280f*Screen.width, 180f/800f*Screen.height, 140f/1280f*Screen.width, 210f/800f*Screen.height), "", "char1");
+					GUI.Box (new Rect (500f/1280f*Screen.width, 400f/800f*Screen.height, 140f/1280f*Screen.width, 210f/800f*Screen.height), "", "char1");
+					GUI.Box (new Rect ( 650f/1280f*Screen.width, 400f/800f*Screen.height, 140f/1280f*Screen.width, 210f/800f*Screen.height), "", "char1");
 				}
 				if (objectScreenUp) {
 					int scrollViewHeightObj = 126 + Playlist.activityPlayback.GetObjectList().Count * 46;
-					scrollPosition = GUI.BeginScrollView(new Rect (Screen.width - 815, 126, 340, 480), scrollPosition, new Rect (Screen.width-405, 126, 320, scrollViewHeightObj));
+					scrollPosition = GUI.BeginScrollView(new Rect (300f/1280f*Screen.width, 160f/800f*Screen.height, 440, 580f/800f*Screen.height), scrollPosition, new Rect (Screen.width-405, 126, 320, scrollViewHeightObj));
 					for (int i = 0;i<Playlist.activityPlayback.GetObjectList().Count;i++  ){
 						if (GUI.Button (new Rect (Screen.width - 405, 126+47*i, 320, 40), Playlist.activityPlayback.GetObjectList ()[i] , "objectButton")) {
 						}
@@ -265,7 +243,7 @@ public class MenuGUI : MonoBehaviour {
 				}
 				if (actionScreenUp) {
 					int scrollViewHeightAction = 126 +Playlist.activityPlayback.actions.Count * 46;
-					scrollPosition = GUI.BeginScrollView(new Rect (Screen.width - 815, 126, 340, 480), scrollPosition, new Rect (Screen.width-405, 126, 320, scrollViewHeightAction));
+					scrollPosition = GUI.BeginScrollView(new Rect (300f/1280f*Screen.width, 160f/800f*Screen.height, 440, 580f/800f*Screen.height), scrollPosition, new Rect (Screen.width-405, 126, 320, scrollViewHeightAction));
 					for (int i = 0;i<Playlist.activityPlayback.actions.Count;i++  ){
 						if (GUI.Button (new Rect (Screen.width - 405, 126+47*i, 320, 40), Playlist.activityPlayback.actions[i].name, "objectButton")) {
 						}
@@ -276,7 +254,7 @@ public class MenuGUI : MonoBehaviour {
 				if (activityScreenUp) {
 					int height = 0;
 					int scrollViewHeightActivity = 126 +Playlist.activityPlayback.activities.Count*6 * 66;
-					scrollPosition = GUI.BeginScrollView(new Rect (220, 126, 980, 480), scrollPosition, new Rect (220, 126, 320, scrollViewHeightActivity));
+					scrollPosition = GUI.BeginScrollView(new Rect (260f/1280f*Screen.width, 160f/800f*Screen.height, 900f/1280f*Screen.width, 580f/800f*Screen.height), scrollPosition, new Rect (220, 126, 320, scrollViewHeightActivity));
 					for (int i = 0; i < Playlist.activityPlayback.activities.Count; i++) {
 						// Displays the activty name and the action and object columns
 						if (GUI.Button (new Rect (220, 126 + 22 * height, 120, 40), Playlist.activityPlayback.activities [i].name, "activity")) {
@@ -318,7 +296,7 @@ public class MenuGUI : MonoBehaviour {
 							}
 							if (hovering&&!activityPopup&&!objectPopup) { //if hovering bring up the action popup menu logic
 
-								if (GUI.Button (new Rect (1050, 136+ 22 * (height), 18, 18), "", "x")) {
+								if (GUI.Button (new Rect (1050f/1280f*Screen.width, 136+ 22 * (height), 18, 18), "", "x")) {
 									Playlist.activityPlayback.activities [i].DeleteAction (j);
 								}
 								if (GUI.Button (new Rect (680, 140+ 22 * (height), 9, 9), "", "activityMenuTriangle")) {
@@ -336,10 +314,10 @@ public class MenuGUI : MonoBehaviour {
 							}
 							if (activityPopup) { // creates action popup menu
 								for (int l = 0; l < Playlist.activityPlayback.actions.Count; l++) {
-									if (GUI.Button (new Rect (680, 104 + (22 * actionheight), 220, 22), "Cancel", "cancelPopup")) {
+									if (GUI.Button (new Rect (680, 180 + (22 * actionheight), 220, 22), "Cancel", "cancelPopup")) {
 										activityPopup = false;
 									}
-									if (GUI.Button (new Rect (680, 126 + (22 * actionheight)+(22*l), 220, 22), Playlist.activityPlayback.actions[l].name, "actionPopup")) {
+									if (GUI.Button (new Rect (680, 202 + (22 * actionheight)+(22*l), 220, 22), Playlist.activityPlayback.actions[l].name, "actionPopup")) {
 										Playlist.activityPlayback.activities [activityCounter].actionIds [actionCounter] = l;
 										activityPopup = false;
 									}
@@ -347,10 +325,10 @@ public class MenuGUI : MonoBehaviour {
 							}
 							if (objectPopup) { // creates object popup menu
 								for (int l = 0; l < Playlist.activityPlayback.GetObjectList().Count; l++) {
-									if (GUI.Button (new Rect (880, 104 + (22 * actionheight), 220, 22), "Cancel", "cancelPopup")) {
+									if (GUI.Button (new Rect (880, 180 + (22 * actionheight), 220, 22), "Cancel", "cancelPopup")) {
 										objectPopup = false;
 									}
-									if (GUI.Button (new Rect (880, 126 + (22 * actionheight)+(22*l), 220, 22), Playlist.activityPlayback.GetObjectList ()[l], "actionPopup")) {
+									if (GUI.Button (new Rect (880, 202 + (22 * actionheight)+(22*l), 220, 22), Playlist.activityPlayback.GetObjectList ()[l], "actionPopup")) {
 										Playlist.activityPlayback.activities[activityCounter].objectNames[actionCounter] = Playlist.activityPlayback.GetObjectList ()[l];
 										objectPopup = false;
 									}
@@ -359,7 +337,7 @@ public class MenuGUI : MonoBehaviour {
 
 						}
 						height += 1;
-						if (GUI.Button (new Rect (1050, 138+ 22 * (height), 18, 18), "", "plus")) { // plus button
+						if (GUI.Button (new Rect (1050f/1280f*Screen.width, 138+ 22 * (height), 18, 18), "", "plus")) { // plus button
 							Playlist.activityPlayback.activities [i].AddAction();
 						}
 						height += 1;
