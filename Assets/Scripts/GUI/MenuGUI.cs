@@ -28,7 +28,7 @@ public class MenuGUI : MonoBehaviour {
 	public bool down = false;
 	public float time=0;
 	float hours= 0;
-	int actionheight = 0;
+	float actionheight = 0;
 	int activityCounter = 0;
 	int actionCounter = 0;
 	bool activityPopup = false;
@@ -252,7 +252,7 @@ public class MenuGUI : MonoBehaviour {
 					GUI.EndScrollView ();
 				}
 				if (activityScreenUp) {
-					int height = 0;
+					float height = 0;
 					int scrollViewHeightActivity = 126 +Playlist.activityPlayback.activities.Count*6 * 66;
 					scrollPosition = GUI.BeginScrollView(new Rect (260f/1280f*Screen.width, 160f/800f*Screen.height, 900f/1280f*Screen.width, 580f/800f*Screen.height), scrollPosition, new Rect (220, 126, 320, scrollViewHeightActivity));
 					for (int i = 0; i < Playlist.activityPlayback.activities.Count; i++) {
@@ -268,7 +268,7 @@ public class MenuGUI : MonoBehaviour {
 						// This loop creates the actions and objects next to the activity 
 						for (int j = 0; j < Playlist.activityPlayback.activities [i].objectNames.Count; j++) {
 							height += 1;
-							if (GUI.Button (new Rect (1050, 136+ 22 * (height), 18, 18), "", "nothing")) { //delete button on hover
+							if (GUI.Button (new Rect (1050f/1280f*Screen.width, 136+ 22 * (height), 18, 18), "", "nothing")) { //delete button on hover
 								Playlist.activityPlayback.activities [i].DeleteAction (j);
 							}
 							if (GUI.Button (new Rect (680, 140+ 22 * (height), 9, 9), "", "nothing")) { // action popup button
@@ -296,7 +296,7 @@ public class MenuGUI : MonoBehaviour {
 							}
 							if (hovering&&!activityPopup&&!objectPopup) { //if hovering bring up the action popup menu logic
 
-								if (GUI.Button (new Rect (1050f/1280f*Screen.width, 136+ 22 * (height), 18, 18), "", "x")) {
+								if (GUI.Button (new Rect (1050f/1280f*Screen.width, (136+ 22 * (height)), 18, 18), "", "x")) {
 									Playlist.activityPlayback.activities [i].DeleteAction (j);
 								}
 								if (GUI.Button (new Rect (680, 140+ 22 * (height), 9, 9), "", "activityMenuTriangle")) {
