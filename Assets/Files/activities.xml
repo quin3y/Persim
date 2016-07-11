@@ -107,9 +107,9 @@
   </activity>
 
   <activity id="17" name="Using bathroom">
-    <action id="8" object="Toilet" />
+    <!--action id="8" object="Toilet" />
     <action id="10" object="Toilet" />
-    <action id="9" object="Toilet" />
+    <action id="9" object="Toilet" /-->
     <action id="22" object="Toilet handle" />
     <action id="3" object="Bathroom sink" />
     <action id="4" object="Towel rack" />
