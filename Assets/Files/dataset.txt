@@ -1,2 +1,2 @@
-08:20:10, Toilet, on
-08:20:14, Toilet, off
+08:20:07, Toilet, on
+08:20:09, Toilet, off
