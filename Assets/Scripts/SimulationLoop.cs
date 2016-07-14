@@ -13,12 +13,9 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 
 		void Start() {
-			print("starting simulation loop");
-
 		}
 
 		void Update() {
-			print("========");
 		}
 			
 		public SimulationLoop()

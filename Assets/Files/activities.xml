@@ -84,9 +84,9 @@
   </activity>
 
   <activity id="13" name="Shaving">
-    <action id="19" object="Bathroom cup" />
-    <action id="14" object="Bathroom cup" />
-    <action id="20" object="Bathroom cup" />
+    <action id="19" object="Razor" />
+    <action id="14" object="Razor" />
+    <action id="20" object="Razor" />
   </activity>
 
   <activity id="14" name="Taking medication">
