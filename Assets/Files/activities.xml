@@ -61,7 +61,7 @@
   </activity>
   
   <activity id="10" name="Going to bed">
-    <!--action id="24" object="Bedroom door" /-->
+    <action id="24" object="Bedroom door" />
     <action id="26" object="Bed" />
     <action id="27" object="Bed" />
     <action id="28" object="Bed" />
