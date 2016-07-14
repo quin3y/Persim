@@ -34,10 +34,16 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			AICharacterControl characterController = GameObject.Find("Ethan").GetComponent<AICharacterControl>();
 			characterController.arrivedAtDestination = false;
 
-			if (characterController.nextAction.name == "Sit down") {
+			Debug.Log("current action = " + characterController.nextAction.name);
+			if (characterController.nextAction.name == "Sit down" ||
+				characterController.nextAction.name == "Lie down" ||
+				characterController.nextAction.name == "Turn off lamp" ||
+				characterController.nextAction.name == "Sleep") {
+				// Go to next animation directly
 				animator.SetInteger("nextAction", characterController.activityPlayback.actionQueue.Peek().animation);
 			}
-			else {
+			else {    
+				// Go back to grounded
 				animator.SetInteger("nextAction", 0);
 			}
 
@@ -51,7 +57,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				characterController.nextAction = characterController.activityPlayback.actionQueue.Dequeue();
 				characterController.navAgent.destination = characterController.nextAction.location;
 
-//				Debug.Log("next action = " + characterController.nextAction.name);
+				Debug.Log("next action = " + characterController.nextAction.name);
 			}
 
 			else {    // Activity finished

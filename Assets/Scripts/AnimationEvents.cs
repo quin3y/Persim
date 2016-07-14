@@ -34,6 +34,12 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			}
 		}
 
+		void TurnOffLamp() {
+			GameObject.Find("Main light").GetComponent<Light>().intensity = 0;
+			stateSpace.AddDataRecord(stateSpace.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))),
+				"Lamp", "off");
+		}
+
 		// Attach the object to character's right hand
 		void PickUpRight() {
 			string objName = characterController.nextAction.obj.name;

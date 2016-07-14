@@ -32,7 +32,7 @@
     <rotation x="0" y="0" z="0" />
     <in-hand-position x="0" y="0" z="0" />
     <in-hand-rotation x="0" y="0" z="0" />
-    <character-position x="9.08" y="0" z="8.35" />
+    <character-position x="10.4" y="0.016" z="8.7" />
     <character-rotation x="-1" y="0" z="0" />
   </object>
   
@@ -93,8 +93,8 @@
   <object name="Mobile phone">
     <position x="0" y="0" z="0" />
     <rotation x="0" y="0" z="0" />
-    <in-hand-position x="-0.02" y="0.11" z="-0.077" />
-    <in-hand-rotation x="338.88" y="14.52" z="317.77" />
+    <in-hand-position x="-0.1" y="-0.05" z="-0.08" />
+    <in-hand-rotation x="348" y="331" z="78" />
     <character-position x="7" y="0" z="12" />
     <character-rotation x="0" y="0" z="1" />
   </object>

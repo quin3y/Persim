@@ -19,7 +19,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			Debug.Log(time + ", " + objName + ", " + status);
 		}
 
-		public string ToStringg() {
+		public string ToString() {
 			return time + ", " + objName + ", " + status;
 		}
 	}
