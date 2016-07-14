@@ -46,9 +46,9 @@
   </object>
   
   <object name="Comb">
-    <position x="0" y="0" z="0" />
-    <rotation x="0" y="0" z="0" />
-    <in-hand-position x="0" y="0" z="0" />
+    <position x="0.87" y="0.75" z="4.13" />
+    <rotation x="90" y="103.77" z="103.77" />
+    <in-hand-position x="-0.1" y="-0.008" z="-0.067" />
     <in-hand-rotation x="0" y="0" z="0" />
     <character-position x="1.2" y="0" z="4" />
     <character-rotation x="-1" y="0" z="0" />
