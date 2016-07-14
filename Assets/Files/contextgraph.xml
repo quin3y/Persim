@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+
+<!---
+<contextcondition> consists of conditions of each object involved in the context.
+<nextcontexts> represents next coming contexts. In case that multiple contexts tie, probability of each context will be considered.
+-->
+<contextgraph>
+  <context id="0" name="Sleep">
+  	<contextconditions>
+  		<condition object="Bed" status="always" />
+  		<condition object="Bedroom door" status="maybe" />
+   	</contextconditions>
+   	<activities>
+   		<activity id="9" />
+   	</activities>
+   	<nextcontexts>
+   		<context id="1" prob="0.8" /> <!-- if all contexts have equal probability, set up 0 for all. In this case, randomly choose the next one !-->
+   		<context id="2" prob="0.2" />
+   	</nextcontexts>
+  </context>
+
+  <context id="1" name="Personal Hygiene">
+  	<contextconditions>
+  		<condition object="Bathroom light switch" status="always" />
+  		<condition object="Bathroom sink" status="maybe" />
+  		<condition object="Towel rack" status="maybe" />
+  		<condition object="Toilet" status="maybe" />
+  		<condition object="Comb" status="maybe" />
+  	</contextconditions>
+  	<activities>
+  		<activity id="3" />
+  		<activity id="13" />
+  		<activity id="17" />
+  		<activity id="22" />
+  		<activity id="23" />
+  	</activities>
+  	<nextcontexts>
+  		<context id="2" prob="0.8" />
+  		<context id="0" prob="0.2" />
+  	</nextcontexts>
+  </context>
+
+  <context id="2" name="Work">
+  	<contextconditions>
+  		<condition object="cellphone" />
+  		<condition object="Computer desk" />
+  	</contextconditions>
+  	<activities>
+  		<activity id="18" />
+  		<activity id="19" />
+  	</activities>
+  	<nextcontexts>
+  		<context id="1" prob="0.2" />
+  		<context id="3" prob="0.8" />
+  	</nextcontexts>
+  </context>
+
+  <context>
+  	<contextconditions>
+  		<condition object="Kitchen up" status="Always" />
+  	</contextconditions>
+  	<activities>
+  		<activity id="6" />
+  		<activity id="10" />
+  	</activities>
+  	<nextcontexts>
+  		<context id="0" prob="1" />
+  	</nextcontexts>
+  </context>
+</contextgraph>
