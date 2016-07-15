@@ -151,10 +151,10 @@
   </activity>
 
   <activity id="23" name="Washing hands">
-    <action id="1" object="Bathroom light switch" />
+    <!--action id="1" object="Bathroom light switch" /-->
     <action id="3" object="Bathroom sink" />
     <action id="4" object="Towel rack" />
-    <action id="2" object="Bathroom light switch" />
+    <!--action id="2" object="Bathroom light switch" /-->
   </activity>  
 
   <activity id="24" name="Watching TV">
