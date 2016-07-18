@@ -4,51 +4,190 @@ using System.Collections.Generic;
 
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
-	enum Object_Status {ALWAYS, MAYBE, NEVER};
+	public class Context {
+		int id;
+		private string name;
+		List<ContextCondition> contextConditions;
+		List<ContextActivity> contextActivities;		// activities to be performed
+		List<NextContext> nextContexts;					// next contexts to be heading from the context
 
-	public class Context
-	{
-		public int id;
-		public String name;
-		List<Condition> ContextConditions;
-		List<ContextActivity> ContextActivities;
-		List<NextContext> NextContexts;
-
-		public Context ()
-		{
-			
+		public Context(int id, string name) {
+			this.id = id;
+			this.name = name;
+			contextConditions = new List<ContextCondition> ();
+			contextActivities = new List<ContextActivity> ();
+			nextContexts = new List<NextContext> ();
 		}
 
-		class Condition
-		{
-			String obj_name;
-			String obj_status;
+		// manage a context ID
+		public int ID {
+			get { return id; }
+			set { id = value; }
+		}
 
-			Condition (String obj_name, String obj_status)
-			{
-				this.obj_name = obj_name;
-				this.obj_status = obj_status;
+		// manage a context name
+		public String Name {
+			get { return name;	}
+			set { name = value; }
+		}
+
+		// return the number of context conditions
+		public int CountContextConditions() {
+			return contextConditions.Count;
+		}
+
+		// return a context condition
+		public List<ContextCondition> GetContextConditions() {
+			return contextConditions;
+		}
+
+		// return a context condition
+		public ContextCondition GetContextCondition(int index) {
+			if (contextConditions.Count == 0)
+				return null;
+			else
+				return contextConditions [index];
+		}
+
+		// add a context condition
+		public void AddContextCondition(string objName, string objStatus) {
+			ContextCondition condition = new ContextCondition (objName, objStatus);
+			contextConditions.Add (condition);
+		}
+
+		// remove a context condition
+		public void RemoveContextCondition(string objName) {
+			foreach (ContextCondition cond in contextConditions) {
+				if (cond.ObjectName == objName) {
+					contextConditions.Remove (cond);
+				}
 			}
 		}
 
-		class ContextActivity
-		{
-			Activity activity; 				// contextactivity id
+		// return the number of context activities
+		public int CountContextActivities() {
+			return contextActivities.Count;
+		}
 
-			ContextActivity(int id)
-			{
-				
+		// return context activities
+		public List<ContextActivity> GetContextActivities() {
+			return contextActivities;
+		}
+
+		// return a context activity
+		public ContextActivity GetContextActivity(int index) {
+			if (contextActivities.Count == 0)
+				return null;
+			else
+				return contextActivities [index];
+		}
+
+		// add a context activity
+		public void AddContextActivity(int id) {
+			ContextActivity conAct = new ContextActivity (id);
+			contextActivities.Add (conAct);
+		}
+
+		// remove a context activity
+		public void RemoveContextActivity(int id) {
+			foreach (ContextActivity contAct in contextActivities) {
+				if (contAct.ID == id) 
+					contextActivities.Remove (contAct);
 			}
 		}
 
-		class NextContext
-		{
-			Context context;				// next context
+		// return the number of next contextts
+		public int CountNextContexts() {
+			return nextContexts.Count;
+		}
+
+		// return next contexts
+		public List<NextContext> getNextContexts() {
+			return nextContexts;
+		}
+
+		// return a context activity
+		public NextContext GetNextContext(int index) {
+			if (nextContexts.Count == 0)
+				return null;
+			else
+				return nextContexts [index];
+		}
+
+		// add a next context
+		public void AddNextContext(int id, float prob) {
+			NextContext nextCont = new NextContext (id, prob);
+			nextContexts.Add (nextCont);
+		}
+
+		// remove a next context
+		public void RemoveNextContext(int id) {
+			foreach (NextContext nextCont in nextContexts) {
+				if (nextCont.ID == id)
+					nextContexts.Remove (nextCont);
+			}
+		}
+
+		// inner class - context condition
+		public class ContextCondition	{
+			string objName;
+			string objStatus;
+
+			public ContextCondition(string objName, string objStatus) {
+				this.objName = objName;
+				this.objStatus = objStatus;
+			}
+
+			// manage object name
+			public string ObjectName {
+				get { return objName; }
+				set { objName = value; }
+			}
+
+			// manage object status
+			public string ObjectStatus {
+				get { return objStatus; }
+				set { objStatus = value; }
+			}
+		}
+
+		public class ContextActivity {
+			int id; 						// contextactivity id
+
+			public ContextActivity(int id)	{
+				this.id = id;
+			}
+
+			// manage context activity ID
+			public int ID {
+				get { return id; }
+			}
+		}
+
+		public class NextContext {
+			int id;							// next context id
 			float prob;						// probability to become the context
 
-			NextContext(int id, float prob)
-			{
-				
+			public NextContext(int id, float prob)	{
+				this.id = id;
+				this.prob = prob;
+			}
+
+			// manage next context ID
+			public int ID {
+				get { return id; }
+				set { id = value; }
+			}
+
+			// manage probability
+			public float Probability {
+				get { return prob; }
+				set { prob = value; }
+			}
+
+			// set a new probability
+			public void SetProbability(float prob) {
+				this.prob = prob;
 			}
 		}
 	}
