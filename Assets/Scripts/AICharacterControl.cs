@@ -24,7 +24,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
         private void Start() {
 			Init();
-			//PlayActivity(playlist.Pop());
+//			PlayActivity(playlist.Pop());
         }
 
         private void Update() {
@@ -111,7 +111,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 //			playlist.AddActivity(23);
 //			playlist.AddActivity(24);
 //			playlist.AddActivity(25);
-
 
 
 

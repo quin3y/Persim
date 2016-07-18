@@ -9,8 +9,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 		void Start() {
 			characterController = GameObject.Find("Ethan").GetComponent<AICharacterControl>();
-//			characterController.PlayActivity(18);
-			print(characterController.activityPlayback.activities);
 
 			SimulationEntity.Objects = Utils.ReadObjectXml();
 			SimulationEntity.Actions = Utils.ReadActionXml();
@@ -18,7 +16,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			SimulationEntity.ReadContextXml();
 
 
-//			RunSimulation ();
+			RunSimulation ();
 		}
 
 		void Update() { }

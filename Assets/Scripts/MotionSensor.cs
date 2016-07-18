@@ -8,7 +8,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		StateSpace stateSpace;
 		AICharacterControl characterController;
 
-
 		// Use this for initialization
 		void Start () {
 			stateSpace = GameObject.Find("Camera").GetComponent<StateSpace>();

@@ -19,6 +19,12 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			PerformContextActivity ();
 			EvaluateStateSpace ();
 			TransitToNextContext ();
+
+			this.characterController.playlist.AddActivity(3);
+			this.characterController.playlist.AddActivity(17);
+			this.characterController.playlist.AddActivity(8);
+
+			this.characterController.PlayActivity(this.characterController.playlist.Pop());
 		}
 
 		public void SelectContextActivities() {
