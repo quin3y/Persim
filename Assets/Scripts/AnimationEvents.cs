@@ -5,14 +5,14 @@ using System.Collections;
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
 	public class AnimationEvents : MonoBehaviour {
-		StateSpace stateSpace;
+		StateSpaceManager stateSpaceManager;
 		AICharacterControl characterController;
 		GameObject bedroomDoor;
 		Animator bedroomDoorAnimator;
 
 		// Use this for initialization
 		void Start () {
-			stateSpace = GameObject.Find("Camera").GetComponent<StateSpace>();
+			stateSpaceManager = GameObject.Find("Camera").GetComponent<StateSpaceManager>();
 			characterController = GetComponent<AICharacterControl>();
 			bedroomDoor = GameObject.Find("Bedroom door");
 			bedroomDoorAnimator = bedroomDoor.GetComponent<Animator>();
@@ -24,12 +24,12 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 			if (characterController.nextAction.name == "Turn on light") {
 				GameObject.Find(lightName.Substring(0, lightName.Length - 7)).GetComponent<Light>().intensity = 2;
-				stateSpace.AddDataRecord(stateSpace.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))),
+				stateSpaceManager.AddDataRecord(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))),
 					lightName, "on");
 			}
 			if (characterController.nextAction.name == "Turn off light") {
 				GameObject.Find(lightName.Substring(0, lightName.Length - 7)).GetComponent<Light>().intensity = 0;
-				stateSpace.AddDataRecord(stateSpace.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))),
+				stateSpaceManager.AddDataRecord(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))),
 					lightName, "off");
 			}
 		}
@@ -37,7 +37,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		// Turn off the main light instead
 		void TurnOffLamp() {
 			GameObject.Find("Main light").GetComponent<Light>().intensity = 0;
-			stateSpace.AddDataRecord(stateSpace.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))),
+			stateSpaceManager.AddDataRecord(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))),
 				"Lamp", "off");
 		}
 
@@ -57,7 +57,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				Quaternion.Euler(characterController.activityPlayback.objects[objName].inHandRotation);
 			print(obj.transform.parent);
 
-			print(stateSpace.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))) + ", " + objName + ", picked up right");
+			print(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))) + ", " + objName + ", picked up right");
 		}
 
 		// Detach the object from character's right hand
@@ -68,7 +68,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			obj.transform.position = characterController.activityPlayback.objects[obj.name].position;
 			obj.transform.rotation = Quaternion.Euler(characterController.activityPlayback.objects[obj.name].rotation);
 
-			print(stateSpace.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))) + ", " + obj.name + ", put down right");
+			print(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))) + ", " + obj.name + ", put down right");
 		}
 
 		//closes bedroom door
