@@ -42,7 +42,7 @@ public class MenuGUI : MonoBehaviour {
 
 	TimeSpan timeSpan;
 	DateTime todayTime; //= DateTime.Today.Add(timeSpan);
-	StateSpace stateSpace;
+	StateSpaceManager stateSpaceManager;
 
 	
 	void Start()
@@ -52,7 +52,7 @@ public class MenuGUI : MonoBehaviour {
 				NameList.Add (Playlist.activityPlayback.activities[i].name);
 			}*/
 			Screen.SetResolution(1280, 800, false);
-			stateSpace = GameObject.Find("Camera").GetComponent<StateSpace>();
+			stateSpaceManager = GameObject.Find("Camera").GetComponent<StateSpaceManager>();
 
 		}
 
@@ -61,7 +61,7 @@ public class MenuGUI : MonoBehaviour {
 
 			// Logic for time in the top right
 			timeSpan = TimeSpan.FromSeconds(time);
-			DateTime todayTime = DateTime.Today.Add(stateSpace.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))));
+			DateTime todayTime = DateTime.Today.Add(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))));
 			timeText = todayTime.ToString("hh:mm:ss tt");
 			for (int i = 0;i<Playlist.activityPlayback.activities.Count;i++  ){
 				NameList.Add (Playlist.activityPlayback.activities[i].name);
