@@ -16,7 +16,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			SimulationEntity.ReadContextXml();
 
 
-			RunSimulation ();
+//			RunSimulation ();
 		}
 
 		void Update() { }

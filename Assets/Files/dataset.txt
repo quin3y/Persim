@@ -1,1 +1,7 @@
-08:20:03, Bathroom light switch, on
+08:20:28, Bed, on
+08:20:28, Bed, off
+08:20:29, Bed, on
+08:20:31, Lamp, off
+08:20:36, Bed, off
+08:20:36, Bed, on
+08:20:37, Bed, off
