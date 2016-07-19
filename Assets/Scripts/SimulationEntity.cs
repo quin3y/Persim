@@ -48,18 +48,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			else
 				return null;
 		}
-
-		public class StateSpace {
-			public Dictionary<string, ObjectInfo> objects = new Dictionary<string, ObjectInfo> ();
-
-			public void SetStateSpace() {
-				this.objects = SimulationEntity.Objects;
-			}
-
-			public void UpdateStateSpace(string objName, string status) {
-				
-			}
-		}
 	}
 }
 

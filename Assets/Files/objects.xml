@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <objects>
-  <object name="Bathroom cup">
+  <object id="0" name="Bathroom cup" status="off">
     <position x="0.76" y="0.739" z="5.1" />
     <rotation x="270" y="90" z="0" />
     <in-hand-position x="0" y="0" z="0" />
@@ -9,7 +9,7 @@
     <character-rotation x="-1" y="0" z="0" />
   </object>
 
-  <object name="Bathroom light switch">
+  <object id="1" name="Bathroom light switch" status="off">
     <position x="0" y="0" z="0" />
     <rotation x="0" y="0" z="0" />
     <in-hand-position x="0" y="0" z="0" />
@@ -18,7 +18,7 @@
     <character-rotation x="1" y="0" z="0" />
   </object>
 
-  <object name="Bathroom sink">
+  <object id="2" name="Bathroom sink" status="off">
     <position x="0" y="0" z="0" />
     <rotation x="0" y="0" z="0" />
     <in-hand-position x="0" y="0" z="0" />
@@ -27,7 +27,7 @@
     <character-rotation x="-1" y="0" z="0" />
   </object>
   
-  <object name="Bed">
+  <object id="3" name="Bed" status="off">
     <position x="0" y="0" z="0" />
     <rotation x="0" y="0" z="0" />
     <in-hand-position x="0" y="0" z="0" />
@@ -36,7 +36,7 @@
     <character-rotation x="-1" y="0" z="0" />
   </object>
   
-  <object name="Bedroom door">
+  <object id="4" name="Bedroom door" status="off">
     <position x="0" y="0" z="0" />
     <rotation x="0" y="0" z="0" />
     <in-hand-position x="0" y="0" z="0" />
@@ -45,7 +45,7 @@
     <character-rotation x="-1" y="0" z="0" />
   </object>
   
-  <object name="Comb">
+  <object id="5" name="Comb" status="off">
     <position x="0.87" y="0.75" z="4.13" />
     <rotation x="90" y="103.77" z="103.77" />
     <in-hand-position x="-0.1" y="-0.01" z="-0.056" />
@@ -54,7 +54,7 @@
     <character-rotation x="-1" y="0" z="0" />
   </object>
   
-  <object name="Computer desk">
+  <object id="6" name="Computer desk" status="off">
     <position x="0" y="0" z="0" />
     <rotation x="0" y="0" z="0" />
     <in-hand-position x="0" y="0" z="0" />
@@ -63,7 +63,7 @@
     <character-rotation x="0" y="0" z="1" />
   </object>
   
-  <object name="Couch">
+  <object id="7" name="Couch" status="off">
     <position x="0" y="0" z="0" />
     <rotation x="0" y="0" z="0" />
     <in-hand-position x="0" y="0" z="0" />
@@ -72,7 +72,7 @@
     <character-rotation x="0" y="0" z="-1" />
   </object>
   
-  <object name="Doorknob">
+  <object id="8" name="Doorknob" status="off">
     <position x="0" y="0" z="0" />
     <rotation x="0" y="0" z="0" />
     <in-hand-position x="0" y="0" z="0" />
@@ -81,7 +81,7 @@
     <character-rotation x="-1" y="0" z="0" />
   </object>
   
-  <object name="Front door">
+  <object id="9" name="Front door" status="off">
     <position x="0" y="0" z="0" />
     <rotation x="0" y="0" z="0" />
     <in-hand-position x="0" y="0" z="0" />
@@ -90,7 +90,7 @@
     <character-rotation x="0" y="0" z="1" />
   </object>
   
-  <object name="Mobile phone">
+  <object id="10" name="Mobile phone" status="off">
     <position x="0" y="0" z="0" />
     <rotation x="0" y="0" z="0" />
     <in-hand-position x="-0.1" y="-0.05" z="-0.08" />
@@ -99,7 +99,7 @@
     <character-rotation x="0" y="0" z="1" />
   </object>
   
-  <object name="Kitchen cup">
+  <object id="11" name="Kitchen cup" status="off">
     <position x="1.13" y="0.773" z="7.465" />
     <rotation x="270" y="0" z="0" />
     <in-hand-position x="-0.07" y="-0.086" z="-0.055" />
@@ -108,7 +108,7 @@
     <character-rotation x="-1" y="0" z="0" />
   </object>
   
-  <object name="Rack">
+  <object id="12" name="Rack" status="off">
     <position x="0" y="0" z="0" />
     <rotation x="0" y="0" z="0" />
     <in-hand-position x="0" y="0" z="0" />
@@ -117,7 +117,7 @@
     <character-rotation x="0" y="0" z="-1" />
   </object>
 
-  <object name="Razor">
+  <object id="13" name="Razor" status="off">
     <position x="0.875" y="0.79" z="4.02" />
     <rotation x="0" y="0" z="7.5" />
     <in-hand-position x="-0.085" y="0" z="-0.08" />
@@ -126,7 +126,7 @@
     <character-rotation x="-1" y="0" z="0" />
   </object>
   
-  <object name="Table">
+  <object id="14" name="Table" status="off">
     <position x="0" y="0" z="0" />
     <rotation x="0" y="0" z="0" />
     <in-hand-position x="0" y="0" z="0" />
@@ -135,7 +135,7 @@
     <character-rotation x="1" y="0" z="0" />
   </object>
   
-  <object name="Toilet">
+  <object id="15" name="Toilet" status="off">
     <position x="0" y="0" z="0" />
     <rotation x="0" y="0" z="0" />
     <in-hand-position x="0" y="0" z="0" />
@@ -144,7 +144,7 @@
     <character-rotation x="1" y="0" z="0" />
   </object>
   
-  <object name="Toilet handle">
+  <object id="16" name="Toilet handle" status="off">
     <position x="0" y="0" z="0" />
     <rotation x="0" y="0" z="0" />
     <in-hand-position x="0" y="0" z="0" />
@@ -153,7 +153,7 @@
     <character-rotation x="-1" y="0" z="0" />
   </object>
   
-  <object name="Towel rack">
+  <object id="17" name="Towel rack" status="off">
     <position x="0" y="0" z="0" />
     <rotation x="0" y="0" z="0" />
     <in-hand-position x="0" y="0" z="0" />
@@ -162,7 +162,7 @@
     <character-rotation x="-1" y="0" z="0" />
   </object>
   
-  <object name="Washer">
+  <object id="18" name="Washer" status="off">
     <position x="0" y="0" z="0" />
     <rotation x="0" y="0" z="0" />
     <in-hand-position x="0" y="0" z="0" />

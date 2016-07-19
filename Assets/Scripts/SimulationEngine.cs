@@ -15,8 +15,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			SimulationEntity.Activities = Utils.ReadActivityXml();
 			SimulationEntity.ReadContextXml();
 
-
-//			RunSimulation ();
+			// RunSimulation ();
 		}
 
 		void Update() { }

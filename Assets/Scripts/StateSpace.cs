@@ -4,41 +4,33 @@ using System.Collections.Generic;
 
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
-	public class StateSpace : MonoBehaviour {
-		public TimeSpan startTime;
-		public List<DataRecord> dataset;
+	public class StateSpace
+	{
+		TimeSpan timeStamp;					// time stamp for the state space
+		string[] objectsStatus;				// state space consisting of status of objects
 
-		// Use this for initialization
-		void Start () {
-			startTime = new TimeSpan(0, 8, 20, 0, 0);    // Simulation start time
-			dataset = new List<DataRecord>();
+		public StateSpace ()
+		{
+			timeStamp = new TimeSpan(0, 8, 20, 0, 0);		// TODO: initial time for the time stamp
+			objectsStatus = new string[SimulationEntity.Objects.Count] ();
 		}
 
-		public void AddDataRecord(TimeSpan time, string objName, string status) {
-			dataset.Add(new DataRecord(time, objName, status));
-			print(time + ", " + objName + ", " + status);
+		// manage a timestamp
+		public TimeSpan TimeStamp {
+			get { return timeStamp; }
+			set { timeStamp = value; }
 		}
 
-		public void PrintDataset() {
-			foreach (DataRecord record in dataset) {
-				record.Print(); 
-			}
+		// return object status
+		public string[] ObjectsStatus {
+			get { return objectsStatus; }
 		}
 
-		public void SaveData() {
-			using (System.IO.StreamWriter file = 
-				new System.IO.StreamWriter(@"Assets/Files/dataset.txt")) {
-				foreach (DataRecord record in dataset) {
-					file.WriteLine(record.ToString());
-				}
-			}
-		}
-
-		void OnApplicationQuit() {
-			print("Printing dataset...");
-			PrintDataset();
-			SaveData();
-			print("Data saved to file");
+		// update a status of object
+		public void UpdateObjectStatus (int index, string newStatus) {
+			if (objectsStatus [index] != newStatus)
+				objectsStatus [index] = newStatus;
 		}
 	}
 }
+
