@@ -32,7 +32,9 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			while (reader.Read()) {
 				if (reader.NodeType == XmlNodeType.Element && reader.Name == "object") {
 					ObjectInfo obj = new ObjectInfo();
-					obj.name = reader.GetAttribute(0);
+					obj.id = Int32.Parse(reader.GetAttribute(0));
+					obj.name = reader.GetAttribute(1);
+					obj.status = reader.GetAttribute (2);
 
 					while (reader.NodeType != XmlNodeType.EndElement) {
 						reader.Read();

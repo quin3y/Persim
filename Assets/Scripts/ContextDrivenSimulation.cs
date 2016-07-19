@@ -19,8 +19,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			PerformContextActivity ();
 			EvaluateStateSpace ();
 			TransitToNextContext ();
-
-
 		}
 
 		public void SelectContextActivities() {
@@ -34,15 +32,17 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				curActivity = SimulationEntity.GetActivity (SimulationEntity.ActivityPlayList.GetList () [i]);
 				Debug.Log ("activity_" + curActivity.id + "(" + curActivity.name + ") is scheduled");
 			}
+			this.characterController.playlist.AddActivity (22);
 			// TODO: scheduling algorithm
-			curActivity = SimulationEntity.GetActivity (SimulationEntity.ActivityPlayList.GetList () [0]);
+			//curActivity = SimulationEntity.GetActivity (SimulationEntity.ActivityPlayList.GetList () [0]);
 		}
 
 		public void PerformContextActivity() {
 			Debug.Log ("activity_" + curActivity.id + "(" + curActivity.name + ") will be performed");
 			Time.timeScale = 1;
-			characterController.PlayActivity(18);
-//			characterController.PlayActivity(SimulationEntity.ActivityPlayList.Pop());
+
+
+			this.characterController.PlayActivity(this.characterController.playlist.Pop());
 
 			// TODO: performing the activity
 		}
