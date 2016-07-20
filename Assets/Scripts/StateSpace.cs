@@ -33,6 +33,16 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				objectsStatus [index] = newStatus;
 			}
 		}
+
+		// print state space
+		public void PrintStateSpace() {
+			string strSpace = "";
+			foreach (string s in objectsStatus) {
+				strSpace += s;
+				strSpace += " ";
+			}
+			Debug.Log(strSpace);
+		}
 	}
 }
 

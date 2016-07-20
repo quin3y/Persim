@@ -8,7 +8,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		Activity curActivity;
 		AICharacterControl characterController;
 
-
 		public ContextDrivenSimulation (AICharacterControl characterController) {
 			this.characterController = characterController;
 		}

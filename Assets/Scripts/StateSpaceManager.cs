@@ -10,10 +10,11 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		List<StateSpace> stateSpaceHistory;
 
 		// Use this for initialization
-		void Start () {
-			startTime = new TimeSpan(0, 8, 20, 0, 0);    // Simulation start time
+		void Start() {
+			startTime = new TimeSpan(0, 8, 20, 0, 0);	// Simulation start time
 			dataset = new List<DataRecord>();
 			stateSpaceHistory = new List<StateSpace> ();
+			InitializeStateSpace();						// initialize state space
 		}
 
 		public void AddDataRecord(TimeSpan time, string objName, string status) {
@@ -36,16 +37,26 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			}
 		}
 
+		// initialize state space
+		public void InitializeStateSpace() {
+			StateSpace firstStateSpace = new StateSpace ();
+			for (int i = 0; i < SimulationEntity.Objects.Count; i++) {				
+				firstStateSpace.ObjectsStatus[i] = SimulationEntity.Objects[i].status;
+			}
+			//firstStateSpace.PrintStateSpace();
+			stateSpaceHistory.Add(firstStateSpace);
+		}
+
 		// update state space
 		public void UpdateStateSpace(TimeSpan time, int objId, string newStatus) {			
 			StateSpace newStateSpace = GetLatestStateSpace ();
-			newStateSpace.UpdateObjectStatus (objId, newStatus);
+			newStateSpace.UpdateObjectStatus (time ,objId, newStatus);
 		}
 
 		// return the latest state space
 		public StateSpace GetLatestStateSpace() {
-			return stateSpaceHistory [stateSpaceHistory.Count];
-		}			
+			return stateSpaceHistory [stateSpaceHistory.Count-1];
+		}
 
 		void OnApplicationQuit() {
 			print("Printing dataset...");

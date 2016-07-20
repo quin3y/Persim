@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
 	public static class SimulationEntity {
-		public static Dictionary<string, ObjectInfo> Objects = new Dictionary<string, ObjectInfo> (); 	// a set of objects
+		public static List<ObjectInfo> Objects = new List<ObjectInfo> (); 								// a set of objects
 		public static List<Action> Actions = new List<Action> ();										// a set of actions
 		public static List<Activity> Activities = new List<Activity> ();								// a set of activities
 		public static ContextGraph ContextGraph = new ContextGraph();									// context graph
@@ -14,6 +14,58 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		public static Context CurContext;
 		public static ActivityPlaylist ActivityPlayList = new ActivityPlaylist ();
 
+		// read object models
+		public static void ReadObjectXml() {
+			XmlReader reader = XmlReader.Create("Assets/Files/objects.xml");
+
+			while (reader.Read()) {
+				if (reader.NodeType == XmlNodeType.Element && reader.Name == "object") {
+					ObjectInfo obj = new ObjectInfo();
+					obj.id = Int32.Parse(reader.GetAttribute(0));
+					obj.name = reader.GetAttribute(1);
+					obj.status = reader.GetAttribute (2);
+
+					while (reader.NodeType != XmlNodeType.EndElement) {
+						reader.Read();
+						if (reader.Name == "position") {
+							obj.position = new Vector3(float.Parse(reader.GetAttribute(0)),
+								float.Parse(reader.GetAttribute(1)),
+								float.Parse(reader.GetAttribute(2)));
+						}
+						else if (reader.Name == "rotation") {
+							obj.rotation = new Vector3(float.Parse(reader.GetAttribute(0)),
+								float.Parse(reader.GetAttribute(1)),
+								float.Parse(reader.GetAttribute(2)));
+						}
+						else if (reader.Name == "in-hand-position") {
+							obj.inHandPosition = new Vector3(float.Parse(reader.GetAttribute(0)),
+								float.Parse(reader.GetAttribute(1)),
+								float.Parse(reader.GetAttribute(2)));
+						}
+						else if (reader.Name == "in-hand-rotation") {
+							obj.inHandRotation = new Vector3(float.Parse(reader.GetAttribute(0)),
+								float.Parse(reader.GetAttribute(1)),
+								float.Parse(reader.GetAttribute(2)));
+						}
+						else if (reader.Name == "character-position") {
+							obj.characterPosition = new Vector3(float.Parse(reader.GetAttribute(0)),
+								float.Parse(reader.GetAttribute(1)),
+								float.Parse(reader.GetAttribute(2)));
+						}
+						else if (reader.Name == "character-rotation") {
+							obj.characterRotation = new Vector3(float.Parse(reader.GetAttribute(0)),
+								float.Parse(reader.GetAttribute(1)),
+								float.Parse(reader.GetAttribute(2)));
+						}
+					}
+
+					SimulationEntity.Objects.Add(obj);
+				}
+			}
+			reader.Close();
+		}
+
+		// read context models
 		public static void ReadContextXml() {
 			XmlReader reader = XmlReader.Create("Assets/Files/contextgraph.xml");
 

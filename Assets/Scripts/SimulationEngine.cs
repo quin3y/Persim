@@ -10,7 +10,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		void Start() {
 			characterController = GameObject.Find("Ethan").GetComponent<AICharacterControl>();
 
-			SimulationEntity.Objects = Utils.ReadObjectXml();
+			SimulationEntity.ReadObjectXml();
 			SimulationEntity.Actions = Utils.ReadActionXml();
 			SimulationEntity.Activities = Utils.ReadActivityXml();
 			SimulationEntity.ReadContextXml();
