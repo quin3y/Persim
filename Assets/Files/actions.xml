@@ -15,7 +15,7 @@
   <action id="12" name="Drink" animation="12" />
   <action id="13" name="Text" animation="13" />
   <action id="14" name="Shave" animation="14" />
-  <action id="15" name="Get Water" animation="15" />
+  <action id="15" name="Get water" animation="15" />
   <action id="16" name="Squeeze toothpaste" animation="16" />
   <action id="17" name="Brush teeth" animation="17" />
   <action id="18" name="Gargle" animation="18" />

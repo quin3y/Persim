@@ -55,7 +55,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			obj.transform.localPosition = characterController.activityPlayback.objects[objName].inHandPosition;
 			obj.transform.localRotation =
 				Quaternion.Euler(characterController.activityPlayback.objects[objName].inHandRotation);
-			print(obj.transform.parent);
 
 			print(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))) + ", " + objName + ", picked up right");
 		}

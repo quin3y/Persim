@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System;
 using System.Collections;
 
 
@@ -8,6 +9,11 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 		override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 			AICharacterControl characterController = GameObject.Find("Ethan").GetComponent<AICharacterControl>();
+			StateSpaceManager stateSpaceManager = GameObject.Find("Camera").GetComponent<StateSpaceManager>();
+
+			Debug.Log(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Math.Round(Time.time))) +
+				" " + characterController.nextAction.name + " starts");
+
 
 			if (characterController.nextAction.name == "Sit down") {
 				animator.SetInteger("nextAction", characterController.activityPlayback.actionQueue.Peek().animation);
@@ -31,8 +37,12 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 		// OnStateExit is called when a transition ends and the state machine finishes evaluating this state
 		override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
+			StateSpaceManager stateSpaceManager = GameObject.Find("Camera").GetComponent<StateSpaceManager>();
 			AICharacterControl characterController = GameObject.Find("Ethan").GetComponent<AICharacterControl>();
 			characterController.arrivedAtDestination = false;
+
+			Debug.Log(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Math.Round(Time.time))) +
+				" " + characterController.nextAction.name + " ends");
 
 			if (characterController.nextAction.name == "Sit down" || characterController.nextAction.name == "Use toilet" ||
 				characterController.nextAction.name == "Use computer" || characterController.nextAction.name == "Lie down" ||
