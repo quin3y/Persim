@@ -118,7 +118,7 @@
     <action id="9" object="Toilet" />
     <action id="22" object="Toilet handle" />
     <action id="3" object="Bathroom sink" />
-    <action id="4" object="Towel rack" />
+    <action id="4" object="Towel" />
   </activity>
 
   <activity id="18" name="Using cellphone">
@@ -126,9 +126,9 @@
   </activity>
 
   <activity id="19" name="Using computer">
-    <action id="8" object="Computer desk" />
-    <action id="11" object="Computer desk" />
-    <action id="9" object="Computer desk" />
+    <action id="8" object="Computer chair" />
+    <action id="11" object="Computer" />
+    <action id="9" object="Computer chair" />
   </activity>
 
   <activity id="20" name="Vacuuming floors">
@@ -146,14 +146,14 @@
   <activity id="22" name="Washing face">
     <action id="1" object="Bathroom light switch" />
     <action id="5" object="Bathroom sink" />
-    <action id="6" object="Towel rack" />
+    <action id="6" object="Towel" />
     <action id="2" object="Bathroom light switch" />
   </activity>
 
   <activity id="23" name="Washing hands">
     <!--action id="1" object="Bathroom light switch" /-->
     <action id="3" object="Bathroom sink" />
-    <action id="4" object="Towel rack" />
+    <action id="4" object="Towel" />
     <!--action id="2" object="Bathroom light switch" /-->
   </activity>  
 

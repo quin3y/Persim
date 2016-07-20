@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <actions>
-  <action id="0"  name="Idle" animation="0" object="Table" />
-  <action id="1"  name="Turn on light" animation="1" object="Bathroom light switch" />
-  <action id="2"  name="Turn off light" animation="1" object="Bathroom light switch" />
-  <action id="3"  name="Wash hands" animation="3" object="Bathroom sink"  />
-  <action id="4"  name="Dry hands" animation="4" object="Towel rack" />
+  <action id="0"  name="Idle" animation="0" />
+  <action id="1"  name="Turn on light" animation="1" />
+  <action id="2"  name="Turn off light" animation="1" />
+  <action id="3"  name="Wash hands" animation="3" />
+  <action id="4"  name="Dry hands" animation="4" />
   <action id="5"  name="Wash face" animation="5" />
   <action id="6"  name="Dry face" animation="6" />  
   <action id="7"  name="Take a pill" animation="7" />

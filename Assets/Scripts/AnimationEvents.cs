@@ -55,8 +55,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			obj.transform.localPosition = characterController.activityPlayback.objects[objName].inHandPosition;
 			obj.transform.localRotation =
 				Quaternion.Euler(characterController.activityPlayback.objects[objName].inHandRotation);
-
-			print(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))) + ", " + objName + ", picked up right");
 		}
 
 		// Detach the object from character's right hand
@@ -66,8 +64,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			obj.transform.parent = null;
 			obj.transform.position = characterController.activityPlayback.objects[obj.name].position;
 			obj.transform.rotation = Quaternion.Euler(characterController.activityPlayback.objects[obj.name].rotation);
-
-			print(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))) + ", " + obj.name + ", put down right");
 		}
 
 		//closes bedroom door

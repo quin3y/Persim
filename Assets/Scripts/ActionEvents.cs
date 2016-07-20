@@ -11,14 +11,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			AICharacterControl characterController = GameObject.Find("Ethan").GetComponent<AICharacterControl>();
 			StateSpaceManager stateSpaceManager = GameObject.Find("Camera").GetComponent<StateSpaceManager>();
 
-			Debug.Log(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Math.Round(Time.time))) +
-				" " + characterController.nextAction.name + " starts");
-
-
-			if (characterController.nextAction.name == "Sit down") {
-				animator.SetInteger("nextAction", characterController.activityPlayback.actionQueue.Peek().animation);
-			}
-
 			// Show the mobile phone
 			if (characterController.nextAction.name == "Text") {
 				characterController.mobilePhone.SetActive(true);
@@ -28,6 +20,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				GameObject.Find("Mobile phone").transform.localRotation = 
 					Quaternion.Euler(characterController.activityPlayback.objects["Mobile phone"].inHandRotation);
 			}
+
+			ChangeObjectStatusAtBeginning(characterController.nextAction);
 	    }
 
 		// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -37,12 +31,10 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 		// OnStateExit is called when a transition ends and the state machine finishes evaluating this state
 		override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-			StateSpaceManager stateSpaceManager = GameObject.Find("Camera").GetComponent<StateSpaceManager>();
 			AICharacterControl characterController = GameObject.Find("Ethan").GetComponent<AICharacterControl>();
 			characterController.arrivedAtDestination = false;
 
-			Debug.Log(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Math.Round(Time.time))) +
-				" " + characterController.nextAction.name + " ends");
+			ChangeObjectStatusAtEnd(characterController.nextAction);
 
 			if (characterController.nextAction.name == "Sit down" || characterController.nextAction.name == "Use toilet" ||
 				characterController.nextAction.name == "Use computer" || characterController.nextAction.name == "Lie down" ||
@@ -64,7 +56,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			if (characterController.activityPlayback.actionQueue.Count > 0) {
 				characterController.nextAction = characterController.activityPlayback.actionQueue.Dequeue();
 				characterController.navAgent.destination = characterController.nextAction.location;
-
 //				Debug.Log("next action = " + characterController.nextAction.name);
 			}
 
@@ -81,6 +72,35 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				}
 			}
 	    }
+
+		private void ChangeObjectStatusAtBeginning(ActionInstance action) {
+			StateSpaceManager stateSpaceManager = GameObject.Find("Camera").GetComponent<StateSpaceManager>();
+			string actionName = action.name;
+
+			if (actionName == "Wash hands" || actionName == "Dry hands" || actionName == "Wash face" || actionName == "Dry face" ||
+				actionName == "Use computer" || actionName == "Text" || actionName == "Flush toilet") {
+//				stateSpaceManager.UpdateStateSpace(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))), action.obj.id, "on");
+				Debug.Log(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))) + ", " + action.obj.name + ", on");
+			}
+		}
+
+		private void ChangeObjectStatusAtEnd(ActionInstance action) {
+			StateSpaceManager stateSpaceManager = GameObject.Find("Camera").GetComponent<StateSpaceManager>();
+			string actionName = action.name;
+
+			if (actionName == "Turn off light" || actionName == "Wash hands" || actionName == "Dry hands" || actionName == "Wash face" ||
+				actionName == "Dry face" || actionName == "Stand up" || actionName == "Use computer" || actionName == "Text" ||
+				actionName == "Put down right" || actionName == "Flush toilet" || actionName == "Open door" || actionName == "Turn off lamp" ||
+				actionName == "Get up") {
+//				stateSpaceManager.UpdateStateSpace(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))), action.obj.id, "off");
+				Debug.Log(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))) + ", " + action.obj.name + ", off");
+			}
+			else if (actionName == "Turn on light" || actionName == "Sit down" || actionName == "Pick up right" ||
+				actionName == "Close door" || actionName == "Lie down") {
+//				stateSpaceManager.UpdateStateSpace(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))), action.obj.id, "on");
+				Debug.Log(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))) + ", " + action.obj.name + ", on");
+			}
+		}
 
 		// OnStateMove is called right after Animator.OnAnimatorMove(). Code that processes and affects root motion should be implemented here
 		//override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
