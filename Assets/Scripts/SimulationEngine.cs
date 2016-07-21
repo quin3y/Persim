@@ -23,7 +23,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			stateSpaceManager = GameObject.Find("Camera").GetComponent<StateSpaceManager>();	
 			stateSpaceManager.InitializeStateSpace();
 
-			RunSimulation ();
+			//RunSimulation ();
 		}
 
 		void Update() { 

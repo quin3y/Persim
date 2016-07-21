@@ -104,7 +104,7 @@
     <rotation x="0" y="0" z="0" />
     <in-hand-position x="-0.1" y="-0.05" z="-0.08" />
     <in-hand-rotation x="348" y="331" z="78" />
-    <character-position x="7" y="0" z="12" />
+    <character-position x="8" y="0" z="11" />
     <character-rotation x="0" y="0" z="1" />
   </object>
   

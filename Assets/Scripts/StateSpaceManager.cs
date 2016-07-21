@@ -69,10 +69,9 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		}
 
 		void OnApplicationQuit() {
-			print("Printing dataset...");
 			PrintDataset();
 			SaveData();
-			print("Data saved to file");
+			print("Sensor data saved to file");
 		}
 	}
 }
