@@ -23,18 +23,25 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			stateSpaceManager = GameObject.Find("Camera").GetComponent<StateSpaceManager>();	
 			stateSpaceManager.InitializeStateSpace();
 
-			//RunSimulation ();
+			RunSimulation ();
 		}
 
-		void Update() { }
+		void Update() { 
+			
+		}
 			
 		public SimulationEngine() { }
 
-		// Run simulation engine
+		// Run simulation loop
 		void RunSimulation() {
 			// Run context-driven simulation engine
-			ContextDrivenSimulation contextDSimulation = new ContextDrivenSimulation (characterController, stateSpaceManager);
-			contextDSimulation.RunSimulationLoop ();
+			ContextDrivenSimulation cds = new ContextDrivenSimulation (characterController, stateSpaceManager);
+			cds.SelectContextActivities ();
+			cds.ScheduleContextActivities ();
+			cds.PerformContextActivity ();
+//			cds.EvaluateStateSpace ();
+//			cds.TransitToNextContext ();
+
 		}
 	}
 }

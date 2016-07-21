@@ -60,6 +60,12 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			else
 				return false;
 		}
+
+		public string GetObjectStatus(string name) {
+			int id = SimulationEntity.GetObject (name).id;
+
+			return objectsStatus[id];
+		}
 	}
 }
 

@@ -14,16 +14,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			this.stateSpaceManager = stateSpaceManager;
 		}
 
-		public void RunSimulationLoop() {
-			SelectContextActivities ();
-			ScheduleContextActivities ();
-			PerformContextActivity ();
-//			EvaluateStateSpace ();
-//			TransitToNextContext ();
-		}
-
 		public void SelectContextActivities() {
-//			Debug.Log ("select activities with " + stateSpaceManager.StateSpaceHistory.Count);
 			int activityID;
 
 			for (int i = 0; i < SimulationEntity.CurContext.CountContextActivities(); i++) {
@@ -78,7 +69,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			}
 
 			characterController.playlist.AddActivity (curID);
-			Debug.Log ("activity " + curActivity.id + "(" + curActivity.name + ") will be performed");
+//			Debug.Log ("activity " + curActivity.id + "(" + curActivity.name + ") will be performed");
 		}
 
 		public void PerformContextActivity() {			
@@ -86,25 +77,45 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 //			characterController.PlayActivity(characterController.playlist.Pop());
 			Debug.Log ("activity " + curActivity.id + "(" + curActivity.name + ") is performed");
 			// test case
+			stateSpaceManager.UpdateStateSpace (stateSpaceManager.startTime.Add (TimeSpan.FromSeconds (Mathf.Round (Time.time))),  1, "on");
 			stateSpaceManager.UpdateStateSpace (stateSpaceManager.startTime.Add (TimeSpan.FromSeconds (Mathf.Round (Time.time))), 11, "on");
 		}
 
 		public void EvaluateStateSpace() {
 			StateSpace curStateSpace = stateSpaceManager.GetLatestStateSpace ();
+			Debug.Log (stateSpaceManager.StateSpaceHistory.Count + " state spaces are stored");
 			curStateSpace.PrintStateSpace ();
 
 			for (int i = 0; i < SimulationEntity.CurContext.CountNextContexts(); i++) {
 				int nextContextID = SimulationEntity.CurContext.GetNextContext (i).ID;
 				Context nextContext = SimulationEntity.ContextGraph.GetContext (nextContextID);
 				float nextContextProb = SimulationEntity.CurContext.GetNextContext (i).Probability;
-				//Debug.Log ("context_" + nextContextID + "(" + nextContext.Name + ") will be evaluated with probability of " + nextContextProb.ToString());
 
 				string objName;
+				int [] distances = new int[nextContext.CountContextConditions ()];
+				int distance = 0;
+				bool satisfiableOfMaybe = false;
 				for (int j = 0; j < nextContext.CountContextConditions (); j++) {
 					objName = nextContext.GetContextCondition (j).ObjectName;
-//					Debug.Log (objName);
-					Debug.Log (objName + " " + curStateSpace.IsAvailable(objName));
-					// TODO: evaluation 
+
+					// evaluation process
+					// if condition status is always, all associated objects' status should be 1
+					// if condition status is never, all associated objects' status should be 0
+					// if condition status is maybe, any of associated objects' status should be 1
+					// others, ignore (filtered)
+					// TODO generalize the process to cover other possible status terms (on/off, used/not unsed, 0/1, ...)
+//					if (nextContext.ContextConditions[j].ObjectStatus == "always" && curStateSpace.GetObjectStatus(objName) == "off" ) {	
+//						Debug.Log (j + "/" + (nextContext.CountContextConditions () - 1) + " " + objName);
+//						distance++;
+//					}
+//					elseif (nextContext.ContextConditions[j].ObjectStatus == "never" && curStateSpace.GetObjectStatus(objName) == "on" ) {	
+//						Debug.Log (j + "/" + (nextContext.CountContextConditions () - 1) + " " + objName);
+//						distance++;
+//					}
+//					elseif (nextContext.ContextConditions[j].ObjectStatus == "always" && curStateSpace.GetObjectStatus(objName) == "off" && !satisfiableOfMaybe) {	
+//						satisfiableOfMaybe = true;
+//						Debug.Log (j + "/" + (nextContext.CountContextConditions () - 1) + " " + objName);
+//					}
 				}
 			}
 		}

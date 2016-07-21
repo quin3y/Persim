@@ -44,7 +44,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		public void InitializeStateSpace() {
 			stateSpaceHistory = new List<StateSpace> ();
 			StateSpace firstStateSpace = new StateSpace ();
-			Debug.Log ("state space of " + SimulationEntity.Objects.Count + " objects is initialized");
+//			Debug.Log ("state space of " + SimulationEntity.Objects.Count + " objects is initialized");
 			for (int i = 0; i < SimulationEntity.Objects.Count; i++) {				
 				firstStateSpace.ObjectsStatus[i] = SimulationEntity.Objects[i].status;
 			}
@@ -56,6 +56,11 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		public void UpdateStateSpace(TimeSpan time, int objId, string newStatus) {			
 			StateSpace newStateSpace = GetLatestStateSpace ();
 			newStateSpace.UpdateObjectStatus (time ,objId, newStatus);
+		}
+
+		// print the latest state space
+		public void PrintLatestStateSpace() {
+			GetLatestStateSpace ().PrintStateSpace ();
 		}
 
 		// return the latest state space

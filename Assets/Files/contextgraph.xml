@@ -18,9 +18,10 @@
   	<contextconditions>
   		<contextcondition object="Bathroom light switch" status="always" />
   		<contextcondition object="Bathroom sink" status="maybe" />
-  		<contextcondition object="Towel rack" status="maybe" />
+  		<contextcondition object="Towel" status="maybe" />
   		<contextcondition object="Toilet" status="maybe" />
   		<contextcondition object="Comb" status="maybe" />
+  		<contextcondition object="Razor" status="maybe" />
   	</contextconditions>
   	<contextactivities>
   		<contextactivity id="3" />
@@ -37,8 +38,8 @@
 
   <context id="2" name="Work" first="true">
   	<contextconditions>
-  		<contextcondition object="cellphone" />
-  		<contextcondition object="Computer desk" />
+  		<contextcondition object="Mobile phone" status="maybe" />
+  		<contextcondition object="Computer" status="always" />
   	</contextconditions>
   	<contextactivities>
   		<contextactivity id="18" />
@@ -52,7 +53,7 @@
 
   <context id="3" name="healthcare" first="false">
   	<contextconditions>
-  		<contextcondition object="Kitchen up" status="Always" />
+  		<contextcondition object="Kitchen cup" status="Always" />
   	</contextconditions>
   	<contextactivities>
   		<contextactivity id="6" />
