@@ -7,19 +7,22 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 	public class StateSpaceManager : MonoBehaviour {
 		public TimeSpan startTime;
 		public List<DataRecord> dataset;
-		List<StateSpace> stateSpaceHistory;
+		List<StateSpace> stateSpaceHistory;				// list of state spaces generated during simulation
 
 		// Use this for initialization
 		void Start() {
 			startTime = new TimeSpan(0, 8, 20, 0, 0);	// Simulation start time
 			dataset = new List<DataRecord>();
-			stateSpaceHistory = new List<StateSpace> ();
-			InitializeStateSpace();						// initialize state space
+//			Debug.Log ("StateSpaceManager starts");
+		}
+
+		public List<StateSpace> StateSpaceHistory {
+			get { return stateSpaceHistory;}
 		}
 
 		public void AddDataRecord(TimeSpan time, string objName, string status) {
 			dataset.Add(new DataRecord(time, objName, status));
-			print(time + ", " + objName + ", " + status);
+//			print(time + ", " + objName + ", " + status);
 		}
 
 		public void PrintDataset() {
@@ -39,11 +42,13 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 		// initialize state space
 		public void InitializeStateSpace() {
+			stateSpaceHistory = new List<StateSpace> ();
 			StateSpace firstStateSpace = new StateSpace ();
+			Debug.Log ("state space of " + SimulationEntity.Objects.Count + " objects is initialized");
 			for (int i = 0; i < SimulationEntity.Objects.Count; i++) {				
 				firstStateSpace.ObjectsStatus[i] = SimulationEntity.Objects[i].status;
 			}
-			//firstStateSpace.PrintStateSpace();
+			firstStateSpace.PrintStateSpace();
 			stateSpaceHistory.Add(firstStateSpace);
 		}
 

@@ -68,6 +68,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		// read context models
 		public static void ReadContextXml() {
 			XmlReader reader = XmlReader.Create("Assets/Files/contextgraph.xml");
+			int first = 0;
 
 			while (reader.Read()) {					
 				if (reader.IsStartElement()) {
@@ -76,6 +77,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 						Context context = new Context (int.Parse (reader.GetAttribute ("id")), reader.GetAttribute ("name"));
 						CurContext = context;
 						SimulationEntity.ContextGraph.AddContext (context);
+						if (reader.GetAttribute ("first") == "true")
+							first = int.Parse (reader.GetAttribute ("id"));
 						break;
 					case "contextcondition":
 						CurContext.AddContextCondition (reader.GetAttribute ("object"), reader.GetAttribute ("status"));
@@ -90,10 +93,22 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				}
 			}
 
-			CurContext = SimulationEntity.ContextGraph.GetContext (0);
+			CurContext = SimulationEntity.ContextGraph.GetContext (first);
 			reader.Close();
 		}
 
+		// return an object with the name
+		public static ObjectInfo GetObject(string name) {
+			foreach (ObjectInfo obj in Objects) {
+				if (obj.name == name) {
+					return obj;
+				}
+			}
+
+			return null;
+		}
+
+		// return an activity with id
 		public static Activity GetActivity(int id) {
 			if (id < Activities.Count)
 				return Activities [id];

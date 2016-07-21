@@ -5,17 +5,25 @@ using System.Collections.Generic;
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
 	public class SimulationEngine : MonoBehaviour {
-		AICharacterControl characterController;
+		AICharacterControl characterController;			// AI Character controller attached on the character
+		StateSpaceManager stateSpaceManager;			// state space manager attached on the character
 
 		void Start() {
-			characterController = GameObject.Find("Ethan").GetComponent<AICharacterControl>();
-
+			// configure simulation
 			SimulationEntity.ReadObjectXml();
-			SimulationEntity.Actions = Utils.ReadActionXml();
-			SimulationEntity.Activities = Utils.ReadActivityXml();
+			SimulationEntity.Actions = Utils.ReadActionXml();	// TODO ReadActionXml with static Actions
+			SimulationEntity.Activities = Utils.ReadActivityXml();	// TODO ReadActivityXml with static Activities
 			SimulationEntity.ReadContextXml();
 
-			// RunSimulation ();
+			// TODO AICharacterControl is located on another character
+			characterController = GameObject.Find("Ethan").GetComponent<AICharacterControl>();	
+
+			// initialize state space
+			// TODO StateSpaceManager is located on another GameObject
+			stateSpaceManager = GameObject.Find("Camera").GetComponent<StateSpaceManager>();	
+			stateSpaceManager.InitializeStateSpace();
+
+			//RunSimulation ();
 		}
 
 		void Update() { }
@@ -25,7 +33,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		// Run simulation engine
 		void RunSimulation() {
 			// Run context-driven simulation engine
-			ContextDrivenSimulation contextDSimulation = new ContextDrivenSimulation (characterController);
+			ContextDrivenSimulation contextDSimulation = new ContextDrivenSimulation (characterController, stateSpaceManager);
 			contextDSimulation.RunSimulationLoop ();
 		}
 	}

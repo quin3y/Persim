@@ -43,6 +43,23 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			}
 			Debug.Log(strSpace);
 		}
+
+		// check the availability of the object with id
+		public Boolean IsAvailable(int id) {
+			if (objectsStatus [id] == "off") //TODO: define the status of "on" and "off"
+				return true;
+			else
+				return false;
+		}
+
+		// check the availability of the object with name
+		public Boolean IsAvailable(string name) {
+			int id = SimulationEntity.GetObject (name).id;
+			if (objectsStatus[id] == "off") //TODO: define the status of "on" and "off"
+				return true;
+			else
+				return false;
+		}
 	}
 }
 

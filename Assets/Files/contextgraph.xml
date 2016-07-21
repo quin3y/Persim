@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <contextgraph>
-	<context id="0" name="Sleep">
+	<context id="0" name="Sleep" first="false">
 		<contextconditions>
   			<contextcondition object="Bed" status="always" />
   			<contextcondition object="Bedroom door" status="maybe" />
    		</contextconditions>
    		<contextactivities>
-   			<contextactivity id="9" />
+   			<contextactivity id="10" />
    		</contextactivities>
 		<nextcontexts>
 			<nextcontext id="1" prob="0.8" /> <!-- if all contexts have equal probability, set up 0 for all. In this case, randomly choose the next one !-->
@@ -14,7 +14,7 @@
 		</nextcontexts>
 	</context>
 
-  <context id="1" name="Personal Hygiene">
+  <context id="1" name="Personal Hygiene" first="false">
   	<contextconditions>
   		<contextcondition object="Bathroom light switch" status="always" />
   		<contextcondition object="Bathroom sink" status="maybe" />
@@ -35,7 +35,7 @@
   	</nextcontexts>
   </context>
 
-  <context id="2" name="Work">
+  <context id="2" name="Work" first="true">
   	<contextconditions>
   		<contextcondition object="cellphone" />
   		<contextcondition object="Computer desk" />
@@ -50,7 +50,7 @@
   	</nextcontexts>
   </context>
 
-  <context id="3" name="healthcare">
+  <context id="3" name="healthcare" first="false">
   	<contextconditions>
   		<contextcondition object="Kitchen up" status="Always" />
   	</contextconditions>

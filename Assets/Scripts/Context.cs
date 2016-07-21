@@ -6,7 +6,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 {
 	public class Context {
 		int id;
-		private string name;
+		string name;
 		List<ContextCondition> contextConditions;
 		List<ContextActivity> contextActivities;		// activities to be performed
 		List<NextContext> nextContexts;					// next contexts to be heading from the context
@@ -19,26 +19,36 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			nextContexts = new List<NextContext> ();
 		}
 
-		// manage a context ID
+		// manage context ID
 		public int ID {
 			get { return id; }
 			set { id = value; }
 		}
 
-		// manage a context name
+		// manage context name
 		public String Name {
 			get { return name;	}
 			set { name = value; }
 		}
 
+		// manage list of context conditions
+		public List<ContextCondition> ContextConditions {
+			get { return contextConditions; }
+		}
+
+		// manage list of context activities
+		public List<ContextActivity> ContextActivities {
+			get { return contextActivities; }
+		}
+
+		// manage list of next contexts
+		public List<NextContext> NextContexts {
+			get { return nextContexts; }
+		}
+
 		// return the number of context conditions
 		public int CountContextConditions() {
 			return contextConditions.Count;
-		}
-
-		// return a context condition
-		public List<ContextCondition> GetContextConditions() {
-			return contextConditions;
 		}
 
 		// return a context condition
@@ -69,11 +79,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			return contextActivities.Count;
 		}
 
-		// return context activities
-		public List<ContextActivity> GetContextActivities() {
-			return contextActivities;
-		}
-
 		// return a context activity
 		public ContextActivity GetContextActivity(int index) {
 			if (contextActivities.Count == 0)
@@ -99,11 +104,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		// return the number of next contextts
 		public int CountNextContexts() {
 			return nextContexts.Count;
-		}
-
-		// return next contexts
-		public List<NextContext> getNextContexts() {
-			return nextContexts;
 		}
 
 		// return a context activity
