@@ -10,10 +10,10 @@ namespace UnityStandardAssets.Characters.ThirdPerson
     public class AICharacterControl : MonoBehaviour {
 		public ActivityPlayback activityPlayback;
 		public ActivityPlaylist playlist;
-		public int currentActivity = -1;
-
 		public ActionInstance nextAction = null;
+		public int currentActivity = -1;
 		public bool arrivedAtDestination;
+		public bool activityFinished = false;
 
 		public NavMeshAgent navAgent { get; private set; } // the navmesh agent required for the path finding
         public ThirdPersonCharacter character { get; private set; } // the character we are controlling

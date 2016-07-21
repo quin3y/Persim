@@ -9,7 +9,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 		override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 			AICharacterControl characterController = GameObject.Find("Ethan").GetComponent<AICharacterControl>();
-			StateSpaceManager stateSpaceManager = GameObject.Find("Camera").GetComponent<StateSpaceManager>();
 
 			// Show the mobile phone
 			if (characterController.nextAction.name == "Text") {
@@ -52,14 +51,18 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				characterController.mobilePhone.SetActive(false);
 			}
 	        
-			// Set the location of the next action as the character's destination
+			// If activity not finished
 			if (characterController.activityPlayback.actionQueue.Count > 0) {
+				// Set the location of the next action as the character's destination
 				characterController.nextAction = characterController.activityPlayback.actionQueue.Dequeue();
 				characterController.navAgent.destination = characterController.nextAction.location;
 //				Debug.Log("next action = " + characterController.nextAction.name);
 			}
 
-			else {    // Activity finished
+			// Activity finished
+			else {
+				characterController.activityFinished = true;
+
 				// Start next activity
 				if (characterController.playlist.Count() > 0) {
 					characterController.PlayActivity(characterController.playlist.Pop());
@@ -79,7 +82,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 			if (actionName == "Wash hands" || actionName == "Dry hands" || actionName == "Wash face" || actionName == "Dry face" ||
 				actionName == "Use computer" || actionName == "Text" || actionName == "Flush toilet") {
-//				stateSpaceManager.UpdateStateSpace(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))), action.obj.id, "on");
+				stateSpaceManager.UpdateStateSpace(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))), action.obj.id, "on");
 				Debug.Log(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))) + ", " + action.obj.name + ", on");
 			}
 		}
@@ -92,12 +95,12 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				actionName == "Dry face" || actionName == "Stand up" || actionName == "Use computer" || actionName == "Text" ||
 				actionName == "Put down right" || actionName == "Flush toilet" || actionName == "Open door" || actionName == "Turn off lamp" ||
 				actionName == "Get up") {
-//				stateSpaceManager.UpdateStateSpace(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))), action.obj.id, "off");
+				stateSpaceManager.UpdateStateSpace(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))), action.obj.id, "off");
 				Debug.Log(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))) + ", " + action.obj.name + ", off");
 			}
 			else if (actionName == "Turn on light" || actionName == "Sit down" || actionName == "Pick up right" ||
 				actionName == "Close door" || actionName == "Lie down") {
-//				stateSpaceManager.UpdateStateSpace(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))), action.obj.id, "on");
+				stateSpaceManager.UpdateStateSpace(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))), action.obj.id, "on");
 				Debug.Log(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))) + ", " + action.obj.name + ", on");
 			}
 		}
