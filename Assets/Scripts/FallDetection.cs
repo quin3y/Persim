@@ -29,7 +29,7 @@ public class FallDetection : MonoBehaviour {
 		//Debug.Log (headVelocity);
 		//PlayerPrefs.SetFloat("vel", headVelocity);
 		if (headCloseToGround && headVelocity < fallVelocityThreshold && !askedIfFallen) { //conditions for falling
-			Debug.Log("Have you fallen?");
+			ReportFall();
 			askedIfFallen = true;
 		}
 		previousHeadPositionY = currentHeadPositionY;
@@ -39,5 +39,29 @@ public class FallDetection : MonoBehaviour {
 		if (c.name == "EthanHead1") { //if the head is close to the ground
 			headCloseToGround = true;
 		}
+	}
+
+	void ReportFall() {
+		Vector3 pos = GameObject.Find("Ethan").transform.position;
+		string loc;
+		if (pos.x < 4.4f && pos.z < 5.6f) {
+			loc = "bathroom";
+		}
+		else if (pos.x < 4.4f && pos.z >= 5.6f && pos.z < 9.6f) {
+			loc = "kitchen";
+		}
+		else if (pos.x < 4.4f && pos.z >= 9.6f && pos.z < 16.5f) {
+			loc = "dining room";
+		}
+		else if (pos.x >= 4.4f && pos.z >= 9.6f && pos.z < 16.5f) {
+			loc = "living room";
+		}
+		else if (pos.x >= 4.4f && pos.x < 7.8f && pos.z < 9.6f) {
+			loc = "hallway";
+		}
+		else {
+			loc = "bedroom";
+		}
+		print("Character fell in the " + loc);
 	}
 }

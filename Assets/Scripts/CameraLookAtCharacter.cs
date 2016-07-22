@@ -22,7 +22,6 @@ public class CameraLookAtCharacter : MonoBehaviour {
 		         target.position.x >= 5f && target.position.x < 8.8f && target.position.z < 3.6f) {
 			transform.position = new Vector3(6.7f, 2f, 1.94f);
 			transform.LookAt(target);
-
 		}
 		else if ((target.position.x >= 8f && target.position.z >= 3.72f && target.position.z < 9.7f) ||
 		         (target.position.x >= 9f && target.position.z < 3.7f)) {
