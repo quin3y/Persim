@@ -4,10 +4,12 @@ using System.Collections.Generic;
 
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
-	public class ContextDrivenSimulation {
-		Activity curActivity;
+	public class ContextDrivenSimulation {		
 		AICharacterControl characterController;
 		StateSpaceManager stateSpaceManager;
+
+		Activity curActivity;
+		double[] contextDistances;
 
 		public ContextDrivenSimulation (AICharacterControl characterController, StateSpaceManager stateSpaceManager) {
 			this.characterController = characterController;
@@ -74,17 +76,18 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 		public void PerformContextActivity() {			
 			Time.timeScale = 1;
-//			characterController.PlayActivity(characterController.playlist.Pop());
+			characterController.PlayActivity(characterController.playlist.Pop());
 			Debug.Log ("activity " + curActivity.id + "(" + curActivity.name + ") is performed");
 			// test case
-			stateSpaceManager.UpdateStateSpace (stateSpaceManager.startTime.Add (TimeSpan.FromSeconds (Mathf.Round (Time.time))),  1, "on");
-			stateSpaceManager.UpdateStateSpace (stateSpaceManager.startTime.Add (TimeSpan.FromSeconds (Mathf.Round (Time.time))), 11, "on");
+//			stateSpaceManager.UpdateStateSpace (stateSpaceManager.startTime.Add (TimeSpan.FromSeconds (Mathf.Round (Time.time))), 11, "on");
+//			stateSpaceManager.UpdateStateSpace (stateSpaceManager.startTime.Add (TimeSpan.FromSeconds (Mathf.Round (Time.time))), 12, "on");
 		}
 
 		public void EvaluateStateSpace() {
 			StateSpace curStateSpace = stateSpaceManager.GetLatestStateSpace ();
 			Debug.Log (stateSpaceManager.StateSpaceHistory.Count + " state spaces are stored");
 			curStateSpace.PrintStateSpace ();
+			contextDistances = new double[SimulationEntity.CurContext.CountNextContexts()];
 
 			for (int i = 0; i < SimulationEntity.CurContext.CountNextContexts(); i++) {
 				int nextContextID = SimulationEntity.CurContext.GetNextContext (i).ID;
@@ -92,9 +95,9 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				float nextContextProb = SimulationEntity.CurContext.GetNextContext (i).Probability;
 
 				string objName;
-				int [] distances = new int[nextContext.CountContextConditions ()];
 				int distance = 0;
-				bool satisfiableOfMaybe = false;
+				bool satisfiableForAlways = true, satisfiableForNever = true, satisfiableForMaybe = false;
+				Debug.Log (nextContext.Name + " is evaluated");
 				for (int j = 0; j < nextContext.CountContextConditions (); j++) {
 					objName = nextContext.GetContextCondition (j).ObjectName;
 
@@ -104,26 +107,56 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 					// if condition status is maybe, any of associated objects' status should be 1
 					// others, ignore (filtered)
 					// TODO generalize the process to cover other possible status terms (on/off, used/not unsed, 0/1, ...)
-//					if (nextContext.ContextConditions[j].ObjectStatus == "always" && curStateSpace.GetObjectStatus(objName) == "off" ) {	
-//						Debug.Log (j + "/" + (nextContext.CountContextConditions () - 1) + " " + objName);
-//						distance++;
-//					}
-//					elseif (nextContext.ContextConditions[j].ObjectStatus == "never" && curStateSpace.GetObjectStatus(objName) == "on" ) {	
-//						Debug.Log (j + "/" + (nextContext.CountContextConditions () - 1) + " " + objName);
-//						distance++;
-//					}
-//					elseif (nextContext.ContextConditions[j].ObjectStatus == "always" && curStateSpace.GetObjectStatus(objName) == "off" && !satisfiableOfMaybe) {	
-//						satisfiableOfMaybe = true;
-//						Debug.Log (j + "/" + (nextContext.CountContextConditions () - 1) + " " + objName);
-//					}
+					if (nextContext.ContextConditions[j].ObjectStatus == "always" && curStateSpace.GetObjectStatus(objName) == "off" ) {
+//						Debug.Log (j + "/" + (nextContext.CountContextConditions () - 1) + " " + objName + ", always out");
+						satisfiableForAlways = false;	
+						break;
+					}
+					else if (nextContext.ContextConditions[j].ObjectStatus == "never" && curStateSpace.GetObjectStatus(objName) == "on" ) {
+//						Debug.Log (j + "/" + (nextContext.CountContextConditions () - 1) + " " + objName + ", never out");
+						satisfiableForAlways = false;
+						break;
+					}
+					else if (nextContext.ContextConditions[j].ObjectStatus == "maybe") {
+						if (curStateSpace.GetObjectStatus (objName) == "on")
+							satisfiableForMaybe = true;
+						else {
+							distance++;						// TODO Euclidean distance
+//							Debug.Log (j + "/" + (nextContext.CountContextConditions () - 1) + " " + objName + ", " + distance);
+
+						}
+					}
 				}
+				if (!satisfiableForMaybe && distance == 0)		// when there is no Maybe condition
+					satisfiableForMaybe = true;
+
+				// store distances for each next context
+				if (satisfiableForAlways && satisfiableForNever && satisfiableForMaybe)
+					contextDistances [i] = Math.Sqrt (distance);
+				else
+					contextDistances [i] = Double.PositiveInfinity;			// The next context which is not reachable has positivie infinity
 			}
 		}
 
 		public void TransitToNextContext() {
-			Debug.Log (">transit context activities");
-		}
+			double least = Double.PositiveInfinity;
+			int newContextID = SimulationEntity.CurContext.ID;
+			for (int k = 0; k < contextDistances.Length ;k++) {
+				Context context = SimulationEntity.GetContext(SimulationEntity.CurContext.NextContexts[k].ID);
 
+				if (contextDistances [k] != -1.0 && contextDistances [k] < least) {
+					least = contextDistances [k];
+					newContextID = k;
+				}
+			}
+
+			if (least < Double.PositiveInfinity) {
+				SimulationEntity.CurContext = SimulationEntity.GetContext(newContextID);
+				Debug.Log ("least is " + least + " and change current context into current context " + newContextID);
+			}
+			else
+				Debug.Log ("least is " + least + " and keep in the current context " + newContextID);
+		}
 	}
 }
 

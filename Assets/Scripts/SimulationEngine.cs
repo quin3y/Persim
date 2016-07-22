@@ -27,7 +27,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		}
 
 		void Update() { 
-			
+			if (characterController.activityFinished)
+				print ("done");
 		}
 			
 		public SimulationEngine() { }
@@ -39,8 +40,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			cds.SelectContextActivities ();
 			cds.ScheduleContextActivities ();
 			cds.PerformContextActivity ();
-//			cds.EvaluateStateSpace ();
-//			cds.TransitToNextContext ();
+			//cds.EvaluateStateSpace ();
+			//cds.TransitToNextContext ();
 
 		}
 	}

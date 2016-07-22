@@ -29,7 +29,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		}
 
 		// return the number of contexts
-		public int GetCount() {
+		public int CountContexts() {
 			return contexts.Count;
 		}
 	}

@@ -115,6 +115,14 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			else
 				return null;
 		}
+
+		// return an activity with id
+		public static Context GetContext(int id) {
+			if (id < ContextGraph.CountContexts())
+				return ContextGraph.GetContext(id);
+			else
+				return null;
+		}
 	}
 }
 

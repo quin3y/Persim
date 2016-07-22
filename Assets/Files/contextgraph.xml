@@ -53,7 +53,7 @@
 
   <context id="3" name="healthcare" first="false">
   	<contextconditions>
-  		<contextcondition object="Kitchen cup" status="Always" />
+  		<contextcondition object="Kitchen cup" status="always" />
   	</contextconditions>
   	<contextactivities>
   		<contextactivity id="6" />
