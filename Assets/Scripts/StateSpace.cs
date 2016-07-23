@@ -41,7 +41,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				strSpace += s;
 				strSpace += " ";
 			}
-			Debug.Log(strSpace);
+//			Debug.Log(strSpace);
 		}
 
 		// check the availability of the object with id

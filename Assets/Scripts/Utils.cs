@@ -83,18 +83,21 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			
 			while (reader.Read()) {
 				if (reader.NodeType == XmlNodeType.Element && reader.Name == "activity") {
-					Activity act = new Activity();
-					act.id = Int32.Parse(reader.GetAttribute(0));
-					act.name = reader.GetAttribute(1);
+					Activity activity = new Activity();
+                    activity.id = Int32.Parse(reader.GetAttribute(0));
+                    activity.name = reader.GetAttribute(1);
 					
 					while (reader.NodeType != XmlNodeType.EndElement) {
 						reader.Read();
 						if (reader.Name == "action") {
-							act.actionIds.Add(Int32.Parse(reader.GetAttribute(0)));
-							act.objectNames.Add(reader.GetAttribute(1));
+                            activity.actionIds.Add(Int32.Parse(reader.GetAttribute(0)));
+                            activity.objectNames.Add(reader.GetAttribute(1));
+                            activity.importances.Add(Int32.Parse(reader.GetAttribute(2)));
+                            activity.maxOccurs.Add(Int32.Parse(reader.GetAttribute(3)));
+                            activity.prereqs.Add(Int32.Parse(reader.GetAttribute(4)));
 						}
 					}
-					activityList.Add(act);
+                    activityList.Add(activity);
 				}
 			}
 			reader.Close();
