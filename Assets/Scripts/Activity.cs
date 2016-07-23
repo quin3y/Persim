@@ -16,6 +16,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			objectNames = new List<string>();
 		}
 
+		// Add the 1st action by default, user can change
 		public void AddAction() {
 			actionIds.Add(1);
 			objectNames.Add("Bathroom light switch");
