@@ -8,38 +8,44 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		AICharacterControl characterController;
 		StateSpaceManager stateSpaceManager;
 
-		Activity curActivity;
+		Activity curActivity;										// currently performing activity
+		List<Context.ContextActivity> selectedContextActivities;	// list of selected context activities
+		List<int> scheduledContextActivities;						// list of scheduled context activities
 		double[] contextDistances;
 
 		public ContextDrivenSimulation (AICharacterControl characterController, StateSpaceManager stateSpaceManager) {
 			this.characterController = characterController;
 			this.stateSpaceManager = stateSpaceManager;
+			selectedContextActivities = new List<Context.ContextActivity> ();
+			scheduledContextActivities = new List<int> ();
 		}
 
+		// select all possible activities from the current context and the next contexts
 		public void SelectContextActivities() {
-			int activityID;
+//			if (selectedContextActivities.Count == 0) {
+				AddContextActivities (SimulationEntity.CurContext);
 
-			for (int i = 0; i < SimulationEntity.CurContext.CountContextActivities(); i++) {
-				activityID = SimulationEntity.CurContext.GetContextActivity (i).ID;
+				foreach (Context.NextContext nc in SimulationEntity.CurContext.NextContexts) {
+					int contextID = nc.ID;
+					Context cont = SimulationEntity.ContextGraph.GetContext (contextID);
+					AddContextActivities (cont);
+				}
+//			}
+			Debug.Log (selectedContextActivities.Count + " activities are added");
+		}
 
-				if (IsAvailable (activityID)) {
-					SimulationEntity.ActivityPlayList.AddActivity (SimulationEntity.CurContext.GetContextActivity (i).ID);
+		// add possible activities as context activities
+		public void AddContextActivities(Context cont) {
+			Context.ContextActivity contActivity;
+
+			for (int i = 0; i < cont.CountContextActivities(); i++) {
+				contActivity = cont.GetContextActivity (i);
+
+				Debug.Log (contActivity.ID + " performed, " + contActivity.Performed);
+				if (IsAvailable (cont.GetContextActivity (i).ID) && !contActivity.Performed) {					
+					selectedContextActivities.Add (contActivity);
 				}
 			}
-
-			foreach (Context.NextContext nc in SimulationEntity.CurContext.NextContexts) {
-				int contextID = nc.ID;
-				Context cont = SimulationEntity.ContextGraph.GetContext (contextID);
-
-				for (int i = 0; i < cont.CountContextActivities(); i++) {
-					activityID = cont.GetContextActivity (i).ID;
-
-					if (IsAvailable (activityID)) {
-						SimulationEntity.ActivityPlayList.AddActivity (cont.GetContextActivity (i).ID);
-					}
-				}
-			}
-			Debug.Log (SimulationEntity.ActivityPlayList.Count () + " activities are added");
 		}
 
 		// check whether the context activity is available
@@ -48,45 +54,57 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			for (int j = 0; j < SimulationEntity.Activities [activityID].objectNames.Count; j++) {
 				objName = SimulationEntity.Activities [activityID].objectNames [j];
 //				Debug.Log (activityID + " with " + objName + " " + stateSpaceManager.GetLatestStateSpace ().ObjectsStatus [j]);
-				if (stateSpaceManager.GetLatestStateSpace ().ObjectsStatus [j] == "on") {
+				if (stateSpaceManager.GetLatestStateSpace ().ObjectsStatus [j] == "on") {	// not available if the object is used
 					return false;
 				}
 			}
 
 			return true;
 		}
-			
+
+		// schecule all the possible activities. the first activity in the schedule will be performed next.
 		public void ScheduleContextActivities() {
 			int curID = 0;
 			Activity activity;
-			for (int i = 0; i < SimulationEntity.ActivityPlayList.Count(); i++) {
-				activity = SimulationEntity.GetActivity (SimulationEntity.ActivityPlayList.GetList () [i]);
+
+			for (int i = 0; i < selectedContextActivities.Count; i++) {
+				activity = SimulationEntity.GetActivity (selectedContextActivities[i].ID);
 //				Debug.Log ("activity " + activity.id + "(" + activity.name + ") is scheduled");
 
 //				TODO: scheduling algorithm
 				if (i == 0) {
-					curID = SimulationEntity.ActivityPlayList.GetList () [0];
+					curID = selectedContextActivities[0].ID;
 					curActivity = activity;
 				}
 			}
 
 			characterController.playlist.AddActivity (curID);
-//			Debug.Log ("activity " + curActivity.id + "(" + curActivity.name + ") will be performed");
 		}
 
+		// perform a scheduled activity by playing a character, which will update state space
 		public void PerformContextActivity() {			
 			Time.timeScale = 1;
-			characterController.PlayActivity(characterController.playlist.Pop());
+
+			characterController.PlayActivity(characterController.playlist.Pop ());
+			selectedContextActivities [0].Performed = true;
+
 			Debug.Log ("activity " + curActivity.id + "(" + curActivity.name + ") is performed");
-			// test case
+
+			scheduledContextActivities.Add (curActivity.id);
+			SimulationEntity.ScheduledActivities.Add (curActivity.id);
+
+			// TODO test cases
 //			stateSpaceManager.UpdateStateSpace (stateSpaceManager.startTime.Add (TimeSpan.FromSeconds (Mathf.Round (Time.time))), 11, "on");
+//			stateSpaceManager.UpdateStateSpace (stateSpaceManager.startTime.Add (TimeSpan.FromSeconds (Mathf.Round (Time.time))), 11, "off");
 //			stateSpaceManager.UpdateStateSpace (stateSpaceManager.startTime.Add (TimeSpan.FromSeconds (Mathf.Round (Time.time))), 12, "on");
+//			stateSpaceManager.UpdateStateSpace (stateSpaceManager.startTime.Add (TimeSpan.FromSeconds (Mathf.Round (Time.time))), 12, "off");
 		}
 
+		// evalucate state space and find all reachable contexts
 		public void EvaluateStateSpace() {
-			StateSpace curStateSpace = stateSpaceManager.GetLatestStateSpace ();
 			Debug.Log (stateSpaceManager.StateSpaceHistory.Count + " state spaces are stored");
-			curStateSpace.PrintStateSpace ();
+			StateSpace curStateSpace = stateSpaceManager.StateSpaceEvaluator;
+			stateSpaceManager.StateSpaceEvaluator.PrintStateSpace ();
 			contextDistances = new double[SimulationEntity.CurContext.CountNextContexts()];
 
 			for (int i = 0; i < SimulationEntity.CurContext.CountNextContexts(); i++) {
@@ -138,24 +156,35 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			}
 		}
 
+		// find the only ONE context to reach as next context
 		public void TransitToNextContext() {
 			double least = Double.PositiveInfinity;
 			int newContextID = SimulationEntity.CurContext.ID;
 			for (int k = 0; k < contextDistances.Length ;k++) {
-				Context context = SimulationEntity.GetContext(SimulationEntity.CurContext.NextContexts[k].ID);
 
 				if (contextDistances [k] != -1.0 && contextDistances [k] < least) {
 					least = contextDistances [k];
 					newContextID = k;
 				}
 			}
+			stateSpaceManager.ResetStateSpaceEvaluator ();
 
 			if (least < Double.PositiveInfinity) {
 				SimulationEntity.CurContext = SimulationEntity.GetContext(newContextID);
+				ResetScheduledContextActivityList ();
 				Debug.Log ("least is " + least + " and change current context into current context " + newContextID);
 			}
 			else
 				Debug.Log ("least is " + least + " and keep in the current context " + newContextID);
+			ResetSelectedContextActivityList ();
+		}
+
+		public void ResetSelectedContextActivityList() {
+			selectedContextActivities.Clear ();
+		}
+
+		public void ResetScheduledContextActivityList() {
+			scheduledContextActivities.Clear ();
 		}
 	}
 }

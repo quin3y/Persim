@@ -6,13 +6,16 @@ using System.Collections.Generic;
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
 	public static class SimulationEntity {
-		public static List<ObjectInfo> Objects = new List<ObjectInfo> (); 								// a set of objects
-		public static List<Action> Actions = new List<Action> ();										// a set of actions
-		public static List<Activity> Activities = new List<Activity> ();								// a set of activities
-		public static ContextGraph ContextGraph = new ContextGraph();									// context graph
+		public static List<ObjectInfo> Objects = new List<ObjectInfo> (); 				// a set of objects
+		public static List<Action> Actions = new List<Action> ();						// a set of actions
+		public static List<Activity> Activities = new List<Activity> ();				// a set of activities
+		public static ContextGraph ContextGraph = new ContextGraph();					// context graph
 
 		public static Context CurContext;
-		public static ActivityPlaylist ActivityPlayList = new ActivityPlaylist ();
+		public static int StartContextId { get; set; }									// starting context id
+		public static int EndContextId { get; set; }									// ending context id
+
+		public static List<int> ScheduledActivities = new List<int>();					// list of performed activities
 
 		// read object models
 		public static void ReadObjectXml() {
@@ -68,7 +71,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		// read context models
 		public static void ReadContextXml() {
 			XmlReader reader = XmlReader.Create("Assets/Files/contextgraph.xml");
-			int first = 0;
 
 			while (reader.Read()) {					
 				if (reader.IsStartElement()) {
@@ -77,8 +79,10 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 						Context context = new Context (int.Parse (reader.GetAttribute ("id")), reader.GetAttribute ("name"));
 						CurContext = context;
 						SimulationEntity.ContextGraph.AddContext (context);
-						if (reader.GetAttribute ("first") == "true")
-							first = int.Parse (reader.GetAttribute ("id"));
+						if (reader.GetAttribute ("status") == "start")
+							StartContextId = int.Parse (reader.GetAttribute ("id"));
+						else if (reader.GetAttribute ("status") == "end")
+							EndContextId = int.Parse (reader.GetAttribute ("id"));
 						break;
 					case "contextcondition":
 						CurContext.AddContextCondition (reader.GetAttribute ("object"), reader.GetAttribute ("status"));
@@ -93,7 +97,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				}
 			}
 
-			CurContext = SimulationEntity.ContextGraph.GetContext (first);
+			CurContext = SimulationEntity.ContextGraph.GetContext (StartContextId);
 			reader.Close();
 		}
 
@@ -122,6 +126,14 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				return ContextGraph.GetContext(id);
 			else
 				return null;
+		}
+
+		// check whether simulation can end or not
+		public static bool IsEnd() {
+			if (CurContext.ID == EndContextId)
+				return true;
+			else 
+				return false;
 		}
 	}
 }

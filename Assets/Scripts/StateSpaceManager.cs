@@ -8,6 +8,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		public TimeSpan startTime;
 		public List<DataRecord> dataset;
 		List<StateSpace> stateSpaceHistory;				// list of state spaces generated during simulation
+		StateSpace stateSpaceEvaluator;					// for evaluating a context
 
 		// Use this for initialization
 		void Start() {
@@ -16,8 +17,14 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 //			Debug.Log ("StateSpaceManager starts");
 		}
 
+		// manage StateSpaceHistory
 		public List<StateSpace> StateSpaceHistory {
 			get { return stateSpaceHistory;}
+		}
+
+		// manage StateSpaceEvaluator
+		public StateSpace StateSpaceEvaluator {
+			get { return stateSpaceEvaluator; }
 		}
 
 		public void AddDataRecord(TimeSpan time, string objName, string status) {
@@ -43,19 +50,36 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		// initialize state space
 		public void InitializeStateSpace() {
 			stateSpaceHistory = new List<StateSpace> ();
+			stateSpaceEvaluator = new StateSpace ();
 			StateSpace firstStateSpace = new StateSpace ();
-//			Debug.Log ("state space of " + SimulationEntity.Objects.Count + " objects is initialized");
+			
 			for (int i = 0; i < SimulationEntity.Objects.Count; i++) {				
 				firstStateSpace.ObjectsStatus[i] = SimulationEntity.Objects[i].status;
+				stateSpaceEvaluator.ObjectsStatus[i] = SimulationEntity.Objects[i].status;
 			}
 			firstStateSpace.PrintStateSpace();
+
 			stateSpaceHistory.Add(firstStateSpace);
 		}
 
 		// update state space
-		public void UpdateStateSpace(TimeSpan time, int objId, string newStatus) {			
+		public void UpdateStateSpace(TimeSpan time, int objId, string newStatus) {	
 			StateSpace newStateSpace = GetLatestStateSpace ();
-			newStateSpace.UpdateObjectStatus (time ,objId, newStatus);
+
+			newStateSpace.UpdateObjectStatus (time, objId, newStatus);
+			stateSpaceHistory.Add (newStateSpace);
+
+			if (newStatus == "on") {
+				stateSpaceEvaluator.UpdateObjectStatus (time, objId, newStatus);		// stateSpaceEaluator contains all "on" cases
+			}
+
+		}
+
+		// print all the state spaces in history
+		public void PrintStateSpaceHistory () {
+			foreach (StateSpace ss in stateSpaceHistory) {
+				ss.PrintStateSpace ();
+			}
 		}
 
 		// print the latest state space
@@ -66,6 +90,16 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		// return the latest state space
 		public StateSpace GetLatestStateSpace() {
 			return stateSpaceHistory [stateSpaceHistory.Count-1];
+		}
+
+		// print the state space evaluator
+		public void PrintStateSpaceEvaluator() {
+			stateSpaceEvaluator.PrintStateSpace();
+		}
+
+		// reset state space evaluator
+		public void ResetStateSpaceEvaluator() {
+			stateSpaceEvaluator = GetLatestStateSpace();
 		}
 
 		void OnApplicationQuit() {

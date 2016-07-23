@@ -7,6 +7,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 	public class SimulationEngine : MonoBehaviour {
 		AICharacterControl characterController;			// AI Character controller attached on the character
 		StateSpaceManager stateSpaceManager;			// state space manager attached on the character
+		ContextDrivenSimulation contextDrvSimulation;
 
 		void Start() {
 			// configure simulation
@@ -23,26 +24,38 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			stateSpaceManager = GameObject.Find("Camera").GetComponent<StateSpaceManager>();	
 			stateSpaceManager.InitializeStateSpace();
 
-			//RunSimulation ();
+			contextDrvSimulation = new ContextDrivenSimulation (characterController, stateSpaceManager);
+
+//			RunSimulation ();
 		}
 
 		void Update() { 
-			if (characterController.activityFinished)
-				print ("done");
+			if (characterController.activityFinished) {
+				characterController.activityFinished = false;
+//				TransitionContext ();
+			}
 		}
 			
-		public SimulationEngine() { }
-
-		// Run simulation loop
+		// run simulation loop: WITHIN a context
 		void RunSimulation() {
 			// Run context-driven simulation engine
-			ContextDrivenSimulation cds = new ContextDrivenSimulation (characterController, stateSpaceManager);
-			cds.SelectContextActivities ();
-			cds.ScheduleContextActivities ();
-			cds.PerformContextActivity ();
-			//cds.EvaluateStateSpace ();
-			//cds.TransitToNextContext ();
 
+			contextDrvSimulation.SelectContextActivities ();
+			contextDrvSimulation.ScheduleContextActivities ();
+			contextDrvSimulation.PerformContextActivity ();
+			//contextDrvSimulation.EvaluateStateSpace ();			// moved into TransitionContext()
+			//contextDrvSimulation.TransitToNextContext ();			// moved into TransitionContext()
+		}
+
+		// transition to the next context if available: BETWEEN contexts
+		void TransitionContext() {
+			print ("Now " + stateSpaceManager.StateSpaceHistory.Count + " state spaces has stored");
+			contextDrvSimulation.EvaluateStateSpace ();
+			contextDrvSimulation.TransitToNextContext ();
+			if (!SimulationEntity.IsEnd ())
+				RunSimulation ();
+			else
+				Debug.Log ("Simulation Ends");			
 		}
 	}
 }

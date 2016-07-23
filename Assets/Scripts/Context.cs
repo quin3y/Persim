@@ -153,14 +153,21 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 		public class ContextActivity {
 			int id; 						// contextactivity id
+			bool performed;
 
 			public ContextActivity(int id)	{
 				this.id = id;
+				this.performed = false;
 			}
 
 			// manage context activity ID
 			public int ID {
 				get { return id; }
+			}
+
+			public bool Performed {
+				get { return performed; }
+				set { performed = value; }
 			}
 		}
 

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <contextgraph>
-	<context id="0" name="Sleep" first="false">
+	<context id="0" name="Sleep" status="any">
 		<contextconditions>
   			<contextcondition object="Bed" status="always" />
   			<contextcondition object="Bedroom door" status="maybe" />
@@ -14,7 +14,7 @@
 		</nextcontexts>
 	</context>
 
-  <context id="1" name="Personal Hygiene" first="false">
+  <context id="1" name="Personal Hygiene" status="any">
   	<contextconditions>
   		<contextcondition object="Bathroom light switch" status="always" />
   		<contextcondition object="Bathroom sink" status="maybe" />
@@ -36,7 +36,7 @@
   	</nextcontexts>
   </context>
 
-  <context id="2" name="Work" first="true">
+  <context id="2" name="Work" status="start">
   	<contextconditions>
   		<contextcondition object="Mobile phone" status="maybe" />
   		<contextcondition object="Computer" status="always" />
@@ -51,7 +51,7 @@
   	</nextcontexts>
   </context>
 
-  <context id="3" name="healthcare" first="false">
+  <context id="3" name="healthcare" status="end">
   	<contextconditions>
   		<contextcondition object="Kitchen cup" status="always" />
   	</contextconditions>
