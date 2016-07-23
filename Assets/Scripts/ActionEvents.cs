@@ -83,7 +83,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			if (actionName == "Wash hands" || actionName == "Dry hands" || actionName == "Wash face" || actionName == "Dry face" ||
 				actionName == "Use computer" || actionName == "Text" || actionName == "Flush toilet") {
 				stateSpaceManager.UpdateStateSpace(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))), action.obj.id, "on");
-				Debug.Log(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))) + ", " + action.obj.name + ", on");
+//				Debug.Log(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))) + ", " + action.obj.name + ", on");
 			}
 		}
 
@@ -96,12 +96,12 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				actionName == "Put down right" || actionName == "Flush toilet" || actionName == "Open door" || actionName == "Turn off lamp" ||
 				actionName == "Get up") {
 				stateSpaceManager.UpdateStateSpace(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))), action.obj.id, "off");
-				Debug.Log(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))) + ", " + action.obj.name + ", off");
+//				Debug.Log(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))) + ", " + action.obj.name + ", off");
 			}
 			else if (actionName == "Turn on light" || actionName == "Sit down" || actionName == "Pick up right" ||
 				actionName == "Close door" || actionName == "Lie down") {
 				stateSpaceManager.UpdateStateSpace(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))), action.obj.id, "on");
-				Debug.Log(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))) + ", " + action.obj.name + ", on");
+//				Debug.Log(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))) + ", " + action.obj.name + ", on");
 			}
 		}
 

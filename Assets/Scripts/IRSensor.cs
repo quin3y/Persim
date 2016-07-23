@@ -19,12 +19,12 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			if (Vector3.Distance(transform.position, GameObject.Find("EthanRightHand").transform.position) < 0.35f && !isOn) {
 				isOn = true;
 				stateSpaceManager.AddDataRecord(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))),
-					"faucet", "on");
+					transform.parent.name, "on");
 			}
 			if (Vector3.Distance(transform.position, GameObject.Find("EthanRightHand").transform.position) >= 0.35f && isOn) {
 				isOn = false;
 				stateSpaceManager.AddDataRecord(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))),
-					"faucet", "off");
+					transform.parent.name, "off");
 			}
 		}
 	}
