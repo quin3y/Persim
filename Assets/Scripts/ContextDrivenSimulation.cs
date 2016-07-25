@@ -31,7 +31,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 					AddContextActivities (cont);
 				}
 //			}
-			Debug.Log (selectedContextActivities.Count + " activities are added");
+			Debug.Log (selectedContextActivities.Count + " activities are selected");
 		}
 
 		// add possible activities as context activities
@@ -41,7 +41,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			for (int i = 0; i < cont.CountContextActivities(); i++) {
 				contActivity = cont.GetContextActivity (i);
 
-				Debug.Log (contActivity.ID + " performed, " + contActivity.Performed);
 				if (IsAvailable (cont.GetContextActivity (i).ID) && !contActivity.Performed) {					
 					selectedContextActivities.Add (contActivity);
 				}
@@ -102,9 +101,9 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 		// evalucate state space and find all reachable contexts
 		public void EvaluateStateSpace() {
-			Debug.Log (stateSpaceManager.StateSpaceHistory.Count + " state spaces are stored");
+			Debug.Log (SimulationEntity.CurContext.Name + " is evaluated with " + SimulationEntity.CurContext.CountNextContexts() + " next contexts");
 			StateSpace curStateSpace = stateSpaceManager.StateSpaceEvaluator;
-			stateSpaceManager.StateSpaceEvaluator.PrintStateSpace ();
+			curStateSpace.PrintStateSpace ();
 			contextDistances = new double[SimulationEntity.CurContext.CountNextContexts()];
 
 			for (int i = 0; i < SimulationEntity.CurContext.CountNextContexts(); i++) {
@@ -170,12 +169,13 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			stateSpaceManager.ResetStateSpaceEvaluator ();
 
 			if (least < Double.PositiveInfinity) {
-				SimulationEntity.CurContext = SimulationEntity.GetContext(newContextID);
+				SimulationEntity.CurContext = SimulationEntity.GetContext (newContextID);
+				Debug.Log ("the least distance is " + least + " and change current context into current context " + newContextID);
 				ResetScheduledContextActivityList ();
-				Debug.Log ("least is " + least + " and change current context into current context " + newContextID);
+			} 
+			else {
+				Debug.Log ("the least distance is " + least + " and keep in the current context " + newContextID);
 			}
-			else
-				Debug.Log ("least is " + least + " and keep in the current context " + newContextID);
 			ResetSelectedContextActivityList ();
 		}
 
