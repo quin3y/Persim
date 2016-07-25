@@ -68,17 +68,18 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 			newStateSpace.UpdateObjectStatus (time, objId, newStatus);
 			stateSpaceHistory.Add (newStateSpace);
-
 			if (newStatus == "on") {
 				stateSpaceEvaluator.UpdateObjectStatus (time, objId, newStatus);		// stateSpaceEaluator contains all "on" cases
-			}
-
+			} 
+//			stateSpaceEvaluator.PrintStateSpace ();		
 		}
 
 		// print all the state spaces in history
 		public void PrintStateSpaceHistory () {
-			foreach (StateSpace ss in stateSpaceHistory) {
-				ss.PrintStateSpace ();
+			print (StateSpaceHistory.Count + " state spaces are stored");
+			for (int i = 0; i < stateSpaceHistory.Count; i++) {
+				print (i); 
+				stateSpaceHistory[i].PrintStateSpace ();
 			}
 		}
 
@@ -87,9 +88,14 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			GetLatestStateSpace ().PrintStateSpace ();
 		}
 
-		// return the latest state space
+		// return a copy of the latest state space
 		public StateSpace GetLatestStateSpace() {
-			return stateSpaceHistory [stateSpaceHistory.Count-1];
+			StateSpace lStateSpace = new StateSpace ();
+			lStateSpace.TimeStamp = stateSpaceHistory [stateSpaceHistory.Count - 1].TimeStamp;
+			for (int i = 0; i < stateSpaceHistory [stateSpaceHistory.Count-1].ObjectsStatus.Length; i++) {
+				lStateSpace.ObjectsStatus [i] = stateSpaceHistory [stateSpaceHistory.Count - 1].ObjectsStatus [i];
+			}
+			return lStateSpace;
 		}
 
 		// print the state space evaluator

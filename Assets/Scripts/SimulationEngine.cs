@@ -1,3 +1,6 @@
+#define CONTEXTSIM
+//#undef CONTEXTSIM
+
 using UnityEngine;
 using System;
 using System.Collections.Generic;
@@ -25,21 +28,23 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			stateSpaceManager.InitializeStateSpace();
 
 			contextDrvSimulation = new ContextDrivenSimulation (characterController, stateSpaceManager);
-
-//			RunSimulation ();
+			#if CONTEXTSIM
+			RunSimulation ();
+			#endif
 		}
 
 		void Update() { 
+			#if CONTEXTSIM
 			if (characterController.activityFinished) {
 				characterController.activityFinished = false;
-//				TransitionContext ();
+				TransitionContext ();
 			}
+			#endif
 		}
 			
 		// run simulation loop: WITHIN a context
 		void RunSimulation() {
 			// Run context-driven simulation engine
-
 			contextDrvSimulation.SelectContextActivities ();
 			contextDrvSimulation.ScheduleContextActivities ();
 			contextDrvSimulation.PerformContextActivity ();
