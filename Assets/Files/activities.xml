@@ -65,7 +65,7 @@
 
   <activity id="13" name="Shaving">
     <action id="19" object="Razor" importance="1" maxOccur="1" prereq="-1" />
-    <action id="14" object="Razor" importance="1" maxOccur="2" prereq="-1" />
+    <action id="14" object="Razor" importance="1" maxOccur="3" prereq="-1" />
     <action id="20" object="Razor" importance="1" maxOccur="1" prereq="-1" />
   </activity>
 
@@ -98,7 +98,7 @@
 
   <activity id="19" name="Using computer">
     <action id="8" object="Computer chair" importance="1" maxOccur="1" prereq="-1" />
-    <action id="11" object="Computer" importance="1" maxOccur="2" prereq="-1" />
+    <action id="11" object="Computer" importance="1" maxOccur="3" prereq="-1" />
     <action id="9" object="Computer chair" importance="1" maxOccur="1" prereq="-1" />
   </activity>
 

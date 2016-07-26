@@ -1,5 +1,5 @@
-#define CONTEXTSIM
-//#undef CONTEXTSIM
+//#define CONTEXTSIM
+#undef CONTEXTSIM
 
 using UnityEngine;
 using System;
