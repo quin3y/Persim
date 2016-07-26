@@ -7,7 +7,7 @@
   <action id="4"  name="Dry hands" animation="4" />
   <action id="5"  name="Wash face" animation="5" />
   <action id="6"  name="Dry face" animation="6" />  
-  <action id="7"  name="Take a pill" animation="7" />
+  <action id="7"  name="Take pills" animation="7" />
   <action id="8"  name="Sit down" animation="8" />
   <action id="9"  name="Stand up" animation="9" />
   <action id="10" name="Use toilet" animation="10" />

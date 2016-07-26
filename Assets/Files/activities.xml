@@ -71,6 +71,11 @@
 
   <activity id="14" name="Taking medication">
     <action id="19" object="Kitchen cup" importance="1" maxOccur="1" prereq="-1" />
+    <action id="7" object="Kitchen cup" importance="1" maxOccur="1" prereq="-1" />
+    <action id="20" object="Kitchen cup" importance="1" maxOccur="1" prereq="-1" />
+    <action id="19" object="Kitchen cup" importance="1" maxOccur="1" prereq="-1" />
+    <action id="12" object="Kitchen cup" importance="1" maxOccur="2" prereq="-1" />
+    <action id="20" object="Kitchen cup" importance="1" maxOccur="1" prereq="-1" />
   </activity>
 
  <activity id="15" name="Taking out trash">
