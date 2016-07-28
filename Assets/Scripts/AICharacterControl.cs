@@ -25,6 +25,11 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         private void Start() {
 			Init();
 //			PlayActivity(playlist.Pop());
+
+			GameObject[] allObjects = GameObject.FindGameObjectsWithTag("Object");
+			foreach (GameObject obj in allObjects) {
+				print("===== " + obj.name + ", " + obj.transform.position);
+			}
         }
 
         private void Update() {

@@ -66,14 +66,44 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			obj.transform.rotation = Quaternion.Euler(characterController.activityPlayback.objects[obj.name].rotation);
 		}
 
-		//closes bedroom door
+		// Closes bedroom door
 		void CloseDoor() {
 			bedroomDoorAnimator.SetBool("bedroomDoorOpen", false);
 		}
 
-		//opens bedroom door
+		// Opens bedroom door
 		void OpenDoor() {
 			bedroomDoorAnimator.SetBool("bedroomDoorOpen", true);
+		}
+
+		void HandOnToiletHandle() {
+			stateSpaceManager.AddDataRecord(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))),
+				"Toilet handle", "on");
+		}
+
+		void HandOffToiletHandle() {
+			stateSpaceManager.AddDataRecord(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))),
+				"Toilet handle", "off");
+		}
+
+		void StartUsingComputer() {
+			stateSpaceManager.AddDataRecord(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))),
+				"Computer", "on");
+		}
+
+		void FinishUsingComputer() {
+			stateSpaceManager.AddDataRecord(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))),
+				"Computer", "off");
+		}
+
+		void StartUsingCellphone() {
+			stateSpaceManager.AddDataRecord(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))),
+				"Mobile phone", "on");
+		}
+
+		void FinishUsingCellphone() {
+			stateSpaceManager.AddDataRecord(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))),
+				"Mobile phone", "off");
 		}
 	}
 }
