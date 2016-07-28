@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activities>
+  <activity id="0" name="Bathing">
+    <action id="0" object="Table" importance="1" maxOccur="1" prereq="-1" />
+  </activity>
+  <activity id="1" name="Brushing teeth">
+    <action id="0" object="Table" importance="1" maxOccur="1" prereq="-1" />
+  </activity>
+  <activity id="2" name="Cleaning countertops">
+    <action id="0" object="Table" importance="1" maxOccur="1" prereq="-1" />
+  </activity>
+  <activity id="3" name="Combing hair">
+    <action id="1" object="Bathroom light switch" importance="0" maxOccur="1" prereq="-1" />
+    <action id="19" object="Comb" importance="1" maxOccur="1" prereq="-1" />
+    <action id="21" object="Comb" importance="1" maxOccur="3" prereq="-1" />
+    <action id="20" object="Comb" importance="1" maxOccur="1" prereq="-1" />
+    <action id="2" object="Bathroom light switch" importance="0" maxOccur="1" prereq="1" />
+  </activity>
+  <activity id="4" name="Doing laundry">
+    <action id="0" object="Table" importance="1" maxOccur="1" prereq="-1" />
+  </activity>
+  <activity id="5" name="Dressing">
+    <action id="0" object="Table" importance="1" maxOccur="1" prereq="-1" />
+  </activity>
+  <activity id="6" name="Drinking water">
+    <action id="19" object="Kitchen cup" importance="1" maxOccur="1" prereq="-1" />
+    <action id="12" object="Kitchen cup" importance="1" maxOccur="2" prereq="-1" />
+    <action id="20" object="Kitchen cup" importance="1" maxOccur="1" prereq="-1" />
+  </activity>
+  <activity id="7" name="Eating a meal">
+    <action id="0" object="Table" importance="1" maxOccur="1" prereq="-1" />
+  </activity>
+  <activity id="8" name="Falling">
+    <action id="25" object="Bathroom light switch" importance="1" maxOccur="1" prereq="-1" />
+  </activity>
+  <activity id="9" name="Getting up">
+    <action id="0" object="Table" importance="1" maxOccur="1" prereq="-1" />
+  </activity>
+  <activity id="10" name="Going to bed">
+    <action id="24" object="Bedroom door" importance="1" maxOccur="1" prereq="-1" />
+    <action id="26" object="Bed" importance="1" maxOccur="1" prereq="-1" />
+    <action id="27" object="Bed" importance="1" maxOccur="1" prereq="-1" />
+    <action id="28" object="Bed" importance="1" maxOccur="10" prereq="-1" />
+    <action id="29" object="Bed" importance="1" maxOccur="1" prereq="-1" />
+    <action id="23" object="Bedroom door" importance="1" maxOccur="1" prereq="-1" />
+  </activity>
+  <activity id="11" name="Leaving home">
+    <action id="0" object="Table" importance="1" maxOccur="1" prereq="-1" />
+  </activity>
+  <activity id="12" name="Preparing a meal">
+    <action id="0" object="Table" importance="1" maxOccur="1" prereq="-1" />
+  </activity>
+  <activity id="13" name="Shaving">
+    <action id="19" object="Razor" importance="1" maxOccur="1" prereq="-1" />
+    <action id="14" object="Razor" importance="1" maxOccur="3" prereq="-1" />
+    <action id="20" object="Razor" importance="1" maxOccur="1" prereq="-1" />
+  </activity>
+  <activity id="14" name="Taking medication">
+    <action id="19" object="Kitchen cup" importance="1" maxOccur="1" prereq="-1" />
+    <action id="7" object="Kitchen cup" importance="1" maxOccur="1" prereq="-1" />
+    <action id="20" object="Kitchen cup" importance="1" maxOccur="1" prereq="-1" />
+    <action id="19" object="Kitchen cup" importance="1" maxOccur="1" prereq="-1" />
+    <action id="12" object="Kitchen cup" importance="1" maxOccur="2" prereq="-1" />
+    <action id="20" object="Kitchen cup" importance="1" maxOccur="1" prereq="-1" />
+  </activity>
+  <activity id="15" name="Taking out trash">
+    <action id="0" object="Table" importance="1" maxOccur="1" prereq="-1" />
+  </activity>
+  <activity id="16" name="Undressing">
+    <action id="0" object="Table" importance="1" maxOccur="1" prereq="-1" />
+  </activity>
+  <activity id="17" name="Using bathroom">
+    <action id="1" object="Bathroom light switch" importance="0" maxOccur="1" prereq="-1" />
+    <action id="8" object="Toilet" importance="1" maxOccur="1" prereq="-1" />
+    <action id="10" object="Toilet" importance="1" maxOccur="5" prereq="-1" />
+    <action id="9" object="Toilet" importance="1" maxOccur="1" prereq="-1" />
+    <action id="22" object="Toilet handle" importance="1" maxOccur="1" prereq="-1" />
+    <action id="3" object="Bathroom sink" importance="0" maxOccur="1" prereq="-1" />
+    <action id="4" object="Towel" importance="0" maxOccur="1" prereq="3" />
+    <action id="2" object="Bathroom light switch" importance="0" maxOccur="1" prereq="1" />
+  </activity>
+  <activity id="18" name="Using cellphone">
+    <action id="13" object="Mobile phone" importance="1" maxOccur="1" prereq="-1" />
+  </activity>
+  <activity id="19" name="Using computer">
+    <action id="8" object="Computer chair" importance="1" maxOccur="1" prereq="-1" />
+    <action id="11" object="Computer" importance="1" maxOccur="3" prereq="-1" />
+    <action id="9" object="Computer chair" importance="1" maxOccur="1" prereq="-1" />
+  </activity>
+  <activity id="20" name="Vacuuming floors">
+    <action id="0" object="Table" importance="1" maxOccur="1" prereq="-1" />
+  </activity>
+  <activity id="21" name="Washing dishes">
+    <action id="0" object="Table" importance="1" maxOccur="1" prereq="-1" />
+  </activity>
+  <activity id="22" name="Washing face">
+    <action id="1" object="Bathroom light switch" importance="0" maxOccur="1" prereq="-1" />
+    <action id="5" object="Bathroom sink" importance="1" maxOccur="1" prereq="-1" />
+    <action id="6" object="Towel" importance="1" maxOccur="1" prereq="-1" />
+    <action id="2" object="Bathroom light switch" importance="0" maxOccur="1" prereq="1" />
+  </activity>
+  <activity id="23" name="Washing hands">
+    <action id="1" object="Bathroom light switch" importance="0" maxOccur="1" prereq="-1" />
+    <action id="3" object="Bathroom sink" importance="1" maxOccur="1" prereq="-1" />
+    <action id="4" object="Towel" importance="0" maxOccur="1" prereq="3" />
+    <action id="2" object="Bathroom light switch" importance="0" maxOccur="1" prereq="1" />
+  </activity>
+  <activity id="24" name="Watching TV">
+    <action id="8" object="Couch" importance="1" maxOccur="1" prereq="-1" />
+  </activity>
+</activities>

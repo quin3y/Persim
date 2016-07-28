@@ -38,7 +38,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			}
 		}
 
-		public void SaveData() {
+		public void SaveSensorData() {
 			using (System.IO.StreamWriter file = 
 				new System.IO.StreamWriter(@"Assets/Files/dataset.txt")) {
 				foreach (DataRecord record in dataset) {
@@ -75,7 +75,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		}
 
 		// print all the state spaces in history
-		public void PrintStateSpaceHistory () {
+		public void PrintStateSpaceHistory() {
 			print (StateSpaceHistory.Count + " state spaces are stored");
 			for (int i = 0; i < stateSpaceHistory.Count; i++) {
 				print (i); 
@@ -109,9 +109,20 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		}
 
 		void OnApplicationQuit() {
+			// Save sensor data to file
 			PrintDataset();
-			SaveData();
+			SaveSensorData();
 			print("Sensor data saved to file");
+
+			// Save activity configuration to file
+			AICharacterControl characterController = GameObject.Find("Ethan").GetComponent<AICharacterControl>();
+			Utils.SaveActivityConfiguration(characterController.activityPlayback.activities);
+
+			// Save unplayed activities
+			PlayerPrefs.SetInt("previousLastIndex", PlayerPrefs.GetInt("lastIndexInPlaylist"));
+			PlayerPrefs.SetInt("prevRun", 1);
+			PlayerPrefs.Save();
+			Debug.Log("PlayerPrefs Saved");
 		}
 	}
 }

@@ -118,19 +118,17 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				writer.WriteAttributeString("name", activities[i].name);
 
 				List<Int32> actions = activities[i].actionIds; //getting all the actions for the ith activity
-				List<string> objectNames = activities[i].objectNames; //getting all the object names for the ith activity
-
 				for (int j = 0; j < actions.Count; j++) { 
-					//writes <action id="id#" object="objectName" />
 					writer.WriteStartElement("action");
-					writer.WriteAttributeString("id", actions[j].ToString ());
-					writer.WriteAttributeString("object", objectNames[j]);
+					writer.WriteAttributeString("id", actions[j].ToString());
+					writer.WriteAttributeString("object", activities[i].objectNames[j]);
+					writer.WriteAttributeString("importance", activities[i].importances[j].ToString());
+					writer.WriteAttributeString("maxOccur", activities[i].maxOccurs[j].ToString());
+					writer.WriteAttributeString("prereq", activities[i].prereqs[j].ToString());
 					writer.WriteEndElement();
 				}
-
 				writer.WriteEndElement(); //writes </activity>
 			}
-
 			writer.WriteEndElement(); // writes </activities>
 			writer.Close(); //close file
 		}
