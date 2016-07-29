@@ -15,14 +15,14 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		void OnTriggerEnter(Collider col) {
 			if (col.gameObject.name == "EthanLeftHand" || col.gameObject.name == "EthanRightHand") {
 				stateSpaceManager.AddDataRecord(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))),
-					this.name, "on");
+                    transform.parent.name, "on");
 			}
 		}
 
 		void OnTriggerExit(Collider col) {
 			if (col.gameObject.name == "EthanLeftHand" || col.gameObject.name == "EthanRightHand") {
 				stateSpaceManager.AddDataRecord(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))),
-					this.name, "off");
+                    transform.parent.name, "off");
 			}
 		}
 	}

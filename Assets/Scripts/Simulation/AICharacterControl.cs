@@ -26,9 +26,9 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			Init();
 //			PlayActivity(playlist.Pop());
 
-			GameObject[] allObjects = GameObject.FindGameObjectsWithTag("Object");
+			GameObject[] allObjects = GameObject.FindGameObjectsWithTag("IRSensor");
 			foreach (GameObject obj in allObjects) {
-				print("===== " + obj.name + ", " + obj.transform.position);
+                print("=== " + obj.transform.parent.name + ", " + obj.transform.position);
 			}
         }
 

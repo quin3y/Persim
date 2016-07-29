@@ -89,8 +89,17 @@
     <character-position x="10" y="0" z="13.04" />
     <character-rotation x="0" y="0" z="-1" />
   </object>
+
+  <object id="10" name="Dining table" status="off">
+    <position x="0" y="0" z="0" />
+    <rotation x="0" y="0" z="0" />
+    <in-hand-position x="0" y="0" z="0" />
+    <in-hand-rotation x="0" y="0" z="0" />
+    <character-position x="2.02" y="0" z="13.46" />
+    <character-rotation x="1" y="0" z="0" />
+  </object>
   
-  <object id="10" name="Front door" status="off">
+  <object id="11" name="Front door" status="off">
     <position x="0" y="0" z="0" />
     <rotation x="0" y="0" z="0" />
     <in-hand-position x="0" y="0" z="0" />
@@ -99,7 +108,7 @@
     <character-rotation x="0" y="0" z="1" />
   </object>
   
-  <object id="11" name="Mobile phone" status="off">
+  <object id="12" name="Mobile phone" status="off">
     <position x="0" y="0" z="0" />
     <rotation x="0" y="0" z="0" />
     <in-hand-position x="-0.1" y="-0.05" z="-0.08" />
@@ -108,7 +117,7 @@
     <character-rotation x="0" y="0" z="1" />
   </object>
   
-  <object id="12" name="Kitchen cup" status="off">
+  <object id="13" name="Kitchen cup" status="off">
     <position x="1.13" y="0.773" z="7.465" />
     <rotation x="270" y="0" z="0" />
     <in-hand-position x="-0.07" y="-0.086" z="-0.055" />
@@ -117,22 +126,13 @@
     <character-rotation x="-1" y="0" z="0" />
   </object>
 
-  <object id="13" name="Razor" status="off">
+  <object id="14" name="Razor" status="off">
     <position x="0.875" y="0.79" z="4.02" />
     <rotation x="0" y="0" z="7.5" />
     <in-hand-position x="-0.085" y="0" z="-0.08" />
     <in-hand-rotation x="334" y="84.4" z="321.3" />
     <character-position x="1.27" y="0.016" z="3.86" />
     <character-rotation x="-1" y="0" z="0" />
-  </object>
-  
-  <object id="14" name="Table" status="off">
-    <position x="0" y="0" z="0" />
-    <rotation x="0" y="0" z="0" />
-    <in-hand-position x="0" y="0" z="0" />
-    <in-hand-rotation x="0" y="0" z="0" />
-    <character-position x="2.02" y="0" z="13.46" />
-    <character-rotation x="1" y="0" z="0" />
   </object>
   
   <object id="15" name="Toilet" status="off">

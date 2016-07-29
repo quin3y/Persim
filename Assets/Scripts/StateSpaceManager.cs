@@ -118,6 +118,9 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			AICharacterControl characterController = GameObject.Find("Ethan").GetComponent<AICharacterControl>();
 			Utils.SaveActivityConfiguration(characterController.activityPlayback.activities);
 
+            // Save sensor configuration
+            Utils.SaveSensorConfiguration();
+
 			// Save unplayed activities
 			PlayerPrefs.SetInt("previousLastIndex", PlayerPrefs.GetInt("lastIndexInPlaylist"));
 			PlayerPrefs.SetInt("prevRun", 1);

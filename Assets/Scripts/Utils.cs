@@ -132,5 +132,63 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			writer.WriteEndElement(); // writes </activities>
 			writer.Close(); //close file
 		}
+
+        public static void SaveSensorConfiguration() {
+            XmlTextWriter writer = new XmlTextWriter("Assets/Files/sensor-info.xml", Encoding.UTF8);
+            writer.Formatting = Formatting.Indented;
+            writer.WriteStartDocument();
+            writer.WriteStartElement("sensors");    // <sensors>
+
+            GameObject[] sensors = GameObject.FindGameObjectsWithTag("MotionSensor");
+            foreach (GameObject sensor in sensors) {
+                writer.WriteStartElement("sensor");
+                writer.WriteAttributeString("type", "motion");
+                writer.WriteAttributeString("attachTo", sensor.transform.parent.name);
+                writer.WriteAttributeString("x", sensor.transform.position.x.ToString());
+                writer.WriteAttributeString("y", sensor.transform.position.y.ToString());
+                writer.WriteAttributeString("z", sensor.transform.position.z.ToString());
+                writer.WriteEndElement();
+            }
+
+            sensors = GameObject.FindGameObjectsWithTag("IRSensor");
+            foreach (GameObject sensor in sensors) {
+                writer.WriteStartElement("sensor");
+                writer.WriteAttributeString("type", "IR");
+                writer.WriteAttributeString("attachTo", sensor.transform.parent.name);
+                writer.WriteAttributeString("x", sensor.transform.position.x.ToString());
+                writer.WriteAttributeString("y", sensor.transform.position.y.ToString());
+                writer.WriteAttributeString("z", sensor.transform.position.z.ToString());
+                writer.WriteEndElement();
+            }
+
+            sensors = GameObject.FindGameObjectsWithTag("ContactSensor");
+            foreach (GameObject sensor in sensors) {
+                writer.WriteStartElement("sensor");
+                writer.WriteAttributeString("type", "contact");
+                writer.WriteAttributeString("attachTo", sensor.transform.parent.name);
+                writer.WriteAttributeString("x", sensor.transform.position.x.ToString());
+                writer.WriteAttributeString("y", sensor.transform.position.y.ToString());
+                writer.WriteAttributeString("z", sensor.transform.position.z.ToString());
+                writer.WriteEndElement();
+            }
+
+            sensors = GameObject.FindGameObjectsWithTag("RFIDTag");
+            foreach (GameObject sensor in sensors) {
+                writer.WriteStartElement("sensor");
+                writer.WriteAttributeString("type", "RFID tag");
+                writer.WriteAttributeString("attachTo", sensor.transform.parent.name);
+                writer.WriteAttributeString("x", sensor.transform.position.x.ToString());
+                writer.WriteAttributeString("y", sensor.transform.position.y.ToString());
+                writer.WriteAttributeString("z", sensor.transform.position.z.ToString());
+                writer.WriteEndElement();
+            }
+
+            writer.WriteEndElement();    // </sensors>
+            writer.Close();
+        }
+
+        public static void SaveObjectConfiguration() {
+
+        }
 	}
 }
