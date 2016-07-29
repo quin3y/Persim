@@ -7,9 +7,9 @@ using System.Text;
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
 	public class Utils {
-		public static List<Action> ReadActionXml() {
+		public static List<Action> ReadActionXml(string characterName) {
 			List<Action> actionList = new List<Action>();
-			XmlReader reader = XmlReader.Create("Assets/Files/actions.xml");
+			XmlReader reader = XmlReader.Create("Assets/Files/" + characterName + "/actions.xml");
 			
 			while (reader.Read()) {
 				if (reader.NodeType == XmlNodeType.Element && reader.Name == "action") {
@@ -77,9 +77,9 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			return objects;
 		}
 
-		public static List<Activity> ReadActivityXml() {
+		public static List<Activity> ReadActivityXml(string characterName) {
 			List<Activity> activityList = new List<Activity>();
-			XmlReader reader = XmlReader.Create("Assets/Files/activities.xml");
+			XmlReader reader = XmlReader.Create("Assets/Files/" + characterName + "/activities.xml");
 			
 			while (reader.Read()) {
 				if (reader.NodeType == XmlNodeType.Element && reader.Name == "activity") {
@@ -105,9 +105,9 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		}
 
 		//writes new xml file called activitesCopy according to list of activities passed in
-		public static void SaveActivityConfiguration(List<Activity> activities) {
+		public static void SaveActivityConfiguration(string characterName, List<Activity> activities) {
 //			Debug.Log ("Saving Activity Configuration");
-			XmlTextWriter writer = new XmlTextWriter("Assets/Files/activitiesCopy.xml", Encoding.UTF8); //making XmlWriter
+			XmlTextWriter writer = new XmlTextWriter("Assets/Files/" + characterName + "/activities copy.xml", Encoding.UTF8); //making XmlWriter
 			writer.Formatting = Formatting.Indented; //making the sure the xml file will be indented
 			writer.WriteStartDocument(); //writes <?xml version="1.0" encoding="utf-8"?>
 			writer.WriteStartElement("activities"); // writes <activities>
@@ -123,7 +123,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 					writer.WriteAttributeString("id", actions[j].ToString());
 					writer.WriteAttributeString("object", activities[i].objectNames[j]);
 					writer.WriteAttributeString("importance", activities[i].importances[j].ToString());
-					writer.WriteAttributeString("maxOccur", activities[i].maxOccurs[j].ToString());
+					writer.WriteAttributeString("max-occur", activities[i].maxOccurs[j].ToString());
 					writer.WriteAttributeString("prereq", activities[i].prereqs[j].ToString());
 					writer.WriteEndElement();
 				}
@@ -133,8 +133,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			writer.Close(); //close file
 		}
 
-        public static void SaveSensorConfiguration() {
-            XmlTextWriter writer = new XmlTextWriter("Assets/Files/sensor info.xml", Encoding.UTF8);
+		public static void SaveSensorConfiguration(string characterName) {
+			XmlTextWriter writer = new XmlTextWriter("Assets/Files/" + characterName + "/sensor info.xml", Encoding.UTF8);
             writer.Formatting = Formatting.Indented;
             writer.WriteStartDocument();
             writer.WriteStartElement("sensors");    // <sensors>
@@ -154,7 +154,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             foreach (GameObject sensor in sensors) {
                 writer.WriteStartElement("sensor");
                 writer.WriteAttributeString("type", "IR");
-                writer.WriteAttributeString("attachTo", sensor.transform.parent.name);
+                writer.WriteAttributeString("attach-to", sensor.transform.parent.name);
                 writer.WriteAttributeString("x", sensor.transform.position.x.ToString());
                 writer.WriteAttributeString("y", sensor.transform.position.y.ToString());
                 writer.WriteAttributeString("z", sensor.transform.position.z.ToString());
@@ -187,8 +187,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             writer.Close();
         }
 
-        public static void SaveSpaceInfo() {
-			XmlTextWriter writer = new XmlTextWriter("Assets/Files/space info.xml", Encoding.UTF8);
+		public static void SaveSpaceInfo(string characterName) {
+			XmlTextWriter writer = new XmlTextWriter("Assets/Files/" + characterName + "/space info.xml", Encoding.UTF8);
 			writer.Formatting = Formatting.Indented;
 			writer.WriteStartDocument();
 			writer.WriteStartElement("objects");    // <objects>

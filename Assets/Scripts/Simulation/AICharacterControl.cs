@@ -61,7 +61,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 		private void Init() {
 			activityPlayback = new ActivityPlayback();
-			activityPlayback.Init();
+			activityPlayback.Init(this.name);
 
 			playlist = new ActivityPlaylist();
 //			playlist.AddActivity(3);

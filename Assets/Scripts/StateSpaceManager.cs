@@ -38,9 +38,9 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			}
 		}
 
-		public void SaveSensorData() {
+		public void SaveSensorData(string characterName) {
 			using (System.IO.StreamWriter file = 
-				new System.IO.StreamWriter(@"Assets/Files/dataset.txt")) {
+				new System.IO.StreamWriter(@"Assets/Files/" + characterName + "/dataset.txt")) {
 				foreach (DataRecord record in dataset) {
 					file.WriteLine(record.ToString());
 				}
@@ -109,23 +109,24 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		}
 
 		void OnApplicationQuit() {
-			// Save sensor data to file
-			PrintDataset();
-			SaveSensorData();
-			print("Sensor data saved to file");
-
-			// Save activity configuration to file
-			AICharacterControl characterController = GameObject.Find("Ethan").GetComponent<AICharacterControl>();
-			Utils.SaveActivityConfiguration(characterController.activityPlayback.activities);
-
-            Utils.SaveSensorConfiguration();
-			Utils.SaveSpaceInfo();
-
-			// Save unplayed activities
-			PlayerPrefs.SetInt("previousLastIndex", PlayerPrefs.GetInt("lastIndexInPlaylist"));
-			PlayerPrefs.SetInt("prevRun", 1);
-			PlayerPrefs.Save();
-			Debug.Log("PlayerPrefs Saved");
+			GameObject[] characters = GameObject.FindGameObjectsWithTag("Character");
+			foreach (GameObject character in characters) {
+				// Save sensor data to file
+				PrintDataset();
+				SaveSensorData(character.name);
+				
+				// Save activity configuration to file
+				AICharacterControl characterController = GameObject.Find(character.name).GetComponent<AICharacterControl>();
+				Utils.SaveActivityConfiguration(character.name, characterController.activityPlayback.activities);
+				
+				Utils.SaveSensorConfiguration(character.name);
+				Utils.SaveSpaceInfo(character.name);
+				
+				// Save unplayed activities
+				PlayerPrefs.SetInt("previousLastIndex", PlayerPrefs.GetInt("lastIndexInPlaylist"));
+				PlayerPrefs.SetInt("prevRun", 1);
+				PlayerPrefs.Save();
+			}
 		}
 	}
 }

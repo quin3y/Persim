@@ -11,10 +11,10 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		public Dictionary<string, ObjectInfo> objects;
 		public Queue<ActionInstance> actionQueue;
 
-		public void Init() {
-			actions = Utils.ReadActionXml();
+		public void Init(string characterName) {
+			actions = Utils.ReadActionXml(characterName);
 			objects = Utils.ReadObjectXml();
-			activities = Utils.ReadActivityXml();
+			activities = Utils.ReadActivityXml(characterName);
 			actionQueue = new Queue<ActionInstance>();
 		}
 		

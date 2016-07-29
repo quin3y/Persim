@@ -69,8 +69,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		}
 
 		// read context models
-		public static void ReadContextXml() {
-			XmlReader reader = XmlReader.Create("Assets/Files/contextgraph.xml");
+		public static void ReadContextXml(string characterName) {
+			XmlReader reader = XmlReader.Create("Assets/Files/" + characterName + "/contextgraph.xml");
 
 			while (reader.Read()) {					
 				if (reader.IsStartElement()) {

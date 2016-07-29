@@ -59,7 +59,7 @@
     <rotation x="90" y="103.77" z="103.77" />
     <in-hand-position x="-0.1" y="-0.01" z="-0.056" />
     <in-hand-rotation x="82" y="208" z="225" />
-    <character-position x="1.2" y="0" z="4" />
+    <character-position x="1.2" y="0" z="5" />
     <character-rotation x="-1" y="0" z="0" />
   </object>
 

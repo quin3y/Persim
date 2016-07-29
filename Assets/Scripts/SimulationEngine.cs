@@ -15,9 +15,9 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		void Start() {
 			// configure simulation
 			SimulationEntity.ReadObjectXml();
-			SimulationEntity.Actions = Utils.ReadActionXml();	// TODO ReadActionXml with static Actions
-			SimulationEntity.Activities = Utils.ReadActivityXml();	// TODO ReadActivityXml with static Activities
-			SimulationEntity.ReadContextXml();
+			SimulationEntity.Actions = Utils.ReadActionXml(this.name);	// TODO ReadActionXml with static Actions
+			SimulationEntity.Activities = Utils.ReadActivityXml(this.name);	// TODO ReadActivityXml with static Activities
+			SimulationEntity.ReadContextXml(this.name);
 
 			// TODO AICharacterControl is located on another character
 			characterController = GameObject.Find("Ethan").GetComponent<AICharacterControl>();	
