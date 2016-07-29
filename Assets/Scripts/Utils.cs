@@ -134,7 +134,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		}
 
         public static void SaveSensorConfiguration() {
-            XmlTextWriter writer = new XmlTextWriter("Assets/Files/sensor-info.xml", Encoding.UTF8);
+            XmlTextWriter writer = new XmlTextWriter("Assets/Files/sensor info.xml", Encoding.UTF8);
             writer.Formatting = Formatting.Indented;
             writer.WriteStartDocument();
             writer.WriteStartElement("sensors");    // <sensors>
@@ -187,8 +187,42 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             writer.Close();
         }
 
-        public static void SaveObjectConfiguration() {
+        public static void SaveSpaceInfo() {
+			XmlTextWriter writer = new XmlTextWriter("Assets/Files/space info.xml", Encoding.UTF8);
+			writer.Formatting = Formatting.Indented;
+			writer.WriteStartDocument();
+			writer.WriteStartElement("objects");    // <objects>
 
+			GameObject[] objects = GameObject.FindGameObjectsWithTag("NavStatic");
+			foreach (GameObject obj in objects) {
+				writer.WriteStartElement("object");
+				writer.WriteAttributeString("name", obj.name);
+				writer.WriteAttributeString("type", "nav static");
+				writer.WriteAttributeString("x", obj.transform.position.x.ToString());
+				writer.WriteAttributeString("y", obj.transform.position.y.ToString());
+				writer.WriteAttributeString("z", obj.transform.position.z.ToString());
+				writer.WriteAttributeString("rotation-x", obj.transform.rotation.x.ToString());
+				writer.WriteAttributeString("rotation-y", obj.transform.rotation.y.ToString());
+				writer.WriteAttributeString("rotation-z", obj.transform.rotation.z.ToString());
+				writer.WriteEndElement();
+			}
+
+			objects = GameObject.FindGameObjectsWithTag("NonNavStatic");
+			foreach (GameObject obj in objects) {
+				writer.WriteStartElement("object");
+				writer.WriteAttributeString("name", obj.name);
+				writer.WriteAttributeString("type", "non-nav static");
+				writer.WriteAttributeString("x", obj.transform.position.x.ToString());
+				writer.WriteAttributeString("y", obj.transform.position.y.ToString());
+				writer.WriteAttributeString("z", obj.transform.position.z.ToString());
+				writer.WriteAttributeString("rotation-x", obj.transform.rotation.x.ToString());
+				writer.WriteAttributeString("rotation-y", obj.transform.rotation.y.ToString());
+				writer.WriteAttributeString("rotation-z", obj.transform.rotation.z.ToString());
+				writer.WriteEndElement();
+			}
+
+			writer.WriteEndElement();    // </objects>
+			writer.Close();
         }
 	}
 }
