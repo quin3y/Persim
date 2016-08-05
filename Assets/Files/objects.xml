@@ -126,7 +126,16 @@
     <character-rotation x="-1" y="0" z="0" />
   </object>
 
-  <object id="14" name="Razor" status="off">
+  <object id="14" name="Pill bottle" status="off">
+    <position x="1.13" y="0.773" z="7.465" />
+    <rotation x="270" y="0" z="0" />
+    <in-hand-position x="-0.11" y="-0.05" z="-0.04" />
+    <in-hand-rotation x="328" y="149" z="234" />
+    <character-position x="1.38" y="0" z="7.4" />
+    <character-rotation x="-1" y="0" z="0" />
+  </object>
+
+  <object id="15" name="Razor" status="off">
     <position x="0.875" y="0.79" z="4.02" />
     <rotation x="0" y="0" z="7.5" />
     <in-hand-position x="-0.085" y="0" z="-0.08" />
@@ -135,7 +144,7 @@
     <character-rotation x="-1" y="0" z="0" />
   </object>
   
-  <object id="15" name="Toilet" status="off">
+  <object id="16" name="Toilet" status="off">
     <position x="0" y="0" z="0" />
     <rotation x="0" y="0" z="0" />
     <in-hand-position x="0" y="0" z="0" />
@@ -144,7 +153,7 @@
     <character-rotation x="1" y="0" z="0" />
   </object>
   
-  <object id="16" name="Toilet handle" status="off">
+  <object id="17" name="Toilet handle" status="off">
     <position x="0" y="0" z="0" />
     <rotation x="0" y="0" z="0" />
     <in-hand-position x="0" y="0" z="0" />
@@ -153,7 +162,7 @@
     <character-rotation x="-1" y="0" z="0" />
   </object>
   
-  <object id="17" name="Towel" status="off">
+  <object id="18" name="Towel" status="off">
     <position x="0" y="0" z="0" />
     <rotation x="0" y="0" z="0" />
     <in-hand-position x="0" y="0" z="0" />
@@ -162,7 +171,7 @@
     <character-rotation x="-1" y="0" z="0" />
   </object>
   
-  <object id="18" name="Washer" status="off">
+  <object id="19" name="Washer" status="off">
     <position x="0" y="0" z="0" />
     <rotation x="0" y="0" z="0" />
     <in-hand-position x="0" y="0" z="0" />
