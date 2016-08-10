@@ -5,19 +5,19 @@ using System.Collections.Generic;
 
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
-	public static class SimulationEntity {
-		public static List<ObjectInfo> Objects = new List<ObjectInfo> (); 				// a set of objects
-		public static List<Action> Actions = new List<Action> ();						// a set of actions
-		public static List<Activity> Activities = new List<Activity> ();				// a set of activities
-		public static ContextGraph ContextGraph = new ContextGraph();					// context graph
+	public class SimulationEntity {
+		public static List<ObjectInfo> Objects = new List<ObjectInfo> (); 				// static varaible: a set of objects
+		List<Action> actions = new List<Action> ();										// a set of actions
+		List<Activity> activities = new List<Activity> ();								// a set of activities
+		ContextGraph contextGraph = new ContextGraph();									// context graph
 
-		public static Context CurContext;
-		public static int StartContextId { get; set; }									// starting context id
-		public static int EndContextId { get; set; }									// ending context id
+		Context curContext;
+		int startContextId;																// starting context id
+		int endContextId;																// ending context id
 
-		public static List<int> ScheduledActivities = new List<int>();					// list of performed activities
+		List<int> scheduledActivities = new List<int>();								// list of performed activities
 
-		// read object models
+		// static method: read object models
 		public static void ReadObjectXml() {
 			XmlReader reader = XmlReader.Create("Assets/Files/objects.xml");
 
@@ -62,14 +62,55 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 						}
 					}
 
-					SimulationEntity.Objects.Add(obj);
+					Objects.Add(obj);
 				}
 			}
 			reader.Close();
 		}
 
+		// manage actions
+		public List<Action> Actions {
+			get { return actions; }
+			set { actions = value; }
+		}
+
+		// manage objects
+		public List<Activity> Activities {
+			get { return activities; }
+			set { activities = value; }
+		}
+
+		// manage objects
+		public ContextGraph ContextGraph {
+			get { return contextGraph; }
+			set { contextGraph = value; }
+		}
+
+		// manage current context
+		public Context CurContext {
+			get { return curContext; }
+			set { curContext = value; }
+		}
+
+		// manage starting context
+		public int StartContextId {
+			get { return startContextId; }
+			set { startContextId = value; }
+		}
+
+		// manage ending context
+		public int EndContextId {
+			get { return endContextId; }
+			set { endContextId = value; }
+		}
+
+		public List<int> ScheduledActivities {
+			get { return scheduledActivities; }
+			set { scheduledActivities = value; }
+		}
+
 		// read context models
-		public static void ReadContextXml(string characterName) {
+		public void ReadContextXml(string characterName) {
 			XmlReader reader = XmlReader.Create("Assets/Files/" + characterName + "/contextgraph.xml");
 
 			while (reader.Read()) {					
@@ -77,27 +118,27 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 					switch (reader.LocalName.ToString ()) {
 					case "context":						
 						Context context = new Context (int.Parse (reader.GetAttribute ("id")), reader.GetAttribute ("name"));
-						CurContext = context;
-						SimulationEntity.ContextGraph.AddContext (context);
+						curContext = context;
+						contextGraph.AddContext (context);
 						if (reader.GetAttribute ("status") == "start")
-							StartContextId = int.Parse (reader.GetAttribute ("id"));
+							startContextId = int.Parse (reader.GetAttribute ("id"));
 						else if (reader.GetAttribute ("status") == "end")
-							EndContextId = int.Parse (reader.GetAttribute ("id"));
+							endContextId = int.Parse (reader.GetAttribute ("id"));
 						break;
 					case "contextcondition":
-						CurContext.AddContextCondition (reader.GetAttribute ("object"), reader.GetAttribute ("status"));
+						curContext.AddContextCondition (reader.GetAttribute ("object"), reader.GetAttribute ("status"));
 						break;
 					case "contextactivity":						
-						CurContext.AddContextActivity (int.Parse(reader.GetAttribute ("id")));
+						curContext.AddContextActivity (int.Parse(reader.GetAttribute ("id")));
 						break;
 					case "nextcontext":						
-						CurContext.AddNextContext (int.Parse(reader.GetAttribute("id")),float.Parse(reader.GetAttribute("prob")));
+						curContext.AddNextContext (int.Parse(reader.GetAttribute("id")),float.Parse(reader.GetAttribute("prob")));
 						break;
 					}				
 				}
 			}
 
-			CurContext = SimulationEntity.ContextGraph.GetContext (StartContextId);
+			curContext = contextGraph.GetContext (startContextId);
 			reader.Close();
 		}
 
@@ -113,24 +154,24 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		}
 
 		// return an activity with id
-		public static Activity GetActivity(int id) {
-			if (id < Activities.Count)
-				return Activities [id];
+		public Activity GetActivity(int id) {
+			if (id < activities.Count)
+				return activities [id];
 			else
 				return null;
 		}
 
 		// return an activity with id
-		public static Context GetContext(int id) {
-			if (id < ContextGraph.CountContexts())
-				return ContextGraph.GetContext(id);
+		public Context GetContext(int id) {
+			if (id < contextGraph.CountContexts())
+				return contextGraph.GetContext(id);
 			else
 				return null;
 		}
 
 		// check whether simulation can end or not
-		public static bool IsEnd() {
-			if (CurContext.ID == EndContextId)
+		public bool IsEnd() {
+			if (curContext.ID == endContextId)
 				return true;
 			else 
 				return false;

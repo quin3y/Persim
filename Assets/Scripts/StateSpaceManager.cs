@@ -6,7 +6,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 {
 	public class StateSpaceManager : MonoBehaviour {
 		public TimeSpan startTime;
-		public List<DataRecord> dataset;
+		public List<DataRecord> dataset;	
 		List<StateSpace> stateSpaceHistory;				// list of state spaces generated during simulation
 		StateSpace stateSpaceEvaluator;					// for evaluating a context
 

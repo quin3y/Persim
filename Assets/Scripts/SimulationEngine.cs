@@ -11,13 +11,16 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		AICharacterControl characterController;			// AI Character controller attached on the character
 		StateSpaceManager stateSpaceManager;			// state space manager attached on the character
 		ContextDrivenSimulation contextDrvSimulation;
+		SimulationEntity simEntity;
 
 		void Start() {
 			// configure simulation
-			SimulationEntity.ReadObjectXml();
-			SimulationEntity.Actions = Utils.ReadActionXml(this.name);	// TODO ReadActionXml with static Actions
-			SimulationEntity.Activities = Utils.ReadActivityXml(this.name);	// TODO ReadActivityXml with static Activities
-			SimulationEntity.ReadContextXml(this.name);
+			SimulationEntity.ReadObjectXml();							// static method: read objects info 
+
+			simEntity = new SimulationEntity();
+			simEntity.Actions = Utils.ReadActionXml(this.name);			// TODO ReadActionXml with static Actions
+			simEntity.Activities = Utils.ReadActivityXml(this.name);	// TODO ReadActivityXml with static Activities
+			simEntity.ReadContextXml(this.name);
 
 			// TODO AICharacterControl is located on another character
 			characterController = GameObject.Find("Ethan").GetComponent<AICharacterControl>();	
@@ -27,7 +30,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			stateSpaceManager = GameObject.Find("Camera").GetComponent<StateSpaceManager>();	
 			stateSpaceManager.InitializeStateSpace();
 
-			contextDrvSimulation = new ContextDrivenSimulation (characterController, stateSpaceManager);
+			contextDrvSimulation = new ContextDrivenSimulation (characterController, stateSpaceManager, simEntity);
 			#if CONTEXTSIM
 			RunSimulation ();
 			#endif
@@ -57,7 +60,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			print ("Now " + stateSpaceManager.StateSpaceHistory.Count + " state spaces has stored");
 			contextDrvSimulation.EvaluateStateSpace ();
 			contextDrvSimulation.TransitToNextContext ();
-			if (!SimulationEntity.IsEnd ())
+			if (!simEntity.IsEnd ())
 				RunSimulation ();
 			else
 				Debug.Log ("Simulation Ends");			

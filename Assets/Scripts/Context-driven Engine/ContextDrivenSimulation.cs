@@ -7,15 +7,17 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 	public class ContextDrivenSimulation {		
 		AICharacterControl characterController;
 		StateSpaceManager stateSpaceManager;
+		SimulationEntity simEntity;
 
 		Activity curActivity;										// currently performing activity
 		List<Context.ContextActivity> selectedContextActivities;	// list of selected context activities
 		List<int> scheduledContextActivities;						// list of scheduled context activities
 		double[] contextDistances;
 
-		public ContextDrivenSimulation (AICharacterControl characterController, StateSpaceManager stateSpaceManager) {
+		public ContextDrivenSimulation (AICharacterControl characterController, StateSpaceManager stateSpaceManager, SimulationEntity simEntity) {
 			this.characterController = characterController;
 			this.stateSpaceManager = stateSpaceManager;
+			this.simEntity = simEntity;
 			selectedContextActivities = new List<Context.ContextActivity> ();
 			scheduledContextActivities = new List<int> ();
 		}
@@ -23,11 +25,11 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		// select all possible activities from the current context and the next contexts
 		public void SelectContextActivities() {
 //			if (selectedContextActivities.Count == 0) {
-				AddContextActivities (SimulationEntity.CurContext);
+				AddContextActivities (simEntity.CurContext);
 
-				foreach (Context.NextContext nc in SimulationEntity.CurContext.NextContexts) {
+			foreach (Context.NextContext nc in simEntity.CurContext.NextContexts) {
 					int contextID = nc.ID;
-					Context cont = SimulationEntity.ContextGraph.GetContext (contextID);
+				Context cont = simEntity.ContextGraph.GetContext (contextID);
 					AddContextActivities (cont);
 				}
 //			}
@@ -50,8 +52,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		// check whether the context activity is available
 		public bool IsAvailable(int activityID) {
 			string objName;
-			for (int j = 0; j < SimulationEntity.Activities [activityID].objectNames.Count; j++) {
-				objName = SimulationEntity.Activities [activityID].objectNames [j];
+			for (int j = 0; j < simEntity.Activities [activityID].objectNames.Count; j++) {
+				objName = simEntity.Activities [activityID].objectNames [j];
 //				Debug.Log (activityID + " with " + objName + " " + stateSpaceManager.GetLatestStateSpace ().ObjectsStatus [j]);
 				if (stateSpaceManager.GetLatestStateSpace ().ObjectsStatus [j] == "on") {	// not available if the object is used
 					return false;
@@ -67,7 +69,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			Activity activity;
 
 			for (int i = 0; i < selectedContextActivities.Count; i++) {
-				activity = SimulationEntity.GetActivity (selectedContextActivities[i].ID);
+				activity = simEntity.GetActivity (selectedContextActivities[i].ID);
 //				Debug.Log ("activity " + activity.id + "(" + activity.name + ") is scheduled");
 
 //				TODO: scheduling algorithm
@@ -90,7 +92,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			Debug.Log ("activity " + curActivity.id + "(" + curActivity.name + ") is performed");
 
 			scheduledContextActivities.Add (curActivity.id);
-			SimulationEntity.ScheduledActivities.Add (curActivity.id);
+			simEntity.ScheduledActivities.Add (curActivity.id);
 
 			// TODO test cases
 //			stateSpaceManager.UpdateStateSpace (stateSpaceManager.startTime.Add (TimeSpan.FromSeconds (Mathf.Round (Time.time))), 11, "on");
@@ -101,15 +103,15 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 		// evalucate state space and find all reachable contexts
 		public void EvaluateStateSpace() {
-			Debug.Log (SimulationEntity.CurContext.Name + " is evaluated with " + SimulationEntity.CurContext.CountNextContexts() + " next contexts");
+			Debug.Log (simEntity.CurContext.Name + " is evaluated with " + simEntity.CurContext.CountNextContexts() + " next contexts");
 			StateSpace curStateSpace = stateSpaceManager.StateSpaceEvaluator;
 			curStateSpace.PrintStateSpace ();
-			contextDistances = new double[SimulationEntity.CurContext.CountNextContexts()];
+			contextDistances = new double[simEntity.CurContext.CountNextContexts()];
 
-			for (int i = 0; i < SimulationEntity.CurContext.CountNextContexts(); i++) {
-				int nextContextID = SimulationEntity.CurContext.GetNextContext (i).ID;
-				Context nextContext = SimulationEntity.ContextGraph.GetContext (nextContextID);
-				float nextContextProb = SimulationEntity.CurContext.GetNextContext (i).Probability;
+			for (int i = 0; i < simEntity.CurContext.CountNextContexts(); i++) {
+				int nextContextID = simEntity.CurContext.GetNextContext (i).ID;
+				Context nextContext = simEntity.ContextGraph.GetContext (nextContextID);
+				float nextContextProb = simEntity.CurContext.GetNextContext (i).Probability;
 
 				string objName;
 				int distance = 0;
@@ -158,7 +160,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		// find the only ONE context to reach as next context
 		public void TransitToNextContext() {
 			double least = Double.PositiveInfinity;
-			int newContextID = SimulationEntity.CurContext.ID;
+			int newContextID = simEntity.CurContext.ID;
 			for (int k = 0; k < contextDistances.Length ;k++) {
 
 				if (contextDistances [k] != -1.0 && contextDistances [k] < least) {
@@ -169,7 +171,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			stateSpaceManager.ResetStateSpaceEvaluator ();
 
 			if (least < Double.PositiveInfinity) {
-				SimulationEntity.CurContext = SimulationEntity.GetContext (newContextID);
+				simEntity.CurContext = simEntity.GetContext (newContextID);
 				Debug.Log ("the least distance is " + least + " and change current context into current context " + newContextID);
 				ResetScheduledContextActivityList ();
 			} 
