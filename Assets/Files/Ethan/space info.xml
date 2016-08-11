@@ -62,7 +62,7 @@
   <object name="Razor" type="non-nav static" x="0.875" y="0.79" z="4.022" rotation-x="0" rotation-y="0" rotation-z="0.06540314" />
   <object name="Toilet paper holder" type="non-nav static" x="1.485" y="0.954" z="0.5" rotation-x="-0.5" rotation-y="-0.5" rotation-z="-0.5000001" />
   <object name="Keyboard" type="non-nav static" x="12.368" y="0.592" z="15.642" rotation-x="0" rotation-y="1" rotation-z="0" />
-  <object name="TVRemoteControl" type="non-nav static" x="9.844" y="0.4940985" z="12.471" rotation-x="0" rotation-y="0.7071068" rotation-z="0" />
+  <object name="TV remote control" type="non-nav static" x="10.18172" y="0.7575298" z="13.11186" rotation-x="0.04592976" rotation-y="0.2623992" rotation-z="-0.04075445" />
   <object name="Wok" type="non-nav static" x="0.934" y="0.86" z="8.238" rotation-x="0.5000002" rotation-y="0.4999998" rotation-z="0.4999999" />
   <object name="Bedroom window 1" type="non-nav static" x="13.32" y="0.7" z="6.7" rotation-x="-0.7071068" rotation-y="0" rotation-z="0" />
   <object name="Comb" type="non-nav static" x="0.96" y="0.761" z="5.1" rotation-x="0.7085484" rotation-y="0.006000339" rotation-z="0.005987941" />

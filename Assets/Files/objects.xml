@@ -170,8 +170,17 @@
     <character-position x="0.75" y="0" z="2.7" />
     <character-rotation x="-1" y="0" z="0" />
   </object>
+
+  <object id="19" name="TV remote control" status="off">
+    <position x="9.844" y="0.454" z="12.48" />
+    <rotation x="0" y="90" z="0" />
+    <in-hand-position x="-0.11" y="-0.15" z="0.11" />
+    <in-hand-rotation x="304" y="160" z="28" />
+    <character-position x="0" y="0" z="0" />
+    <character-rotation x="0" y="0" z="0" />
+  </object>
   
-  <object id="19" name="Washer" status="off">
+  <object id="20" name="Washer" status="off">
     <position x="0" y="0" z="0" />
     <rotation x="0" y="0" z="0" />
     <in-hand-position x="0" y="0" z="0" />

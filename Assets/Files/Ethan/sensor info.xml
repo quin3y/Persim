@@ -7,7 +7,4 @@
   <sensor type="motion" attachTo="Towel" x="0.704" y="0.918" z="2.782" />
   <sensor type="IR" attach-to="Bathroom sink" x="0.6660001" y="0.749" z="4.597" />
   <sensor type="contact" attachTo="Bedroom door frame" x="8.1276" y="1.719" z="4.789502" />
-  <sensor type="RFID tag" attachTo="Razor" x="0.875" y="0.79" z="4.022" />
-  <sensor type="RFID tag" attachTo="Comb" x="0.96" y="0.761" z="5.1" />
-  <sensor type="RFID tag" attachTo="Bathroom cup" x="0.76" y="0.739" z="5.1" />
 </sensors>

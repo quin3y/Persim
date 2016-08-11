@@ -66,6 +66,21 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			obj.transform.rotation = Quaternion.Euler(characterController.activityPlayback.objects[obj.name].rotation);
 		}
 
+        void PickUpTVRemote() {
+            GameObject obj = GameObject.Find("TV remote control");
+            obj.transform.parent = GameObject.Find("EthanLeftHand").transform;
+            obj.transform.localPosition = characterController.activityPlayback.objects["TV remote control"].inHandPosition;
+            obj.transform.localRotation =
+                Quaternion.Euler(characterController.activityPlayback.objects["TV remote control"].inHandRotation);
+        }
+
+        void PutDownRemote() {
+            GameObject obj = GameObject.Find("TV remote control");
+            obj.transform.parent = null;
+            obj.transform.position = characterController.activityPlayback.objects["TV remote control"].position;
+            obj.transform.rotation = Quaternion.Euler(characterController.activityPlayback.objects["TV remote control"].rotation);
+        }
+
 		// Closes bedroom door
 		void CloseDoor() {
 			bedroomDoorAnimator.SetBool("bedroomDoorOpen", false);
