@@ -9,7 +9,6 @@
   <object name="Dining room plant" type="nav static" x="0.86" y="-2.986366E-06" z="16.08" rotation-x="-0.7071068" rotation-y="0" rotation-z="0" />
   <object name="Kitchen counter 1" type="nav static" x="1.66" y="-0.015" z="6.9" rotation-x="-0.7071068" rotation-y="0" rotation-z="0" />
   <object name="Kitchen counter 2" type="nav static" x="3.826" y="-0.028" z="7.271" rotation-x="-0.7071068" rotation-y="0" rotation-z="0" />
-  <object name="Front door" type="nav static" x="7.552" y="0" z="16.505" rotation-x="-0.5" rotation-y="-0.5" rotation-z="-0.5000001" />
   <object name="Wardrobe" type="nav static" x="13.01" y="1.072884E-06" z="9" rotation-x="-0.5" rotation-y="-0.5" rotation-z="-0.5000001" />
   <object name="Towel rack" type="nav static" x="0.56" y="1.036138" z="2.751" rotation-x="0.7071068" rotation-y="1.192093E-07" rotation-z="0" />
   <object name="Bathroom door" type="nav static" x="5" y="0" z="5.593" rotation-x="0" rotation-y="1" rotation-z="0" />
@@ -36,7 +35,7 @@
   <object name="Wall 11" type="nav static" x="4.96" y="1.2" z="7.555" rotation-x="0" rotation-y="0" rotation-z="0" />
   <object name="Wall 3" type="nav static" x="9.15" y="1.2" z="2.09" rotation-x="0" rotation-y="0" rotation-z="0" />
   <object name="Wall 5" type="nav static" x="8.64" y="1.2" z="3.713" rotation-x="0" rotation-y="0.7071068" rotation-z="0" />
-  <object name="Wall 10" type="nav static" x="7.552" y="2.248" z="16.498" rotation-x="0" rotation-y="0.7071068" rotation-z="0" />
+  <object name="Wall 10" type="nav static" x="7.552" y="2.227" z="16.498" rotation-x="0" rotation-y="0.7071068" rotation-z="0" />
   <object name="Wall 6" type="nav static" x="10.81" y="1.2" z="16.5" rotation-x="0" rotation-y="0.7071068" rotation-z="0" />
   <object name="Wall 4" type="nav static" x="8.11" y="1.2" z="7.284" rotation-x="0" rotation-y="0" rotation-z="0" />
   <object name="Wall 14" type="nav static" x="0.46" y="1.2" z="8.53" rotation-x="0" rotation-y="0" rotation-z="0" />
@@ -62,7 +61,7 @@
   <object name="Razor" type="non-nav static" x="0.875" y="0.79" z="4.022" rotation-x="0" rotation-y="0" rotation-z="0.06540314" />
   <object name="Toilet paper holder" type="non-nav static" x="1.485" y="0.954" z="0.5" rotation-x="-0.5" rotation-y="-0.5" rotation-z="-0.5000001" />
   <object name="Keyboard" type="non-nav static" x="12.368" y="0.592" z="15.642" rotation-x="0" rotation-y="1" rotation-z="0" />
-  <object name="TV remote control" type="non-nav static" x="10.18172" y="0.7575298" z="13.11186" rotation-x="0.04592976" rotation-y="0.2623992" rotation-z="-0.04075445" />
+  <object name="TV remote control" type="non-nav static" x="9.844" y="0.454" z="12.481" rotation-x="0" rotation-y="0.7071068" rotation-z="0" />
   <object name="Wok" type="non-nav static" x="0.934" y="0.86" z="8.238" rotation-x="0.5000002" rotation-y="0.4999998" rotation-z="0.4999999" />
   <object name="Bedroom window 1" type="non-nav static" x="13.32" y="0.7" z="6.7" rotation-x="-0.7071068" rotation-y="0" rotation-z="0" />
   <object name="Comb" type="non-nav static" x="0.96" y="0.761" z="5.1" rotation-x="0.7085484" rotation-y="0.006000339" rotation-z="0.005987941" />

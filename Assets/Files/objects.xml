@@ -104,7 +104,7 @@
     <rotation x="0" y="0" z="0" />
     <in-hand-position x="0" y="0" z="0" />
     <in-hand-rotation x="0" y="0" z="0" />
-    <character-position x="6" y="0" z="15" />
+    <character-position x="7.64" y="0" z="15.6" />
     <character-rotation x="0" y="0" z="1" />
   </object>
   
@@ -187,6 +187,24 @@
     <in-hand-rotation x="0" y="0" z="0" />
     <character-position x="0" y="0" z="0" />
     <character-rotation x="1" y="0" z="0" />
+  </object>
+
+  <object id="21" name="Front door outside" status="off">
+    <position x="0" y="0" z="0" />
+    <rotation x="0" y="0" z="0" />
+    <in-hand-position x="0" y="0" z="0" />
+    <in-hand-rotation x="0" y="0" z="0" />
+    <character-position x="7.64" y="0" z="17" />
+    <character-rotation x="0" y="0" z="-1" />
+  </object>
+
+  <object id="22" name="Front entrance" status="off">
+    <position x="0" y="0" z="0" />
+    <rotation x="0" y="0" z="0" />
+    <in-hand-position x="0" y="0" z="0" />
+    <in-hand-rotation x="0" y="0" z="0" />
+    <character-position x="8" y="0" z="18" />
+    <character-rotation x="0" y="0" z="1" />
   </object>
   
 </objects>
