@@ -112,7 +112,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			GameObject[] characters = GameObject.FindGameObjectsWithTag("Character");
 			foreach (GameObject character in characters) {
 				// Save sensor data to file
-				PrintDataset();
+//				PrintDataset();
 				SaveSensorData(character.name);
 				
 				// Save activity configuration to file

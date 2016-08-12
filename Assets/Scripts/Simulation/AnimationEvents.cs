@@ -7,16 +7,23 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 	public class AnimationEvents : MonoBehaviour {
 		StateSpaceManager stateSpaceManager;
 		AICharacterControl characterController;
+
 		GameObject bedroomDoor;
+        GameObject frontDoor;
 		Animator bedroomDoorAnimator;
+        Animator frontDoorAnimator;
 
 		// Use this for initialization
 		void Start () {
 			stateSpaceManager = GameObject.Find("Camera").GetComponent<StateSpaceManager>();
 			characterController = GetComponent<AICharacterControl>();
+
 			bedroomDoor = GameObject.Find("Bedroom door");
 			bedroomDoorAnimator = bedroomDoor.GetComponent<Animator>();
 			bedroomDoorAnimator.SetBool("bedroomDoorOpen", true);
+
+            frontDoor = GameObject.Find("Front door");
+            frontDoorAnimator = frontDoor.GetComponent<Animator>();
 		}
 
 		void TurnOnOffLight() {
@@ -66,14 +73,43 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			obj.transform.rotation = Quaternion.Euler(characterController.activityPlayback.objects[obj.name].rotation);
 		}
 
+        void PickUpTVRemote() {
+            GameObject obj = GameObject.Find("TV remote control");
+            obj.transform.parent = GameObject.Find("EthanLeftHand").transform;
+            obj.transform.localPosition = characterController.activityPlayback.objects["TV remote control"].inHandPosition;
+            obj.transform.localRotation =
+                Quaternion.Euler(characterController.activityPlayback.objects["TV remote control"].inHandRotation);
+            stateSpaceManager.UpdateStateSpace(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))),
+                characterController.activityPlayback.objects["TV remote control"].id, "on");
+        }
+
+        void PutDownRemote() {
+            GameObject obj = GameObject.Find("TV remote control");
+            obj.transform.parent = null;
+            obj.transform.position = characterController.activityPlayback.objects["TV remote control"].position;
+            obj.transform.rotation = Quaternion.Euler(characterController.activityPlayback.objects["TV remote control"].rotation);
+            stateSpaceManager.UpdateStateSpace(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))),
+                characterController.activityPlayback.objects["TV remote control"].id, "off");
+        }
+
 		// Closes bedroom door
 		void CloseDoor() {
-			bedroomDoorAnimator.SetBool("bedroomDoorOpen", false);
+            if (characterController.nextAction.obj.name == "Bedroom door") {
+                bedroomDoorAnimator.SetBool("bedroomDoorOpen", false);
+            }
+            else if (characterController.nextAction.obj.name == "Front door outside") {
+                frontDoorAnimator.SetBool("frontDoorOpen", false);
+            }
 		}
 
 		// Opens bedroom door
 		void OpenDoor() {
-			bedroomDoorAnimator.SetBool("bedroomDoorOpen", true);
+            if (characterController.nextAction.obj.name == "Bedroom door") {
+                bedroomDoorAnimator.SetBool("bedroomDoorOpen", true);
+            }
+            else if (characterController.nextAction.obj.name == "Front door") {
+                frontDoorAnimator.SetBool("frontDoorOpen", true);
+            }
 		}
 
 		void HandOnToiletHandle() {
