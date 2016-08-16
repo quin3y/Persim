@@ -19,7 +19,7 @@
   <activity id="3" name="Combing hair">
     <action id="1" object="Bathroom light switch" importance="0" max-occur="1" prereq="-1" />
     <action id="19" object="Comb" importance="1" max-occur="1" prereq="-1" />
-    <action id="21" object="Comb" importance="1" max-occur="3" prereq="-1" />
+    <action id="21" object="Comb" importance="1" max-occur="2" prereq="-1" />
     <action id="20" object="Comb" importance="1" max-occur="1" prereq="-1" />
     <action id="2" object="Bathroom light switch" importance="0" max-occur="1" prereq="1" />
   </activity>
@@ -44,6 +44,8 @@
 
   <activity id="8" name="Falling">
     <action id="25" object="Bathroom light switch" importance="1" max-occur="1" prereq="-1" />
+    <!--action id="25" object="Front door" importance="1" max-occur="1" prereq="-1" /-->
+    <!--action id="25" object="Phantom of fall" importance="1" max-occur="1" prereq="-1" /-->
   </activity>
 
   <activity id="9" name="Getting up">
@@ -105,6 +107,7 @@
 
   <activity id="18" name="Using cellphone">
     <action id="13" object="Mobile phone" importance="1" max-occur="1" prereq="-1" />
+    <action id="0" object="Front door" importance="1" max-occur="1" prereq="-1" />
   </activity>
 
   <activity id="19" name="Using computer">

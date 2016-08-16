@@ -1,2 +1,5 @@
-08:20:00, Front door, closed
-08:20:07, Front door, open
+07:23:00, Front door, closed
+07:23:14, Kitchen cup, on
+07:23:15, Kitchen cup, off
+07:23:25, Kitchen cup, on
+07:23:26, Kitchen cup, off
