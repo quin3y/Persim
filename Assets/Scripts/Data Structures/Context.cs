@@ -59,19 +59,27 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				return contextConditions [index];
 		}
 
-		// add a context condition
+		// add a context condition with object name and status
 		public void AddContextCondition(string objName, string objStatus) {
 			ContextCondition condition = new ContextCondition (objName, objStatus);
 			contextConditions.Add (condition);
 		}
 
-		// remove a context condition
+		// remove a context condition with object name
 		public void RemoveContextCondition(string objName) {
 			foreach (ContextCondition cond in contextConditions) {
-				if (cond.ObjectName == objName) {
-					contextConditions.Remove (cond);
-				}
+				if (cond.ObjectName == objName) 
+					contextConditions.Remove (cond);				
 			}
+		}
+
+		// remove a context condition with index
+		public void RemoveContextCondition(int index) {
+			Debug.Log (index + " out of " + ContextConditions.Count);
+			if (index > contextConditions.Count)
+				Debug.Log ("context condition is out of range.");
+			else
+				contextConditions.Remove (contextConditions [index]);
 		}
 
 		// return the number of context activities
@@ -88,8 +96,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		}
 
 		// add a context activity
-		public void AddContextActivity(int id) {
-			ContextActivity conAct = new ContextActivity (id);
+		public void AddContextActivity(int id, float prob) {			
+			ContextActivity conAct = new ContextActivity (id, prob);
 			contextActivities.Add (conAct);
 		}
 
@@ -131,7 +139,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		// inner class - context condition
 		public class ContextCondition	{
 			string objName;
-			string objStatus;
+			string objStatus;				// TODO currently setting {always, maybe, never}
 
 			public ContextCondition(string objName, string objStatus) {
 				this.objName = objName;
@@ -153,10 +161,12 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 		public class ContextActivity {
 			int id; 						// contextactivity id
+			float prob;
 			bool performed;
 
-			public ContextActivity(int id)	{
+			public ContextActivity(int id, float prob)	{
 				this.id = id;
+				this.prob = prob;
 				this.performed = false;
 			}
 
@@ -165,6 +175,13 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				get { return id; }
 			}
 
+			// manage probability
+			public float Probability {
+				get { return prob; }
+				set { prob = value; }
+			}
+
+			// manage probability
 			public bool Performed {
 				get { return performed; }
 				set { performed = value; }

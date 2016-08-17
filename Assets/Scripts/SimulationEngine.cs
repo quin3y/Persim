@@ -65,6 +65,11 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			else
 				Debug.Log ("Simulation Ends");			
 		}
+
+		public SimulationEntity SimEntity {
+			get { return  simEntity; }
+			set { simEntity = value; }
+		}
 	}
 }
 

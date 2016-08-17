@@ -6,7 +6,7 @@
   			<contextcondition object="Bedroom door" status="maybe" />
    		</contextconditions>
    		<contextactivities>
-   			<contextactivity id="10" />
+   			<contextactivity id="10" prob="1.0" /> <!-- if all activities have equal probability, set up 0 for all. In this case, randomly choose the next one !-->
    		</contextactivities>
 		<nextcontexts>
 			<nextcontext id="1" prob="0.8" /> <!-- if all contexts have equal probability, set up 0 for all. In this case, randomly choose the next one !-->
@@ -24,11 +24,11 @@
   		<contextcondition object="Razor" status="maybe" />
   	</contextconditions>
   	<contextactivities>
-  		<contextactivity id="3" />
-  		<contextactivity id="13" />
-  		<contextactivity id="17" />
-  		<contextactivity id="22" />
-  		<contextactivity id="23" />
+  		<contextactivity id="3" prob="0.0" />
+  		<contextactivity id="13" prob="0.0" />
+  		<contextactivity id="17" prob="0.0" />
+  		<contextactivity id="22" prob="0.0" />
+  		<contextactivity id="23" prob="0.0" />
   	</contextactivities>
   	<nextcontexts>
   		<nextcontext id="2" prob="0.8" />
@@ -42,8 +42,8 @@
   		<contextcondition object="Computer" status="always" />
   	</contextconditions>
   	<contextactivities>
-  		<contextactivity id="18" />
-  		<contextactivity id="19" />
+  		<contextactivity id="18" prob="0.3" />
+  		<contextactivity id="19" prob="0.7" />
   	</contextactivities>
   	<nextcontexts>
   		<nextcontext id="1" prob="0.2" />
@@ -56,8 +56,7 @@
   		<contextcondition object="Kitchen cup" status="always" />
   	</contextconditions>
   	<contextactivities>
-  		<contextactivity id="6" />
-  		<contextactivity id="10" />
+  		<contextactivity id="14" prob="1.0" />
   	</contextactivities>
   	<nextcontexts>
   		<nextcontext id="0" prob="1" />

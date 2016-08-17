@@ -12,7 +12,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		public StateSpace ()
 		{
 			timeStamp = new TimeSpan(0, 8, 20, 0, 0);		// TODO: initial time for the time stamp
-			objectsStatus = new string[SimulationEntity.Objects.Count];
+			objectsStatus = new string[StateSpaceManager.Objects.Count];
 		}
 
 		// manage a timestamp

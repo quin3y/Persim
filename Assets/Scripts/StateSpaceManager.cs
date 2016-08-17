@@ -6,7 +6,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 {
 	public class StateSpaceManager : MonoBehaviour {
 		public TimeSpan startTime;
-		public List<DataRecord> dataset;	
+		public List<DataRecord> dataset;
+		public static List<ObjectInfo> Objects = new List<ObjectInfo> (); 				// static varaible: a set of objects
 		List<StateSpace> stateSpaceHistory;				// list of state spaces generated during simulation
 		StateSpace stateSpaceEvaluator;					// for evaluating a context
 
@@ -53,13 +54,37 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			stateSpaceEvaluator = new StateSpace ();
 			StateSpace firstStateSpace = new StateSpace ();
 			
-			for (int i = 0; i < SimulationEntity.Objects.Count; i++) {				
-				firstStateSpace.ObjectsStatus[i] = SimulationEntity.Objects[i].status;
-				stateSpaceEvaluator.ObjectsStatus[i] = SimulationEntity.Objects[i].status;
+			for (int i = 0; i < Objects.Count; i++) {				
+				firstStateSpace.ObjectsStatus[i] = Objects[i].status;
+				stateSpaceEvaluator.ObjectsStatus[i] = Objects[i].status;
 			}
 			firstStateSpace.PrintStateSpace();
 
 			stateSpaceHistory.Add(firstStateSpace);
+		}
+
+		// count objects
+		public int CountObjects () {
+			return Objects.Count;
+		}
+
+		// return an object with index
+		public ObjectInfo GetObject (int indObject) {
+			if (indObject < Objects.Count) {
+				return Objects [indObject];
+			} 
+			else {
+				return null;
+			}
+		}
+
+		public string GetObjectName (int indObject) {
+			if (indObject < Objects.Count) {
+				return Objects [indObject].name;
+			} 
+			else {
+				return null;
+			}
 		}
 
 		// update state space

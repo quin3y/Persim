@@ -13,11 +13,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			contexts = new List<Context> ();	
 		}
 
-		// add a context into context graph
-		public void AddContext(Context context) {
-			contexts.Add (context);
-		}
-
 		// return a context
 		public Context GetContext(int id) {
 			foreach (Context cont in contexts) {
@@ -26,6 +21,15 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			}
 
 			return null;
+		}
+
+		// add a context into context graph
+		public void AddContext(Context context) {
+			contexts.Add (context);
+		}
+
+		public void RemoveContext(int index) {
+			contexts.RemoveAt (index);
 		}
 
 		// return the number of contexts
