@@ -1,14 +1,20 @@
 fileFormatVersion: 2
-guid: a7dab037ee6674728995f4aa120013d6
-timeCreated: 1470405821
+guid: cb77a9c48bf204556bbf546fafeaa511
+timeCreated: 1471287071
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
+    100000: Camera
+    100002: Lamp
+    100004: //RootNode
+    100006: Pill_Bottle
+    400000: Camera
+    400002: Lamp
+    400004: //RootNode
+    400006: Pill_Bottle
+    2300000: Pill_Bottle
+    3300000: Pill_Bottle
     4300000: Pill_Bottle
   materials:
     importMaterials: 1

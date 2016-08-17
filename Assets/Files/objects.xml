@@ -55,7 +55,7 @@
   </object>
   
   <object id="6" name="Comb" status="off">
-    <position x="0.87" y="0.75" z="4.13" />
+    <position x="0.96" y="0.76" z="5.1" />
     <rotation x="90" y="103.77" z="103.77" />
     <in-hand-position x="-0.1" y="-0.01" z="-0.056" />
     <in-hand-rotation x="82" y="208" z="225" />
@@ -118,7 +118,7 @@
   </object>
   
   <object id="13" name="Kitchen cup" status="off">
-    <position x="1.13" y="0.773" z="7.465" />
+    <position x="1.13" y="0.77" z="7.85" />
     <rotation x="270" y="0" z="0" />
     <in-hand-position x="-0.07" y="-0.086" z="-0.055" />
     <in-hand-rotation x="300" y="209" z="188" />
@@ -204,6 +204,15 @@
     <in-hand-position x="0" y="0" z="0" />
     <in-hand-rotation x="0" y="0" z="0" />
     <character-position x="8" y="0" z="18" />
+    <character-rotation x="0" y="0" z="1" />
+  </object>
+
+  <object id="23" name="Phantom of fall" status="off">
+    <position x="0" y="0" z="0" />
+    <rotation x="0" y="0" z="0" />
+    <in-hand-position x="0" y="0" z="0" />
+    <in-hand-rotation x="0" y="0" z="0" />
+    <character-position x="12.3" y="0" z="14" />
     <character-rotation x="0" y="0" z="1" />
   </object>
   
