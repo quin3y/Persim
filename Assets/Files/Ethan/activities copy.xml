@@ -14,9 +14,9 @@
     <action id="0" object="Table" importance="1" max-occur="1" prereq="-1" />
   </activity>
   <activity id="3" name="Combing hair">
-    <action id="1" object="Bathroom light switch" importance="0" max-occur="1" prereq="-1" />
+    <action id="1" object="Bathroom light switch" importance="0" max-occur="0" prereq="-1" />
     <action id="19" object="Comb" importance="1" max-occur="1" prereq="-1" />
-    <action id="21" object="Comb" importance="1" max-occur="2" prereq="-1" />
+    <action id="21" object="Comb" importance="1" max-occur="1" prereq="-1" />
     <action id="20" object="Comb" importance="1" max-occur="1" prereq="-1" />
     <action id="2" object="Bathroom light switch" importance="0" max-occur="1" prereq="1" />
   </activity>
@@ -28,14 +28,14 @@
   </activity>
   <activity id="6" name="Drinking water">
     <action id="19" object="Kitchen cup" importance="1" max-occur="1" prereq="-1" />
-    <action id="12" object="Kitchen cup" importance="1" max-occur="2" prereq="-1" />
+    <action id="12" object="Kitchen cup" importance="1" max-occur="1" prereq="-1" />
     <action id="20" object="Kitchen cup" importance="1" max-occur="1" prereq="-1" />
   </activity>
   <activity id="7" name="Eating a meal">
     <action id="0" object="Table" importance="1" max-occur="1" prereq="-1" />
   </activity>
   <activity id="8" name="Falling">
-    <action id="25" object="Bathroom light switch" importance="1" max-occur="1" prereq="-1" />
+    <action id="25" object="Phantom" importance="1" max-occur="1" prereq="-1" />
   </activity>
   <activity id="9" name="Getting up">
     <action id="0" object="Table" importance="1" max-occur="1" prereq="-1" />
@@ -49,9 +49,11 @@
     <action id="0" object="Table" importance="1" max-occur="1" prereq="-1" />
   </activity>
   <activity id="12" name="Shaving">
+    <action id="1" object="Bathroom light switch" importance="1" max-occur="1" prereq="-1" />
     <action id="19" object="Razor" importance="1" max-occur="1" prereq="-1" />
-    <action id="14" object="Razor" importance="1" max-occur="3" prereq="-1" />
+    <action id="14" object="Razor" importance="1" max-occur="1" prereq="-1" />
     <action id="20" object="Razor" importance="1" max-occur="1" prereq="-1" />
+    <action id="2" object="Bathroom light switch" importance="1" max-occur="1" prereq="1" />
   </activity>
   <activity id="13" name="Sleep">
     <action id="24" object="Bedroom door" importance="1" max-occur="1" prereq="-1" />

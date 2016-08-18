@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <sensors>
-  <sensor type="motion" attachTo="Couch" x="9.966999" y="0.4060002" z="13.31212" />
+  <sensor type="motion" attachTo="Couch" x="9.966999" y="0.406" z="8.252118" />
   <sensor type="motion" attachTo="Toilet" x="1.362" y="0.3570499" z="1.116" />
   <sensor type="motion" attachTo="Computer chair" x="12.317" y="0.4130001" z="15.102" />
   <sensor type="motion" attachTo="Bed" x="9.9337" y="0.4584903" z="9.255199" />

@@ -14,7 +14,7 @@
     <rotation x="0" y="0" z="0" />
     <in-hand-position x="0" y="0" z="0" />
     <in-hand-rotation x="0" y="0" z="0" />
-    <character-position x="4.32" y="0" z="2.85" />
+    <character-position x="4.25" y="0" z="2.8" />
     <character-rotation x="1" y="0" z="0" />
   </object>
 
@@ -59,7 +59,7 @@
     <rotation x="90" y="103.77" z="103.77" />
     <in-hand-position x="-0.1" y="-0.01" z="-0.056" />
     <in-hand-rotation x="82" y="208" z="225" />
-    <character-position x="1.2" y="0" z="5" />
+    <character-position x="1.29" y="0" z="5" />
     <character-rotation x="-1" y="0" z="0" />
   </object>
 
@@ -111,23 +111,24 @@
   <object id="12" name="Mobile phone" status="off">
     <position x="0" y="0" z="0" />
     <rotation x="0" y="0" z="0" />
-    <in-hand-position x="-0.1" y="-0.05" z="-0.08" />
-    <in-hand-rotation x="348" y="331" z="78" />
-    <character-position x="8" y="0" z="11" />
+    <in-hand-position x="-0.1" y="0" z="-0.07" />
+    <in-hand-rotation x="335" y="344.5" z="49.3" />
+    <!--character-position x="12.3" y="0" z="14" /-->
+    <character-position x="1.4" y="0" z="12.7" />
     <character-rotation x="0" y="0" z="1" />
   </object>
   
   <object id="13" name="Kitchen cup" status="off">
-    <position x="1.13" y="0.77" z="7.85" />
+    <position x="1.07" y="0.74" z="7.85" />
     <rotation x="270" y="0" z="0" />
     <in-hand-position x="-0.07" y="-0.086" z="-0.055" />
     <in-hand-rotation x="300" y="209" z="188" />
-    <character-position x="1.38" y="0" z="7.66" />
+    <character-position x="1.38" y="0" z="7.5" />
     <character-rotation x="-1" y="0" z="0" />
   </object>
 
   <object id="14" name="Pill bottle" status="off">
-    <position x="1.13" y="0.773" z="7.465" />
+    <position x="1.03" y="0.74" z="7.45" />
     <rotation x="270" y="0" z="0" />
     <in-hand-position x="-0.11" y="-0.05" z="-0.04" />
     <in-hand-rotation x="328" y="149" z="234" />
@@ -136,7 +137,7 @@
   </object>
 
   <object id="15" name="Razor" status="off">
-    <position x="0.875" y="0.79" z="4.02" />
+    <position x="0.97" y="0.78" z="4.02" />
     <rotation x="0" y="0" z="7.5" />
     <in-hand-position x="-0.085" y="0" z="-0.08" />
     <in-hand-rotation x="334" y="84.4" z="321.3" />
@@ -207,13 +208,14 @@
     <character-rotation x="0" y="0" z="1" />
   </object>
 
-  <object id="23" name="Phantom of fall" status="off">
+  <object id="23" name="Phantom" status="off">
     <position x="0" y="0" z="0" />
     <rotation x="0" y="0" z="0" />
     <in-hand-position x="0" y="0" z="0" />
     <in-hand-rotation x="0" y="0" z="0" />
-    <character-position x="12.3" y="0" z="14" />
-    <character-rotation x="0" y="0" z="1" />
+    <!--character-position x="12.3" y="0" z="14" /-->
+    <character-position x="11.8" y="0" z="14.2" />
+    <character-rotation x="-1" y="0" z="0" />
   </object>
   
 </objects>
