@@ -49,7 +49,7 @@
     <action id="0" object="Table" importance="1" max-occur="1" prereq="-1" />
   </activity>
   <activity id="12" name="Shaving">
-    <action id="1" object="Bathroom light switch" importance="1" max-occur="1" prereq="-1" />
+    <action id="1" object="Bathroom light switch on" importance="1" max-occur="1" prereq="-1" />
     <action id="19" object="Razor" importance="1" max-occur="1" prereq="-1" />
     <action id="14" object="Razor" importance="1" max-occur="1" prereq="-1" />
     <action id="20" object="Razor" importance="1" max-occur="1" prereq="-1" />

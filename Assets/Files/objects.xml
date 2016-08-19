@@ -217,5 +217,15 @@
     <character-position x="11.8" y="0" z="14.2" />
     <character-rotation x="-1" y="0" z="0" />
   </object>
+
+  <!-- For turning on bathroom light -->
+  <object id="24" name="Bathroom light switch on" status="off">
+    <position x="0" y="0" z="0" />
+    <rotation x="0" y="0" z="0" />
+    <in-hand-position x="0" y="0" z="0" />
+    <in-hand-rotation x="0" y="0" z="0" />
+    <character-position x="4.5" y="0" z="3.3" />
+    <character-rotation x="2" y="0" z="-1" />
+  </object>
   
 </objects>

@@ -10,9 +10,14 @@ public class CameraLookAtCharacter : MonoBehaviour {
 
 	// Change camera's position and rotation based on the character's position
 	void LateUpdate () {
-		if (target.position.x < 5.2f && target.position.z >= 2.2f && target.position.z < 5.6f) {
+		if (target.position.x < 5.2f && target.position.z >= 2.2f && target.position.z < 5.7f) {
 			transform.position = new Vector3(1.26f, 1.8f, 0.6f);
 			transform.rotation = Quaternion.Euler(new Vector3(17.73f, 22.64f, 3.33f));
+
+			if (target.position.x < 3f) {
+				transform.position = new Vector3(4.9f, 1.65f, 2.4f);
+				transform.rotation = Quaternion.Euler(new Vector3(11f, 301f, 1.5f));
+			}
 		}
 		else if (target.position.x < 5.2f && target.position.z < 2.2f) {
 			transform.position = new Vector3(2.985f, 1.8f, 5.264f);

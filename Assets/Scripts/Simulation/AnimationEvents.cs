@@ -26,18 +26,19 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             frontDoorAnimator = frontDoor.GetComponent<Animator>();
 		}
 
+		// Works for bathroom light only
 		void TurnOnOffLight() {
-			string lightName = characterController.nextAction.obj.name;
+//			string lightName = characterController.nextAction.obj.name;
 
 			if (characterController.nextAction.name == "Turn on light") {
-				GameObject.Find(lightName.Substring(0, lightName.Length - 7)).GetComponent<Light>().intensity = 2;
+				GameObject.Find("Bathroom light").GetComponent<Light>().intensity = 4;
 				stateSpaceManager.AddDataRecord(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))),
-					lightName, "on");
+					"Bathroom light", "on");
 			}
 			if (characterController.nextAction.name == "Turn off light") {
-				GameObject.Find(lightName.Substring(0, lightName.Length - 7)).GetComponent<Light>().intensity = 0;
+				GameObject.Find("Bathroom light").GetComponent<Light>().intensity = 0;
 				stateSpaceManager.AddDataRecord(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))),
-					lightName, "off");
+					"Bathroom light", "off");
 			}
 		}
 

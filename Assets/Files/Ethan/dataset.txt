@@ -1,3 +1,5 @@
 09:34:00, Front door, closed
-09:34:07, Mobile phone, on
-09:34:29, Mobile phone, off
+09:34:18, Razor, on
+09:34:18, Razor, off
+09:34:19, Towel, on
+09:34:20, Towel, off
