@@ -168,7 +168,7 @@
     <rotation x="0" y="0" z="0" />
     <in-hand-position x="0" y="0" z="0" />
     <in-hand-rotation x="0" y="0" z="0" />
-    <character-position x="0.75" y="0" z="2.7" />
+    <character-position x="0.95" y="0" z="2.7" />
     <character-rotation x="-1" y="0" z="0" />
   </object>
 

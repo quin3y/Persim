@@ -1,3 +1,7 @@
 09:34:00, Front door, closed
-09:34:20, Comb, on
-09:34:21, Comb, off
+09:34:06, Bathroom light, on
+09:34:18, Razor, on
+09:34:18, Razor, off
+09:34:19, Towel, on
+09:34:20, Towel, off
+09:34:27, Bathroom light, off

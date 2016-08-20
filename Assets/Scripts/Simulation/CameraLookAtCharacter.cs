@@ -14,7 +14,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			characterController = GameObject.Find("Ethan").GetComponent<AICharacterControl>();
 		}
 
-		// Change camera's position and rotation based on the characterTransform's position
+		// Change camera's position and rotation based on the character's position
 		void LateUpdate () {
 			if (closeUpEnabled) {
 				if (characterController.nextAction != null) {
@@ -41,10 +41,10 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				transform.position = new Vector3(1.26f, 1.8f, 0.6f);
 				transform.rotation = Quaternion.Euler(new Vector3(17.73f, 22.64f, 3.33f));
 				
-//				if (characterTransform.position.x < 3f) {
-//					transform.position = new Vector3(4.9f, 1.65f, 2.4f);
-//					transform.rotation = Quaternion.Euler(new Vector3(11f, 301f, 1.5f));
-//				}
+				if (characterTransform.position.x < 3f) {
+					transform.position = new Vector3(4.9f, 1.65f, 2.4f);
+					transform.rotation = Quaternion.Euler(new Vector3(11f, 301f, 1.5f));
+				}
 			}
 			else if (characterTransform.position.x < 5.2f && characterTransform.position.z < 2.2f) {
 				transform.position = new Vector3(2.985f, 1.8f, 5.264f);

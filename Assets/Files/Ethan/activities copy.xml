@@ -109,10 +109,10 @@
     <action id="2" object="Bathroom light switch" importance="0" max-occur="1" prereq="1" />
   </activity>
   <activity id="23" name="Washing hands">
-    <action id="1" object="Bathroom light switch" importance="0" max-occur="1" prereq="-1" />
+    <action id="1" object="Bathroom light switch" importance="1" max-occur="1" prereq="-1" />
     <action id="3" object="Bathroom sink" importance="1" max-occur="1" prereq="-1" />
-    <action id="4" object="Towel" importance="0" max-occur="1" prereq="3" />
-    <action id="2" object="Bathroom light switch" importance="0" max-occur="1" prereq="1" />
+    <action id="4" object="Towel" importance="1" max-occur="1" prereq="3" />
+    <action id="2" object="Bathroom light switch" importance="1" max-occur="1" prereq="1" />
   </activity>
   <activity id="24" name="Watching TV">
     <action id="8" object="Couch" importance="1" max-occur="1" prereq="-1" />
