@@ -96,6 +96,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				nextAction = activityPlayback.actionQueue.Dequeue();
 				navAgent.destination = nextAction.location;
 				currentActivity = id;
+				activityFinished = false;
+				print("activity finished = " + activityFinished);
 			}
 		}
     }

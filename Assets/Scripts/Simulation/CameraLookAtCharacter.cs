@@ -1,45 +1,72 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CameraLookAtCharacter : MonoBehaviour {
-	private Transform target;
+namespace UnityStandardAssets.Characters.ThirdPerson
+{
+	public class CameraLookAtCharacter : MonoBehaviour {
+		private Transform characterTransform;
+		private AICharacterControl characterController;
 
-	void Start () {
-		target = GameObject.Find("Ethan").transform;
-	}
+		public bool closeUpEnabled = true;
 
-	// Change camera's position and rotation based on the character's position
-	void LateUpdate () {
-		if (target.position.x < 5.2f && target.position.z >= 2.2f && target.position.z < 5.7f) {
-			transform.position = new Vector3(1.26f, 1.8f, 0.6f);
-			transform.rotation = Quaternion.Euler(new Vector3(17.73f, 22.64f, 3.33f));
+		void Start () {
+			characterTransform = GameObject.Find("Ethan").transform;
+			characterController = GameObject.Find("Ethan").GetComponent<AICharacterControl>();
+		}
 
-			if (target.position.x < 3f) {
-				transform.position = new Vector3(4.9f, 1.65f, 2.4f);
-				transform.rotation = Quaternion.Euler(new Vector3(11f, 301f, 1.5f));
+		// Change camera's position and rotation based on the characterTransform's position
+		void LateUpdate () {
+			if (closeUpEnabled) {
+				if (characterController.nextAction != null) {
+					float distance = Vector3.Distance(characterTransform.position, characterController.nextAction.obj.position);
+					if (characterController.nextAction.name == "Pick up right" && distance >= 1.1f && distance <= 2.7f) {
+						if (characterController.nextAction.obj.name == "Razor") {
+							transform.position = new Vector3(1.38f, 1f, 3.79f);
+							transform.rotation = Quaternion.Euler(new Vector3(26f, 304f, 3f));
+						}
+						else if (characterController.nextAction.obj.name == "Kitchen cup") {
+							transform.position = new Vector3(1.4f, 1.03f, 8.05f);
+							transform.rotation = Quaternion.Euler(new Vector3(23f, 238f, 1f));
+						}
+						else if (characterController.nextAction.obj.name == "Comb") {
+							transform.position = new Vector3(1.3f, 1.02f, 4.82f);
+							transform.rotation = Quaternion.Euler(new Vector3(21f, -52.5f, -1f));
+						}
+						return;
+					}
+				}
 			}
-		}
-		else if (target.position.x < 5.2f && target.position.z < 2.2f) {
-			transform.position = new Vector3(2.985f, 1.8f, 5.264f);
-			transform.rotation = Quaternion.Euler(new Vector3(15.94f, 180f, 0.62f));
-		}
-		else if ((target.position.x >= 4.8f && target.position.x < 8.2f && target.position.z >= 3.6f && target.position.z < 7f) || 
-		         target.position.x >= 5f && target.position.x < 8.8f && target.position.z < 3.6f) {
-			transform.position = new Vector3(6.7f, 2f, 1.94f);
-			transform.LookAt(target);
-		}
-		else if ((target.position.x >= 8f && target.position.z >= 3.72f && target.position.z < 9.7f) ||
-		         (target.position.x >= 9f && target.position.z < 3.7f)) {
-			transform.position = new Vector3(13.143f, 2f, 4.984f);
-			transform.LookAt(target);
-		}
-		else if (target.position.x < 5f && target.position.z >= 6.4f) {
-//            transform.position = new Vector3(1.35f, 2f, 10.76f);
-			transform.LookAt(target);
-		}
-		else {
-			transform.position = new Vector3(5.4f, 2f, 13f);
-			transform.LookAt(target);
+
+			if (characterTransform.position.x < 5.2f && characterTransform.position.z >= 2.2f && characterTransform.position.z < 5.7f) {
+				transform.position = new Vector3(1.26f, 1.8f, 0.6f);
+				transform.rotation = Quaternion.Euler(new Vector3(17.73f, 22.64f, 3.33f));
+				
+//				if (characterTransform.position.x < 3f) {
+//					transform.position = new Vector3(4.9f, 1.65f, 2.4f);
+//					transform.rotation = Quaternion.Euler(new Vector3(11f, 301f, 1.5f));
+//				}
+			}
+			else if (characterTransform.position.x < 5.2f && characterTransform.position.z < 2.2f) {
+				transform.position = new Vector3(2.985f, 1.8f, 5.264f);
+				transform.rotation = Quaternion.Euler(new Vector3(15.94f, 180f, 0.62f));
+			}
+			else if ((characterTransform.position.x >= 4.8f && characterTransform.position.x < 8.2f && characterTransform.position.z >= 3.6f && characterTransform.position.z < 7f) || 
+				characterTransform.position.x >= 5f && characterTransform.position.x < 8.8f && characterTransform.position.z < 3.6f) {
+				transform.position = new Vector3(6.7f, 2f, 1.94f);
+				transform.LookAt(characterTransform);
+			}
+			else if ((characterTransform.position.x >= 8f && characterTransform.position.z >= 3.72f && characterTransform.position.z < 9.7f) ||
+				(characterTransform.position.x >= 9f && characterTransform.position.z < 3.7f)) {
+				transform.position = new Vector3(13.143f, 2f, 4.984f);
+				transform.LookAt(characterTransform);
+			}
+//			else if (characterTransform.position.x < 5f && characterTransform.position.z >= 6.4f) {
+//				transform.LookAt(characterTransform);
+//			}
+			else {
+				transform.position = new Vector3(5.4f, 2f, 13f);
+				transform.LookAt(characterTransform);
+			}
 		}
 	}
 }

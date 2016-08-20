@@ -62,6 +62,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			// Activity finished
 			else {
 				characterController.activityFinished = true;
+				Debug.Log("activity finished = " + characterController.activityFinished);
+
 
 				// Start next activity
 				if (characterController.playlist.Count() > 0) {
