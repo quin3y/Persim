@@ -42,8 +42,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				transform.rotation = Quaternion.Euler(new Vector3(17.73f, 22.64f, 3.33f));
 				
 				if (characterTransform.position.x < 3f) {
-					transform.position = new Vector3(4.9f, 1.65f, 2.4f);
-					transform.rotation = Quaternion.Euler(new Vector3(11f, 301f, 1.5f));
+					transform.position = new Vector3(4.5f, 1.55f, 2.85f);
+					transform.rotation = Quaternion.Euler(new Vector3(11.2f, 296.4f, 2.86f));
 				}
 			}
 			else if (characterTransform.position.x < 5.2f && characterTransform.position.z < 2.2f) {

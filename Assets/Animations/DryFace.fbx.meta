@@ -1,142 +1,142 @@
 fileFormatVersion: 2
-guid: 502fa7cf167cd41659b913d441c0f3cb
-timeCreated: 1456590915
+guid: ee1f63a6eafd942d2b89ff086f665fd0
+timeCreated: 1471918131
 licenseType: Free
 ModelImporter:
-  serializedVersion: 18
+  serializedVersion: 19
   fileIDToRecycleName:
-    100000: iPiMocap:EffectorHead
-    100002: iPiMocap:EffectorLFinger0
-    100004: iPiMocap:EffectorLFinger1
-    100006: iPiMocap:EffectorLFinger2
-    100008: iPiMocap:EffectorLFinger3
-    100010: iPiMocap:EffectorLFinger4
-    100012: iPiMocap:EffectorLToe
-    100014: iPiMocap:EffectorRFinger0
-    100016: iPiMocap:EffectorRFinger1
-    100018: iPiMocap:EffectorRFinger2
-    100020: iPiMocap:EffectorRFinger3
-    100022: iPiMocap:EffectorRFinger4
-    100024: iPiMocap:EffectorRToe
-    100026: iPiMocap:Head
-    100028: iPiMocap:Hips
-    100030: iPiMocap:LeftArm
-    100032: iPiMocap:LeftFoot
-    100034: iPiMocap:LeftForeArm
-    100036: iPiMocap:LeftHand
-    100038: iPiMocap:LeftHandIndex1
-    100040: iPiMocap:LeftHandIndex2
-    100042: iPiMocap:LeftHandIndex3
-    100044: iPiMocap:LeftHandMiddle1
-    100046: iPiMocap:LeftHandMiddle2
-    100048: iPiMocap:LeftHandMiddle3
-    100050: iPiMocap:LeftHandPinky1
-    100052: iPiMocap:LeftHandPinky2
-    100054: iPiMocap:LeftHandPinky3
-    100056: iPiMocap:LeftHandRing1
-    100058: iPiMocap:LeftHandRing2
-    100060: iPiMocap:LeftHandRing3
-    100062: iPiMocap:LeftHandThumb1
-    100064: iPiMocap:LeftHandThumb2
-    100066: iPiMocap:LeftHandThumb3
-    100068: iPiMocap:LeftLeg
-    100070: iPiMocap:LeftShoulder
-    100072: iPiMocap:LeftToeBase
-    100074: iPiMocap:LeftUpLeg
-    100076: iPiMocap:Neck
-    100078: iPiMocap:RightArm
-    100080: iPiMocap:RightFoot
-    100082: iPiMocap:RightForeArm
-    100084: iPiMocap:RightHand
-    100086: iPiMocap:RightHandIndex1
-    100088: iPiMocap:RightHandIndex2
-    100090: iPiMocap:RightHandIndex3
-    100092: iPiMocap:RightHandMiddle1
-    100094: iPiMocap:RightHandMiddle2
-    100096: iPiMocap:RightHandMiddle3
-    100098: iPiMocap:RightHandPinky1
-    100100: iPiMocap:RightHandPinky2
-    100102: iPiMocap:RightHandPinky3
-    100104: iPiMocap:RightHandRing1
-    100106: iPiMocap:RightHandRing2
-    100108: iPiMocap:RightHandRing3
-    100110: iPiMocap:RightHandThumb1
-    100112: iPiMocap:RightHandThumb2
-    100114: iPiMocap:RightHandThumb3
-    100116: iPiMocap:RightLeg
-    100118: iPiMocap:RightShoulder
-    100120: iPiMocap:RightToeBase
-    100122: iPiMocap:RightUpLeg
-    100124: iPiMocap:Spine
-    100126: iPiMocap:Spine1
-    100128: iPiMocap:Spine2
-    100130: //RootNode
-    400000: iPiMocap:EffectorHead
-    400002: iPiMocap:EffectorLFinger0
-    400004: iPiMocap:EffectorLFinger1
-    400006: iPiMocap:EffectorLFinger2
-    400008: iPiMocap:EffectorLFinger3
-    400010: iPiMocap:EffectorLFinger4
-    400012: iPiMocap:EffectorLToe
-    400014: iPiMocap:EffectorRFinger0
-    400016: iPiMocap:EffectorRFinger1
-    400018: iPiMocap:EffectorRFinger2
-    400020: iPiMocap:EffectorRFinger3
-    400022: iPiMocap:EffectorRFinger4
-    400024: iPiMocap:EffectorRToe
-    400026: iPiMocap:Head
-    400028: iPiMocap:Hips
-    400030: iPiMocap:LeftArm
-    400032: iPiMocap:LeftFoot
-    400034: iPiMocap:LeftForeArm
-    400036: iPiMocap:LeftHand
-    400038: iPiMocap:LeftHandIndex1
-    400040: iPiMocap:LeftHandIndex2
-    400042: iPiMocap:LeftHandIndex3
-    400044: iPiMocap:LeftHandMiddle1
-    400046: iPiMocap:LeftHandMiddle2
-    400048: iPiMocap:LeftHandMiddle3
-    400050: iPiMocap:LeftHandPinky1
-    400052: iPiMocap:LeftHandPinky2
-    400054: iPiMocap:LeftHandPinky3
-    400056: iPiMocap:LeftHandRing1
-    400058: iPiMocap:LeftHandRing2
-    400060: iPiMocap:LeftHandRing3
-    400062: iPiMocap:LeftHandThumb1
-    400064: iPiMocap:LeftHandThumb2
-    400066: iPiMocap:LeftHandThumb3
-    400068: iPiMocap:LeftLeg
-    400070: iPiMocap:LeftShoulder
-    400072: iPiMocap:LeftToeBase
-    400074: iPiMocap:LeftUpLeg
-    400076: iPiMocap:Neck
-    400078: iPiMocap:RightArm
-    400080: iPiMocap:RightFoot
-    400082: iPiMocap:RightForeArm
-    400084: iPiMocap:RightHand
-    400086: iPiMocap:RightHandIndex1
-    400088: iPiMocap:RightHandIndex2
-    400090: iPiMocap:RightHandIndex3
-    400092: iPiMocap:RightHandMiddle1
-    400094: iPiMocap:RightHandMiddle2
-    400096: iPiMocap:RightHandMiddle3
-    400098: iPiMocap:RightHandPinky1
-    400100: iPiMocap:RightHandPinky2
-    400102: iPiMocap:RightHandPinky3
-    400104: iPiMocap:RightHandRing1
-    400106: iPiMocap:RightHandRing2
-    400108: iPiMocap:RightHandRing3
-    400110: iPiMocap:RightHandThumb1
-    400112: iPiMocap:RightHandThumb2
-    400114: iPiMocap:RightHandThumb3
-    400116: iPiMocap:RightLeg
-    400118: iPiMocap:RightShoulder
-    400120: iPiMocap:RightToeBase
-    400122: iPiMocap:RightUpLeg
-    400124: iPiMocap:Spine
-    400126: iPiMocap:Spine1
-    400128: iPiMocap:Spine2
-    400130: //RootNode
+    100000: Chest
+    100002: //RootNode
+    100004: EffectorHead
+    100006: EffectorLFinger0
+    100008: EffectorLFinger1
+    100010: EffectorLFinger2
+    100012: EffectorLFinger3
+    100014: EffectorLFinger4
+    100016: EffectorLToe
+    100018: EffectorRFinger0
+    100020: EffectorRFinger1
+    100022: EffectorRFinger2
+    100024: EffectorRFinger3
+    100026: EffectorRFinger4
+    100028: EffectorRToe
+    100030: Head
+    100032: Hip
+    100034: LClavicle
+    100036: LFinger0
+    100038: LFinger01
+    100040: LFinger02
+    100042: LFinger1
+    100044: LFinger11
+    100046: LFinger12
+    100048: LFinger2
+    100050: LFinger21
+    100052: LFinger22
+    100054: LFinger3
+    100056: LFinger31
+    100058: LFinger32
+    100060: LFinger4
+    100062: LFinger41
+    100064: LFinger42
+    100066: LFoot
+    100068: LForearm
+    100070: LHand
+    100072: LowerSpine
+    100074: LShin
+    100076: LShoulder
+    100078: LThigh
+    100080: LToe
+    100082: MiddleSpine
+    100084: Neck
+    100086: RClavicle
+    100088: RFinger0
+    100090: RFinger01
+    100092: RFinger02
+    100094: RFinger1
+    100096: RFinger11
+    100098: RFinger12
+    100100: RFinger2
+    100102: RFinger21
+    100104: RFinger22
+    100106: RFinger3
+    100108: RFinger31
+    100110: RFinger32
+    100112: RFinger4
+    100114: RFinger41
+    100116: RFinger42
+    100118: RFoot
+    100120: RForearm
+    100122: RHand
+    100124: RShin
+    100126: RShoulder
+    100128: RThigh
+    100130: RToe
+    400000: Chest
+    400002: //RootNode
+    400004: EffectorHead
+    400006: EffectorLFinger0
+    400008: EffectorLFinger1
+    400010: EffectorLFinger2
+    400012: EffectorLFinger3
+    400014: EffectorLFinger4
+    400016: EffectorLToe
+    400018: EffectorRFinger0
+    400020: EffectorRFinger1
+    400022: EffectorRFinger2
+    400024: EffectorRFinger3
+    400026: EffectorRFinger4
+    400028: EffectorRToe
+    400030: Head
+    400032: Hip
+    400034: LClavicle
+    400036: LFinger0
+    400038: LFinger01
+    400040: LFinger02
+    400042: LFinger1
+    400044: LFinger11
+    400046: LFinger12
+    400048: LFinger2
+    400050: LFinger21
+    400052: LFinger22
+    400054: LFinger3
+    400056: LFinger31
+    400058: LFinger32
+    400060: LFinger4
+    400062: LFinger41
+    400064: LFinger42
+    400066: LFoot
+    400068: LForearm
+    400070: LHand
+    400072: LowerSpine
+    400074: LShin
+    400076: LShoulder
+    400078: LThigh
+    400080: LToe
+    400082: MiddleSpine
+    400084: Neck
+    400086: RClavicle
+    400088: RFinger0
+    400090: RFinger01
+    400092: RFinger02
+    400094: RFinger1
+    400096: RFinger11
+    400098: RFinger12
+    400100: RFinger2
+    400102: RFinger21
+    400104: RFinger22
+    400106: RFinger3
+    400108: RFinger31
+    400110: RFinger32
+    400112: RFinger4
+    400114: RFinger41
+    400116: RFinger42
+    400118: RFoot
+    400120: RForearm
+    400122: RHand
+    400124: RShin
+    400126: RShoulder
+    400128: RThigh
+    400130: RToe
     7400000: DryFace
     9500000: //RootNode
   materials:
@@ -146,19 +146,20 @@ ModelImporter:
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
+    resampleRotations: 1
     optimizeGameObjects: 0
     motionNodeName: 
     animationImportErrors: 
     animationImportWarnings: "\nClip 'iPi Default Take' has import animation warnings
       that might lower retargeting quality:\nNote: Activate translation DOF on avatar
-      to improve retargeting quality.\n\t'iPiMocap:Spine1' is inbetween humanoid transforms
+      to improve retargeting quality.\n\t'MiddleSpine' is inbetween humanoid transforms
       and has rotation animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     animationCompression: 3
-    animationRotationError: .5
-    animationPositionError: .5
-    animationScaleError: .5
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
     clipAnimations:
@@ -166,12 +167,13 @@ ModelImporter:
       name: DryFace
       takeName: iPi Default Take
       firstFrame: 0
-      lastFrame: 195
+      lastFrame: 171
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
+      hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
@@ -188,138 +190,139 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: iPiMocap:Hips
+      - path: Hip
         weight: 1
-      - path: iPiMocap:Hips/iPiMocap:LeftUpLeg
+      - path: Hip/LowerSpine
         weight: 1
-      - path: iPiMocap:Hips/iPiMocap:LeftUpLeg/iPiMocap:LeftLeg
+      - path: Hip/LowerSpine/MiddleSpine
         weight: 1
-      - path: iPiMocap:Hips/iPiMocap:LeftUpLeg/iPiMocap:LeftLeg/iPiMocap:LeftFoot
+      - path: Hip/LowerSpine/MiddleSpine/Chest
         weight: 1
-      - path: iPiMocap:Hips/iPiMocap:LeftUpLeg/iPiMocap:LeftLeg/iPiMocap:LeftFoot/iPiMocap:LeftToeBase
+      - path: Hip/LowerSpine/MiddleSpine/Chest/LClavicle
         weight: 1
-      - path: iPiMocap:Hips/iPiMocap:LeftUpLeg/iPiMocap:LeftLeg/iPiMocap:LeftFoot/iPiMocap:LeftToeBase/iPiMocap:EffectorLToe
+      - path: Hip/LowerSpine/MiddleSpine/Chest/LClavicle/LShoulder
+        weight: 1
+      - path: Hip/LowerSpine/MiddleSpine/Chest/LClavicle/LShoulder/LForearm
+        weight: 1
+      - path: Hip/LowerSpine/MiddleSpine/Chest/LClavicle/LShoulder/LForearm/LHand
+        weight: 1
+      - path: Hip/LowerSpine/MiddleSpine/Chest/LClavicle/LShoulder/LForearm/LHand/LFinger0
+        weight: 1
+      - path: Hip/LowerSpine/MiddleSpine/Chest/LClavicle/LShoulder/LForearm/LHand/LFinger0/LFinger01
+        weight: 1
+      - path: Hip/LowerSpine/MiddleSpine/Chest/LClavicle/LShoulder/LForearm/LHand/LFinger0/LFinger01/LFinger02
+        weight: 1
+      - path: Hip/LowerSpine/MiddleSpine/Chest/LClavicle/LShoulder/LForearm/LHand/LFinger0/LFinger01/LFinger02/EffectorLFinger0
         weight: 0
-      - path: iPiMocap:Hips/iPiMocap:RightUpLeg
+      - path: Hip/LowerSpine/MiddleSpine/Chest/LClavicle/LShoulder/LForearm/LHand/LFinger1
         weight: 1
-      - path: iPiMocap:Hips/iPiMocap:RightUpLeg/iPiMocap:RightLeg
+      - path: Hip/LowerSpine/MiddleSpine/Chest/LClavicle/LShoulder/LForearm/LHand/LFinger1/LFinger11
         weight: 1
-      - path: iPiMocap:Hips/iPiMocap:RightUpLeg/iPiMocap:RightLeg/iPiMocap:RightFoot
+      - path: Hip/LowerSpine/MiddleSpine/Chest/LClavicle/LShoulder/LForearm/LHand/LFinger1/LFinger11/LFinger12
         weight: 1
-      - path: iPiMocap:Hips/iPiMocap:RightUpLeg/iPiMocap:RightLeg/iPiMocap:RightFoot/iPiMocap:RightToeBase
-        weight: 1
-      - path: iPiMocap:Hips/iPiMocap:RightUpLeg/iPiMocap:RightLeg/iPiMocap:RightFoot/iPiMocap:RightToeBase/iPiMocap:EffectorRToe
+      - path: Hip/LowerSpine/MiddleSpine/Chest/LClavicle/LShoulder/LForearm/LHand/LFinger1/LFinger11/LFinger12/EffectorLFinger1
         weight: 0
-      - path: iPiMocap:Hips/iPiMocap:Spine
+      - path: Hip/LowerSpine/MiddleSpine/Chest/LClavicle/LShoulder/LForearm/LHand/LFinger2
         weight: 1
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1
+      - path: Hip/LowerSpine/MiddleSpine/Chest/LClavicle/LShoulder/LForearm/LHand/LFinger2/LFinger21
         weight: 1
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1/iPiMocap:Spine2
+      - path: Hip/LowerSpine/MiddleSpine/Chest/LClavicle/LShoulder/LForearm/LHand/LFinger2/LFinger21/LFinger22
         weight: 1
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1/iPiMocap:Spine2/iPiMocap:LeftShoulder
-        weight: 1
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1/iPiMocap:Spine2/iPiMocap:LeftShoulder/iPiMocap:LeftArm
-        weight: 1
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1/iPiMocap:Spine2/iPiMocap:LeftShoulder/iPiMocap:LeftArm/iPiMocap:LeftForeArm
-        weight: 1
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1/iPiMocap:Spine2/iPiMocap:LeftShoulder/iPiMocap:LeftArm/iPiMocap:LeftForeArm/iPiMocap:LeftHand
-        weight: 1
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1/iPiMocap:Spine2/iPiMocap:LeftShoulder/iPiMocap:LeftArm/iPiMocap:LeftForeArm/iPiMocap:LeftHand/iPiMocap:LeftHandIndex1
-        weight: 1
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1/iPiMocap:Spine2/iPiMocap:LeftShoulder/iPiMocap:LeftArm/iPiMocap:LeftForeArm/iPiMocap:LeftHand/iPiMocap:LeftHandIndex1/iPiMocap:LeftHandIndex2
-        weight: 1
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1/iPiMocap:Spine2/iPiMocap:LeftShoulder/iPiMocap:LeftArm/iPiMocap:LeftForeArm/iPiMocap:LeftHand/iPiMocap:LeftHandIndex1/iPiMocap:LeftHandIndex2/iPiMocap:LeftHandIndex3
-        weight: 1
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1/iPiMocap:Spine2/iPiMocap:LeftShoulder/iPiMocap:LeftArm/iPiMocap:LeftForeArm/iPiMocap:LeftHand/iPiMocap:LeftHandIndex1/iPiMocap:LeftHandIndex2/iPiMocap:LeftHandIndex3/iPiMocap:EffectorLFinger1
+      - path: Hip/LowerSpine/MiddleSpine/Chest/LClavicle/LShoulder/LForearm/LHand/LFinger2/LFinger21/LFinger22/EffectorLFinger2
         weight: 0
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1/iPiMocap:Spine2/iPiMocap:LeftShoulder/iPiMocap:LeftArm/iPiMocap:LeftForeArm/iPiMocap:LeftHand/iPiMocap:LeftHandMiddle1
+      - path: Hip/LowerSpine/MiddleSpine/Chest/LClavicle/LShoulder/LForearm/LHand/LFinger3
         weight: 1
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1/iPiMocap:Spine2/iPiMocap:LeftShoulder/iPiMocap:LeftArm/iPiMocap:LeftForeArm/iPiMocap:LeftHand/iPiMocap:LeftHandMiddle1/iPiMocap:LeftHandMiddle2
+      - path: Hip/LowerSpine/MiddleSpine/Chest/LClavicle/LShoulder/LForearm/LHand/LFinger3/LFinger31
         weight: 1
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1/iPiMocap:Spine2/iPiMocap:LeftShoulder/iPiMocap:LeftArm/iPiMocap:LeftForeArm/iPiMocap:LeftHand/iPiMocap:LeftHandMiddle1/iPiMocap:LeftHandMiddle2/iPiMocap:LeftHandMiddle3
+      - path: Hip/LowerSpine/MiddleSpine/Chest/LClavicle/LShoulder/LForearm/LHand/LFinger3/LFinger31/LFinger32
         weight: 1
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1/iPiMocap:Spine2/iPiMocap:LeftShoulder/iPiMocap:LeftArm/iPiMocap:LeftForeArm/iPiMocap:LeftHand/iPiMocap:LeftHandMiddle1/iPiMocap:LeftHandMiddle2/iPiMocap:LeftHandMiddle3/iPiMocap:EffectorLFinger2
+      - path: Hip/LowerSpine/MiddleSpine/Chest/LClavicle/LShoulder/LForearm/LHand/LFinger3/LFinger31/LFinger32/EffectorLFinger3
         weight: 0
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1/iPiMocap:Spine2/iPiMocap:LeftShoulder/iPiMocap:LeftArm/iPiMocap:LeftForeArm/iPiMocap:LeftHand/iPiMocap:LeftHandPinky1
+      - path: Hip/LowerSpine/MiddleSpine/Chest/LClavicle/LShoulder/LForearm/LHand/LFinger4
         weight: 1
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1/iPiMocap:Spine2/iPiMocap:LeftShoulder/iPiMocap:LeftArm/iPiMocap:LeftForeArm/iPiMocap:LeftHand/iPiMocap:LeftHandPinky1/iPiMocap:LeftHandPinky2
+      - path: Hip/LowerSpine/MiddleSpine/Chest/LClavicle/LShoulder/LForearm/LHand/LFinger4/LFinger41
         weight: 1
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1/iPiMocap:Spine2/iPiMocap:LeftShoulder/iPiMocap:LeftArm/iPiMocap:LeftForeArm/iPiMocap:LeftHand/iPiMocap:LeftHandPinky1/iPiMocap:LeftHandPinky2/iPiMocap:LeftHandPinky3
+      - path: Hip/LowerSpine/MiddleSpine/Chest/LClavicle/LShoulder/LForearm/LHand/LFinger4/LFinger41/LFinger42
         weight: 1
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1/iPiMocap:Spine2/iPiMocap:LeftShoulder/iPiMocap:LeftArm/iPiMocap:LeftForeArm/iPiMocap:LeftHand/iPiMocap:LeftHandPinky1/iPiMocap:LeftHandPinky2/iPiMocap:LeftHandPinky3/iPiMocap:EffectorLFinger4
+      - path: Hip/LowerSpine/MiddleSpine/Chest/LClavicle/LShoulder/LForearm/LHand/LFinger4/LFinger41/LFinger42/EffectorLFinger4
         weight: 0
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1/iPiMocap:Spine2/iPiMocap:LeftShoulder/iPiMocap:LeftArm/iPiMocap:LeftForeArm/iPiMocap:LeftHand/iPiMocap:LeftHandRing1
+      - path: Hip/LowerSpine/MiddleSpine/Chest/Neck
         weight: 1
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1/iPiMocap:Spine2/iPiMocap:LeftShoulder/iPiMocap:LeftArm/iPiMocap:LeftForeArm/iPiMocap:LeftHand/iPiMocap:LeftHandRing1/iPiMocap:LeftHandRing2
+      - path: Hip/LowerSpine/MiddleSpine/Chest/Neck/Head
         weight: 1
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1/iPiMocap:Spine2/iPiMocap:LeftShoulder/iPiMocap:LeftArm/iPiMocap:LeftForeArm/iPiMocap:LeftHand/iPiMocap:LeftHandRing1/iPiMocap:LeftHandRing2/iPiMocap:LeftHandRing3
+      - path: Hip/LowerSpine/MiddleSpine/Chest/Neck/Head/EffectorHead
         weight: 1
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1/iPiMocap:Spine2/iPiMocap:LeftShoulder/iPiMocap:LeftArm/iPiMocap:LeftForeArm/iPiMocap:LeftHand/iPiMocap:LeftHandRing1/iPiMocap:LeftHandRing2/iPiMocap:LeftHandRing3/iPiMocap:EffectorLFinger3
+      - path: Hip/LowerSpine/MiddleSpine/Chest/RClavicle
+        weight: 1
+      - path: Hip/LowerSpine/MiddleSpine/Chest/RClavicle/RShoulder
+        weight: 1
+      - path: Hip/LowerSpine/MiddleSpine/Chest/RClavicle/RShoulder/RForearm
+        weight: 1
+      - path: Hip/LowerSpine/MiddleSpine/Chest/RClavicle/RShoulder/RForearm/RHand
+        weight: 1
+      - path: Hip/LowerSpine/MiddleSpine/Chest/RClavicle/RShoulder/RForearm/RHand/RFinger0
+        weight: 1
+      - path: Hip/LowerSpine/MiddleSpine/Chest/RClavicle/RShoulder/RForearm/RHand/RFinger0/RFinger01
+        weight: 1
+      - path: Hip/LowerSpine/MiddleSpine/Chest/RClavicle/RShoulder/RForearm/RHand/RFinger0/RFinger01/RFinger02
+        weight: 1
+      - path: Hip/LowerSpine/MiddleSpine/Chest/RClavicle/RShoulder/RForearm/RHand/RFinger0/RFinger01/RFinger02/EffectorRFinger0
         weight: 0
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1/iPiMocap:Spine2/iPiMocap:LeftShoulder/iPiMocap:LeftArm/iPiMocap:LeftForeArm/iPiMocap:LeftHand/iPiMocap:LeftHandThumb1
+      - path: Hip/LowerSpine/MiddleSpine/Chest/RClavicle/RShoulder/RForearm/RHand/RFinger1
         weight: 1
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1/iPiMocap:Spine2/iPiMocap:LeftShoulder/iPiMocap:LeftArm/iPiMocap:LeftForeArm/iPiMocap:LeftHand/iPiMocap:LeftHandThumb1/iPiMocap:LeftHandThumb2
+      - path: Hip/LowerSpine/MiddleSpine/Chest/RClavicle/RShoulder/RForearm/RHand/RFinger1/RFinger11
         weight: 1
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1/iPiMocap:Spine2/iPiMocap:LeftShoulder/iPiMocap:LeftArm/iPiMocap:LeftForeArm/iPiMocap:LeftHand/iPiMocap:LeftHandThumb1/iPiMocap:LeftHandThumb2/iPiMocap:LeftHandThumb3
+      - path: Hip/LowerSpine/MiddleSpine/Chest/RClavicle/RShoulder/RForearm/RHand/RFinger1/RFinger11/RFinger12
         weight: 1
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1/iPiMocap:Spine2/iPiMocap:LeftShoulder/iPiMocap:LeftArm/iPiMocap:LeftForeArm/iPiMocap:LeftHand/iPiMocap:LeftHandThumb1/iPiMocap:LeftHandThumb2/iPiMocap:LeftHandThumb3/iPiMocap:EffectorLFinger0
+      - path: Hip/LowerSpine/MiddleSpine/Chest/RClavicle/RShoulder/RForearm/RHand/RFinger1/RFinger11/RFinger12/EffectorRFinger1
         weight: 0
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1/iPiMocap:Spine2/iPiMocap:Neck
+      - path: Hip/LowerSpine/MiddleSpine/Chest/RClavicle/RShoulder/RForearm/RHand/RFinger2
         weight: 1
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1/iPiMocap:Spine2/iPiMocap:Neck/iPiMocap:Head
+      - path: Hip/LowerSpine/MiddleSpine/Chest/RClavicle/RShoulder/RForearm/RHand/RFinger2/RFinger21
         weight: 1
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1/iPiMocap:Spine2/iPiMocap:Neck/iPiMocap:Head/iPiMocap:EffectorHead
+      - path: Hip/LowerSpine/MiddleSpine/Chest/RClavicle/RShoulder/RForearm/RHand/RFinger2/RFinger21/RFinger22
         weight: 1
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1/iPiMocap:Spine2/iPiMocap:RightShoulder
-        weight: 1
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1/iPiMocap:Spine2/iPiMocap:RightShoulder/iPiMocap:RightArm
-        weight: 1
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1/iPiMocap:Spine2/iPiMocap:RightShoulder/iPiMocap:RightArm/iPiMocap:RightForeArm
-        weight: 1
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1/iPiMocap:Spine2/iPiMocap:RightShoulder/iPiMocap:RightArm/iPiMocap:RightForeArm/iPiMocap:RightHand
-        weight: 1
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1/iPiMocap:Spine2/iPiMocap:RightShoulder/iPiMocap:RightArm/iPiMocap:RightForeArm/iPiMocap:RightHand/iPiMocap:RightHandIndex1
-        weight: 1
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1/iPiMocap:Spine2/iPiMocap:RightShoulder/iPiMocap:RightArm/iPiMocap:RightForeArm/iPiMocap:RightHand/iPiMocap:RightHandIndex1/iPiMocap:RightHandIndex2
-        weight: 1
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1/iPiMocap:Spine2/iPiMocap:RightShoulder/iPiMocap:RightArm/iPiMocap:RightForeArm/iPiMocap:RightHand/iPiMocap:RightHandIndex1/iPiMocap:RightHandIndex2/iPiMocap:RightHandIndex3
-        weight: 1
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1/iPiMocap:Spine2/iPiMocap:RightShoulder/iPiMocap:RightArm/iPiMocap:RightForeArm/iPiMocap:RightHand/iPiMocap:RightHandIndex1/iPiMocap:RightHandIndex2/iPiMocap:RightHandIndex3/iPiMocap:EffectorRFinger1
+      - path: Hip/LowerSpine/MiddleSpine/Chest/RClavicle/RShoulder/RForearm/RHand/RFinger2/RFinger21/RFinger22/EffectorRFinger2
         weight: 0
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1/iPiMocap:Spine2/iPiMocap:RightShoulder/iPiMocap:RightArm/iPiMocap:RightForeArm/iPiMocap:RightHand/iPiMocap:RightHandMiddle1
+      - path: Hip/LowerSpine/MiddleSpine/Chest/RClavicle/RShoulder/RForearm/RHand/RFinger3
         weight: 1
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1/iPiMocap:Spine2/iPiMocap:RightShoulder/iPiMocap:RightArm/iPiMocap:RightForeArm/iPiMocap:RightHand/iPiMocap:RightHandMiddle1/iPiMocap:RightHandMiddle2
+      - path: Hip/LowerSpine/MiddleSpine/Chest/RClavicle/RShoulder/RForearm/RHand/RFinger3/RFinger31
         weight: 1
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1/iPiMocap:Spine2/iPiMocap:RightShoulder/iPiMocap:RightArm/iPiMocap:RightForeArm/iPiMocap:RightHand/iPiMocap:RightHandMiddle1/iPiMocap:RightHandMiddle2/iPiMocap:RightHandMiddle3
+      - path: Hip/LowerSpine/MiddleSpine/Chest/RClavicle/RShoulder/RForearm/RHand/RFinger3/RFinger31/RFinger32
         weight: 1
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1/iPiMocap:Spine2/iPiMocap:RightShoulder/iPiMocap:RightArm/iPiMocap:RightForeArm/iPiMocap:RightHand/iPiMocap:RightHandMiddle1/iPiMocap:RightHandMiddle2/iPiMocap:RightHandMiddle3/iPiMocap:EffectorRFinger2
+      - path: Hip/LowerSpine/MiddleSpine/Chest/RClavicle/RShoulder/RForearm/RHand/RFinger3/RFinger31/RFinger32/EffectorRFinger3
         weight: 0
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1/iPiMocap:Spine2/iPiMocap:RightShoulder/iPiMocap:RightArm/iPiMocap:RightForeArm/iPiMocap:RightHand/iPiMocap:RightHandPinky1
+      - path: Hip/LowerSpine/MiddleSpine/Chest/RClavicle/RShoulder/RForearm/RHand/RFinger4
         weight: 1
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1/iPiMocap:Spine2/iPiMocap:RightShoulder/iPiMocap:RightArm/iPiMocap:RightForeArm/iPiMocap:RightHand/iPiMocap:RightHandPinky1/iPiMocap:RightHandPinky2
+      - path: Hip/LowerSpine/MiddleSpine/Chest/RClavicle/RShoulder/RForearm/RHand/RFinger4/RFinger41
         weight: 1
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1/iPiMocap:Spine2/iPiMocap:RightShoulder/iPiMocap:RightArm/iPiMocap:RightForeArm/iPiMocap:RightHand/iPiMocap:RightHandPinky1/iPiMocap:RightHandPinky2/iPiMocap:RightHandPinky3
+      - path: Hip/LowerSpine/MiddleSpine/Chest/RClavicle/RShoulder/RForearm/RHand/RFinger4/RFinger41/RFinger42
         weight: 1
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1/iPiMocap:Spine2/iPiMocap:RightShoulder/iPiMocap:RightArm/iPiMocap:RightForeArm/iPiMocap:RightHand/iPiMocap:RightHandPinky1/iPiMocap:RightHandPinky2/iPiMocap:RightHandPinky3/iPiMocap:EffectorRFinger4
+      - path: Hip/LowerSpine/MiddleSpine/Chest/RClavicle/RShoulder/RForearm/RHand/RFinger4/RFinger41/RFinger42/EffectorRFinger4
         weight: 0
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1/iPiMocap:Spine2/iPiMocap:RightShoulder/iPiMocap:RightArm/iPiMocap:RightForeArm/iPiMocap:RightHand/iPiMocap:RightHandRing1
+      - path: Hip/LThigh
         weight: 1
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1/iPiMocap:Spine2/iPiMocap:RightShoulder/iPiMocap:RightArm/iPiMocap:RightForeArm/iPiMocap:RightHand/iPiMocap:RightHandRing1/iPiMocap:RightHandRing2
+      - path: Hip/LThigh/LShin
         weight: 1
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1/iPiMocap:Spine2/iPiMocap:RightShoulder/iPiMocap:RightArm/iPiMocap:RightForeArm/iPiMocap:RightHand/iPiMocap:RightHandRing1/iPiMocap:RightHandRing2/iPiMocap:RightHandRing3
+      - path: Hip/LThigh/LShin/LFoot
         weight: 1
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1/iPiMocap:Spine2/iPiMocap:RightShoulder/iPiMocap:RightArm/iPiMocap:RightForeArm/iPiMocap:RightHand/iPiMocap:RightHandRing1/iPiMocap:RightHandRing2/iPiMocap:RightHandRing3/iPiMocap:EffectorRFinger3
+      - path: Hip/LThigh/LShin/LFoot/LToe
+        weight: 1
+      - path: Hip/LThigh/LShin/LFoot/LToe/EffectorLToe
         weight: 0
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1/iPiMocap:Spine2/iPiMocap:RightShoulder/iPiMocap:RightArm/iPiMocap:RightForeArm/iPiMocap:RightHand/iPiMocap:RightHandThumb1
+      - path: Hip/RThigh
         weight: 1
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1/iPiMocap:Spine2/iPiMocap:RightShoulder/iPiMocap:RightArm/iPiMocap:RightForeArm/iPiMocap:RightHand/iPiMocap:RightHandThumb1/iPiMocap:RightHandThumb2
+      - path: Hip/RThigh/RShin
         weight: 1
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1/iPiMocap:Spine2/iPiMocap:RightShoulder/iPiMocap:RightArm/iPiMocap:RightForeArm/iPiMocap:RightHand/iPiMocap:RightHandThumb1/iPiMocap:RightHandThumb2/iPiMocap:RightHandThumb3
+      - path: Hip/RThigh/RShin/RFoot
         weight: 1
-      - path: iPiMocap:Hips/iPiMocap:Spine/iPiMocap:Spine1/iPiMocap:Spine2/iPiMocap:RightShoulder/iPiMocap:RightArm/iPiMocap:RightForeArm/iPiMocap:RightHand/iPiMocap:RightHandThumb1/iPiMocap:RightHandThumb2/iPiMocap:RightHandThumb3/iPiMocap:EffectorRFinger0
+      - path: Hip/RThigh/RShin/RFoot/RToe
+        weight: 1
+      - path: Hip/RThigh/RShin/RFoot/RToe/EffectorRToe
         weight: 0
       maskType: 0
       maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -340,14 +343,13 @@ ModelImporter:
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
-    splitTangentsAcrossUV: 1
     normalImportMode: 0
-    tangentImportMode: 1
+    tangentImportMode: 3
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
     human:
-    - boneName: iPiMocap:Hips
+    - boneName: Hip
       humanName: Hips
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -355,7 +357,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: iPiMocap:LeftUpLeg
+    - boneName: LThigh
       humanName: LeftUpperLeg
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -363,7 +365,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: iPiMocap:RightUpLeg
+    - boneName: RThigh
       humanName: RightUpperLeg
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -371,7 +373,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: iPiMocap:LeftLeg
+    - boneName: LShin
       humanName: LeftLowerLeg
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -379,7 +381,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: iPiMocap:RightLeg
+    - boneName: RShin
       humanName: RightLowerLeg
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -387,7 +389,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: iPiMocap:LeftFoot
+    - boneName: LFoot
       humanName: LeftFoot
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -395,7 +397,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: iPiMocap:RightFoot
+    - boneName: RFoot
       humanName: RightFoot
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -403,7 +405,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: iPiMocap:Spine
+    - boneName: LowerSpine
       humanName: Spine
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -411,7 +413,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: iPiMocap:Spine2
+    - boneName: Chest
       humanName: Chest
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -419,7 +421,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: iPiMocap:Neck
+    - boneName: Neck
       humanName: Neck
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -427,7 +429,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: iPiMocap:Head
+    - boneName: Head
       humanName: Head
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -435,7 +437,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: iPiMocap:LeftShoulder
+    - boneName: LClavicle
       humanName: LeftShoulder
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -443,7 +445,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: iPiMocap:RightShoulder
+    - boneName: RClavicle
       humanName: RightShoulder
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -451,7 +453,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: iPiMocap:LeftArm
+    - boneName: LShoulder
       humanName: LeftUpperArm
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -459,7 +461,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: iPiMocap:RightArm
+    - boneName: RShoulder
       humanName: RightUpperArm
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -467,7 +469,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: iPiMocap:LeftForeArm
+    - boneName: LForearm
       humanName: LeftLowerArm
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -475,7 +477,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: iPiMocap:RightForeArm
+    - boneName: RForearm
       humanName: RightLowerArm
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -483,7 +485,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: iPiMocap:LeftHand
+    - boneName: LHand
       humanName: LeftHand
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -491,7 +493,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: iPiMocap:RightHand
+    - boneName: RHand
       humanName: RightHand
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -499,7 +501,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: iPiMocap:LeftToeBase
+    - boneName: LToe
       humanName: LeftToes
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -507,7 +509,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: iPiMocap:RightToeBase
+    - boneName: RToe
       humanName: RightToes
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -515,7 +517,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: iPiMocap:EffectorHead
+    - boneName: EffectorHead
       humanName: LeftEye
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -523,7 +525,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: iPiMocap:LeftHandThumb1
+    - boneName: LFinger1
       humanName: Left Thumb Proximal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -531,7 +533,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: iPiMocap:LeftHandThumb2
+    - boneName: LFinger11
       humanName: Left Thumb Intermediate
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -539,7 +541,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: iPiMocap:LeftHandThumb3
+    - boneName: LFinger12
       humanName: Left Thumb Distal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -547,7 +549,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: iPiMocap:LeftHandIndex1
+    - boneName: LFinger0
       humanName: Left Index Proximal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -555,7 +557,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: iPiMocap:LeftHandIndex2
+    - boneName: LFinger01
       humanName: Left Index Intermediate
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -563,7 +565,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: iPiMocap:LeftHandIndex3
+    - boneName: LFinger02
       humanName: Left Index Distal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -571,7 +573,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: iPiMocap:LeftHandMiddle1
+    - boneName: LFinger2
       humanName: Left Middle Proximal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -579,7 +581,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: iPiMocap:LeftHandMiddle2
+    - boneName: LFinger21
       humanName: Left Middle Intermediate
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -587,7 +589,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: iPiMocap:LeftHandMiddle3
+    - boneName: LFinger22
       humanName: Left Middle Distal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -595,7 +597,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: iPiMocap:LeftHandRing1
+    - boneName: LFinger3
       humanName: Left Ring Proximal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -603,7 +605,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: iPiMocap:LeftHandRing2
+    - boneName: LFinger31
       humanName: Left Ring Intermediate
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -611,7 +613,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: iPiMocap:LeftHandRing3
+    - boneName: LFinger32
       humanName: Left Ring Distal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -619,7 +621,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: iPiMocap:LeftHandPinky1
+    - boneName: LFinger4
       humanName: Left Little Proximal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -627,7 +629,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: iPiMocap:LeftHandPinky2
+    - boneName: LFinger41
       humanName: Left Little Intermediate
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -635,7 +637,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: iPiMocap:LeftHandPinky3
+    - boneName: LFinger42
       humanName: Left Little Distal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -643,7 +645,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: iPiMocap:RightHandThumb1
+    - boneName: RFinger1
       humanName: Right Thumb Proximal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -651,7 +653,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: iPiMocap:RightHandThumb2
+    - boneName: RFinger11
       humanName: Right Thumb Intermediate
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -659,7 +661,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: iPiMocap:RightHandThumb3
+    - boneName: RFinger12
       humanName: Right Thumb Distal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -667,7 +669,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: iPiMocap:RightHandIndex1
+    - boneName: RFinger0
       humanName: Right Index Proximal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -675,7 +677,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: iPiMocap:RightHandIndex2
+    - boneName: RFinger01
       humanName: Right Index Intermediate
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -683,7 +685,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: iPiMocap:RightHandIndex3
+    - boneName: RFinger02
       humanName: Right Index Distal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -691,7 +693,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: iPiMocap:RightHandMiddle1
+    - boneName: RFinger2
       humanName: Right Middle Proximal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -699,7 +701,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: iPiMocap:RightHandMiddle2
+    - boneName: RFinger21
       humanName: Right Middle Intermediate
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -707,7 +709,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: iPiMocap:RightHandMiddle3
+    - boneName: RFinger22
       humanName: Right Middle Distal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -715,7 +717,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: iPiMocap:RightHandRing1
+    - boneName: RFinger3
       humanName: Right Ring Proximal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -723,7 +725,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: iPiMocap:RightHandRing2
+    - boneName: RFinger31
       humanName: Right Ring Intermediate
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -731,7 +733,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: iPiMocap:RightHandRing3
+    - boneName: RFinger32
       humanName: Right Ring Distal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -739,7 +741,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: iPiMocap:RightHandPinky1
+    - boneName: RFinger4
       humanName: Right Little Proximal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -747,7 +749,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: iPiMocap:RightHandPinky2
+    - boneName: RFinger41
       humanName: Right Little Intermediate
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -755,7 +757,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: iPiMocap:RightHandPinky3
+    - boneName: RFinger42
       humanName: Right Little Distal
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -764,342 +766,342 @@ ModelImporter:
         length: 0
         modified: 0
     skeleton:
-    - name: Wipe face(Clone)
+    - name: DryFace(Clone)
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: iPiMocap:Hips
-      position: {x: -.000647589564, y: .907997668, z: .0130063891}
-      rotation: {x: -.0693097934, y: -.0641522631, z: .00883562118, w: .995491147}
-      scale: {x: 1, y: .99999994, z: 1}
+    - name: Hip
+      position: {x: 0.0026910007, y: 0.986974, z: 0.01315558}
+      rotation: {x: -0.067952186, y: 0.02851749, z: 0.026389789, w: 0.99693173}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1}
       transformModified: 1
-    - name: iPiMocap:LeftUpLeg
-      position: {x: -.0930678248, y: .0393294692, z: -.00767166074}
-      rotation: {x: .114301533, y: .00354398671, z: -.0104733035, w: .9933846}
-      scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
-    - name: iPiMocap:LeftLeg
-      position: {x: -.00744772004, y: -.444625199, z: 2.88709998e-07}
-      rotation: {x: .066586934, y: .00579624996, z: .00531382766, w: .997749627}
-      scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
-    - name: iPiMocap:LeftFoot
-      position: {x: -1.1920929e-07, y: -.436591595, z: 3.27825489e-07}
-      rotation: {x: -.063788712, y: .0436718501, z: .0208840463, w: .996788681}
-      scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
-    - name: iPiMocap:LeftToeBase
-      position: {x: 2.23517382e-08, y: -.0436884575, z: .0913582668}
+    - name: LowerSpine
+      position: {x: -0, y: 0.08901634, z: -0.0481707}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: iPiMocap:EffectorLToe
-      position: {x: 2.23517382e-08, y: 3.72528994e-08, z: .0612884164}
+    - name: MiddleSpine
+      position: {x: -0, y: 0.081234425, z: 0.004243335}
+      rotation: {x: 0.024935162, y: -0.0034194877, z: -0.0039313072, w: 0.9996755}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Chest
+      position: {x: -0, y: 0.1005182, z: -0.02237435}
+      rotation: {x: 0.08217049, y: -0.011491798, z: -0.013109142, w: 0.9964658}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: LClavicle
+      position: {x: -0.02286842, y: 0.2185968, z: 0.074892506}
+      rotation: {x: 0.00259806, y: 0.019057939, z: 0.11809363, w: 0.99281615}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: LShoulder
+      position: {x: -0.1336005, y: 0.03135485, z: -0.050734628}
+      rotation: {x: 0.0011637232, y: -0.008961696, z: -0.11595675, w: 0.9932132}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: LForearm
+      position: {x: -0.2837944, y: -0.001007912, z: -0.002459158}
+      rotation: {x: -0.010121216, y: 0.029008253, z: 0.005978986, w: 0.9995101}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: LHand
+      position: {x: -0.2367442, y: 0.00068692904, z: -0.001417806}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: iPiMocap:RightUpLeg
-      position: {x: .0930686742, y: .0393266678, z: -.00767162349}
-      rotation: {x: .115233988, y: -.00917014573, z: .0123936506, w: .99321872}
+    - name: LFinger0
+      position: {x: -0.01898007, y: -0.0143663, z: 0.01438872}
+      rotation: {x: -0.027538653, y: -0.24268216, z: -0.14224434, w: 0.95922554}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: iPiMocap:RightLeg
-      position: {x: .00744713098, y: -.444622189, z: 2.53319712e-07}
-      rotation: {x: .0954056308, y: -.00762547925, z: .00319383107, w: .995404184}
-      scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
-    - name: iPiMocap:RightFoot
-      position: {x: -2.23517382e-08, y: -.436591476, z: 3.27825489e-07}
-      rotation: {x: -.0184702277, y: -.00875036791, z: -.00418484397, w: .999782383}
-      scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
-    - name: iPiMocap:RightToeBase
-      position: {x: 5.21540571e-08, y: -.043688301, z: .091357924}
-      rotation: {x: -.0241636354, y: 2.09547646e-09, z: 3.72529074e-09, w: .999708056}
-      scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
-    - name: iPiMocap:EffectorRToe
-      position: {x: 3.72528994e-08, y: 1.30385196e-08, z: .0612884797}
+    - name: LFinger01
+      position: {x: -0.035338998, y: -0.01160694, z: 0.02664428}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: iPiMocap:Spine
-      position: {x: -0, y: .0870001316, z: -.0470796376}
+    - name: LFinger02
+      position: {x: -0.02327066, y: -0.008326484, z: 0.016765669}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: iPiMocap:Spine1
-      position: {x: -0, y: .0793945193, z: .00414722413}
-      rotation: {x: .0283836089, y: .0142157096, z: .00744613633, w: .999468267}
-      scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
-    - name: iPiMocap:Spine2
-      position: {x: -0, y: .098241441, z: -.0218675807}
-      rotation: {x: .0944384411, y: .0471742861, z: .0245342106, w: .99410969}
-      scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
-    - name: iPiMocap:LeftShoulder
-      position: {x: -.0223504491, y: .213645592, z: .07319621}
-      rotation: {x: -3.43425222e-09, y: -9.31322908e-10, z: .127736717, w: .991808116}
-      scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
-    - name: iPiMocap:LeftArm
-      position: {x: -.130574495, y: .030644659, z: -.0495854989}
-      rotation: {x: .071671553, y: -.0395965129, z: -.135489151, w: .987389565}
-      scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
-    - name: iPiMocap:LeftForeArm
-      position: {x: -.277366489, y: -.00098502636, z: -.00240345881}
-      rotation: {x: .0317702107, y: .0273478888, z: .0104948478, w: .999065876}
-      scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
-    - name: iPiMocap:LeftHand
-      position: {x: -.231381997, y: .000671386719, z: -.00138569297}
+    - name: EffectorLFinger0
+      position: {x: -0.017112259, y: -0.00589057, z: 0.011717679}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: iPiMocap:LeftHandIndex1
-      position: {x: -.0896766707, y: .00784242153, z: .0249072406}
-      rotation: {x: -.00651881425, y: -.0425496884, z: -.0958809033, w: .994461596}
+    - name: LFinger1
+      position: {x: -0.09175493, y: 0.008024217, z: 0.02548446}
+      rotation: {x: -0.08156484, y: 0.25112396, z: -0.11536196, w: 0.9575884}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: iPiMocap:LeftHandIndex2
-      position: {x: -.0335437693, y: -.00817966461, z: .00591053162}
+    - name: LFinger11
+      position: {x: -0.03432115, y: -0.008369211, z: 0.006047508}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: iPiMocap:LeftHandIndex3
-      position: {x: -.0228993893, y: -.00558638573, z: .00403666077}
+    - name: LFinger12
+      position: {x: -0.0234301, y: -0.005715895, z: 0.004130209}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: iPiMocap:EffectorLFinger1
-      position: {x: -.0162951387, y: -.0048644538, z: .00264325202}
+    - name: EffectorLFinger1
+      position: {x: -0.01667274, y: -0.004977176, z: 0.0027045088}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: iPiMocap:LeftHandMiddle1
-      position: {x: -.0910153389, y: .00905692577, z: .00216874084}
+    - name: LFinger2
+      position: {x: -0.09312461, y: 0.009266833, z: 0.002219002}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: iPiMocap:LeftHandMiddle2
-      position: {x: -.041474998, y: .000115632996, z: -.000244943396}
+    - name: LFinger21
+      position: {x: -0.04243618, y: 0.000118294, z: -0.00025062068}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: iPiMocap:LeftHandMiddle3
-      position: {x: -.0229884405, y: 6.98566364e-05, z: -.000139903292}
+    - name: LFinger22
+      position: {x: -0.023521198, y: 0.00007144721, z: -0.0001431464}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: iPiMocap:EffectorLFinger2
-      position: {x: -.0206488986, y: -.00145804894, z: 2.77254694e-05}
+    - name: EffectorLFinger2
+      position: {x: -0.02112742, y: -0.001491799, z: 0.000028368848}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: iPiMocap:LeftHandPinky1
-      position: {x: -.0800418854, y: -.00608313084, z: -.0352424793}
-      rotation: {x: .00685731275, y: .0913903415, z: -.0938819945, w: .991356134}
-      scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
-    - name: iPiMocap:LeftHandPinky2
-      position: {x: -.0231486596, y: -.00482737971, z: -.0063899979}
+    - name: LFinger3
+      position: {x: -0.08825461, y: 0.006183186, z: -0.020879012}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: iPiMocap:LeftHandPinky3
-      position: {x: -.0169748105, y: -.00353550911, z: -.00468870997}
+    - name: LFinger31
+      position: {x: -0.038506277, y: -0.0019496729, z: -0.002410714}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: iPiMocap:EffectorLFinger4
-      position: {x: -.0150665604, y: -.004139781, z: -.00345661491}
+    - name: LFinger32
+      position: {x: -0.021942178, y: -0.001103724, z: -0.001378953}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: iPiMocap:LeftHandRing1
-      position: {x: -.0862556547, y: .00604319572, z: -.0204061009}
+    - name: EffectorLFinger3
+      position: {x: -0.019401269, y: -0.0023854189, z: -0.00091707637}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: iPiMocap:LeftHandRing2
-      position: {x: -.0376341268, y: -.00190556003, z: -.002356112}
+    - name: LFinger4
+      position: {x: -0.081896864, y: -0.006224147, z: -0.03605921}
+      rotation: {x: 0.0068570212, y: 0.09138925, z: -0.09388128, w: 0.9913563}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: LFinger41
+      position: {x: -0.0236851, y: -0.004939274, z: -0.0065380856}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: iPiMocap:LeftHandRing3
-      position: {x: -.0214452092, y: -.00107872498, z: -.00134772109}
+    - name: LFinger42
+      position: {x: -0.01736821, y: -0.003617442, z: -0.004797369}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: iPiMocap:EffectorLFinger3
-      position: {x: -.0189618506, y: -.00233137584, z: -.000896304729}
+    - name: EffectorLFinger4
+      position: {x: -0.0154157095, y: -0.0042357487, z: -0.0035367177}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: iPiMocap:LeftHandThumb1
-      position: {x: -.0185501594, y: -.0140409507, z: .0140628191}
-      rotation: {x: -.151511714, y: .0531521104, z: -.177799553, w: .970879197}
-      scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
-    - name: iPiMocap:LeftHandThumb2
-      position: {x: -.0345385671, y: -.0113440799, z: .0260407887}
+    - name: Neck
+      position: {x: -0, y: 0.22651349, z: -0.004710699}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: iPiMocap:LeftHandThumb3
-      position: {x: -.022743579, y: -.00813794043, z: .0163859297}
+    - name: Head
+      position: {x: 0.0000003424539, y: 0.12791489, z: 0.03479273}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: iPiMocap:EffectorLFinger0
-      position: {x: -.0167246498, y: -.0057570925, z: .01145228}
+    - name: EffectorHead
+      position: {x: -0.0000007819711, y: 0.17873038, z: 0.0053354907}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: iPiMocap:Neck
-      position: {x: -0, y: .22138299, z: -.00460400386}
+    - name: RClavicle
+      position: {x: 0.02286843, y: 0.2185968, z: 0.074892506}
+      rotation: {x: 0, y: -0, z: -0.1252024, w: 0.99213123}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: RShoulder
+      position: {x: 0.1336242, y: 0.031360257, z: -0.05074341}
+      rotation: {x: -0.027248299, y: 0.000044200548, z: 0.10684635, w: 0.9939021}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: RForearm
+      position: {x: 0.2837944, y: -0.001007676, z: -0.002459154}
+      rotation: {x: -0.022699207, y: -0.032077245, z: -0.0031139508, w: 0.99922276}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: RHand
+      position: {x: 0.2367442, y: 0.0006871645, z: -0.001417803}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: iPiMocap:Head
-      position: {x: 3.34697376e-07, y: .125017598, z: .0340046808}
+    - name: RFinger0
+      position: {x: 0.01898007, y: -0.0143663, z: 0.01438872}
+      rotation: {x: -0.027539246, y: 0.24268295, z: 0.14224468, w: 0.9592253}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: RFinger01
+      position: {x: 0.035339057, y: -0.01160694, z: 0.02664428}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: iPiMocap:EffectorHead
-      position: {x: -7.64259539e-07, y: .174682096, z: .00521464273}
+    - name: RFinger02
+      position: {x: 0.02327066, y: -0.008326367, z: 0.016765669}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: iPiMocap:RightShoulder
-      position: {x: .0223504696, y: .213645592, z: .07319621}
-      rotation: {x: .00436227024, y: -.0463503785, z: -.131797507, w: .990182817}
-      scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
-    - name: iPiMocap:RightArm
-      position: {x: .130597591, y: .0306499004, z: -.0495940782}
-      rotation: {x: .12380638, y: .0199820176, z: .100890756, w: .986961961}
-      scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
-    - name: iPiMocap:RightForeArm
-      position: {x: .277366489, y: -.00098490715, z: -.00240345486}
-      rotation: {x: .0867172331, y: -.0215663519, z: -.0146419657, w: .995891869}
-      scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
-    - name: iPiMocap:RightHand
-      position: {x: .231381893, y: .000671625021, z: -.00138569099}
+    - name: EffectorRFinger0
+      position: {x: 0.017112259, y: -0.00589057, z: 0.011717679}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: iPiMocap:RightHandIndex1
-      position: {x: .0896766186, y: .00784254074, z: .0249072406}
-      rotation: {x: -.00651881285, y: .0425494723, z: .0958809406, w: .994461656}
+    - name: RFinger1
+      position: {x: 0.09175488, y: 0.008024334, z: 0.02548446}
+      rotation: {x: -0.07585728, y: -0.24640082, z: 0.08951122, w: 0.9620396}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: iPiMocap:RightHandIndex2
-      position: {x: .0335437693, y: -.00817966461, z: .00591053162}
+    - name: RFinger11
+      position: {x: 0.03432115, y: -0.008369211, z: 0.006047508}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: iPiMocap:RightHandIndex3
-      position: {x: .0228993893, y: -.00558638573, z: .00403665891}
+    - name: RFinger12
+      position: {x: 0.0234301, y: -0.005715895, z: 0.004130208}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: iPiMocap:EffectorRFinger1
-      position: {x: .0162951387, y: -.0048644538, z: .00264324993}
+    - name: EffectorRFinger1
+      position: {x: 0.01667274, y: -0.004977176, z: 0.002704507}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: iPiMocap:RightHandMiddle1
-      position: {x: .0910153389, y: .00905704498, z: .00216874294}
+    - name: RFinger2
+      position: {x: 0.09312461, y: 0.009266951, z: 0.002219004}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: iPiMocap:RightHandMiddle2
-      position: {x: .041474998, y: .000115752198, z: -.000244943396}
+    - name: RFinger21
+      position: {x: 0.04243618, y: 0.00011841169, z: -0.00025062068}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: iPiMocap:RightHandMiddle3
-      position: {x: .0229884405, y: 6.98566364e-05, z: -.000139903292}
+    - name: RFinger22
+      position: {x: 0.023521198, y: 0.00007144721, z: -0.0001431446}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: iPiMocap:EffectorRFinger2
-      position: {x: .0206488986, y: -.00145804894, z: 2.77254694e-05}
+    - name: EffectorRFinger2
+      position: {x: 0.02112742, y: -0.001491799, z: 0.000028368848}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: iPiMocap:RightHandPinky1
-      position: {x: .0800419375, y: -.00608301209, z: -.0352424681}
-      rotation: {x: .00685739703, y: -.0913910642, z: .093883276, w: .991355956}
-      scale: {x: 1, y: 1, z: 1}
-      transformModified: 1
-    - name: iPiMocap:RightHandPinky2
-      position: {x: .0231486596, y: -.00482737971, z: -.0063899979}
+    - name: RFinger3
+      position: {x: 0.08825461, y: 0.006183304, z: -0.020879012}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: iPiMocap:RightHandPinky3
-      position: {x: .0169748105, y: -.0035353899, z: -.00468870578}
+    - name: RFinger31
+      position: {x: 0.038506277, y: -0.0019495559, z: -0.002410714}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: iPiMocap:EffectorRFinger4
-      position: {x: .0150665604, y: -.004139781, z: -.00345661491}
+    - name: RFinger32
+      position: {x: 0.021942178, y: -0.001103724, z: -0.001378953}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: iPiMocap:RightHandRing1
-      position: {x: .0862556547, y: .00604319572, z: -.0204061009}
+    - name: EffectorRFinger3
+      position: {x: 0.019401269, y: -0.002385301, z: -0.00091707637}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: iPiMocap:RightHandRing2
-      position: {x: .0376341268, y: -.00190544093, z: -.002356112}
+    - name: RFinger4
+      position: {x: 0.081896864, y: -0.0062240288, z: -0.03605921}
+      rotation: {x: 0.0068573654, y: -0.0913913, z: 0.09388529, w: 0.9913558}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: RFinger41
+      position: {x: 0.0236851, y: -0.004939274, z: -0.0065380856}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: iPiMocap:RightHandRing3
-      position: {x: .0214452092, y: -.00107872498, z: -.00134772109}
+    - name: RFinger42
+      position: {x: 0.01736821, y: -0.003617324, z: -0.004797369}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: iPiMocap:EffectorRFinger3
-      position: {x: .0189618506, y: -.00233125687, z: -.000896304729}
+    - name: EffectorRFinger4
+      position: {x: 0.0154157095, y: -0.0042357487, z: -0.0035367177}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: iPiMocap:RightHandThumb1
-      position: {x: .0185501594, y: -.0140409507, z: .0140628191}
-      rotation: {x: -.189498171, y: -.0360524282, z: .235631645, w: .952506363}
+    - name: LThigh
+      position: {x: -0.095224656, y: 0.040240906, z: -0.007849452}
+      rotation: {x: 0.105429, y: -0.0016017965, z: -0.042340115, w: 0.9935238}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: iPiMocap:RightHandThumb2
-      position: {x: .0345386267, y: -.0113440799, z: .0260407887}
+    - name: LShin
+      position: {x: -0.007620318, y: -0.4549293, z: 0.0000002961028}
+      rotation: {x: 0.031408828, y: 0.011292107, z: 0.011069962, w: 0.99938154}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: LFoot
+      position: {x: -0.0000001198045, y: -0.44670957, z: 0.0000003358805}
+      rotation: {x: 0.0038594282, y: 0.0028131139, z: 0.0013425049, w: 0.9999877}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: LToe
+      position: {x: 0.000000022069768, y: -0.04470094, z: 0.093475476}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: iPiMocap:RightHandThumb3
-      position: {x: .022743579, y: -.00813782215, z: .0163859297}
+    - name: EffectorLToe
+      position: {x: 0.000000022069768, y: 0.00000003862211, z: 0.06270876}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    - name: iPiMocap:EffectorRFinger0
-      position: {x: .0167246498, y: -.0057570925, z: .0114522697}
+    - name: RThigh
+      position: {x: 0.09522551, y: 0.04023808, z: -0.007849413}
+      rotation: {x: 0.08587858, y: -0.0025230949, z: 0.0039849933, w: 0.9962945}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: RShin
+      position: {x: 0.007619714, y: -0.45492616, z: 0.0000002593198}
+      rotation: {x: 0.0612127, y: -0.00321885, z: 0.0028720165, w: 0.9981154}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: RFoot
+      position: {x: -0.0000000256724, y: -0.4467094, z: 0.0000003358805}
+      rotation: {x: 0.021433124, y: -0.019269206, z: -0.009216705, w: 0.99954206}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: RToe
+      position: {x: 0.00000005149614, y: -0.044700768, z: 0.09347512}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
-    armTwist: .5
-    foreArmTwist: .5
-    upperLegTwist: .5
-    legTwist: .5
-    armStretch: .0500000007
-    legStretch: .0500000007
+    - name: EffectorRToe
+      position: {x: 0.00000003678296, y: 0.00000001287404, z: 0.06270881}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
     feetSpacing: 0
     rootMotionBoneName: 
     hasTranslationDoF: 0
