@@ -168,7 +168,7 @@
     <rotation x="0" y="0" z="0" />
     <in-hand-position x="0" y="0" z="0" />
     <in-hand-rotation x="0" y="0" z="0" />
-    <character-position x="0.95" y="0" z="2.7" />
+    <character-position x="1" y="0" z="2.5" />
     <character-rotation x="-1" y="0" z="0" />
   </object>
 
@@ -213,9 +213,9 @@
     <rotation x="0" y="0" z="0" />
     <in-hand-position x="0" y="0" z="0" />
     <in-hand-rotation x="0" y="0" z="0" />
-    <!--character-position x="12.3" y="0" z="14" /-->
-    <character-position x="11.8" y="0" z="14.2" />
-    <character-rotation x="-1" y="0" z="0" />
+    <character-position x="12" y="0" z="13.4" />
+    <!--character-position x="11.8" y="0" z="12.3" /-->
+    <character-rotation x="-1" y="0" z="1" />
   </object>
 
   <!-- For turning on bathroom light -->

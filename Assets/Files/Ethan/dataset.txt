@@ -1,7 +1,1 @@
 09:34:00, Front door, closed
-09:34:16, Razor, on
-09:34:17, Razor, off
-09:34:17, Towel, on
-09:34:18, Towel, off
-09:34:18, Towel, on
-09:34:22, Towel, off
