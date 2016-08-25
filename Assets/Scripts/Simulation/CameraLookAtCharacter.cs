@@ -41,9 +41,14 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				transform.position = new Vector3(1.26f, 1.8f, 0.6f);
 				transform.rotation = Quaternion.Euler(new Vector3(17.73f, 22.64f, 3.33f));
 				
+                // Camera behind character in bathroom
 				if (characterTransform.position.x < 3f) {
-					transform.position = new Vector3(4.5f, 1.55f, 2.85f);
-					transform.rotation = Quaternion.Euler(new Vector3(11.2f, 296.4f, 2.86f));
+//					transform.position = new Vector3(4.5f, 1.55f, 2.85f);
+//					transform.rotation = Quaternion.Euler(new Vector3(11.2f, 296.4f, 2.86f));
+
+                    // For shaving
+//                    transform.position = new Vector3(3.94f, 1.5f, 1.9f);
+//                    transform.rotation = Quaternion.Euler(new Vector3(10.5f, 306.78f, 0.855f));
 				}
 			}
 			else if (characterTransform.position.x < 5.2f && characterTransform.position.z < 2.2f) {

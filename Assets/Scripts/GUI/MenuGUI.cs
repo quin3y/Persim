@@ -65,6 +65,8 @@ public class MenuGUI : MonoBehaviour {
 			stateSpaceManager = GameObject.Find("Camera").GetComponent<StateSpaceManager>();
 			simEntity = GameObject.Find("Ethan").GetComponent<SimulationEngine>().SimEntity;
 
+            Playlist = GameObject.Find("Ethan").GetComponent<AICharacterControl>();
+
 		}
 
 		void Update()

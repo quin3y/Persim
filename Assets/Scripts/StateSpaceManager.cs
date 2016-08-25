@@ -13,7 +13,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 		// Use this for initialization
 		void Start() {
-			startTime = new TimeSpan(0, 9, 34, 0, 0);	// Simulation start time
+			startTime = new TimeSpan(0, 7, 54, 0, 0);	// Simulation start time
 			dataset = new List<DataRecord>();
 //			Debug.Log ("StateSpaceManager starts");
 		}

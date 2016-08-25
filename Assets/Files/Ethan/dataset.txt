@@ -1,1 +1,3 @@
-09:34:00, Front door, closed
+07:54:00, Front door, closed
+07:54:09, Razor, on
+07:54:11, Razor, off
