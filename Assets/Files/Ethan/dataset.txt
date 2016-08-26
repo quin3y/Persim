@@ -1,3 +1,33 @@
 07:54:00, Front door, closed
-07:54:09, Razor, on
-07:54:11, Razor, off
+07:54:07, Comb, on
+07:54:07, Bathroom cup, on
+07:54:08, Comb, off
+07:54:08, Bathroom cup, off
+07:54:15, Bathroom cup, on
+07:54:16, Comb, on
+07:54:17, Bathroom cup, off
+07:54:17, Comb, off
+07:54:17, Comb, on
+07:54:18, Bathroom cup, on
+07:54:19, Comb, off
+07:54:19, Bathroom cup, off
+07:54:26, Bathroom cup, on
+07:54:26, Comb, on
+07:54:27, Bathroom cup, off
+07:54:27, Comb, off
+07:54:28, Comb, on
+07:54:28, Bathroom cup, on
+07:54:29, Comb, off
+07:54:29, Bathroom cup, off
+07:54:36, Bathroom cup, on
+07:54:37, Comb, on
+07:54:38, Bathroom cup, off
+07:54:38, Comb, off
+07:54:38, Comb, on
+07:54:39, Bathroom cup, on
+07:54:40, Comb, off
+07:54:40, Bathroom cup, off
+07:54:47, Bathroom cup, on
+07:54:47, Comb, on
+07:54:48, Bathroom cup, off
+07:54:48, Comb, off
