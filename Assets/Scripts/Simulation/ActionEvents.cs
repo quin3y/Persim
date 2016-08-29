@@ -9,17 +9,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 		override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 			AICharacterControl characterController = GameObject.Find("Ethan").GetComponent<AICharacterControl>();
-
-			// Show the mobile phone
-			if (characterController.nextAction.name == "Text") {
-				characterController.mobilePhone.SetActive(true);
-
-				GameObject.Find("Mobile phone").transform.localPosition = 
-					characterController.activityPlayback.objects["Mobile phone"].inHandPosition;
-				GameObject.Find("Mobile phone").transform.localRotation = 
-					Quaternion.Euler(characterController.activityPlayback.objects["Mobile phone"].inHandRotation);
-			}
-
 			ChangeObjectStatusAtBeginning(characterController.nextAction);
 	    }
 
@@ -44,11 +33,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			else {    
 				// Go back to grounded
 				animator.SetInteger("nextAction", 0);
-			}
-
-			// Hide the mobile phone
-			if (characterController.nextAction.name == "Text") {
-				characterController.mobilePhone.SetActive(false);
 			}
 	        
 			// If activity not finished

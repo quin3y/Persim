@@ -134,11 +134,18 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		}
 
 		void StartUsingCellphone() {
+            characterController.mobilePhone.SetActive(true);
+
+            GameObject.Find("Mobile phone").transform.localPosition = 
+                characterController.activityPlayback.objects["Mobile phone"].inHandPosition;
+            GameObject.Find("Mobile phone").transform.localRotation = 
+                Quaternion.Euler(characterController.activityPlayback.objects["Mobile phone"].inHandRotation);
 			stateSpaceManager.AddDataRecord(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))),
 				"Mobile phone", "on");
 		}
 
 		void FinishUsingCellphone() {
+            characterController.mobilePhone.SetActive(false);
 			stateSpaceManager.AddDataRecord(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))),
 				"Mobile phone", "off");
 		}

@@ -104,7 +104,8 @@
     <rotation x="0" y="0" z="0" />
     <in-hand-position x="0" y="0" z="0" />
     <in-hand-rotation x="0" y="0" z="0" />
-    <character-position x="7.64" y="0" z="15.6" />
+    <!--character-position x="7.64" y="0" z="15.6" /-->
+    <character-position x="1" y="0" z="15" />
     <character-rotation x="0" y="0" z="1" />
   </object>
   
@@ -113,8 +114,7 @@
     <rotation x="0" y="0" z="0" />
     <in-hand-position x="-0.1" y="0" z="-0.07" />
     <in-hand-rotation x="335" y="344.5" z="49.3" />
-    <!--character-position x="12.3" y="0" z="14" /-->
-    <character-position x="1.4" y="0" z="12.7" />
+    <character-position x="1.9" y="0" z="11.4" />
     <character-rotation x="0" y="0" z="1" />
   </object>
   
@@ -168,7 +168,7 @@
     <rotation x="0" y="0" z="0" />
     <in-hand-position x="0" y="0" z="0" />
     <in-hand-rotation x="0" y="0" z="0" />
-    <character-position x="1" y="0" z="2.5" />
+    <character-position x="0.93" y="0" z="2.5" />
     <character-rotation x="-1" y="0" z="0" />
   </object>
 
