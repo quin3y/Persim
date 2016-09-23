@@ -155,7 +155,10 @@ ModelImporter:
       that might lower retargeting quality:\nNote: Activate translation DOF on avatar
       to improve retargeting quality.\n\t'MiddleSpine' is inbetween humanoid transforms
       and has rotation animation that will be discarded.\n"
-    animationRetargetingWarnings: 
+    animationRetargetingWarnings: "\nRetargeting quality report for clip 'iPi Default
+      Take':\n\tLeftLowerLeg average position error 3.6 mm and maximum position error
+      4.4 mm at time 0:21 (32.8%) Frame 21\n\tRightLowerLeg average position error
+      1.8 mm and maximum position error 3.9 mm at time 1:19 (76.6%) Frame 49\n"
     animationDoRetargetingWarnings: 0
     animationCompression: 3
     animationRotationError: 0.5
@@ -1273,7 +1276,8 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
     hasTranslationDoF: 0
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 77c20acb92dd542debfdfc963f2192b5,
+    type: 3}
   animationType: 3
   humanoidOversampling: 1
   additionalBone: 0

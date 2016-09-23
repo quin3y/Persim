@@ -149,13 +149,16 @@ ModelImporter:
     resampleRotations: 1
     optimizeGameObjects: 0
     motionNodeName: 
-    animationImportErrors: 
-    animationImportWarnings: "\nClip 'iPi Default Take' has import animation warnings
-      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
-      to improve retargeting quality.\n\t'MiddleSpine' is inbetween humanoid transforms
-      and has rotation animation that will be discarded.\n"
+    animationImportErrors: '
+
+      Imported file ''Drink'' conversion failed: Transform ''mixamorig:Hips'' for
+      human bone ''Hips'' not found
+
+
+'
+    animationImportWarnings: 
     animationRetargetingWarnings: 
-    animationDoRetargetingWarnings: 0
+    animationDoRetargetingWarnings: 1
     animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -766,7 +769,7 @@ ModelImporter:
         length: 0
         modified: 0
     skeleton:
-    - name: Drink1(Clone)
+    - name: Drink(Clone)
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
@@ -1105,7 +1108,8 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
     hasTranslationDoF: 0
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: acc5479a0319e4c718a23be67832fe15,
+    type: 3}
   animationType: 3
   humanoidOversampling: 1
   additionalBone: 0
