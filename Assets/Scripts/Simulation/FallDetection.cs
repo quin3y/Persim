@@ -16,7 +16,7 @@ public class FallDetection : MonoBehaviour {
 	//initializing everything
 	void Start() {
 		//Debug.Log("saved from player prefs:" + PlayerPrefs.GetFloat("vel"));
-		head = GameObject.Find("EthanHead1");
+		head = GameObject.FindGameObjectWithTag("Head");
 		currentHeadPositionY = head.transform.position.y; //the head's position in the current frame
 		previousHeadPositionY = head.transform.position.y; //the head's position in the previous frame
 		askedIfFallen = false; //gets set to true when "Have you fallen?" gets printed to the console
@@ -36,7 +36,7 @@ public class FallDetection : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider c) {
-		if (c.name == "EthanHead1") { //if the head is close to the ground
+		if (c.tag == "Head") { //if the head is close to the ground
 			headCloseToGround = true;
 		}
 	}

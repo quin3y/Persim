@@ -81,6 +81,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			navAgent.updatePosition = true;
 
 			// Hide the mobile phone
+			mobilePhone = GameObject.Find("Mobile phone");
 			mobilePhone.SetActive(false);
 		}
 

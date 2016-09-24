@@ -16,7 +16,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		
 		// Update is called once per frame
 		void Update () {
-			if (Vector3.Distance(transform.position, GameObject.Find("EthanRightHand").transform.position) < 0.35f && !isOn) {
+		/*	if (Vector3.Distance(transform.position, GameObject.Find("EthanRightHand").transform.position) < 0.35f && !isOn) {
 				isOn = true;
 				stateSpaceManager.AddDataRecord(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))),
 					transform.parent.name, "on");
@@ -25,7 +25,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				isOn = false;
 				stateSpaceManager.AddDataRecord(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))),
 					transform.parent.name, "off");
-			}
+			}*/
 		}
 	}
 }
