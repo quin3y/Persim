@@ -8,7 +8,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 	public class ActionEvents : StateMachineBehaviour {
 		 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 		override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-			AICharacterControl characterController = GameObject.Find("Ethan").GetComponent<AICharacterControl>();
+			AICharacterControl characterController = GameObject.FindGameObjectWithTag("Character").GetComponent<AICharacterControl>();
 			ChangeObjectStatusAtBeginning(characterController.nextAction);
 	    }
 
@@ -19,7 +19,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 		// OnStateExit is called when a transition ends and the state machine finishes evaluating this state
 		override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-			AICharacterControl characterController = GameObject.Find("Ethan").GetComponent<AICharacterControl>();
+			AICharacterControl characterController = GameObject.FindGameObjectWithTag("Character").GetComponent<AICharacterControl>();
 			characterController.arrivedAtDestination = false;
 
 			ChangeObjectStatusAtEnd(characterController.nextAction);

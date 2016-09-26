@@ -213,9 +213,9 @@
     <rotation x="0" y="0" z="0" />
     <in-hand-position x="0" y="0" z="0" />
     <in-hand-rotation x="0" y="0" z="0" />
-    <character-position x="12" y="0" z="13.2" />
+    <character-position x="7" y="0" z="11" />
     <!--character-position x="11.8" y="0" z="12.3" /-->
-    <character-rotation x="-1" y="0" z="1" />
+    <character-rotation x="0" y="0" z="1" />
   </object>
 
   <!-- For turning on bathroom light -->

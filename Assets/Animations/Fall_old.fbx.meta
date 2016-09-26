@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 5aa9deabfe8424e9a98e9e2fe8d73bb3
-timeCreated: 1474674532
+guid: b4f4d54aea517416b8de900d4a2c8243
+timeCreated: 1472053047
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -141,7 +141,7 @@ ModelImporter:
     400130: mixamorig:Spine1
     400132: mixamorig:Spine2
     400134: //RootNode
-    7400000: mixamo.com
+    7400000: Trip
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -154,24 +154,33 @@ ModelImporter:
     optimizeGameObjects: 0
     motionNodeName: 
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'mixamo.com' has import animation warnings that
-      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
-      improve retargeting quality.\n\t'mixamorig:Spine2' is inbetween humanoid transforms
-      and has rotation animation that will be discarded.\n"
+    animationImportWarnings: "\nDefault bone length found in this file is different
+      form the one found in the source avatar:\n\t'mixamorig:LeftUpLeg' : position
+      error = 65.449615 mm\n\t'mixamorig:LeftLeg' : position error = 223.494827 mm\n\t'mixamorig:LeftFoot'
+      : position error = 227.410812 mm\n\t'mixamorig:LeftToeBase' : position error
+      = 91.152946 mm\n\t'mixamorig:RightUpLeg' : position error = 64.569702 mm\n\t'mixamorig:RightLeg'
+      : position error = 221.485916 mm\n\t'mixamorig:RightFoot' : position error =
+      226.717545 mm\n\t'mixamorig:RightToeBase' : position error = 93.439789 mm\n\nClip
+      'mixamo.com' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'mixamorig:Spine2'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n"
     animationRetargetingWarnings: "\nRetargeting quality report for clip 'mixamo.com':\n\tLeftLowerLeg
-      average position error 0.8 mm and maximum position error 3.3 mm at time 4: 0
-      (35.1%) Frame 120\n\tRightLowerLeg average position error 0.4 mm and maximum
-      position error 2.5 mm at time 4: 0 (35.1%) Frame 120\n\tLeftUpperArm average
-      position error 6.7 mm and maximum position error 22.7 mm at time 5:21 (50.0%)
-      Frame 171\n\tLeftLowerArm average position error 5.2 mm and maximum position
-      error 22.2 mm at time 5:21 (50.0%) Frame 171\n\tLeftHand average position error
-      4.4 mm and maximum position error 20.8 mm at time 5:25 (51.2%) Frame 175\n\tRightUpperArm
-      average position error 6.7 mm and maximum position error 25.8 mm at time 7:
-      4 (62.6%) Frame 214\n\tRightLowerArm average position error 4.7 mm and maximum
-      position error 25.2 mm at time 7:10 (64.3%) Frame 220\n\tRightHand average position
-      error 4.7 mm and maximum position error 25.2 mm at time 7:10 (64.3%) Frame 220\n\tHead
-      average position error 10.7 mm and maximum position error 34.8 mm at time 7:
-      5 (62.9%) Frame 215\n"
+      average position error 270.0 mm and maximum position error 280.9 mm at time
+      1:17 (56.6%) Frame 47\n\tLeftFoot average position error 459.1 mm and maximum
+      position error 492.1 mm at time 0: 4 (4.8%) Frame 4\n\tRightLowerLeg average
+      position error 266.3 mm and maximum position error 272.8 mm at time 2: 3 (75.9%)
+      Frame 63\n\tRightFoot average position error 456.5 mm and maximum position error
+      480.7 mm at time 2: 3 (75.9%) Frame 63\n\tLeftUpperArm average position error
+      277.4 mm and maximum position error 307.1 mm at time 1: 8 (45.8%) Frame 38\n\tLeftLowerArm
+      average position error 272.7 mm and maximum position error 385.1 mm at time
+      0:29 (34.9%) Frame 29\n\tLeftHand average position error 277.2 mm and maximum
+      position error 483.9 mm at time 1: 5 (42.2%) Frame 35\n\tRightUpperArm average
+      position error 293.0 mm and maximum position error 311.6 mm at time 1:13 (51.8%)
+      Frame 43\n\tRightLowerArm average position error 255.4 mm and maximum position
+      error 397.6 mm at time 1: 3 (39.8%) Frame 33\n\tRightHand average position error
+      248.0 mm and maximum position error 514.0 mm at time 1: 3 (39.8%) Frame 33\n\tHead
+      average position error 346.8 mm and maximum position error 350.2 mm at time
+      1:10 (48.2%) Frame 40\n"
     animationDoRetargetingWarnings: 1
     animationCompression: 3
     animationRotationError: 0.5
@@ -181,13 +190,13 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: mixamo.com
+      name: Trip
       takeName: mixamo.com
       firstFrame: 0
-      lastFrame: 342
+      lastFrame: 83
       wrapMode: 0
       orientationOffsetY: 0
-      level: -0
+      level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
@@ -196,13 +205,30 @@ ModelImporter:
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
+      keepOriginalOrientation: 1
       keepOriginalPositionY: 0
       keepOriginalPositionXZ: 0
       heightFromFeet: 1
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
+      curves:
+      - name: Curve
+        curve:
+          serializedVersion: 2
+          curve:
+          - time: 0
+            value: -0.06705713
+            inSlope: 2
+            outSlope: 2
+            tangentMode: 0
+          - time: 1
+            value: 0.93294287
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+          preInfinity: 2
+          postInfinity: 2
+          rotationOrder: 0
       events: []
       transformMask:
       - path: 

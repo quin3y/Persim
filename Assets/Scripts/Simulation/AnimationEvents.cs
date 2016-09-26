@@ -59,7 +59,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			string objName = characterController.nextAction.obj.name;
 			GameObject obj = GameObject.Find(objName);
 			characterController.rightObject = obj;
-			obj.transform.parent = GameObject.Find("EthanRightHand").transform;
+			obj.transform.parent = GameObject.FindGameObjectWithTag("RightHand").transform;
 			obj.transform.localPosition = characterController.activityPlayback.objects[objName].inHandPosition;
 			obj.transform.localRotation =
 				Quaternion.Euler(characterController.activityPlayback.objects[objName].inHandRotation);
@@ -76,7 +76,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
         void PickUpTVRemote() {
             GameObject obj = GameObject.Find("TV remote control");
-            obj.transform.parent = GameObject.Find("EthanLeftHand").transform;
+			obj.transform.parent = GameObject.FindGameObjectWithTag("LeftHand").transform;
             obj.transform.localPosition = characterController.activityPlayback.objects["TV remote control"].inHandPosition;
             obj.transform.localRotation =
                 Quaternion.Euler(characterController.activityPlayback.objects["TV remote control"].inHandRotation);
