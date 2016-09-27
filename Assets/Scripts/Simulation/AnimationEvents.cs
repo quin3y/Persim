@@ -149,5 +149,9 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			stateSpaceManager.AddDataRecord(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))),
 				"Mobile phone", "off");
 		}
+
+		void MoveBody() {
+			transform.position += new Vector3(0, 0, 2f);
+		}
 	}
 }

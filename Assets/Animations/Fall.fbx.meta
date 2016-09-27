@@ -152,7 +152,7 @@ ModelImporter:
     bakeSimulation: 0
     resampleRotations: 1
     optimizeGameObjects: 0
-    motionNodeName: <Root Transform>
+    motionNodeName: 
     animationImportErrors: 
     animationImportWarnings: "\nClip 'mixamo.com' has import animation warnings that
       might lower retargeting quality:\nNote: Activate translation DOF on avatar to
@@ -170,22 +170,22 @@ ModelImporter:
     - serializedVersion: 16
       name: Fall
       takeName: mixamo.com
-      firstFrame: 0
+      firstFrame: 15
       lastFrame: 83
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
-      hasAdditiveReferencePose: 0
+      hasAdditiveReferencePose: 1
       loopTime: 0
-      loopBlend: 1
+      loopBlend: 0
       loopBlendOrientation: 1
       loopBlendPositionY: 1
-      loopBlendPositionXZ: 1
+      loopBlendPositionXZ: 0
       keepOriginalOrientation: 1
       keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 1
+      keepOriginalPositionXZ: 0
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -195,17 +195,22 @@ ModelImporter:
           serializedVersion: 2
           curve:
           - time: 0
-            value: 0
+            value: 0.0030701752
             inSlope: 0
             outSlope: 0
             tangentMode: 0
-          - time: 1
-            value: 1
-            inSlope: 2
-            outSlope: 2
+          - time: 0.10107809
+            value: 0.044736836
+            inSlope: 0
+            outSlope: 0
             tangentMode: 0
-          preInfinity: 2
-          postInfinity: 2
+          - time: 1.0103092
+            value: 0.043201752
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+          preInfinity: 3
+          postInfinity: 3
           rotationOrder: 0
       events: []
       transformMask:
