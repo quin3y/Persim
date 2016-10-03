@@ -14,7 +14,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		public int currentActivity = -1;
 		public bool arrivedAtDestination;
 		public bool activityFinished = false;
-
 		public NavMeshAgent navAgent { get; private set; } // the navmesh agent required for the path finding
         public ThirdPersonCharacter character { get; private set; } // the character we are controlling
 		public Animator animator;
@@ -28,19 +27,50 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         }
 
         private void Update() {
-			if (nextAction != null) {
+//			if (nextAction != null) {
+//				character.Move(navAgent.desiredVelocity, false, false);
+//				if (!navAgent.pathPending) {
+//					if (navAgent.remainingDistance <= navAgent.stoppingDistance) {
+//						if (Vector3.Distance(transform.position, nextAction.location) > 0.25f && !arrivedAtDestination) {
+//							character.Move((nextAction.location - transform.position), false, false);
+//						}
+//					    else {
+//							arrivedAtDestination = true;
+//
+//							// Rotate the character
+//							Quaternion lookRotation = Quaternion.LookRotation(nextAction.obj.characterRotation);
+//							float coefficient = 10f;
+////								if (nextAction.name == "Sit down") {
+////									coefficient = 5f;
+////								}
+//							transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, coefficient * Time.deltaTime);
+//
+//							// Play animation
+//							animator.SetInteger("nextAction", nextAction.animation);
+//						}
+//					}
+//				}
+//			}
+//			else {
+//				// We still need to call the character's move function, but we send zeroed input as the move param.
+//				character.Move(Vector3.zero, false, false);
+//			}
+
+			//=======================================================
+
+			if (nextAction != null && !arrivedAtDestination) {
 				character.Move(navAgent.desiredVelocity, false, false);
+				print("==============");
 				if (!navAgent.pathPending) {
 					if (navAgent.remainingDistance <= navAgent.stoppingDistance) {
 						if (Vector3.Distance(transform.position, nextAction.location) > 0.25f && !arrivedAtDestination) {
 							character.Move((nextAction.location - transform.position), false, false);
 						}
-						else {
+					    else {
 							arrivedAtDestination = true;
 
 							// Rotate the character
-							Quaternion lookRotation = Quaternion.LookRotation(nextAction.obj.characterRotation);
-							transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 20f);
+							transform.rotation = Quaternion.LookRotation(nextAction.obj.characterRotation);
 
 							// Play animation
 							animator.SetInteger("nextAction", nextAction.animation);

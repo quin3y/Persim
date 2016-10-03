@@ -20,13 +20,22 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		// OnStateExit is called when a transition ends and the state machine finishes evaluating this state
 		override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 			AICharacterControl characterController = GameObject.FindGameObjectWithTag("Character").GetComponent<AICharacterControl>();
-			characterController.arrivedAtDestination = false;
+
+			if (characterController.nextAction.name == "Stand up" || characterController.nextAction.name == "Put down right" ||
+				characterController.nextAction.name == "Open door" || characterController.nextAction.name == "Close door" ||
+				characterController.nextAction.name == "Get up" || characterController.nextAction.name == "Close door" ||
+				characterController.nextAction.name == "Turn on light" || characterController.nextAction.name == "Turn off light" ||
+				characterController.nextAction.name == "Wash hands" || characterController.nextAction.name == "Dry hands" ||
+				characterController.nextAction.name == "Wash face" || characterController.nextAction.name == "Dry face" ||
+				characterController.nextAction.name == "Fall") {
+				characterController.arrivedAtDestination = false;
+			}
 
 			ChangeObjectStatusAtEnd(characterController.nextAction);
 
 			if (characterController.nextAction.name == "Sit down" || characterController.nextAction.name == "Use toilet" ||
 				characterController.nextAction.name == "Use computer" || characterController.nextAction.name == "Lie down" ||
-				characterController.nextAction.name == "Turn off lamp" || characterController.nextAction.name == "Sleep") {
+				characterController.nextAction.name == "Turn off lamp" || characterController.nextAction.name == "Text") {
 				// Go to next animation directly
 				animator.SetInteger("nextAction", characterController.activityPlayback.actionQueue.Peek().animation);
 			}
@@ -40,14 +49,11 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				// Set the location of the next action as the character's destination
 				characterController.nextAction = characterController.activityPlayback.actionQueue.Dequeue();
 				characterController.navAgent.destination = characterController.nextAction.location;
-//				Debug.Log("next action = " + characterController.nextAction.name);
 			}
 
 			// Activity finished
 			else {
 				characterController.activityFinished = true;
-				Debug.Log("activity finished = " + characterController.activityFinished);
-
 
 				// Start next activity
 				if (characterController.playlist.Count() > 0) {
