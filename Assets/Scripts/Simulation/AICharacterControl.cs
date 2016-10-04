@@ -39,11 +39,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 //
 //							// Rotate the character
 //							Quaternion lookRotation = Quaternion.LookRotation(nextAction.obj.characterRotation);
-//							float coefficient = 10f;
-////								if (nextAction.name == "Sit down") {
-////									coefficient = 5f;
-////								}
-//							transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, coefficient * Time.deltaTime);
+//							transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, 20 * Time.deltaTime);
 //
 //							// Play animation
 //							animator.SetInteger("nextAction", nextAction.animation);
@@ -60,16 +56,15 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 			if (nextAction != null && !arrivedAtDestination) {
 				character.Move(navAgent.desiredVelocity, false, false);
-				print("==============");
 				if (!navAgent.pathPending) {
 					if (navAgent.remainingDistance <= navAgent.stoppingDistance) {
-						if (Vector3.Distance(transform.position, nextAction.location) > 0.25f && !arrivedAtDestination) {
+						if (Vector3.Distance(transform.position, nextAction.location) > 0.25f) {
 							character.Move((nextAction.location - transform.position), false, false);
 						}
 					    else {
 							arrivedAtDestination = true;
 
-							// Rotate the character
+//							transform.position = nextAction.obj.characterPosition;
 							transform.rotation = Quaternion.LookRotation(nextAction.obj.characterRotation);
 
 							// Play animation
