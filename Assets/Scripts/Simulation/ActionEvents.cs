@@ -27,7 +27,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				characterController.nextAction.name == "Turn on light" || characterController.nextAction.name == "Turn off light" ||
 				characterController.nextAction.name == "Wash hands" || characterController.nextAction.name == "Dry hands" ||
 				characterController.nextAction.name == "Wash face" || characterController.nextAction.name == "Dry face" ||
-				characterController.nextAction.name == "Fall") {
+				characterController.nextAction.name == "Get up off ground") {
 				characterController.arrivedAtDestination = false;
 			}
 

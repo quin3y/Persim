@@ -87,7 +87,7 @@
     <in-hand-position x="0" y="0" z="0" />
     <in-hand-rotation x="0" y="0" z="0" />
     <character-position x="10" y="0" z="13.04" />
-    <character-rotation x="0" y="0" z="-1" />
+    <character-rotation x="1" y="0" z="-999" />
   </object>
 
   <object id="10" name="Dining table" status="off">
@@ -104,16 +104,15 @@
     <rotation x="0" y="0" z="0" />
     <in-hand-position x="0" y="0" z="0" />
     <in-hand-rotation x="0" y="0" z="0" />
-    <!--character-position x="7.64" y="0" z="15.6" /-->
-    <character-position x="1" y="0" z="15" />
+    <character-position x="7.9" y="0" z="15.6" />
     <character-rotation x="0" y="0" z="1" />
   </object>
   
   <object id="12" name="Mobile phone" status="off">
     <position x="0" y="0" z="0" />
     <rotation x="0" y="0" z="0" />
-    <in-hand-position x="-0.1" y="0" z="-0.07" />
-    <in-hand-rotation x="335" y="344.5" z="49.3" />
+    <in-hand-position x="-0.05" y="0.335" z="0.138" />
+    <in-hand-rotation x="346" y="136" z="331.2" />
     <character-position x="1.9" y="0" z="11.4" />
     <character-rotation x="0" y="0" z="1" />
   </object>
@@ -121,8 +120,8 @@
   <object id="13" name="Kitchen cup" status="off">
     <position x="1.07" y="0.74" z="7.85" />
     <rotation x="270" y="0" z="0" />
-    <in-hand-position x="-0.07" y="-0.086" z="-0.055" />
-    <in-hand-rotation x="300" y="209" z="188" />
+    <in-hand-position x="0.084" y="0.3" z="0.143" />
+    <in-hand-rotation x="353" y="275" z="222" />
     <character-position x="1.38" y="0" z="7.5" />
     <character-rotation x="-1" y="0" z="0" />
   </object>
@@ -195,7 +194,7 @@
     <rotation x="0" y="0" z="0" />
     <in-hand-position x="0" y="0" z="0" />
     <in-hand-rotation x="0" y="0" z="0" />
-    <character-position x="7.64" y="0" z="17" />
+    <character-position x="7.64" y="0" z="17.2" />
     <character-rotation x="0" y="0" z="-1" />
   </object>
 

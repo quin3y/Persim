@@ -56,6 +56,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 			if (nextAction != null && !arrivedAtDestination) {
 				character.Move(navAgent.desiredVelocity, false, false);
+				print("====================");
 				if (!navAgent.pathPending) {
 					if (navAgent.remainingDistance <= navAgent.stoppingDistance) {
 						if (Vector3.Distance(transform.position, nextAction.location) > 0.25f) {
