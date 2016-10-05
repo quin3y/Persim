@@ -38,7 +38,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				characterController.nextAction.name == "Turn off lamp" || characterController.nextAction.name == "Text" ||
 				characterController.nextAction.name == "Pick up right" || characterController.nextAction.name == "Take pills" ||
 				characterController.nextAction.name == "Drink" || characterController.nextAction.name == "Shave" ||
-				characterController.nextAction.name == "Comb hair") {
+				characterController.nextAction.name == "Comb hair" || characterController.nextAction.name == "Use TV remote") {
 				// Go to next animation directly
 				animator.SetInteger("nextAction", characterController.activityPlayback.actionQueue.Peek().animation);
 			}
@@ -52,7 +52,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				// Set the location of the next action as the character's destination
 				characterController.nextAction = characterController.activityPlayback.actionQueue.Dequeue();
 				characterController.navAgent.destination = characterController.nextAction.location;
-				Debug.Log(characterController.nextAction.name);
 			}
 
 			// Activity finished

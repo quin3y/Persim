@@ -61,6 +61,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 					if (navAgent.remainingDistance <= navAgent.stoppingDistance) {
 						if (Vector3.Distance(transform.position, nextAction.location) > 0.25f) {
 							character.Move((nextAction.location - transform.position), false, false);
+							print("1111111111");
 						}
 					    else {
 							arrivedAtDestination = true;
