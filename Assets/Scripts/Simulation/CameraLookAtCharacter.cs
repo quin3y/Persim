@@ -60,14 +60,18 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				transform.position = new Vector3(6.7f, 2f, 1.94f);
 				transform.LookAt(characterTransform);
 			}
+			// Bedroom
 			else if ((characterTransform.position.x >= 8f && characterTransform.position.z >= 3.72f && characterTransform.position.z < 9.7f) ||
 				(characterTransform.position.x >= 9f && characterTransform.position.z < 3.7f)) {
-				transform.position = new Vector3(13.143f, 2f, 4.984f);
-				transform.LookAt(characterTransform);
+				if (characterController.isLyingDown) {
+					transform.position = new Vector3(9.2f, 1.6f, 4.8f);
+					transform.rotation = Quaternion.Euler(new Vector3(17, 10, -1));
+				}
+				else {
+					transform.position = new Vector3(13.143f, 2f, 4.984f);
+					transform.LookAt(characterTransform);
+				}
 			}
-//			else if (characterTransform.position.x < 5f && characterTransform.position.z >= 6.4f) {
-//				transform.LookAt(characterTransform);
-//			}
 			else {
 				transform.position = new Vector3(5.4f, 2f, 13f);
 				transform.LookAt(characterTransform);

@@ -153,5 +153,10 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		void MoveBody() {
 			transform.position += new Vector3(0, 0, 2f);
 		}
+
+		void MoveCharacterOnBed() {
+			GameObject.FindGameObjectWithTag("Character").transform.position = new Vector3(10, 0.016f, 8.7f);
+			characterController.isLyingDown = true;
+		}
 	}
 }

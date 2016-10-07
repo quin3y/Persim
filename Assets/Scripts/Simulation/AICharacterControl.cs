@@ -14,6 +14,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		public int currentActivity = -1;
 		public bool arrivedAtDestination;
 		public bool activityFinished = false;
+		public bool isLyingDown = false;
 		public NavMeshAgent navAgent { get; private set; } // the navmesh agent required for the path finding
         public ThirdPersonCharacter character { get; private set; } // the character we are controlling
 		public Animator animator;
@@ -56,12 +57,10 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 			if (nextAction != null && !arrivedAtDestination) {
 				character.Move(navAgent.desiredVelocity, false, false);
-				print("====================");
 				if (!navAgent.pathPending) {
 					if (navAgent.remainingDistance <= navAgent.stoppingDistance) {
 						if (Vector3.Distance(transform.position, nextAction.location) > 0.25f) {
 							character.Move((nextAction.location - transform.position), false, false);
-							print("1111111111");
 						}
 					    else {
 							arrivedAtDestination = true;
