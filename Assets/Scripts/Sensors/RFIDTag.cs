@@ -1,26 +1,33 @@
 ﻿using UnityEngine;
 using System;
-using System.Collections;
+using System.Collections.Generic;
 
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
 	public class RFIDTag : MonoBehaviour {
 		StateSpaceManager stateSpaceManager;
+		Transform hand;
+		public List<String> distances = new List<String>();
 
 		// Use this for initialization
 		void Start () {
 			stateSpaceManager = GameObject.Find("Camera").GetComponent<StateSpaceManager>();
+			hand = GameObject.FindGameObjectWithTag("RightHand").transform;
+		}
+
+		void Update() {
+			distances.Add(Vector3.Distance(transform.position, hand.position).ToString());
 		}
 
 		void OnTriggerEnter(Collider col) {
-			if (col.gameObject.name == "EthanLeftHand" || col.gameObject.name == "EthanRightHand") {
+			if (col.gameObject.tag == "LeftHand" || col.gameObject.tag == "RightHand") {
 				stateSpaceManager.AddDataRecord(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))),
                     transform.parent.name, "on");
 			}
 		}
 
 		void OnTriggerExit(Collider col) {
-			if (col.gameObject.name == "EthanLeftHand" || col.gameObject.name == "EthanRightHand") {
+			if (col.gameObject.tag == "LeftHand" || col.gameObject.tag == "RightHand") {
 				stateSpaceManager.AddDataRecord(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))),
                     transform.parent.name, "off");
 			}

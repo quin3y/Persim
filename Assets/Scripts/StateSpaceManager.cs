@@ -45,6 +45,16 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 					file.WriteLine(record.ToString());
 				}
 			}
+
+			// Save RFID distances
+			List<String> distances = GameObject.Find("RFID Tag").GetComponent<RFIDTag>().distances;
+
+			using (System.IO.StreamWriter file = 
+				new System.IO.StreamWriter(@"Assets/Files/" + characterName + "/RFID.txt")) {
+				foreach (String d in distances) {
+					file.WriteLine(d);
+				}
+			}
 		}
 
 		// initialize state space

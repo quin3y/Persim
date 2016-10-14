@@ -1,2 +1,1 @@
 07:43:00, Front door, closed
-07:43:17, Bathroom light, on
