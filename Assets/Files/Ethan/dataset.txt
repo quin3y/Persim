@@ -1,1 +1,1131 @@
 07:43:00, Front door, closed
+07:43:18, Pill bottle, on
+07:43:18, Pill bottle, off
+07:43:18, Pill bottle, on
+07:43:18, Pill bottle, off
+07:43:18, Pill bottle, on
+07:43:18, Pill bottle, off
+07:43:18, Pill bottle, on
+07:43:19, Kitchen cup, on
+07:43:19, Pill bottle, off
+07:43:20, Pill bottle, on
+07:43:20, Kitchen cup, off
+07:43:20, Pill bottle, off
+07:43:20, Pill bottle, on
+07:43:20, Pill bottle, off
+07:43:20, Pill bottle, on
+07:43:21, Pill bottle, off
+07:43:21, Pill bottle, on
+07:43:21, Pill bottle, off
+07:43:21, Pill bottle, on
+07:43:21, Pill bottle, off
+07:43:21, Pill bottle, on
+07:43:21, Pill bottle, off
+07:43:21, Pill bottle, on
+07:43:21, Pill bottle, off
+07:43:21, Pill bottle, on
+07:43:21, Pill bottle, off
+07:43:21, Pill bottle, on
+07:43:21, Pill bottle, off
+07:43:21, Pill bottle, on
+07:43:21, Pill bottle, off
+07:43:21, Pill bottle, on
+07:43:21, Pill bottle, off
+07:43:22, Pill bottle, on
+07:43:22, Pill bottle, off
+07:43:22, Pill bottle, on
+07:43:22, Pill bottle, off
+07:43:22, Pill bottle, on
+07:43:22, Pill bottle, off
+07:43:22, Pill bottle, on
+07:43:22, Pill bottle, off
+07:43:22, Pill bottle, on
+07:43:22, Pill bottle, off
+07:43:22, Pill bottle, on
+07:43:22, Pill bottle, off
+07:43:22, Pill bottle, on
+07:43:22, Pill bottle, off
+07:43:22, Pill bottle, on
+07:43:22, Pill bottle, off
+07:43:22, Pill bottle, on
+07:43:22, Pill bottle, off
+07:43:22, Pill bottle, on
+07:43:22, Pill bottle, off
+07:43:22, Pill bottle, on
+07:43:22, Pill bottle, off
+07:43:22, Pill bottle, on
+07:43:22, Pill bottle, off
+07:43:22, Pill bottle, on
+07:43:22, Pill bottle, off
+07:43:22, Pill bottle, on
+07:43:22, Pill bottle, off
+07:43:22, Pill bottle, on
+07:43:22, Pill bottle, off
+07:43:22, Pill bottle, on
+07:43:22, Pill bottle, off
+07:43:22, Pill bottle, on
+07:43:22, Pill bottle, off
+07:43:22, Pill bottle, on
+07:43:22, Pill bottle, off
+07:43:22, Pill bottle, on
+07:43:22, Pill bottle, off
+07:43:22, Pill bottle, on
+07:43:22, Pill bottle, off
+07:43:22, Pill bottle, on
+07:43:22, Pill bottle, off
+07:43:22, Pill bottle, on
+07:43:22, Pill bottle, off
+07:43:22, Pill bottle, on
+07:43:22, Pill bottle, off
+07:43:22, Pill bottle, on
+07:43:22, Pill bottle, off
+07:43:22, Pill bottle, on
+07:43:22, Pill bottle, off
+07:43:22, Pill bottle, on
+07:43:22, Pill bottle, off
+07:43:22, Pill bottle, on
+07:43:22, Pill bottle, off
+07:43:22, Pill bottle, on
+07:43:22, Pill bottle, off
+07:43:22, Pill bottle, on
+07:43:22, Pill bottle, off
+07:43:22, Pill bottle, on
+07:43:22, Pill bottle, off
+07:43:22, Pill bottle, on
+07:43:22, Pill bottle, off
+07:43:22, Pill bottle, on
+07:43:22, Pill bottle, off
+07:43:22, Pill bottle, on
+07:43:22, Pill bottle, off
+07:43:22, Pill bottle, on
+07:43:22, Pill bottle, off
+07:43:22, Pill bottle, on
+07:43:22, Pill bottle, off
+07:43:22, Pill bottle, on
+07:43:22, Pill bottle, off
+07:43:22, Pill bottle, on
+07:43:22, Pill bottle, off
+07:43:22, Pill bottle, on
+07:43:22, Pill bottle, off
+07:43:22, Pill bottle, on
+07:43:22, Pill bottle, off
+07:43:22, Pill bottle, on
+07:43:22, Pill bottle, off
+07:43:22, Pill bottle, on
+07:43:22, Pill bottle, off
+07:43:22, Pill bottle, on
+07:43:22, Pill bottle, off
+07:43:22, Pill bottle, on
+07:43:22, Pill bottle, off
+07:43:22, Pill bottle, on
+07:43:22, Pill bottle, off
+07:43:22, Pill bottle, on
+07:43:22, Pill bottle, off
+07:43:22, Pill bottle, on
+07:43:22, Pill bottle, off
+07:43:22, Pill bottle, on
+07:43:22, Pill bottle, off
+07:43:22, Pill bottle, on
+07:43:22, Pill bottle, off
+07:43:23, Pill bottle, on
+07:43:23, Pill bottle, off
+07:43:23, Pill bottle, on
+07:43:23, Pill bottle, off
+07:43:23, Pill bottle, on
+07:43:23, Pill bottle, off
+07:43:23, Pill bottle, on
+07:43:23, Pill bottle, off
+07:43:23, Pill bottle, on
+07:43:23, Pill bottle, off
+07:43:23, Pill bottle, on
+07:43:23, Pill bottle, off
+07:43:23, Pill bottle, on
+07:43:23, Pill bottle, off
+07:43:23, Pill bottle, on
+07:43:23, Pill bottle, off
+07:43:23, Pill bottle, on
+07:43:23, Pill bottle, off
+07:43:23, Pill bottle, on
+07:43:23, Pill bottle, off
+07:43:23, Pill bottle, on
+07:43:23, Pill bottle, off
+07:43:23, Pill bottle, on
+07:43:23, Pill bottle, off
+07:43:23, Pill bottle, on
+07:43:23, Pill bottle, off
+07:43:23, Pill bottle, on
+07:43:23, Pill bottle, off
+07:43:23, Pill bottle, on
+07:43:23, Pill bottle, off
+07:43:23, Pill bottle, on
+07:43:23, Pill bottle, off
+07:43:23, Pill bottle, on
+07:43:23, Pill bottle, off
+07:43:23, Pill bottle, on
+07:43:23, Pill bottle, off
+07:43:23, Pill bottle, on
+07:43:23, Pill bottle, off
+07:43:23, Pill bottle, on
+07:43:23, Pill bottle, off
+07:43:23, Pill bottle, on
+07:43:23, Pill bottle, off
+07:43:23, Pill bottle, on
+07:43:23, Pill bottle, off
+07:43:23, Pill bottle, on
+07:43:24, Pill bottle, off
+07:43:24, Pill bottle, on
+07:43:24, Pill bottle, off
+07:43:24, Pill bottle, on
+07:43:24, Pill bottle, off
+07:43:24, Pill bottle, on
+07:43:24, Pill bottle, off
+07:43:24, Pill bottle, on
+07:43:24, Pill bottle, off
+07:43:24, Pill bottle, on
+07:43:24, Pill bottle, off
+07:43:24, Pill bottle, on
+07:43:24, Pill bottle, off
+07:43:24, Pill bottle, on
+07:43:24, Pill bottle, off
+07:43:25, Pill bottle, on
+07:43:25, Pill bottle, off
+07:43:25, Pill bottle, on
+07:43:25, Pill bottle, off
+07:43:25, Pill bottle, on
+07:43:25, Pill bottle, off
+07:43:25, Pill bottle, on
+07:43:25, Pill bottle, off
+07:43:25, Pill bottle, on
+07:43:25, Pill bottle, off
+07:43:25, Pill bottle, on
+07:43:25, Pill bottle, off
+07:43:25, Pill bottle, on
+07:43:25, Pill bottle, off
+07:43:25, Pill bottle, on
+07:43:25, Pill bottle, off
+07:43:25, Pill bottle, on
+07:43:25, Pill bottle, off
+07:43:25, Pill bottle, on
+07:43:25, Pill bottle, off
+07:43:25, Pill bottle, on
+07:43:25, Pill bottle, off
+07:43:25, Pill bottle, on
+07:43:25, Pill bottle, off
+07:43:25, Pill bottle, on
+07:43:25, Pill bottle, off
+07:43:25, Pill bottle, on
+07:43:25, Pill bottle, off
+07:43:25, Pill bottle, on
+07:43:25, Pill bottle, off
+07:43:25, Pill bottle, on
+07:43:25, Pill bottle, off
+07:43:25, Pill bottle, on
+07:43:25, Pill bottle, off
+07:43:25, Pill bottle, on
+07:43:25, Pill bottle, off
+07:43:25, Pill bottle, on
+07:43:25, Pill bottle, off
+07:43:25, Pill bottle, on
+07:43:25, Pill bottle, off
+07:43:25, Pill bottle, on
+07:43:25, Pill bottle, off
+07:43:25, Pill bottle, on
+07:43:25, Pill bottle, off
+07:43:25, Pill bottle, on
+07:43:25, Pill bottle, off
+07:43:25, Pill bottle, on
+07:43:25, Pill bottle, off
+07:43:25, Pill bottle, on
+07:43:25, Pill bottle, off
+07:43:25, Pill bottle, on
+07:43:25, Pill bottle, off
+07:43:25, Pill bottle, on
+07:43:25, Pill bottle, off
+07:43:25, Pill bottle, on
+07:43:25, Pill bottle, off
+07:43:25, Pill bottle, on
+07:43:25, Pill bottle, off
+07:43:25, Pill bottle, on
+07:43:25, Pill bottle, off
+07:43:25, Pill bottle, on
+07:43:25, Pill bottle, off
+07:43:25, Pill bottle, on
+07:43:25, Pill bottle, off
+07:43:25, Pill bottle, on
+07:43:25, Pill bottle, off
+07:43:26, Pill bottle, on
+07:43:26, Pill bottle, off
+07:43:26, Pill bottle, on
+07:43:26, Pill bottle, off
+07:43:26, Pill bottle, on
+07:43:26, Pill bottle, off
+07:43:26, Pill bottle, on
+07:43:26, Pill bottle, off
+07:43:26, Pill bottle, on
+07:43:26, Pill bottle, off
+07:43:26, Pill bottle, on
+07:43:26, Kitchen cup, on
+07:43:26, Pill bottle, off
+07:43:26, Kitchen cup, off
+07:43:26, Kitchen cup, on
+07:43:26, Pill bottle, on
+07:43:26, Pill bottle, off
+07:43:26, Kitchen cup, off
+07:43:26, Kitchen cup, on
+07:43:26, Pill bottle, on
+07:43:26, Pill bottle, off
+07:43:26, Kitchen cup, off
+07:43:26, Kitchen cup, on
+07:43:26, Pill bottle, on
+07:43:26, Pill bottle, off
+07:43:26, Kitchen cup, off
+07:43:26, Kitchen cup, on
+07:43:26, Pill bottle, on
+07:43:26, Pill bottle, off
+07:43:26, Kitchen cup, off
+07:43:26, Kitchen cup, on
+07:43:26, Pill bottle, on
+07:43:26, Pill bottle, off
+07:43:26, Kitchen cup, off
+07:43:26, Kitchen cup, on
+07:43:26, Pill bottle, on
+07:43:26, Pill bottle, off
+07:43:26, Kitchen cup, off
+07:43:26, Kitchen cup, on
+07:43:26, Pill bottle, on
+07:43:26, Pill bottle, off
+07:43:26, Kitchen cup, off
+07:43:26, Kitchen cup, on
+07:43:26, Pill bottle, on
+07:43:26, Pill bottle, off
+07:43:26, Kitchen cup, off
+07:43:26, Kitchen cup, on
+07:43:26, Pill bottle, on
+07:43:26, Pill bottle, off
+07:43:26, Kitchen cup, off
+07:43:26, Kitchen cup, on
+07:43:26, Pill bottle, on
+07:43:26, Pill bottle, off
+07:43:26, Kitchen cup, off
+07:43:26, Kitchen cup, on
+07:43:26, Pill bottle, on
+07:43:26, Pill bottle, off
+07:43:26, Kitchen cup, off
+07:43:26, Pill bottle, on
+07:43:26, Kitchen cup, on
+07:43:26, Pill bottle, off
+07:43:26, Kitchen cup, off
+07:43:26, Pill bottle, on
+07:43:26, Kitchen cup, on
+07:43:26, Pill bottle, off
+07:43:26, Kitchen cup, off
+07:43:26, Pill bottle, on
+07:43:26, Kitchen cup, on
+07:43:26, Pill bottle, off
+07:43:26, Kitchen cup, off
+07:43:26, Pill bottle, on
+07:43:26, Kitchen cup, on
+07:43:26, Pill bottle, off
+07:43:26, Kitchen cup, off
+07:43:26, Pill bottle, on
+07:43:26, Kitchen cup, on
+07:43:26, Pill bottle, off
+07:43:26, Kitchen cup, off
+07:43:26, Pill bottle, on
+07:43:26, Kitchen cup, on
+07:43:26, Pill bottle, off
+07:43:26, Kitchen cup, off
+07:43:26, Pill bottle, on
+07:43:26, Kitchen cup, on
+07:43:26, Pill bottle, off
+07:43:26, Kitchen cup, off
+07:43:26, Pill bottle, on
+07:43:26, Kitchen cup, on
+07:43:26, Pill bottle, off
+07:43:26, Kitchen cup, off
+07:43:26, Pill bottle, on
+07:43:26, Kitchen cup, on
+07:43:26, Pill bottle, off
+07:43:26, Kitchen cup, off
+07:43:26, Pill bottle, on
+07:43:26, Kitchen cup, on
+07:43:26, Pill bottle, off
+07:43:26, Kitchen cup, off
+07:43:26, Pill bottle, on
+07:43:26, Kitchen cup, on
+07:43:26, Pill bottle, off
+07:43:26, Kitchen cup, off
+07:43:26, Pill bottle, on
+07:43:26, Kitchen cup, on
+07:43:26, Pill bottle, off
+07:43:26, Kitchen cup, off
+07:43:26, Pill bottle, on
+07:43:26, Kitchen cup, on
+07:43:26, Pill bottle, off
+07:43:26, Kitchen cup, off
+07:43:26, Pill bottle, on
+07:43:26, Kitchen cup, on
+07:43:26, Pill bottle, off
+07:43:26, Kitchen cup, off
+07:43:26, Pill bottle, on
+07:43:26, Kitchen cup, on
+07:43:26, Pill bottle, off
+07:43:26, Kitchen cup, off
+07:43:26, Pill bottle, on
+07:43:26, Kitchen cup, on
+07:43:27, Kitchen cup, off
+07:43:27, Pill bottle, off
+07:43:50, Bathroom light, on
+07:43:54, Comb, on
+07:43:54, Comb, off
+07:43:54, Comb, on
+07:43:54, Comb, off
+07:43:54, Comb, on
+07:43:54, Comb, off
+07:43:54, Comb, on
+07:43:54, Comb, off
+07:43:54, Comb, on
+07:43:54, Comb, off
+07:43:54, Comb, on
+07:43:54, Comb, off
+07:43:54, Comb, on
+07:43:54, Comb, off
+07:43:54, Comb, on
+07:43:54, Comb, off
+07:43:54, Comb, on
+07:43:54, Comb, on
+07:43:54, Comb, off
+07:43:54, Comb, off
+07:43:54, Comb, on
+07:43:54, Comb, on
+07:43:54, Comb, off
+07:43:54, Comb, off
+07:43:55, Comb, on
+07:43:55, Comb, on
+07:43:55, Comb, off
+07:43:55, Comb, off
+07:43:55, Comb, on
+07:43:55, Comb, on
+07:43:55, Comb, off
+07:43:55, Comb, off
+07:43:55, Comb, on
+07:43:55, Comb, on
+07:43:55, Comb, off
+07:43:55, Comb, off
+07:43:55, Comb, on
+07:43:55, Comb, on
+07:43:55, Comb, off
+07:43:55, Comb, off
+07:43:55, Comb, on
+07:43:55, Comb, on
+07:43:55, Comb, off
+07:43:55, Comb, off
+07:43:55, Comb, on
+07:43:55, Comb, on
+07:43:55, Comb, off
+07:43:55, Comb, off
+07:43:55, Comb, on
+07:43:55, Comb, on
+07:43:55, Comb, off
+07:43:55, Comb, off
+07:43:55, Comb, on
+07:43:55, Comb, on
+07:43:55, Comb, off
+07:43:55, Comb, off
+07:43:55, Comb, on
+07:43:55, Comb, on
+07:43:55, Comb, off
+07:43:55, Comb, off
+07:43:55, Comb, on
+07:43:55, Comb, on
+07:43:55, Comb, off
+07:43:55, Comb, off
+07:43:55, Comb, on
+07:43:55, Comb, on
+07:43:55, Comb, off
+07:43:55, Comb, off
+07:43:55, Comb, on
+07:43:55, Comb, on
+07:43:55, Comb, off
+07:43:55, Comb, off
+07:43:55, Bathroom cup, on
+07:43:55, Comb, on
+07:43:55, Comb, on
+07:43:55, Comb, off
+07:43:55, Comb, off
+07:43:55, Bathroom cup, off
+07:43:55, Bathroom cup, on
+07:43:55, Comb, on
+07:43:55, Comb, on
+07:43:55, Comb, off
+07:43:55, Comb, off
+07:43:55, Bathroom cup, off
+07:43:55, Bathroom cup, on
+07:43:55, Comb, on
+07:43:55, Comb, on
+07:43:55, Comb, off
+07:43:55, Comb, off
+07:43:55, Bathroom cup, off
+07:43:55, Bathroom cup, on
+07:43:55, Comb, on
+07:43:55, Comb, on
+07:43:55, Comb, off
+07:43:55, Comb, off
+07:43:55, Bathroom cup, off
+07:43:55, Bathroom cup, on
+07:43:55, Comb, on
+07:43:55, Comb, on
+07:43:55, Comb, off
+07:43:55, Comb, off
+07:43:55, Bathroom cup, off
+07:43:55, Bathroom cup, on
+07:43:55, Comb, on
+07:43:55, Comb, on
+07:43:55, Comb, off
+07:43:55, Comb, off
+07:43:55, Bathroom cup, off
+07:43:55, Bathroom cup, on
+07:43:55, Comb, on
+07:43:55, Comb, on
+07:43:55, Comb, off
+07:43:55, Comb, off
+07:43:55, Bathroom cup, off
+07:43:55, Bathroom cup, on
+07:43:55, Comb, on
+07:43:55, Comb, on
+07:43:55, Comb, off
+07:43:55, Comb, off
+07:43:55, Bathroom cup, off
+07:43:55, Bathroom cup, on
+07:43:55, Comb, on
+07:43:55, Comb, on
+07:43:55, Comb, off
+07:43:55, Comb, off
+07:43:55, Bathroom cup, off
+07:43:55, Bathroom cup, on
+07:43:55, Comb, on
+07:43:55, Comb, off
+07:43:55, Bathroom cup, off
+07:43:55, Bathroom cup, on
+07:43:55, Comb, on
+07:43:55, Comb, off
+07:43:55, Bathroom cup, off
+07:43:55, Bathroom cup, on
+07:43:55, Comb, on
+07:43:55, Comb, off
+07:43:55, Bathroom cup, off
+07:43:55, Bathroom cup, on
+07:43:55, Comb, on
+07:43:55, Comb, off
+07:43:55, Bathroom cup, off
+07:43:55, Bathroom cup, on
+07:43:55, Comb, on
+07:43:55, Comb, off
+07:43:55, Bathroom cup, off
+07:43:55, Bathroom cup, on
+07:43:55, Comb, on
+07:43:55, Comb, off
+07:43:55, Bathroom cup, off
+07:43:55, Bathroom cup, on
+07:43:55, Comb, on
+07:43:55, Comb, off
+07:43:55, Bathroom cup, off
+07:43:55, Bathroom cup, on
+07:43:55, Comb, on
+07:43:55, Comb, off
+07:43:55, Bathroom cup, off
+07:43:55, Bathroom cup, on
+07:43:55, Comb, on
+07:43:55, Comb, off
+07:43:55, Bathroom cup, off
+07:43:55, Bathroom cup, on
+07:43:55, Comb, on
+07:43:55, Comb, off
+07:43:55, Bathroom cup, off
+07:43:55, Bathroom cup, on
+07:43:55, Comb, on
+07:43:55, Comb, off
+07:43:55, Bathroom cup, off
+07:43:55, Bathroom cup, on
+07:43:55, Comb, on
+07:43:55, Comb, off
+07:43:55, Bathroom cup, off
+07:43:55, Bathroom cup, on
+07:43:55, Comb, on
+07:43:55, Comb, off
+07:43:55, Bathroom cup, off
+07:43:55, Bathroom cup, on
+07:43:55, Comb, on
+07:43:55, Comb, off
+07:43:55, Bathroom cup, off
+07:43:55, Bathroom cup, on
+07:43:55, Comb, on
+07:43:55, Comb, off
+07:43:55, Bathroom cup, off
+07:43:55, Bathroom cup, on
+07:43:55, Comb, on
+07:43:55, Comb, off
+07:43:55, Bathroom cup, off
+07:43:55, Bathroom cup, on
+07:43:55, Comb, on
+07:43:55, Comb, off
+07:43:55, Bathroom cup, off
+07:43:55, Bathroom cup, on
+07:43:55, Comb, on
+07:43:55, Comb, off
+07:43:55, Bathroom cup, off
+07:43:55, Bathroom cup, on
+07:43:55, Comb, on
+07:43:55, Comb, off
+07:43:55, Bathroom cup, off
+07:43:55, Bathroom cup, on
+07:43:55, Comb, on
+07:43:55, Comb, off
+07:43:55, Bathroom cup, off
+07:43:55, Bathroom cup, on
+07:43:55, Comb, on
+07:43:55, Comb, off
+07:43:55, Bathroom cup, off
+07:43:55, Bathroom cup, on
+07:43:55, Comb, on
+07:43:55, Comb, off
+07:43:55, Bathroom cup, off
+07:43:55, Bathroom cup, on
+07:43:55, Comb, on
+07:43:55, Comb, off
+07:43:55, Bathroom cup, off
+07:43:55, Bathroom cup, on
+07:43:55, Comb, on
+07:43:55, Comb, off
+07:43:55, Bathroom cup, off
+07:43:56, Bathroom cup, on
+07:43:56, Comb, on
+07:43:56, Comb, off
+07:43:56, Bathroom cup, off
+07:43:56, Bathroom cup, on
+07:43:56, Comb, on
+07:43:56, Comb, off
+07:43:56, Bathroom cup, off
+07:43:56, Bathroom cup, on
+07:43:56, Comb, on
+07:43:56, Comb, off
+07:43:56, Bathroom cup, off
+07:43:56, Bathroom cup, on
+07:43:56, Comb, on
+07:43:56, Comb, off
+07:43:56, Bathroom cup, off
+07:43:56, Bathroom cup, on
+07:43:56, Comb, on
+07:43:56, Comb, off
+07:43:56, Bathroom cup, off
+07:43:56, Bathroom cup, on
+07:43:56, Comb, on
+07:43:56, Comb, off
+07:43:56, Bathroom cup, off
+07:43:56, Bathroom cup, on
+07:43:56, Comb, on
+07:43:56, Comb, off
+07:43:56, Bathroom cup, off
+07:43:56, Bathroom cup, on
+07:43:56, Comb, on
+07:43:56, Comb, off
+07:43:56, Bathroom cup, off
+07:43:56, Bathroom cup, on
+07:43:56, Comb, on
+07:43:56, Comb, off
+07:43:56, Bathroom cup, off
+07:43:56, Bathroom cup, on
+07:43:56, Comb, on
+07:43:56, Comb, off
+07:43:56, Bathroom cup, off
+07:43:56, Bathroom cup, on
+07:43:56, Comb, on
+07:43:56, Comb, off
+07:43:56, Bathroom cup, off
+07:43:56, Bathroom cup, on
+07:43:56, Comb, on
+07:43:56, Comb, off
+07:43:56, Bathroom cup, off
+07:43:56, Bathroom cup, on
+07:43:56, Comb, on
+07:43:56, Comb, off
+07:43:56, Bathroom cup, off
+07:43:56, Bathroom cup, on
+07:43:56, Bathroom cup, off
+07:43:56, Bathroom cup, on
+07:43:56, Bathroom cup, off
+07:43:56, Bathroom cup, on
+07:43:56, Bathroom cup, off
+07:43:56, Bathroom cup, on
+07:43:56, Bathroom cup, off
+07:43:56, Bathroom cup, on
+07:43:56, Bathroom cup, off
+07:43:56, Bathroom cup, on
+07:43:56, Bathroom cup, off
+07:43:56, Bathroom cup, on
+07:43:56, Bathroom cup, off
+07:43:56, Bathroom cup, on
+07:43:56, Bathroom cup, off
+07:43:56, Bathroom cup, on
+07:43:56, Bathroom cup, off
+07:43:56, Bathroom cup, on
+07:43:56, Bathroom cup, off
+07:43:56, Bathroom cup, on
+07:43:56, Bathroom cup, off
+07:43:56, Bathroom cup, on
+07:43:56, Bathroom cup, off
+07:43:56, Bathroom cup, on
+07:43:56, Bathroom cup, off
+07:43:56, Bathroom cup, on
+07:43:56, Bathroom cup, off
+07:43:56, Bathroom cup, on
+07:43:56, Bathroom cup, off
+07:43:56, Bathroom cup, on
+07:43:56, Bathroom cup, off
+07:43:56, Bathroom cup, on
+07:43:56, Bathroom cup, off
+07:43:56, Bathroom cup, on
+07:43:56, Bathroom cup, off
+07:43:56, Bathroom cup, on
+07:43:56, Bathroom cup, off
+07:43:57, Bathroom cup, on
+07:43:57, Bathroom cup, off
+07:44:10, Bathroom cup, on
+07:44:10, Bathroom cup, off
+07:44:10, Bathroom cup, on
+07:44:10, Bathroom cup, off
+07:44:10, Bathroom cup, on
+07:44:10, Bathroom cup, off
+07:44:10, Bathroom cup, on
+07:44:10, Bathroom cup, off
+07:44:10, Bathroom cup, on
+07:44:10, Bathroom cup, off
+07:44:10, Bathroom cup, on
+07:44:10, Bathroom cup, off
+07:44:10, Bathroom cup, on
+07:44:10, Bathroom cup, off
+07:44:10, Bathroom cup, on
+07:44:10, Bathroom cup, off
+07:44:10, Bathroom cup, on
+07:44:10, Bathroom cup, off
+07:44:10, Bathroom cup, on
+07:44:10, Bathroom cup, off
+07:44:10, Bathroom cup, on
+07:44:10, Bathroom cup, off
+07:44:10, Bathroom cup, on
+07:44:10, Bathroom cup, off
+07:44:10, Bathroom cup, on
+07:44:10, Bathroom cup, off
+07:44:10, Bathroom cup, on
+07:44:10, Bathroom cup, off
+07:44:10, Bathroom cup, on
+07:44:10, Bathroom cup, off
+07:44:10, Bathroom cup, on
+07:44:10, Bathroom cup, off
+07:44:10, Bathroom cup, on
+07:44:10, Bathroom cup, off
+07:44:10, Bathroom cup, on
+07:44:10, Comb, on
+07:44:10, Comb, off
+07:44:10, Bathroom cup, off
+07:44:10, Bathroom cup, on
+07:44:10, Comb, on
+07:44:10, Comb, off
+07:44:10, Bathroom cup, off
+07:44:10, Comb, on
+07:44:10, Comb, off
+07:44:10, Comb, on
+07:44:10, Comb, off
+07:44:10, Comb, on
+07:44:10, Comb, off
+07:44:10, Comb, on
+07:44:10, Comb, off
+07:44:10, Comb, on
+07:44:10, Comb, off
+07:44:10, Comb, on
+07:44:10, Comb, off
+07:44:10, Comb, on
+07:44:10, Comb, off
+07:44:10, Comb, on
+07:44:10, Comb, off
+07:44:10, Comb, on
+07:44:10, Comb, off
+07:44:10, Comb, on
+07:44:10, Comb, off
+07:44:10, Comb, on
+07:44:10, Comb, off
+07:44:10, Comb, on
+07:44:10, Comb, off
+07:44:10, Comb, on
+07:44:10, Comb, off
+07:44:10, Comb, on
+07:44:10, Comb, off
+07:44:10, Comb, on
+07:44:10, Comb, off
+07:44:10, Comb, on
+07:44:10, Comb, off
+07:44:10, Comb, on
+07:44:10, Comb, off
+07:44:10, Comb, on
+07:44:10, Comb, off
+07:44:10, Comb, on
+07:44:10, Comb, off
+07:44:11, Comb, on
+07:44:11, Comb, off
+07:44:11, Comb, on
+07:44:11, Comb, off
+07:44:11, Comb, on
+07:44:11, Comb, off
+07:44:11, Comb, on
+07:44:11, Comb, off
+07:44:11, Comb, on
+07:44:11, Comb, off
+07:44:11, Comb, on
+07:44:11, Comb, off
+07:44:11, Comb, on
+07:44:11, Comb, off
+07:44:11, Comb, on
+07:44:11, Comb, off
+07:44:11, Comb, on
+07:44:11, Comb, off
+07:44:11, Comb, on
+07:44:11, Comb, off
+07:44:11, Comb, on
+07:44:11, Comb, off
+07:44:11, Comb, on
+07:44:11, Comb, off
+07:44:11, Comb, on
+07:44:11, Comb, off
+07:44:11, Comb, on
+07:44:11, Comb, off
+07:44:11, Comb, on
+07:44:11, Comb, off
+07:44:11, Comb, on
+07:44:11, Comb, off
+07:44:11, Comb, on
+07:44:11, Comb, off
+07:44:11, Comb, on
+07:44:11, Comb, off
+07:44:11, Comb, on
+07:44:11, Comb, off
+07:44:11, Comb, on
+07:44:11, Comb, off
+07:44:11, Comb, on
+07:44:11, Comb, off
+07:44:11, Comb, on
+07:44:11, Comb, off
+07:44:11, Comb, on
+07:44:11, Comb, off
+07:44:11, Comb, on
+07:44:11, Comb, off
+07:44:12, Comb, on
+07:44:12, Comb, off
+07:44:12, Comb, on
+07:44:12, Comb, off
+07:44:12, Comb, on
+07:44:12, Comb, off
+07:44:12, Comb, on
+07:44:12, Comb, off
+07:44:12, Comb, on
+07:44:12, Comb, off
+07:44:12, Comb, on
+07:44:12, Comb, off
+07:44:12, Comb, on
+07:44:12, Comb, off
+07:44:12, Comb, on
+07:44:12, Comb, off
+07:44:15, Bathroom light, off
+07:44:17, Bathroom light, on
+07:44:20, Razor, on
+07:44:20, Razor, off
+07:44:20, Razor, on
+07:44:20, Razor, off
+07:44:20, Razor, on
+07:44:20, Razor, off
+07:44:20, Razor, on
+07:44:20, Razor, off
+07:44:20, Razor, on
+07:44:20, Razor, off
+07:44:20, Razor, on
+07:44:20, Razor, off
+07:44:20, Razor, on
+07:44:20, Razor, off
+07:44:21, Razor, on
+07:44:21, Razor, off
+07:44:21, Razor, on
+07:44:21, Razor, off
+07:44:21, Razor, on
+07:44:21, Razor, off
+07:44:21, Razor, on
+07:44:21, Razor, off
+07:44:21, Razor, on
+07:44:21, Razor, off
+07:44:21, Razor, on
+07:44:21, Razor, off
+07:44:21, Razor, on
+07:44:21, Razor, off
+07:44:21, Razor, on
+07:44:21, Razor, off
+07:44:21, Razor, on
+07:44:21, Razor, on
+07:44:21, Razor, off
+07:44:21, Razor, off
+07:44:21, Razor, on
+07:44:21, Razor, on
+07:44:21, Razor, off
+07:44:21, Razor, off
+07:44:21, Razor, on
+07:44:21, Razor, on
+07:44:21, Razor, off
+07:44:21, Razor, off
+07:44:21, Razor, on
+07:44:21, Razor, on
+07:44:21, Razor, off
+07:44:21, Razor, off
+07:44:21, Razor, on
+07:44:21, Razor, off
+07:44:21, Razor, on
+07:44:21, Razor, off
+07:44:21, Razor, on
+07:44:21, Razor, off
+07:44:21, Razor, on
+07:44:21, Razor, off
+07:44:21, Razor, on
+07:44:21, Razor, off
+07:44:21, Razor, on
+07:44:21, Razor, off
+07:44:21, Razor, on
+07:44:21, Razor, off
+07:44:21, Bathroom sink, on
+07:44:21, Razor, on
+07:44:21, Razor, off
+07:44:21, Razor, on
+07:44:21, Razor, off
+07:44:21, Razor, on
+07:44:21, Razor, off
+07:44:21, Razor, on
+07:44:21, Razor, off
+07:44:21, Razor, on
+07:44:21, Razor, off
+07:44:21, Razor, on
+07:44:21, Razor, off
+07:44:21, Bathroom sink, off
+07:44:39, Razor, on
+07:44:39, Razor, off
+07:44:39, Razor, on
+07:44:39, Razor, off
+07:44:39, Razor, on
+07:44:39, Razor, off
+07:44:39, Razor, on
+07:44:39, Razor, off
+07:44:39, Razor, on
+07:44:39, Razor, off
+07:44:39, Razor, on
+07:44:39, Razor, off
+07:44:40, Razor, on
+07:44:40, Razor, off
+07:44:40, Razor, on
+07:44:40, Razor, off
+07:44:40, Razor, on
+07:44:40, Razor, off
+07:44:40, Razor, on
+07:44:40, Razor, off
+07:44:40, Razor, on
+07:44:40, Razor, off
+07:44:40, Razor, on
+07:44:40, Razor, off
+07:44:40, Razor, on
+07:44:40, Razor, off
+07:44:40, Razor, on
+07:44:40, Razor, off
+07:44:40, Razor, on
+07:44:40, Razor, off
+07:44:40, Razor, on
+07:44:40, Razor, off
+07:44:40, Razor, on
+07:44:40, Razor, off
+07:44:40, Razor, on
+07:44:40, Razor, off
+07:44:40, Razor, on
+07:44:40, Razor, off
+07:44:40, Razor, on
+07:44:40, Razor, off
+07:44:40, Razor, on
+07:44:40, Razor, off
+07:44:40, Razor, on
+07:44:40, Razor, off
+07:44:40, Razor, on
+07:44:40, Razor, off
+07:44:40, Razor, on
+07:44:40, Razor, off
+07:44:40, Razor, on
+07:44:40, Razor, off
+07:44:40, Razor, on
+07:44:40, Razor, off
+07:44:40, Razor, on
+07:44:40, Razor, off
+07:44:40, Razor, on
+07:44:40, Razor, off
+07:44:40, Razor, on
+07:44:40, Razor, off
+07:44:40, Razor, on
+07:44:40, Razor, off
+07:44:40, Razor, on
+07:44:40, Razor, off
+07:44:40, Razor, on
+07:44:40, Razor, off
+07:44:40, Razor, on
+07:44:40, Razor, off
+07:44:40, Razor, on
+07:44:40, Razor, off
+07:44:40, Razor, on
+07:44:40, Razor, off
+07:44:40, Razor, on
+07:44:40, Razor, off
+07:44:40, Razor, on
+07:44:40, Razor, off
+07:44:40, Razor, on
+07:44:40, Razor, off
+07:44:40, Razor, on
+07:44:40, Razor, off
+07:44:40, Razor, on
+07:44:40, Razor, off
+07:44:40, Razor, on
+07:44:40, Razor, off
+07:44:40, Razor, on
+07:44:40, Razor, off
+07:44:40, Razor, on
+07:44:40, Razor, off
+07:44:40, Razor, on
+07:44:40, Razor, off
+07:44:40, Razor, on
+07:44:40, Razor, off
+07:44:40, Razor, on
+07:44:40, Razor, off
+07:44:41, Razor, on
+07:44:41, Razor, off
+07:44:41, Razor, on
+07:44:41, Razor, off
+07:44:41, Razor, on
+07:44:41, Razor, off
+07:44:41, Razor, on
+07:44:41, Razor, off
+07:44:41, Razor, on
+07:44:41, Razor, off
+07:44:41, Razor, on
+07:44:41, Razor, off
+07:44:41, Razor, on
+07:44:41, Razor, off
+07:44:43, Bathroom light, off
+07:44:52, Pill bottle, on
+07:44:52, Pill bottle, off
+07:44:52, Pill bottle, on
+07:44:52, Pill bottle, off
+07:44:52, Pill bottle, on
+07:44:52, Pill bottle, off
+07:44:52, Pill bottle, on
+07:44:52, Pill bottle, off
+07:44:52, Pill bottle, on
+07:44:52, Pill bottle, off
+07:44:52, Pill bottle, on
+07:44:52, Pill bottle, off
+07:44:52, Pill bottle, on
+07:44:52, Pill bottle, off
+07:44:52, Pill bottle, on
+07:44:52, Pill bottle, off
+07:44:52, Pill bottle, on
+07:44:52, Pill bottle, off
+07:44:52, Pill bottle, on
+07:44:52, Pill bottle, off
+07:44:52, Pill bottle, on
+07:44:52, Pill bottle, off
+07:44:52, Pill bottle, on
+07:44:52, Pill bottle, off
+07:44:53, Pill bottle, on
+07:44:53, Pill bottle, off
+07:44:53, Pill bottle, on
+07:44:53, Pill bottle, off
+07:44:53, Pill bottle, on
+07:44:53, Pill bottle, off
+07:44:53, Pill bottle, on
+07:44:53, Pill bottle, off
+07:44:53, Pill bottle, on
+07:44:53, Pill bottle, off
+07:44:53, Pill bottle, on
+07:44:53, Pill bottle, off
+07:44:53, Pill bottle, on
+07:44:53, Pill bottle, off
+07:44:53, Pill bottle, on
+07:44:53, Pill bottle, off
+07:44:53, Pill bottle, on
+07:44:53, Pill bottle, off
+07:44:53, Pill bottle, on
+07:44:53, Pill bottle, off
+07:44:53, Pill bottle, on
+07:44:53, Pill bottle, off
+07:44:53, Pill bottle, on
+07:44:53, Pill bottle, off
+07:44:53, Pill bottle, on
+07:44:53, Pill bottle, off
+07:44:53, Pill bottle, on
+07:44:53, Pill bottle, off
+07:44:53, Pill bottle, on
+07:44:53, Pill bottle, off
+07:44:53, Pill bottle, on
+07:44:53, Pill bottle, off
+07:44:53, Pill bottle, on
+07:44:53, Pill bottle, off
+07:44:53, Pill bottle, on
+07:44:53, Pill bottle, off
+07:44:53, Pill bottle, on
+07:44:53, Pill bottle, off
+07:44:53, Pill bottle, on
+07:44:53, Pill bottle, off
+07:44:53, Pill bottle, on
+07:44:53, Pill bottle, off
+07:44:53, Pill bottle, on
+07:44:53, Pill bottle, off
+07:44:53, Pill bottle, on
+07:44:53, Pill bottle, off
+07:44:53, Pill bottle, on
+07:44:53, Pill bottle, off
+07:44:53, Pill bottle, on
+07:44:53, Pill bottle, off
+07:44:53, Pill bottle, on
+07:44:53, Pill bottle, off
+07:44:53, Pill bottle, on
+07:44:53, Pill bottle, off
+07:44:53, Pill bottle, on
+07:44:53, Pill bottle, off
+07:44:53, Pill bottle, on
+07:44:53, Pill bottle, off
+07:44:53, Pill bottle, on
+07:44:53, Pill bottle, off
+07:44:53, Pill bottle, on
+07:44:53, Pill bottle, off
+07:44:53, Pill bottle, on
+07:44:53, Pill bottle, off
+07:44:53, Pill bottle, on
+07:44:53, Pill bottle, off
+07:44:53, Pill bottle, on
+07:44:53, Pill bottle, off
+07:44:53, Pill bottle, on
+07:44:53, Pill bottle, off
+07:44:53, Pill bottle, on
+07:44:53, Pill bottle, off
+07:44:53, Pill bottle, on
+07:44:53, Pill bottle, off
+07:44:53, Pill bottle, on
+07:44:53, Pill bottle, off
+07:44:53, Pill bottle, on
+07:44:53, Pill bottle, off
+07:44:53, Pill bottle, on
+07:44:53, Pill bottle, off
+07:44:53, Pill bottle, on
+07:44:53, Pill bottle, off
+07:44:53, Pill bottle, on
+07:44:53, Pill bottle, off
+07:44:53, Pill bottle, on
+07:44:53, Pill bottle, off
+07:44:53, Pill bottle, on
+07:44:53, Pill bottle, off

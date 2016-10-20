@@ -58,14 +58,14 @@
   <object name="TV" type="non-nav static" x="10.3" y="1.51" z="9.9" rotation-x="-0.7071068" rotation-y="0" rotation-z="0" />
   <object name="Living room window 1" type="non-nav static" x="13.32" y="0.7" z="13.65" rotation-x="-0.7071068" rotation-y="0" rotation-z="0" />
   <object name="Bedroom lamp left" type="non-nav static" x="9.47" y="0.4066622" z="9.35" rotation-x="-1.152023E-07" rotation-y="0.7071069" rotation-z="0.7071066" />
-  <object name="Razor" type="non-nav static" x="0.97" y="0.78" z="4.02" rotation-x="0" rotation-y="0" rotation-z="0.06540314" />
+  <object name="Razor" type="non-nav static" x="0.97" y="0.78" z="4.02" rotation-x="0" rotation-y="0" rotation-z="0.06540313" />
   <object name="Toilet paper holder" type="non-nav static" x="1.485" y="0.954" z="0.5" rotation-x="-0.5" rotation-y="-0.5" rotation-z="-0.5000001" />
   <object name="Keyboard" type="non-nav static" x="12.368" y="0.592" z="15.642" rotation-x="0" rotation-y="1" rotation-z="0" />
   <object name="TV remote control" type="non-nav static" x="9.9" y="0.454" z="12.56" rotation-x="0" rotation-y="0.7071068" rotation-z="0" />
   <object name="Wok" type="non-nav static" x="0.934" y="0.82" z="8.743" rotation-x="0.5000002" rotation-y="0.4999998" rotation-z="0.4999999" />
   <object name="Bedroom window 1" type="non-nav static" x="13.32" y="0.7" z="6.7" rotation-x="-0.7071068" rotation-y="0" rotation-z="0" />
-  <object name="Comb" type="non-nav static" x="0.96" y="0.761" z="5.1" rotation-x="0.7085484" rotation-y="0.006000339" rotation-z="0.005987941" />
-  <object name="Kitchen cup" type="non-nav static" x="1.07" y="0.74" z="7.85" rotation-x="0.7071066" rotation-y="0" rotation-z="0" />
+  <object name="Comb" type="non-nav static" x="0.96" y="0.76" z="5.1" rotation-x="0.7071068" rotation-y="-2.980233E-08" rotation-z="2.980233E-08" />
+  <object name="Kitchen cup" type="non-nav static" x="1.07" y="0.74" z="7.85" rotation-x="0.7071068" rotation-y="0" rotation-z="0" />
   <object name="Knife set" type="non-nav static" x="4.56" y="0.736" z="7.3" rotation-x="-0.5" rotation-y="-0.5" rotation-z="-0.5000001" />
   <object name="Razor stand" type="non-nav static" x="0.9788" y="0.751" z="4.0207" rotation-x="0" rotation-y="0" rotation-z="0" />
   <object name="Plate" type="non-nav static" x="3.03" y="0.689" z="13.7" rotation-x="-0.7071068" rotation-y="0" rotation-z="0" />

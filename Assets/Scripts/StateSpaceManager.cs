@@ -57,6 +57,25 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			}
 		}
 
+		public String[] GetLastNDataRecords(int n) {
+			String[] records = new String[n];
+			if (n > dataset.Count) {
+				for (int i = 0; i < dataset.Count; i++) {
+					records[i] = dataset[i].ToString();
+				}
+				for (int i = dataset.Count; i < n; i++) {
+					records[i] = "";
+				}
+			}
+			else {
+				for (int i = 0; i < n; i++) {
+					records[i] = dataset[dataset.Count-n+i].ToString();
+				}
+			}
+
+			return records;
+		}
+
 		// initialize state space
 		public void InitializeStateSpace() {
 			stateSpaceHistory = new List<StateSpace> ();
