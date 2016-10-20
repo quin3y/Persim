@@ -201,7 +201,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson {
 					
 				String[] dataRecords = stateSpaceManager.GetLastNDataRecords(5);
 				for (int i = 0; i < 5; i++) {
-					GUI.Label(new Rect(0, 650 + i * 25, 200, 20), "<size=17><color=#dadada>"+ dataRecords[i] +"</color></size>", "nothing");
+					GUI.Label(new Rect(0, 650 + i * 25, 300, 20), "<size=17><color=#dadada>"+ dataRecords[i] +"</color></size>", "nothing");
 				}
 			}
 		}
