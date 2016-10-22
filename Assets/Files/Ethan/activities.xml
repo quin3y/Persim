@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <activities>
   <activity id="0" name="Bath">
-    <action id="8" object="Couch" importance="1" max-occur="1" prereq="-1" />
-    <action id="30" object="Couch" importance="1" max-occur="1" prereq="-1" />
-    <action id="10" object="Couch" importance="1" max-occur="1" prereq="-1" />
-    <action id="30" object="Couch" importance="1" max-occur="1" prereq="-1" />
-    <action id="9" object="Couch" importance="1" max-occur="1" prereq="-1" />
+    <action id="0" object="Bathroom light switch" importance="1" max-occur="1" prereq="-1" />
   </activity>
 
   <activity id="1" name="Brush teeth">
-    <action id="0" object="Table" importance="1" max-occur="1" prereq="-1" />
+    <action id="0" object="Bathroom light switch" importance="1" max-occur="1" prereq="-1" />
   </activity>
 
   <activity id="2" name="Clean countertops">
-    <action id="0" object="Table" importance="1" max-occur="1" prereq="-1" />
+    <action id="0" object="Bathroom light switch" importance="1" max-occur="1" prereq="-1" />
   </activity>
 
   <activity id="3" name="Comb hair">
@@ -25,7 +21,7 @@
   </activity>
 
   <activity id="4" name="Do laundry">
-    <action id="0" object="Table" importance="1" max-occur="1" prereq="-1" />
+    <action id="0" object="Bathroom light switch" importance="1" max-occur="1" prereq="-1" />
   </activity>
 
   <activity id="5" name="Drink water">
@@ -35,22 +31,22 @@
   </activity>
 
   <activity id="6" name="Eat a meal">
-    <action id="0" object="Table" importance="1" max-occur="1" prereq="-1" />
+    <action id="0" object="Bathroom light switch" importance="1" max-occur="1" prereq="-1" />
   </activity>
 
   <activity id="7" name="Fall">
-    <action id="25" object="Phantom" importance="1" max-occur="1" prereq="-1" />
-    <action id="31" object="Phantom" importance="1" max-occur="1" prereq="-1" />
+    <action id="25" object="Fall object" importance="1" max-occur="1" prereq="-1" />
+    <action id="31" object="Fall object" importance="1" max-occur="1" prereq="-1" />
   </activity>
   
   <activity id="8" name="Leave home">
- 	<action id="23" object="Front door" importance="1" max-occur="1" prereq="-1" />
+ 	<action id="23" object="Front door inside" importance="1" max-occur="1" prereq="-1" />
     <action id="24" object="Front door outside" importance="1" max-occur="1" prereq="-1" />
  	<action id="0" object="Front entrance" importance="1" max-occur="1" prereq="-1" />
   </activity>
   
   <activity id="9" name="Prepare a meal">
-    <action id="0" object="Table" importance="1" max-occur="1" prereq="-1" />
+    <action id="0" object="Bathroom light switch" importance="1" max-occur="1" prereq="-1" />
   </activity>
 
   <activity id="10" name="Shave">
@@ -80,11 +76,11 @@
   </activity>
 
  <activity id="13" name="Take out trash">
-    <action id="0" object="Table" importance="1" max-occur="1" prereq="-1" />
+    <action id="0" object="Bathroom light switch" importance="1" max-occur="1" prereq="-1" />
   </activity>
 
   <activity id="14" name="Use bathroom">
-    <!--action id="1" object="Bathroom light switch" importance="0" max-occur="1" prereq="-1" /-->
+    <!--action id="1" object="Bathroom light switch on" importance="0" max-occur="1" prereq="-1" /-->
     <action id="8" object="Toilet" importance="1" max-occur="1" prereq="-1" />
     <action id="10" object="Toilet" importance="1" max-occur="3" prereq="-1" />
     <action id="9" object="Toilet" importance="1" max-occur="1" prereq="-1" />
@@ -96,7 +92,6 @@
 
   <activity id="15" name="Use cellphone">
     <action id="13" object="Mobile phone" importance="1" max-occur="1" prereq="-1" />
-    <action id="0" object="Front door" importance="1" max-occur="1" prereq="-1" />
   </activity>
 
   <activity id="16" name="Use computer">
@@ -106,11 +101,11 @@
   </activity>
 
   <activity id="16" name="Vacuum floors">
-    <action id="0" object="Table" importance="1" max-occur="1" prereq="-1" />
+    <action id="0" object="Bathroom light switch" importance="1" max-occur="1" prereq="-1" />
   </activity>
 
   <activity id="17" name="Wash dishes">
-    <action id="0" object="Table" importance="1" max-occur="1" prereq="-1" />
+    <action id="0" object="Bathroom light switch" importance="1" max-occur="1" prereq="-1" />
   </activity>
 
   <activity id="18" name="Wash face">

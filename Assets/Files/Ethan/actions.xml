@@ -10,7 +10,7 @@
   <action id="7"  name="Take pills" animation="7" />
   <action id="8"  name="Sit down" animation="8" />
   <action id="9"  name="Stand up" animation="9" />
-  <action id="10" name="Use toilet" animation="10" />
+  <action id="10" name="Sit" animation="10" />
   <action id="11" name="Use computer" animation="11" />
   <action id="12" name="Drink" animation="12" />
   <action id="13" name="Text" animation="13" />
