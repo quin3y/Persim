@@ -21,6 +21,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 			AICharacterControl characterController = GameObject.FindGameObjectWithTag("Character").GetComponent<AICharacterControl>();
 
+		
 			if (characterController.nextAction.name == "Stand up" || characterController.nextAction.name == "Put down right" ||
 				characterController.nextAction.name == "Open door" || characterController.nextAction.name == "Close door" ||
 				characterController.nextAction.name == "Get up" || characterController.nextAction.name == "Close door" ||
@@ -33,7 +34,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 			ChangeObjectStatusAtEnd(characterController.nextAction);
 
-			if (characterController.nextAction.name == "Sit down" || characterController.nextAction.name == "Use toilet" ||
+			if (characterController.nextAction.name == "Sit down" || characterController.nextAction.name == "Sit" ||
 				characterController.nextAction.name == "Use computer" || characterController.nextAction.name == "Lie down" ||
 				characterController.nextAction.name == "Turn off lamp" || characterController.nextAction.name == "Text" ||
 				characterController.nextAction.name == "Pick up right" || characterController.nextAction.name == "Take pills" ||

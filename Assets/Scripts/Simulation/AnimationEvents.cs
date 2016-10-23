@@ -108,7 +108,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             if (characterController.nextAction.obj.name == "Bedroom door") {
                 bedroomDoorAnimator.SetBool("bedroomDoorOpen", true);
             }
-            else if (characterController.nextAction.obj.name == "Front door") {
+            else if (characterController.nextAction.obj.name == "Front door inside") {
                 frontDoorAnimator.SetBool("frontDoorOpen", true);
             }
 		}
@@ -157,6 +157,12 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		void MoveCharacterOnBed() {
 			GameObject.FindGameObjectWithTag("Character").transform.position = new Vector3(10, 0.016f, 8.7f);
 			characterController.isLyingDown = true;
+		}
+
+		void LetCharacterFall() {
+			FallDetection fall = GameObject.Find("Plane").GetComponent<FallDetection>();
+			fall.characterCouldFall = true;
+			Debug.Log("characterCouldFall");
 		}
 	}
 }
