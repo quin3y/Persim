@@ -78,9 +78,9 @@ namespace UnityStandardAssets.Characters.ThirdPerson {
 				// Control buttons panel
 				GUI.Box(new Rect(screenWidth-268, 7, 260, 114), "", "timer");
 				// Displays time and current activity
-				GUI.Label(new Rect(screenWidth-290, 23, 201, 30), "<size=17><color=#dadada>"+timeText + "     " + currActivity+"</color></size>", "nothing");
+				GUI.Label(new Rect(screenWidth-250, 23, 201, 30), timeText + "     " + currActivity, "fontMedium");
 				// Displays play speed
-				GUI.Label(new Rect(screenWidth-98, 79, 201, 30), "<size=17><color=#dadada>x"+Time.timeScale+"</color></size>", "nothing");
+				GUI.Label(new Rect(screenWidth-58, 78, 201, 30), "x"+Time.timeScale, "fontLarge");
 
 				// Activity panel
 				GUI.Box(new Rect(screenWidth-268, 159, 260, 360), "");
@@ -98,16 +98,16 @@ namespace UnityStandardAssets.Characters.ThirdPerson {
 					}
 				}
 				// Text labels for the tabs
-				GUI.Label(new Rect(screenWidth-234, 141, 112, 45), "<size=19><color=#dadada>Activity</color></size>", "");
-				GUI.Label(new Rect(screenWidth-112, 141, 112, 45), "<size=19><color=#dadada>Context</color></size>", "");
+				GUI.Label(new Rect(screenWidth-232, 141, 112, 45), "Activity", "fontLarge");
+				GUI.Label(new Rect(screenWidth-109, 141, 112, 45), "Context", "fontLarge");
 
 
 				if (!contextTabActive) {
 					// List of activities in the Activities panel's scroll box
-                    int scrollViewHeight = characterControl.activityPlayback.activities.Count * 38;
-                    scrollPosition = GUI.BeginScrollView(new Rect(screenWidth-262, 177, 310, 342), scrollPosition, new Rect(screenWidth-110, 40, 200, scrollViewHeight));
+					int scrollViewHeight = characterControl.activityPlayback.activities.Count * 39;
+                    scrollPosition = GUI.BeginScrollView(new Rect(screenWidth-262, 177, 310, 342), scrollPosition, new Rect(screenWidth-110, 38, 200, scrollViewHeight));
                     for (int i = 0; i < characterControl.activityPlayback.activities.Count; i++) {
-						if (GUI.Button(new Rect(Screen.width - 90, 52 + 36 * i, 200, 33), "<size=17><color=#e5e5e5>"+characterControl.activityPlayback.activities[i].name+"</color></size>", "toDoList")) {
+						if (GUI.Button(new Rect(screenWidth-90, 44+38*i, 200, 29), characterControl.activityPlayback.activities[i].name, "toDoList")) {
                             toDoList.Add(characterControl.activityPlayback.activities[i].name);
                             characterControl.playlist.AddActivity(i);
                         }
@@ -117,23 +117,23 @@ namespace UnityStandardAssets.Characters.ThirdPerson {
 
                     // Queue panel - is hidden when context tab is active
                     GUI.Label(new Rect(screenWidth-268, 525, 260, 270), "");
-					GUI.Label(new Rect(screenWidth-235, 537, 222, 45), "<size=19><color=#dadada>Queue</color></size>", "");
+					GUI.Label(new Rect(screenWidth-235, 537, 222, 45), "Queue", "fontLarge");
 					//Clear Button
 					if (GUI.Button(new Rect(screenWidth-77, 526, 45, 45), "", "clear")) {
 						characterControl.playlist.Clear();
 						toDoList.Clear();
 					}
 					// List of upcoming activities in the Queue panel
-					int scrollViewHeightToDoList = toDoList.Count * 40;
-					scrollPositionToDoList = GUI.BeginScrollView(new Rect(screenWidth-242, 572, 290, 222), scrollPositionToDoList, new Rect(3, 35, 200, scrollViewHeightToDoList));
+					int scrollViewHeightToDoList = toDoList.Count * 39;
+					scrollPositionToDoList = GUI.BeginScrollView(new Rect(screenWidth-242, 572, 290, 222), scrollPositionToDoList, new Rect(3, 38, 200, scrollViewHeightToDoList));
 					for (int i = 0; i < toDoList.Count; i++) {
-						if (GUI.Button(new Rect(181, 55+38*i, 12, 12), "", "x")) {					// The x button to delete an activty after hovering
+						if (GUI.Button(new Rect(181, 53+38*i, 12, 12), "", "x")) {					// The x button to delete an activty after hovering
 							toDoList.RemoveAt(i);
 							characterControl.playlist.DeleteActivity(i);
 						}
 						//The Label of the toDoList activity
-						GUI.Label(new Rect(3, 44+38*i, 200, 33), new GUIContent(toDoList[i], "h" + i), "toDoList");
-						if (GUI.Button(new Rect(181, 55+38*i, 12, 12), "", "x")) {
+						GUI.Label(new Rect(3, 44+38*i, 200, 29), new GUIContent(toDoList[i], "h" + i), "toDoList");
+						if (GUI.Button(new Rect(181, 53+38*i, 12, 12), "", "x")) {
 							toDoList.RemoveAt(i);
 							characterControl.playlist.DeleteActivity(i);
 						}
@@ -151,10 +151,10 @@ namespace UnityStandardAssets.Characters.ThirdPerson {
 
 				// Context tab is active - hard coded context graph
 				if (contextTabActive) {
-					GUI.Button(new Rect(Screen.width-135, 260, 85, 33), "<size=16><color=#e5e5e5>Working</color></size>", "toDoList");
-					GUI.Button(new Rect(Screen.width-260, 220, 150, 33), "<size=16><color=#e5e5e5>Personal hygiene</color></size>", "toDoList");
-					GUI.Button(new Rect(Screen.width-125, 420, 85, 33), "<size=16><color=#e5e5e5>Sleeping</color></size>", "toDoList");
-					GUI.Button(new Rect(Screen.width-250, 420, 85, 33), "<size=16><color=#e5e5e5>Morning</color></size>", "toDoList");
+					GUI.Button(new Rect(Screen.width-135, 260, 85, 33), "Working", "toDoList");
+					GUI.Button(new Rect(Screen.width-260, 220, 150, 33), "Personal hygiene", "toDoList");
+					GUI.Button(new Rect(Screen.width-125, 420, 85, 33), "Sleeping", "toDoList");
+					GUI.Button(new Rect(Screen.width-250, 420, 85, 33), "Morning", "toDoList");
 				}
 
 
@@ -198,11 +198,11 @@ namespace UnityStandardAssets.Characters.ThirdPerson {
 				if (GUI.Button(new Rect(screenWidth-257, 65, 45, 45), "", "gear")) {
 					menu = true;
 				}
-					
-				String[] dataRecords = stateSpaceManager.GetLastNDataRecords(5);
-				for (int i = 0; i < 5; i++) {
-					GUI.Label(new Rect(0, 650 + i * 25, 300, 20), "<size=17><color=#dadada>"+ dataRecords[i] +"</color></size>", "nothing");
-				}
+
+                String[] dataRecords = stateSpaceManager.GetLastNDataRecords(5);
+                for (int i = 0; i < 5; i++) {
+                    GUI.Label(new Rect(20, 550 + i * 25, 300, 20), dataRecords[i], "fontMedium");
+                }
 			}
 		}
 	}
