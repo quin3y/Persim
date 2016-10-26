@@ -15,11 +15,11 @@
   <object name="Bed" type="nav static" x="10.575" y="0" z="8.45" rotation-x="-1.043081E-07" rotation-y="0.707107" rotation-z="0.7071066" />
   <object name="Nightstand left" type="nav static" x="9.4" y="-0.04488337" z="9.35" rotation-x="-1.152023E-07" rotation-y="0.7071069" rotation-z="0.7071066" />
   <object name="Dining chair 2" type="nav static" x="2.83" y="0" z="14.7" rotation-x="1.152023E-07" rotation-y="0.7071067" rotation-z="0.7071068" />
-  <object name="Dining table" type="nav static" x="2.83" y="-3.8743E-07" z="13.6" rotation-x="-0.7071068" rotation-y="0" rotation-z="0" />
+  <object name="Dining table" type="nav static" x="2.83" y="0.005" z="13.6" rotation-x="-0.7071068" rotation-y="0" rotation-z="0" />
   <object name="End base unit" type="nav static" x="8.71" y="0.7710001" z="3.6" rotation-x="-0.5" rotation-y="0.5" rotation-z="0.5000001" />
   <object name="Bathroom sink" type="nav static" x="0.56" y="-0.16" z="4.6" rotation-x="-0.5" rotation-y="0.5" rotation-z="0.5000001" />
   <object name="Toilet" type="nav static" x="-1.891" y="-0.06" z="0.502" rotation-x="8.146034E-08" rotation-y="0" rotation-z="0" />
-  <object name="Dining chair 4" type="nav static" x="2.83" y="0" z="12.47" rotation-x="-0.7071068" rotation-y="0" rotation-z="0" />
+  <object name="Dining chair 4" type="nav static" x="2.959" y="0" z="12.47" rotation-x="-0.7071068" rotation-y="0" rotation-z="0" />
   <object name="Burner" type="nav static" x="0.938" y="0.684" z="8.491" rotation-x="-0.5" rotation-y="0.5" rotation-z="0.5000001" />
   <object name="Vacuum" type="nav static" x="8.42" y="0" z="0.67" rotation-x="-0.5" rotation-y="0.5" rotation-z="0.5000001" />
   <object name="Computer chair" type="nav static" x="12.401" y="0" z="15.001" rotation-x="-0.707089" rotation-y="-0.005023809" rotation-z="-0.005023699" />
@@ -68,7 +68,7 @@
   <object name="Kitchen cup" type="non-nav static" x="1.16" y="0.74" z="7.85" rotation-x="0.7071068" rotation-y="0" rotation-z="0" />
   <object name="Knife set" type="non-nav static" x="4.56" y="0.736" z="7.3" rotation-x="-0.5" rotation-y="-0.5" rotation-z="-0.5000001" />
   <object name="Razor stand" type="non-nav static" x="0.9788" y="0.751" z="4.0207" rotation-x="0" rotation-y="0" rotation-z="0" />
-  <object name="Plate" type="non-nav static" x="3.03" y="0.689" z="13.7" rotation-x="-0.7071068" rotation-y="0" rotation-z="0" />
+  <object name="Plate" type="non-nav static" x="3.03" y="0.738" z="13.7" rotation-x="-0.7071068" rotation-y="0" rotation-z="0" />
   <object name="Bathroom light" type="non-nav static" x="2.97" y="4.58" z="3.11" rotation-x="0" rotation-y="0" rotation-z="0" />
   <object name="Towel" type="non-nav static" x="0.678" y="0.861" z="2.766" rotation-x="0" rotation-y="0" rotation-z="0" />
   <object name="Bathroom light switch" type="non-nav static" x="4.845" y="1.212" z="2.74" rotation-x="-1.152023E-07" rotation-y="-0.7071069" rotation-z="-0.7071066" />

@@ -20,7 +20,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				if (characterController.nextAction != null) {
 					float distance = Vector3.Distance(characterTransform.position, characterController.nextAction.obj.position);
 					if (characterController.nextAction.name == "Pick up right" && distance >= 1.2f && distance <= 2.9f) {
-						print(distance);
+//						print(distance);
 						if (characterController.nextAction.obj.name == "Razor") {
 							transform.position = new Vector3(1.38f, 1f, 3.79f);
 							transform.rotation = Quaternion.Euler(new Vector3(26f, 304f, 3f));

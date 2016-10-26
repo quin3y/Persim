@@ -107,7 +107,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		//writes new xml file called activitesCopy according to list of activities passed in
 		public static void SaveActivityConfiguration(string characterName, List<Activity> activities) {
 //			Debug.Log ("Saving Activity Configuration");
-			XmlTextWriter writer = new XmlTextWriter("Assets/Files/" + characterName + "/activities copy.xml", Encoding.UTF8); //making XmlWriter
+			XmlTextWriter writer = new XmlTextWriter("Assets/Files/" + characterName + "/activities.xml", Encoding.UTF8); //making XmlWriter
 			writer.Formatting = Formatting.Indented; //making the sure the xml file will be indented
 			writer.WriteStartDocument(); //writes <?xml version="1.0" encoding="utf-8"?>
 			writer.WriteStartElement("activities"); // writes <activities>
