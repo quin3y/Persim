@@ -14,7 +14,7 @@
     <rotation x="0" y="0" z="0" />
     <in-hand-position x="0" y="0" z="0" />
     <in-hand-rotation x="0" y="0" z="0" />
-    <character-position x="1.3" y="0" z="4.58" />
+    <character-position x="1.3" y="0" z="4.5" />
     <character-rotation x="-99" y="0" z="1" />
   </object>
   
@@ -100,11 +100,11 @@
   </object>
   
   <object id="11" name="Kitchen cup" status="off">
-    <position x="1.07" y="0.74" z="7.85" />
+    <position x="1.16" y="0.74" z="7.85" />
     <rotation x="270" y="0" z="0" />
     <in-hand-position x="0.084" y="0.3" z="0.143" />
     <in-hand-rotation x="353" y="275" z="222" />
-    <character-position x="1.38" y="0" z="7.5" />
+    <character-position x="1.7" y="0" z="7.4" />
     <character-rotation x="-99" y="0" z="1" />
   </object>
 
@@ -131,7 +131,7 @@
     <rotation x="0" y="0" z="0" />
     <in-hand-position x="0" y="0" z="0" />
     <in-hand-rotation x="0" y="0" z="0" />
-    <character-position x="1.6" y="0" z="1.1" />
+    <character-position x="1.4" y="0" z="1.1" />
     <character-rotation x="1" y="0" z="0" />
   </object>
   
@@ -178,7 +178,7 @@
     <rotation x="0" y="0" z="0" />
     <in-hand-position x="0" y="0" z="0" />
     <in-hand-rotation x="0" y="0" z="0" />
-    <character-position x="4.5" y="0" z="3.4" />
+    <character-position x="4.5" y="0" z="3.35" />
     <character-rotation x="2" y="0" z="-1" />
   </object>
   

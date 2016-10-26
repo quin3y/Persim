@@ -53,17 +53,19 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 //				character.Move(Vector3.zero, false, false);
 //			}
 
-			//=======================================================
 
 			if (nextAction != null && !arrivedAtDestination) {
 				character.Move(navAgent.desiredVelocity, false, false);
+				print("1111111111");
 				if (!navAgent.pathPending) {
 					if (navAgent.remainingDistance <= navAgent.stoppingDistance) {
 						if (Vector3.Distance(transform.position, nextAction.location) > 0.25f) {
 							character.Move((nextAction.location - transform.position), false, false);
+//							print("22222222");
 						}
 					    else {
 							arrivedAtDestination = true;
+//							print("33333333");
 
 //							transform.position = nextAction.obj.characterPosition;
 							transform.rotation = Quaternion.LookRotation(nextAction.obj.characterRotation);
@@ -77,6 +79,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			else {
 				// We still need to call the character's move function, but we send zeroed input as the move param.
 				character.Move(Vector3.zero, false, false);
+				print("4444444");
+
 			}
         }
 
@@ -124,7 +128,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				navAgent.destination = nextAction.location;
 				currentActivity = id;
 				activityFinished = false;
-				print("activity finished = " + activityFinished);
 			}
 		}
     }

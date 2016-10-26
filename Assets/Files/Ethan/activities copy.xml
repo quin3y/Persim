@@ -65,6 +65,7 @@
     <action id="0" object="Bathroom light switch" importance="1" max-occur="1" prereq="-1" />
   </activity>
   <activity id="14" name="Use bathroom">
+    <action id="1" object="Bathroom light switch on" importance="0" max-occur="1" prereq="-1" />
     <action id="8" object="Toilet" importance="1" max-occur="1" prereq="-1" />
     <action id="10" object="Toilet" importance="1" max-occur="3" prereq="-1" />
     <action id="9" object="Toilet" importance="1" max-occur="1" prereq="-1" />
@@ -87,11 +88,12 @@
     <action id="0" object="Bathroom light switch" importance="1" max-occur="1" prereq="-1" />
   </activity>
   <activity id="19" name="Wash face">
+    <action id="1" object="Bathroom light switch on" importance="0" max-occur="1" prereq="-1" />
     <action id="5" object="Bathroom sink" importance="1" max-occur="1" prereq="-1" />
     <action id="6" object="Towel" importance="1" max-occur="1" prereq="-1" />
+    <action id="2" object="Bathroom light switch" importance="0" max-occur="1" prereq="1" />
   </activity>
   <activity id="20" name="Wash hands">
-    <action id="1" object="Bathroom light switch on" importance="1" max-occur="1" prereq="-1" />
     <action id="3" object="Bathroom sink" importance="1" max-occur="1" prereq="-1" />
     <action id="4" object="Towel" importance="1" max-occur="1" prereq="3" />
     <action id="2" object="Bathroom light switch" importance="1" max-occur="1" prereq="1" />

@@ -29,7 +29,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 		public void AddDataRecord(TimeSpan time, string objName, string status) {
 			dataset.Add(new DataRecord(time, objName, status));
-			print("sensor " + time + ", " + objName + ", " + status);
+//			print("sensor " + time + ", " + objName + ", " + status);
 		}
 
 		public void PrintDataset() {
