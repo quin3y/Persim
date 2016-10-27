@@ -15,14 +15,14 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		void OnTriggerEnter(Collider col) {
 			if (col.gameObject.tag == "Hip" || col.gameObject.tag == "Head") {
 				stateSpaceManager.AddDataRecord(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))),
-					transform.parent.gameObject.name, "on");
+					transform.parent.gameObject.name + " motion sensor", "on");
 			}
 		}
 
 		void OnTriggerExit(Collider col) {
 			if (col.gameObject.tag == "Hip" || col.gameObject.tag == "Head") {
 				stateSpaceManager.AddDataRecord(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))),
-					transform.parent.gameObject.name, "off");
+					transform.parent.gameObject.name + " motion sensor", "off");
 			}
 		}
 	}

@@ -33,12 +33,12 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			if (characterController.nextAction.name == "Turn on light") {
 				GameObject.Find("Bathroom light").GetComponent<Light>().intensity = 4;
 				stateSpaceManager.AddDataRecord(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))),
-					"Bathroom light", "on");
+					"Bathroom light motion sensor", "on");
 			}
 			if (characterController.nextAction.name == "Turn off light") {
 				GameObject.Find("Bathroom light").GetComponent<Light>().intensity = 0;
 				stateSpaceManager.AddDataRecord(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))),
-					"Bathroom light", "off");
+					"Bathroom light motion sensor", "on");
 			}
 		}
 
@@ -46,7 +46,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		void TurnOffLamp() {
 			GameObject.Find("Main light").GetComponent<Light>().intensity = 0;
 			stateSpaceManager.AddDataRecord(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))),
-				"Lamp", "off");
+				"Lamp motion sensor", "on");
 		}
 
 		// Turn on the main light when the character gets up
@@ -162,7 +162,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		void LetCharacterFall() {
 			FallDetection fall = GameObject.Find("Plane").GetComponent<FallDetection>();
 			fall.characterCouldFall = true;
-			Debug.Log("characterCouldFall");
 		}
 	}
 }

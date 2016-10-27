@@ -42,7 +42,9 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			using (System.IO.StreamWriter file = 
 				new System.IO.StreamWriter(@"Assets/Files/" + characterName + "/dataset.txt")) {
 				foreach (DataRecord record in dataset) {
-					file.WriteLine(record.ToString());
+					if (record.objName != "Character fell") {
+						file.WriteLine(record.ToString());
+					}
 				}
 			}
 

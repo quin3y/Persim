@@ -56,7 +56,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 			if (nextAction != null && !arrivedAtDestination) {
 				character.Move(navAgent.desiredVelocity, false, false);
-				print("1111111111");
+//				print("1111111111");
 				if (!navAgent.pathPending) {
 					if (navAgent.remainingDistance <= navAgent.stoppingDistance) {
 						if (Vector3.Distance(transform.position, nextAction.location) > 0.25f) {
@@ -79,8 +79,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			else {
 				// We still need to call the character's move function, but we send zeroed input as the move param.
 				character.Move(Vector3.zero, false, false);
-				print("4444444");
-
+//				print("4444444");
 			}
         }
 

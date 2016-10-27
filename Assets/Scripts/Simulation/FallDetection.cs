@@ -69,7 +69,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			}
 			print("Character fell in the " + loc);
 			stateSpaceManager.AddDataRecord(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))),
-				"Character fell", loc);
+				"Floor motion sensor", "on");
 		}
 	}
 }

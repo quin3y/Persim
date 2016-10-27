@@ -22,14 +22,14 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		void OnTriggerEnter(Collider col) {
 			if (col.gameObject.tag == "LeftHand" || col.gameObject.tag == "RightHand") {
 				stateSpaceManager.AddDataRecord(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))),
-                    transform.parent.name, "on");
+                    transform.parent.name + " RFID tag", "on");
 			}
 		}
 
 		void OnTriggerExit(Collider col) {
 			if (col.gameObject.tag == "LeftHand" || col.gameObject.tag == "RightHand") {
 				stateSpaceManager.AddDataRecord(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))),
-                    transform.parent.name, "off");
+					transform.parent.name + " RFID tag", "off");
 			}
 		}
 	}

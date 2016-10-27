@@ -17,14 +17,14 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		void OnTriggerEnter(Collider col) {
 			if (col.gameObject.name == "Contact Sensor B") {
 				stateSpaceManager.AddDataRecord(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))),
-					transform.parent.parent.gameObject.name, "closed");
+					transform.parent.parent.gameObject.name + " contact sensor", "on");
 			}
 		}
 
 		void OnTriggerExit(Collider col) {
 			if (col.gameObject.name == "Contact Sensor B") {
 				stateSpaceManager.AddDataRecord(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))),
-					transform.parent.parent.gameObject.name, "open");
+					transform.parent.parent.gameObject.name + " contact sensor", "off");
 			}
 		}
 	}

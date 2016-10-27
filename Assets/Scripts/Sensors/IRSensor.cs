@@ -19,12 +19,12 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("RightHand").transform.position) < 0.35f && !isOn) {
 				isOn = true;
 				stateSpaceManager.AddDataRecord(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))),
-					transform.parent.name, "on");
+					transform.parent.name + " IR sensor", "on");
 			}
 			if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("RightHand").transform.position) >= 0.35f && isOn) {
 				isOn = false;
 				stateSpaceManager.AddDataRecord(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))),
-					transform.parent.name, "off");
+					transform.parent.name + " IR sensor", "off");
 			}
 		}
 	}
