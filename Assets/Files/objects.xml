@@ -39,8 +39,8 @@
   <object id="4" name="Comb" status="off">
     <position x="0.96" y="0.76" z="5.1" />
     <rotation x="90" y="103.77" z="103.77" />
-    <in-hand-position x="-0.12" y="-0.01" z="-0.056" />
-    <in-hand-rotation x="82" y="208" z="225" />
+    <in-hand-position x="-0.042" y="0.345" z="0.095" />
+    <in-hand-rotation x="0" y="53.38" z="289" />
     <character-position x="1.29" y="0" z="5" />
     <character-rotation x="-1" y="0" z="0" />
   </object>
@@ -123,8 +123,8 @@
   <object id="13" name="Razor" status="off">
     <position x="0.97" y="0.78" z="4.02" />
     <rotation x="0" y="0" z="7.5" />
-    <in-hand-position x="-0.085" y="0" z="-0.08" />
-    <in-hand-rotation x="334" y="84.4" z="321.3" />
+    <in-hand-position x="-0.0725" y="0.3116" z="0.0658" />
+    <in-hand-rotation x="315" y="353" z="83" />
     <character-position x="1.27" y="0.016" z="3.86" />
     <character-rotation x="-1" y="0" z="0" />
   </object>

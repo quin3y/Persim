@@ -1,2 +1,32 @@
 08:43:00, Front door contact sensor, on
-08:43:06, Floor motion sensor, on
+08:43:10, Bathroom light motion sensor, on
+08:43:14, Razor RFID tag, on
+08:43:14, Razor RFID tag, off
+08:43:14, Razor RFID tag, on
+08:43:14, Razor RFID tag, off
+08:43:14, Razor RFID tag, on
+08:43:14, Razor RFID tag, off
+08:43:14, Razor RFID tag, on
+08:43:14, Razor RFID tag, off
+08:43:14, Razor RFID tag, on
+08:43:14, Razor RFID tag, off
+08:43:14, Razor RFID tag, on
+08:43:14, Razor RFID tag, off
+08:43:15, Razor RFID tag, on
+08:43:15, Razor RFID tag, off
+08:43:15, Razor RFID tag, on
+08:43:15, Razor RFID tag, off
+08:43:15, Razor RFID tag, on
+08:43:15, Razor RFID tag, off
+08:43:15, Razor RFID tag, on
+08:43:15, Razor RFID tag, off
+08:43:15, Razor RFID tag, on
+08:43:15, Razor RFID tag, off
+08:43:15, Razor RFID tag, on
+08:43:15, Razor RFID tag, off
+08:43:15, Razor RFID tag, on
+08:43:15, Razor RFID tag, off
+08:43:15, Razor RFID tag, on
+08:43:15, Razor RFID tag, off
+08:43:15, Razor RFID tag, on
+08:43:15, Razor RFID tag, off
