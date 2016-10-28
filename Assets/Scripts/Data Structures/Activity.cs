@@ -24,8 +24,11 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 		// Add the 1st action by default, user can change
 		public void AddAction() {
-			actionIds.Add(1);
+			actionIds.Add(0);
 			objectNames.Add("Bathroom light switch");
+			importances.Add(0);
+			maxOccurs.Add(1);
+			prereqs.Add(-1);
 		}
 
 		public void DeleteAction(int index) {
@@ -33,6 +36,9 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 			actionIds.RemoveAt(index);
 			objectNames.RemoveAt(index);
+			importances.RemoveAt(index);
+			maxOccurs.RemoveAt(index);
+			prereqs.RemoveAt(index);
 		}
 	}
 }

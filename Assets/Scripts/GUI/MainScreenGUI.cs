@@ -32,9 +32,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson {
 		string timeText = "";
 		private float prevTime = 1;
 		string currActivity = "No Activity";
-		public bool hovering = false;
 		public bool menu = false;
-		public bool down = false;
 		public float time = 0;
 
 		private float screenWidth;
@@ -47,6 +45,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson {
 		void Start() {
 			stateSpaceManager = GameObject.Find("Camera").GetComponent<StateSpaceManager>();
 			characterControl = GameObject.Find("Ethan").GetComponent<AICharacterControl>();
+			Screen.SetResolution(1280, 800, false);
 			play = true; // Play button is visible, so it is currently paused. play -> hidePause
 			contextTabActive = false;
 			needsPlay = false; // needsPlay -> playing
@@ -105,18 +104,17 @@ namespace UnityStandardAssets.Characters.ThirdPerson {
 				if (!contextTabActive) {
 					// List of activities in the Activities panel's scroll box
 					int scrollViewHeight = characterControl.activityPlayback.activities.Count * 39;
-                    scrollPosition = GUI.BeginScrollView(new Rect(screenWidth-262, 177, 310, 342), scrollPosition, new Rect(screenWidth-110, 38, 200, scrollViewHeight));
-                    for (int i = 0; i < characterControl.activityPlayback.activities.Count; i++) {
+					scrollPosition = GUI.BeginScrollView(new Rect(screenWidth-262, 177, 310, 342), scrollPosition, new Rect(screenWidth-110, 38, 200, scrollViewHeight));
+					for (int i = 0; i < characterControl.activityPlayback.activities.Count; i++) {
 						if (GUI.Button(new Rect(screenWidth-90, 44+38*i, 200, 29), characterControl.activityPlayback.activities[i].name, "toDoList")) {
-                            toDoList.Add(characterControl.activityPlayback.activities[i].name);
-                            characterControl.playlist.AddActivity(i);
-                        }
-                    }
-                    GUI.EndScrollView();
+							toDoList.Add(characterControl.activityPlayback.activities[i].name);characterControl.playlist.AddActivity(i);
+						}
+					}
+					GUI.EndScrollView();
 
 
-                    // Queue panel - is hidden when context tab is active
-                    GUI.Label(new Rect(screenWidth-268, 525, 260, 270), "");
+					// Queue panel - is hidden when context tab is active
+					GUI.Label(new Rect(screenWidth-268, 525, 260, 270), "");
 					GUI.Label(new Rect(screenWidth-235, 537, 222, 45), "Queue", "fontLarge");
 					//Clear Button
 					if (GUI.Button(new Rect(screenWidth-77, 526, 45, 45), "", "clear")) {
@@ -127,23 +125,23 @@ namespace UnityStandardAssets.Characters.ThirdPerson {
 					int scrollViewHeightToDoList = toDoList.Count * 39;
 					scrollPositionToDoList = GUI.BeginScrollView(new Rect(screenWidth-242, 572, 290, 222), scrollPositionToDoList, new Rect(3, 38, 200, scrollViewHeightToDoList));
 					for (int i = 0; i < toDoList.Count; i++) {
-						if (GUI.Button(new Rect(181, 53+38*i, 12, 12), "", "x")) {					// The x button to delete an activty after hovering
-							toDoList.RemoveAt(i);
-							characterControl.playlist.DeleteActivity(i);
-						}
-						//The Label of the toDoList activity
-						GUI.Label(new Rect(3, 44+38*i, 200, 29), new GUIContent(toDoList[i], "h" + i), "toDoList");
-						if (GUI.Button(new Rect(181, 53+38*i, 12, 12), "", "x")) {
-							toDoList.RemoveAt(i);
-							characterControl.playlist.DeleteActivity(i);
-						}
-						if (characterControl.playlist.popped == true) {    //When the activty characterControl pops something it changes the GUI list to match
-							if (toDoList.Count > 0) {
-								currActivity = toDoList[0];
-								toDoList.RemoveAt(0);
-							}
-							characterControl.playlist.popped = false;
-						}
+					    if (GUI.Button(new Rect(181, 53+38*i, 12, 12), "", "x")) {					// The x button to delete an activity
+					        toDoList.RemoveAt(i);
+					        characterControl.playlist.DeleteActivity(i);
+					    }
+					    //The Label of the toDoList activity
+					    GUI.Label(new Rect(3, 44+38*i, 200, 29), new GUIContent(toDoList[i], "h" + i), "toDoList");
+					    if (GUI.Button(new Rect(181, 53+38*i, 12, 12), "", "x")) {
+					        toDoList.RemoveAt(i);
+					        characterControl.playlist.DeleteActivity(i);
+					    }
+					    if (characterControl.playlist.popped == true) {    //When the activty characterControl pops something it changes the GUI list to match
+					        if (toDoList.Count > 0) {
+					            currActivity = toDoList[0];
+					            toDoList.RemoveAt(0);
+					        }
+					        characterControl.playlist.popped = false;
+					    }
 					}
 					GUI.EndScrollView();
 				}
@@ -199,10 +197,10 @@ namespace UnityStandardAssets.Characters.ThirdPerson {
 					menu = true;
 				}
 
-                String[] dataRecords = stateSpaceManager.GetLastNDataRecords(5);
-                for (int i = 0; i < 5; i++) {
-                    GUI.Label(new Rect(20, 550 + i * 25, 300, 20), dataRecords[i], "fontMedium");
-                }
+				String[] dataRecords = stateSpaceManager.GetLastNDataRecords(5);
+				for (int i = 0; i < 5; i++) {
+					GUI.Label(new Rect(20, 550 + i * 25, 300, 20), dataRecords[i], "fontMedium");
+				}
 			}
 		}
 	}
