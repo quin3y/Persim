@@ -36,7 +36,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 			if (characterController.nextAction.name == "Sit down" || characterController.nextAction.name == "Sit" ||
 				characterController.nextAction.name == "Use computer" || characterController.nextAction.name == "Lie down" ||
-				characterController.nextAction.name == "Turn off lamp" || characterController.nextAction.name == "Text" ||
+				characterController.nextAction.name == "Turn off lamp" || /*characterController.nextAction.name == "Text" ||*/
 				characterController.nextAction.name == "Pick up right" || characterController.nextAction.name == "Take pills" ||
 				characterController.nextAction.name == "Drink" || characterController.nextAction.name == "Shave" ||
 				characterController.nextAction.name == "Comb hair" || characterController.nextAction.name == "Use TV remote") {

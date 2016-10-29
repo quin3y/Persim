@@ -4,32 +4,32 @@ using System.Collections;
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
 	public class CameraLookAtCharacter : MonoBehaviour {
-		private Transform characterTransform;
-		private AICharacterControl characterController;
+		public Transform characterTransform;
+		public AICharacterControl characterControl;
 
 		public bool closeUpEnabled = true;
 
 		void Start () {
 			characterTransform = GameObject.FindGameObjectWithTag("Character").transform;
-			characterController = GameObject.FindGameObjectWithTag("Character").GetComponent<AICharacterControl>();
+			characterControl = GameObject.FindGameObjectWithTag("Character").GetComponent<AICharacterControl>();
 		}
 
 		// Change camera's position and rotation based on the character's position
 		void LateUpdate () {
 			if (closeUpEnabled) {
-				if (characterController.nextAction != null) {
-					float distance = Vector3.Distance(characterTransform.position, characterController.nextAction.obj.position);
-					if (characterController.nextAction.name == "Pick up right" && distance >= 1.2f && distance <= 2.9f) {
+				if (characterControl.nextAction != null) {
+					float distance = Vector3.Distance(characterTransform.position, characterControl.nextAction.obj.position);
+					if (characterControl.nextAction.name == "Pick up right" && distance >= 1.2f && distance <= 2.9f) {
 //						print(distance);
-						if (characterController.nextAction.obj.name == "Razor") {
+						if (characterControl.nextAction.obj.name == "Razor") {
 							transform.position = new Vector3(1.38f, 1f, 3.79f);
 							transform.rotation = Quaternion.Euler(new Vector3(26f, 304f, 3f));
 						}
-						else if (characterController.nextAction.obj.name == "Kitchen cup") {
+						else if (characterControl.nextAction.obj.name == "Kitchen cup") {
 							transform.position = new Vector3(1.4f, 1.03f, 8.05f);
 							transform.rotation = Quaternion.Euler(new Vector3(23f, 238f, 1f));
 						}
-						else if (characterController.nextAction.obj.name == "Comb") {
+						else if (characterControl.nextAction.obj.name == "Comb") {
 							transform.position = new Vector3(1.3f, 1.02f, 4.82f);
 							transform.rotation = Quaternion.Euler(new Vector3(21f, -52.5f, -1f));
 						}
@@ -64,7 +64,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			// Bedroom
 			else if ((characterTransform.position.x >= 8f && characterTransform.position.z >= 3.72f && characterTransform.position.z < 9.7f) ||
 				(characterTransform.position.x >= 9f && characterTransform.position.z < 3.7f)) {
-				if (characterController.isLyingDown) {
+				if (characterControl.isLyingDown) {
 					transform.position = new Vector3(9.2f, 1.6f, 4.8f);
 					transform.rotation = Quaternion.Euler(new Vector3(17, 10, -1));
 				}
