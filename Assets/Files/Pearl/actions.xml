@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+  <action id="0"  name="Idle" animation="0" />
+  <action id="1"  name="Turn on light" animation="1" />
+  <action id="2"  name="Turn off light" animation="2" />
+  <action id="3"  name="Wash hands" animation="3" />
+  <action id="4"  name="Dry hands" animation="4" />
+  <action id="5"  name="Wash face" animation="5" />
+  <action id="6"  name="Dry face" animation="6" />  
+  <action id="7"  name="Take pills" animation="7" />
+  <action id="8"  name="Sit down" animation="8" />
+  <action id="9"  name="Stand up" animation="9" />
+  <action id="10" name="Sit" animation="10" />
+  <action id="11" name="Use computer" animation="11" />
+  <action id="12" name="Drink" animation="12" />
+  <action id="13" name="Text" animation="13" />
+  <action id="14" name="Shave" animation="14" />
+  <action id="15" name="Get water" animation="15" />
+  <action id="16" name="Squeeze toothpaste" animation="16" />
+  <action id="17" name="Brush teeth" animation="17" />
+  <action id="18" name="Gargle" animation="18" />
+  <action id="19" name="Pick up right" animation="19" />
+  <action id="20" name="Put down right" animation="20" />
+  <action id="21" name="Comb hair" animation="21" />
+  <action id="22" name="Flush toilet" animation="22" />
+  <action id="23" name="Open door" animation="23" />
+  <action id="24" name="Close door" animation="24" />
+  <action id="25" name="Fall" animation="25" />
+  <action id="26" name="Lie down" animation="26" />
+  <action id="27" name="Turn off lamp" animation="27" />
+  <action id="28" name="Sleep" animation="28" />
+  <action id="29" name="Get up" animation="29" />
+  <action id="30" name="Use TV remote" animation="30" />
+  <action id="31" name="Get up off ground" animation="31" />
+  
+</actions>

@@ -65,9 +65,9 @@ namespace UnityStandardAssets.Characters.ThirdPerson {
 
         void Start() {
             stateSpaceManager = GameObject.Find("Camera").GetComponent<StateSpaceManager>();
-            simEntity = GameObject.Find("Ethan").GetComponent<SimulationEngine>().SimEntity;
+			simEntity = GameObject.FindGameObjectWithTag("Character").GetComponent<SimulationEngine>().SimEntity;
 			Screen.SetResolution(1280, 800, false);
-            characterControl = GameObject.Find("Ethan").GetComponent<AICharacterControl>();
+			characterControl = GameObject.FindGameObjectWithTag("Character").GetComponent<AICharacterControl>();
         }
 
 		void Update() {
@@ -75,9 +75,9 @@ namespace UnityStandardAssets.Characters.ThirdPerson {
             timeSpan = TimeSpan.FromSeconds(time);
             DateTime todayTime = DateTime.Today.Add(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))));
             timeText = todayTime.ToString("hh:mm:ss tt");
-            for (int i = 0; i < characterControl.activityPlayback.activities.Count; i++) {
-                nameList.Add(characterControl.activityPlayback.activities[i].name);
-            }
+//            for (int i = 0; i < characterControl.activityPlayback.activities.Count; i++) {
+//                nameList.Add(characterControl.activityPlayback.activities[i].name);
+//            }
         }
 
         void OnGUI() {
@@ -178,10 +178,16 @@ namespace UnityStandardAssets.Characters.ThirdPerson {
 				}
 
 				if (charScreenUp) {
-				    GUI.Box(new Rect(500f / 1280f * Screen.width, 180f / 800f * Screen.height, 140f / 1280f * Screen.width, 210f / 800f * Screen.height), "", "char1");
-				    GUI.Box(new Rect(650f / 1280f * Screen.width, 180f / 800f * Screen.height, 140f / 1280f * Screen.width, 210f / 800f * Screen.height), "", "char1");
-				    GUI.Box(new Rect(500f / 1280f * Screen.width, 400f / 800f * Screen.height, 140f / 1280f * Screen.width, 210f / 800f * Screen.height), "", "char1");
-				    GUI.Box(new Rect(650f / 1280f * Screen.width, 400f / 800f * Screen.height, 140f / 1280f * Screen.width, 210f / 800f * Screen.height), "", "char1");
+					if (GUI.Button(new Rect(300, 150, 120, 275), "", "char1")) {
+						transform.Find("Ethan")
+						GameObject.Find("Pearl").SetActive(false);
+					}
+					if (GUI.Button(new Rect(500, 150, 120, 275), "", "char2")) {
+						GameObject.Find("Ethan").SetActive(false);
+						GameObject.Find("Pearl").SetActive(true);
+					}
+//				    GUI.Box(new Rect(500f / 1280f * Screen.width, 400f / 800f * Screen.height, 140f / 1280f * Screen.width, 210f / 800f * Screen.height), "", "char1");
+//				    GUI.Box(new Rect(650f / 1280f * Screen.width, 400f / 800f * Screen.height, 140f / 1280f * Screen.width, 210f / 800f * Screen.height), "", "char1");
 				}
                 if (objectScreenUp) {
                     int scrollViewHeightObj = 126 + characterControl.activityPlayback.GetObjectList().Count * 46;

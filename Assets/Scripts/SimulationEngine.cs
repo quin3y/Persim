@@ -15,7 +15,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 		void Start() {
 			// configure simulation
-			SimulationEntity.ReadObjectXml();							// static method: read objects info 
+			SimulationEntity.ReadObjectXml(this.name);							// static method: read objects info 
 
 			simEntity = new SimulationEntity();
 			simEntity.Actions = Utils.ReadActionXml(this.name);			// TODO ReadActionXml with static Actions
@@ -23,7 +23,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			simEntity.ReadContextXml(this.name);
 
 			// TODO AICharacterControl is located on another character
-			characterController = GameObject.Find("Ethan").GetComponent<AICharacterControl>();	
+			characterController = GameObject.FindGameObjectWithTag("Character").GetComponent<AICharacterControl>();	
 
 			// initialize state space
 			// TODO StateSpaceManager is located on another GameObject

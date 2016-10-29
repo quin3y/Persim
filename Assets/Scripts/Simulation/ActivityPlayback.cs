@@ -13,7 +13,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 		public void Init(string characterName) {
 			actions = Utils.ReadActionXml(characterName);
-			objects = Utils.ReadObjectXml();
+			objects = Utils.ReadObjectXml(characterName);
 			activities = Utils.ReadActivityXml(characterName);
 			actionQueue = new Queue<ActionInstance>();
 		}

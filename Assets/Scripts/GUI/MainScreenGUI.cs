@@ -44,7 +44,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson {
 
 		void Start() {
 			stateSpaceManager = GameObject.Find("Camera").GetComponent<StateSpaceManager>();
-			characterControl = GameObject.Find("Ethan").GetComponent<AICharacterControl>();
+			characterControl = GameObject.FindGameObjectWithTag("Character").GetComponent<AICharacterControl>();
 			Screen.SetResolution(1280, 800, false);
 			play = true; // Play button is visible, so it is currently paused. play -> hidePause
 			contextTabActive = false;

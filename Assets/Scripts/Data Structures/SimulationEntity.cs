@@ -24,8 +24,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		}
 
 		// static method: read object models
-		public static void ReadObjectXml() {
-			XmlReader reader = XmlReader.Create("Assets/Files/objects.xml");
+		public static void ReadObjectXml(String characterName) {
+			XmlReader reader = XmlReader.Create("Assets/Files/" + characterName + "/objects.xml");
 
 			while (reader.Read()) {
 				if (reader.NodeType == XmlNodeType.Element && reader.Name == "object") {

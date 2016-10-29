@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<contextgraph>
+	<context id="0" name="Sleep" status="any">
+		<contextconditions>
+  			<contextcondition object="Bed" status="always" />
+  			<contextcondition object="Bedroom door" status="maybe" />
+   		</contextconditions>
+   		<contextactivities>
+   			<contextactivity id="10" prob="1.0" /> <!-- if all activities have equal probability, set up 0 for all. In this case, randomly choose the next one !-->
+   		</contextactivities>
+		<nextcontexts>
+			<nextcontext id="1" prob="0.8" /> <!-- if all contexts have equal probability, set up 0 for all. In this case, randomly choose the next one !-->
+			<nextcontext id="2" prob="0.2" />
+		</nextcontexts>
+	</context>
+
+  <context id="1" name="Personal Hygiene" status="any">
+  	<contextconditions>
+  		<contextcondition object="Bathroom light switch" status="always" />
+  		<contextcondition object="Bathroom sink" status="maybe" />
+  		<contextcondition object="Towel" status="maybe" />
+  		<contextcondition object="Toilet" status="maybe" />
+  		<contextcondition object="Comb" status="maybe" />
+  		<contextcondition object="Razor" status="maybe" />
+  	</contextconditions>
+  	<contextactivities>
+  		<contextactivity id="3" prob="0.0" />
+  		<contextactivity id="13" prob="0.0" />
+  		<contextactivity id="17" prob="0.0" />
+  		<contextactivity id="22" prob="0.0" />
+  		<contextactivity id="23" prob="0.0" />
+  	</contextactivities>
+  	<nextcontexts>
+  		<nextcontext id="2" prob="0.8" />
+  		<nextcontext id="0" prob="0.2" />
+  	</nextcontexts>
+  </context>
+
+  <context id="2" name="Work" status="start">
+  	<contextconditions>
+  		<contextcondition object="Mobile phone" status="maybe" />
+  		<contextcondition object="Computer" status="always" />
+  	</contextconditions>
+  	<contextactivities>
+  		<contextactivity id="18" prob="0.3" />
+  		<contextactivity id="19" prob="0.7" />
+  	</contextactivities>
+  	<nextcontexts>
+  		<nextcontext id="1" prob="0.2" />
+  		<nextcontext id="3" prob="0.8" />
+  	</nextcontexts>
+  </context>
+
+  <context id="3" name="healthcare" status="end">
+  	<contextconditions>
+  		<contextcondition object="Kitchen cup" status="always" />
+  	</contextconditions>
+  	<contextactivities>
+  		<contextactivity id="14" prob="1.0" />
+  	</contextactivities>
+  	<nextcontexts>
+  		<nextcontext id="0" prob="1" />
+  	</nextcontexts>
+  </context>
+</contextgraph>

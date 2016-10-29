@@ -10,8 +10,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		public bool closeUpEnabled = true;
 
 		void Start () {
-			characterTransform = GameObject.Find("Ethan").transform;
-			characterController = GameObject.Find("Ethan").GetComponent<AICharacterControl>();
+			characterTransform = GameObject.FindGameObjectWithTag("Character").transform;
+			characterController = GameObject.FindGameObjectWithTag("Character").GetComponent<AICharacterControl>();
 		}
 
 		// Change camera's position and rotation based on the character's position
