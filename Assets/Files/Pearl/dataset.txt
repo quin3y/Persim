@@ -1,2 +1,2 @@
 08:43:00, Front door contact sensor, on
-08:43:08, Floor motion sensor, on
+08:43:15, Bathroom light motion sensor, on
