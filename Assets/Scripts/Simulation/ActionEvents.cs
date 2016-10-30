@@ -24,7 +24,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		
 			if (characterController.nextAction.name == "Stand up" || characterController.nextAction.name == "Put down right" ||
 				characterController.nextAction.name == "Open door" || characterController.nextAction.name == "Close door" ||
-				characterController.nextAction.name == "Get up" || characterController.nextAction.name == "Close door" ||
+				characterController.nextAction.name == "Get up" || characterController.nextAction.name == "Text" ||
 				characterController.nextAction.name == "Turn on light" || characterController.nextAction.name == "Turn off light" ||
 				characterController.nextAction.name == "Wash hands" || characterController.nextAction.name == "Dry hands" ||
 				characterController.nextAction.name == "Wash face" || characterController.nextAction.name == "Dry face" ||
@@ -36,10 +36,10 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 			if (characterController.nextAction.name == "Sit down" || characterController.nextAction.name == "Sit" ||
 				characterController.nextAction.name == "Use computer" || characterController.nextAction.name == "Lie down" ||
-				characterController.nextAction.name == "Turn off lamp" || /*characterController.nextAction.name == "Text" ||*/
+				characterController.nextAction.name == "Turn off lamp" || characterController.nextAction.name == "Use TV remote" ||
 				characterController.nextAction.name == "Pick up right" || characterController.nextAction.name == "Take pills" ||
 				characterController.nextAction.name == "Drink" || characterController.nextAction.name == "Shave" ||
-				characterController.nextAction.name == "Comb hair" || characterController.nextAction.name == "Use TV remote") {
+				characterController.nextAction.name == "Comb hair") {
 				// Go to next animation directly
 				animator.SetInteger("nextAction", characterController.activityPlayback.actionQueue.Peek().animation);
 			}

@@ -1,3 +1,114 @@
 08:43:00, Front door contact sensor, on
-08:43:10, Mobile phone, on
-08:43:32, Mobile phone, off
+08:43:16, Floor motion sensor, on
+08:43:31, Couch motion sensor, on
+08:43:31, Couch motion sensor, off
+08:43:31, Couch motion sensor, on
+08:43:31, Couch motion sensor, off
+08:43:31, Couch motion sensor, on
+08:43:31, Couch motion sensor, off
+08:43:32, Couch motion sensor, on
+08:43:32, Couch motion sensor, off
+08:43:32, Couch motion sensor, on
+08:43:32, Couch motion sensor, off
+08:43:32, Couch motion sensor, on
+08:43:32, Couch motion sensor, off
+08:43:32, Couch motion sensor, on
+08:43:33, Couch motion sensor, off
+08:43:33, Couch motion sensor, on
+08:43:33, Couch motion sensor, off
+08:43:33, Couch motion sensor, on
+08:43:33, Couch motion sensor, off
+08:43:33, Couch motion sensor, on
+08:43:33, Couch motion sensor, off
+08:43:33, Couch motion sensor, on
+08:43:33, TV remote control RFID tag, on
+08:43:33, Couch motion sensor, off
+08:43:33, TV remote control RFID tag, off
+08:43:33, Couch motion sensor, on
+08:43:33, TV remote control RFID tag, on
+08:43:33, Couch motion sensor, off
+08:43:33, TV remote control RFID tag, off
+08:43:33, TV remote control RFID tag, on
+08:43:33, Couch motion sensor, on
+08:43:33, Couch motion sensor, off
+08:43:33, TV remote control RFID tag, off
+08:43:33, Couch motion sensor, on
+08:43:33, TV remote control RFID tag, on
+08:43:33, Couch motion sensor, off
+08:43:33, TV remote control RFID tag, off
+08:43:33, TV remote control RFID tag, on
+08:43:33, Couch motion sensor, on
+08:43:34, TV remote control RFID tag, off
+08:43:34, Couch motion sensor, off
+08:43:34, Couch motion sensor, on
+08:43:34, Couch motion sensor, off
+08:43:34, Couch motion sensor, on
+08:43:36, TV remote control RFID tag, on
+08:43:36, TV remote control RFID tag, off
+08:43:36, TV remote control RFID tag, on
+08:43:36, TV remote control RFID tag, off
+08:43:36, Couch motion sensor, off
+08:43:36, Couch motion sensor, on
+08:43:37, Couch motion sensor, off
+08:43:37, Couch motion sensor, on
+08:43:37, Couch motion sensor, off
+08:43:37, Couch motion sensor, on
+08:43:37, Couch motion sensor, off
+08:43:37, Couch motion sensor, on
+08:43:38, Couch motion sensor, off
+08:43:38, Couch motion sensor, on
+08:43:38, Couch motion sensor, off
+08:43:38, Couch motion sensor, on
+08:43:38, Couch motion sensor, off
+08:43:38, Couch motion sensor, on
+08:43:38, TV remote control RFID tag, on
+08:43:38, Couch motion sensor, off
+08:43:38, TV remote control RFID tag, off
+08:43:38, Couch motion sensor, on
+08:43:38, TV remote control RFID tag, on
+08:43:38, Couch motion sensor, off
+08:43:38, TV remote control RFID tag, off
+08:43:38, TV remote control RFID tag, on
+08:43:38, Couch motion sensor, on
+08:43:38, Couch motion sensor, off
+08:43:38, TV remote control RFID tag, off
+08:43:38, Couch motion sensor, on
+08:43:38, TV remote control RFID tag, on
+08:43:38, Couch motion sensor, off
+08:43:38, Couch motion sensor, on
+08:43:38, TV remote control RFID tag, off
+08:43:41, TV remote control RFID tag, on
+08:43:41, TV remote control RFID tag, off
+08:43:41, TV remote control RFID tag, on
+08:43:41, TV remote control RFID tag, off
+08:43:41, Couch motion sensor, off
+08:43:41, Couch motion sensor, on
+08:43:42, Couch motion sensor, off
+08:43:42, Couch motion sensor, on
+08:43:42, Couch motion sensor, off
+08:43:42, Couch motion sensor, on
+08:43:42, Couch motion sensor, off
+08:43:42, Couch motion sensor, on
+08:43:42, Couch motion sensor, off
+08:43:42, TV remote control RFID tag, on
+08:43:42, Couch motion sensor, on
+08:43:42, TV remote control RFID tag, off
+08:43:42, Couch motion sensor, off
+08:43:42, TV remote control RFID tag, on
+08:43:43, TV remote control RFID tag, off
+08:43:43, Couch motion sensor, on
+08:43:43, Couch motion sensor, off
+08:43:43, TV remote control RFID tag, on
+08:43:43, TV remote control RFID tag, off
+08:43:43, TV remote control RFID tag, on
+08:43:43, TV remote control RFID tag, off
+08:43:43, TV remote control RFID tag, on
+08:43:43, TV remote control RFID tag, off
+08:43:43, TV remote control RFID tag, on
+08:43:44, TV remote control RFID tag, off
+08:43:44, TV remote control RFID tag, on
+08:43:44, TV remote control RFID tag, off
+08:43:49, Mobile phone, on
+08:44:11, Mobile phone, off
+08:44:17, Front door contact sensor, off
+08:44:21, Front door contact sensor, on
