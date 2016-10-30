@@ -39,8 +39,8 @@
   <object id="4" name="Comb" status="off">
     <position x="0.96" y="0.76" z="5.1" />
     <rotation x="90" y="103.77" z="103.77" />
-    <in-hand-position x="-0.042" y="0.345" z="0.095" />
-    <in-hand-rotation x="0" y="53.38" z="289" />
+    <in-hand-position x="-0.02" y="0.13" z="0.02" />
+    <in-hand-rotation x="347" y="48" z="289" />
     <character-position x="1.29" y="0" z="5" />
     <character-rotation x="-1" y="0" z="0" />
   </object>
@@ -93,8 +93,8 @@
   <object id="10" name="Mobile phone" status="off">
     <position x="0" y="0" z="0" />
     <rotation x="0" y="0" z="0" />
-    <in-hand-position x="-0.05" y="0.335" z="0.138" />
-    <in-hand-rotation x="346" y="136" z="331.2" />
+    <in-hand-position x="-0.04" y="0.11" z="0.04" />
+    <in-hand-rotation x="347" y="123" z="329" />
     <character-position x="1.9" y="0" z="11.4" />
     <character-rotation x="0" y="0" z="1" />
   </object>
@@ -102,7 +102,7 @@
   <object id="11" name="Kitchen cup" status="off">
     <position x="1.16" y="0.74" z="7.85" />
     <rotation x="270" y="0" z="0" />
-    <in-hand-position x="0.084" y="0.3" z="0.143" />
+    <in-hand-position x="0.01" y="0.08" z="0.04" />
     <in-hand-rotation x="353" y="275" z="222" />
     <character-position x="1.7" y="0" z="7.4" />
     <character-rotation x="-99" y="0" z="1" />
@@ -112,11 +112,9 @@
     <!--position x="1.09" y="0.74" z="7.5" /-->
     <position x="2.3" y="0.74" z="13.1" />
     <rotation x="0" y="0" z="0" />
-    <in-hand-position x="-0.04" y="0.35" z="0.1" />
-    <in-hand-rotation x="318.5" y="182" z="268.8" />
-    <!--character-position x="1.7" y="0" z="7" /-->
+    <in-hand-position x="0" y="0.1" z="0.04" />
+    <in-hand-rotation x="322" y="177" z="257" />
     <character-position x="1.8" y="0" z="12.55" />
-    <!--character-rotation x="-99" y="0" z="1" /-->
     <character-rotation x="0" y="0" z="1" />
   </object>
 
@@ -150,8 +148,8 @@
   <object id="16" name="TV remote control" status="off">
     <position x="9.9" y="0.454" z="12.56" />
     <rotation x="0" y="90" z="0" />
-    <in-hand-position x="0.04" y="0.34" z="0.45" />
-    <in-hand-rotation x="2.56" y="187.6" z="117.1" />
+    <in-hand-position x="0.12" y="0.08" z="0.15" />
+    <in-hand-rotation x="357" y="222" z="107" />
     <character-position x="0" y="0" z="0" />
     <character-rotation x="0" y="0" z="0" />
   </object>

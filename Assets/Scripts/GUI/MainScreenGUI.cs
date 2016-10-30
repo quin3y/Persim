@@ -77,7 +77,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson {
 				// Control buttons panel
 				GUI.Box(new Rect(screenWidth-268, 7, 260, 114), "", "timer");
 				// Displays time and current activity
-				GUI.Label(new Rect(screenWidth-250, 23, 201, 30), timeText + "     " + currActivity, "fontMedium");
+				GUI.Label(new Rect(screenWidth-260, 23, 201, 30), timeText + "     " + currActivity, "fontMedium");
 				// Displays play speed
 				GUI.Label(new Rect(screenWidth-58, 78, 201, 30), "x"+Time.timeScale, "fontLarge");
 

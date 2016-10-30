@@ -26,6 +26,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		}
 
 		public static Dictionary<string, ObjectInfo> ReadObjectXml(string characterName) {
+			Debug.Log(characterName);
 			Dictionary<string, ObjectInfo> objects = new Dictionary<string, ObjectInfo>();
 			XmlReader reader = XmlReader.Create("Assets/Files/" + characterName + "/objects.xml");
 
