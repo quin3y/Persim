@@ -1,2 +1,36 @@
 08:43:00, Front door contact sensor, on
-08:43:15, Bathroom light motion sensor, on
+08:43:11, Bedroom door contact sensor, on
+08:43:17, Bed motion sensor, on
+08:43:17, Bed motion sensor, off
+08:43:18, Bed motion sensor, on
+08:43:18, Bed motion sensor, off
+08:43:18, Bed motion sensor, on
+08:43:18, Bed motion sensor, off
+08:43:18, Bed motion sensor, on
+08:43:18, Bed motion sensor, off
+08:43:18, Bed motion sensor, on
+08:43:18, Bed motion sensor, off
+08:43:19, Bed motion sensor, on
+08:43:19, Bed motion sensor, off
+08:43:19, Bed motion sensor, on
+08:43:19, Bed motion sensor, off
+08:43:19, Bed motion sensor, on
+08:43:19, Bed motion sensor, off
+08:43:19, Bed motion sensor, on
+08:43:19, Bed motion sensor, off
+08:43:19, Bed motion sensor, on
+08:43:19, Bed motion sensor, off
+08:43:19, Bed motion sensor, on
+08:43:19, Bed motion sensor, off
+08:43:19, Lamp motion sensor, on
+08:43:19, Bed motion sensor, on
+08:43:19, Bed motion sensor, off
+08:43:19, Bed motion sensor, on
+08:43:19, Bed motion sensor, off
+08:43:20, Bed motion sensor, on
+08:43:20, Bed motion sensor, off
+08:43:20, Bed motion sensor, on
+08:43:20, Bed motion sensor, off
+08:43:24, Bed motion sensor, on
+08:43:24, Bed motion sensor, off
+08:43:31, Bedroom door contact sensor, off

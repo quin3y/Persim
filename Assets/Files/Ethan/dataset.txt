@@ -1,195 +1,39 @@
 08:43:00, Front door contact sensor, on
-08:43:43, Couch motion sensor, on
-08:43:43, Couch motion sensor, off
-08:43:44, Couch motion sensor, on
-08:43:44, Couch motion sensor, off
-08:43:44, Couch motion sensor, on
-08:43:44, Couch motion sensor, off
-08:43:44, Couch motion sensor, on
-08:43:44, Couch motion sensor, off
-08:43:44, Couch motion sensor, on
-08:43:44, Couch motion sensor, off
-08:43:45, Couch motion sensor, on
-08:43:45, Couch motion sensor, off
-08:43:45, Couch motion sensor, on
-08:43:45, Couch motion sensor, off
-08:43:45, Couch motion sensor, on
-08:43:45, Couch motion sensor, off
-08:43:45, Couch motion sensor, on
-08:43:46, Couch motion sensor, off
-08:43:46, Couch motion sensor, on
-08:43:46, Couch motion sensor, off
-08:43:46, Couch motion sensor, on
-08:43:46, Couch motion sensor, off
-08:43:46, Couch motion sensor, on
-08:43:46, Couch motion sensor, off
-08:43:46, Couch motion sensor, on
-08:43:46, Couch motion sensor, off
-08:43:46, Couch motion sensor, on
-08:43:46, Couch motion sensor, off
-08:43:46, Couch motion sensor, on
-08:43:46, Couch motion sensor, off
-08:43:46, Couch motion sensor, on
-08:43:46, TV remote control RFID tag, on
-08:43:46, Couch motion sensor, off
-08:43:46, TV remote control RFID tag, off
-08:43:46, Couch motion sensor, on
-08:43:46, TV remote control RFID tag, on
-08:43:46, Couch motion sensor, off
-08:43:46, Couch motion sensor, on
-08:43:47, TV remote control RFID tag, off
-08:43:49, TV remote control RFID tag, on
-08:43:49, TV remote control RFID tag, off
-08:43:49, TV remote control RFID tag, on
-08:43:49, TV remote control RFID tag, off
-08:43:50, Couch motion sensor, off
-08:43:50, Couch motion sensor, on
-08:43:51, Couch motion sensor, off
-08:43:51, Couch motion sensor, on
-08:43:51, Couch motion sensor, off
-08:43:51, Couch motion sensor, on
-08:43:51, Couch motion sensor, off
-08:43:51, Couch motion sensor, on
-08:43:52, Couch motion sensor, off
-08:43:52, Couch motion sensor, on
-08:43:52, Couch motion sensor, off
-08:43:52, Couch motion sensor, on
-08:43:52, Couch motion sensor, off
-08:43:52, Couch motion sensor, on
-08:43:53, Couch motion sensor, off
-08:43:53, Couch motion sensor, on
-08:43:53, Couch motion sensor, off
-08:43:53, Couch motion sensor, on
-08:43:53, Couch motion sensor, off
-08:43:53, Couch motion sensor, on
-08:43:54, Couch motion sensor, off
-08:43:54, Couch motion sensor, on
-08:43:54, Couch motion sensor, off
-08:43:54, Couch motion sensor, on
-08:43:54, Couch motion sensor, off
-08:43:55, Couch motion sensor, on
-08:43:55, Couch motion sensor, off
-08:43:55, Couch motion sensor, on
-08:43:56, Couch motion sensor, off
-08:43:56, Couch motion sensor, on
-08:43:56, Couch motion sensor, off
-08:43:56, Couch motion sensor, on
-08:43:56, Couch motion sensor, off
-08:43:56, Couch motion sensor, on
-08:43:56, Couch motion sensor, off
-08:43:56, Couch motion sensor, on
-08:43:56, Couch motion sensor, off
-08:43:56, Couch motion sensor, on
-08:43:57, Couch motion sensor, off
-08:43:57, Couch motion sensor, on
-08:43:57, Couch motion sensor, off
-08:43:57, Couch motion sensor, on
-08:43:58, Couch motion sensor, off
-08:43:58, Couch motion sensor, on
-08:43:58, TV remote control RFID tag, on
-08:43:58, TV remote control RFID tag, off
-08:43:59, Couch motion sensor, off
-08:43:59, Couch motion sensor, on
-08:44:01, TV remote control RFID tag, on
-08:44:01, TV remote control RFID tag, off
-08:44:01, TV remote control RFID tag, on
-08:44:01, TV remote control RFID tag, off
-08:44:02, Couch motion sensor, off
-08:44:02, Couch motion sensor, on
-08:44:02, Couch motion sensor, off
-08:44:02, Couch motion sensor, on
-08:44:02, Couch motion sensor, off
-08:44:02, Couch motion sensor, on
-08:44:02, Couch motion sensor, off
-08:44:02, Couch motion sensor, on
-08:44:02, Couch motion sensor, off
-08:44:02, TV remote control RFID tag, on
-08:44:03, TV remote control RFID tag, off
-08:44:03, Couch motion sensor, on
-08:44:03, Couch motion sensor, off
-08:44:03, TV remote control RFID tag, on
-08:44:03, Couch motion sensor, on
-08:44:03, TV remote control RFID tag, off
-08:44:03, Couch motion sensor, off
-08:44:03, TV remote control RFID tag, on
-08:44:03, TV remote control RFID tag, off
-08:44:03, TV remote control RFID tag, on
-08:44:03, TV remote control RFID tag, off
-08:44:03, TV remote control RFID tag, on
-08:44:04, TV remote control RFID tag, off
-08:44:04, TV remote control RFID tag, on
-08:44:04, TV remote control RFID tag, off
-08:44:04, TV remote control RFID tag, on
-08:44:04, TV remote control RFID tag, off
-08:44:10, Mobile phone, on
-08:44:31, Mobile phone, off
-08:44:33, Pill bottle RFID tag, on
-08:44:34, Pill bottle RFID tag, off
-08:44:34, Pill bottle RFID tag, on
-08:44:34, Pill bottle RFID tag, off
-08:44:47, Kitchen cup RFID tag, on
-08:44:47, Kitchen cup RFID tag, off
-08:44:47, Kitchen cup RFID tag, on
-08:44:47, Kitchen cup RFID tag, off
-08:44:47, Kitchen cup RFID tag, on
-08:44:47, Kitchen cup RFID tag, off
-08:44:47, Kitchen cup RFID tag, on
-08:44:47, Kitchen cup RFID tag, off
-08:44:47, Kitchen cup RFID tag, on
-08:44:47, Kitchen cup RFID tag, off
-08:44:47, Kitchen cup RFID tag, on
-08:44:47, Kitchen cup RFID tag, off
-08:44:47, Kitchen cup RFID tag, on
-08:44:47, Kitchen cup RFID tag, off
-08:44:47, Kitchen cup RFID tag, on
-08:44:47, Kitchen cup RFID tag, off
-08:44:47, Kitchen cup RFID tag, on
-08:44:47, Kitchen cup RFID tag, off
-08:44:47, Kitchen cup RFID tag, on
-08:44:47, Kitchen cup RFID tag, off
-08:44:47, Kitchen cup RFID tag, on
-08:44:47, Kitchen cup RFID tag, off
-08:44:47, Kitchen cup RFID tag, on
-08:44:47, Kitchen cup RFID tag, off
-08:44:47, Kitchen cup RFID tag, on
-08:44:47, Kitchen cup RFID tag, off
-08:44:47, Kitchen cup RFID tag, on
-08:44:47, Kitchen cup RFID tag, off
-08:44:47, Kitchen cup RFID tag, on
-08:44:47, Kitchen cup RFID tag, off
-08:44:48, Kitchen cup RFID tag, on
-08:44:48, Kitchen cup RFID tag, off
-08:44:48, Kitchen cup RFID tag, on
-08:44:48, Kitchen cup RFID tag, off
-08:44:48, Kitchen cup RFID tag, on
-08:44:48, Kitchen cup RFID tag, off
-08:44:48, Kitchen cup RFID tag, on
-08:44:48, Kitchen cup RFID tag, off
-08:44:48, Kitchen cup RFID tag, on
-08:44:48, Kitchen cup RFID tag, off
-08:44:48, Kitchen cup RFID tag, on
-08:44:48, Kitchen cup RFID tag, off
-08:44:48, Kitchen cup RFID tag, on
-08:44:48, Kitchen cup RFID tag, off
-08:44:48, Kitchen cup RFID tag, on
-08:44:48, Kitchen cup RFID tag, off
-08:44:48, Kitchen cup RFID tag, on
-08:44:48, Kitchen cup RFID tag, off
-08:44:48, Kitchen cup RFID tag, on
-08:44:48, Kitchen cup RFID tag, off
-08:44:48, Kitchen cup RFID tag, on
-08:44:48, Kitchen cup RFID tag, off
-08:44:48, Kitchen cup RFID tag, on
-08:44:48, Kitchen cup RFID tag, off
-08:44:48, Kitchen cup RFID tag, on
-08:44:48, Kitchen cup RFID tag, off
-08:44:48, Kitchen cup RFID tag, on
-08:44:48, Kitchen cup RFID tag, off
-08:44:48, Kitchen cup RFID tag, on
-08:44:48, Kitchen cup RFID tag, off
-08:44:48, Kitchen cup RFID tag, on
-08:44:48, Kitchen cup RFID tag, off
-08:44:48, Kitchen cup RFID tag, on
-08:44:48, Kitchen cup RFID tag, off
-08:44:58, Kitchen cup RFID tag, on
-08:44:59, Kitchen cup RFID tag, off
+08:43:08, Bedroom door contact sensor, on
+08:43:14, Bed motion sensor, on
+08:43:14, Bed motion sensor, off
+08:43:15, Bed motion sensor, on
+08:43:15, Bed motion sensor, off
+08:43:15, Bed motion sensor, on
+08:43:15, Bed motion sensor, off
+08:43:15, Bed motion sensor, on
+08:43:15, Bed motion sensor, off
+08:43:15, Bed motion sensor, on
+08:43:15, Bed motion sensor, off
+08:43:15, Bed motion sensor, on
+08:43:15, Bed motion sensor, off
+08:43:16, Bed motion sensor, on
+08:43:16, Bed motion sensor, off
+08:43:16, Bed motion sensor, on
+08:43:16, Bed motion sensor, off
+08:43:16, Bed motion sensor, on
+08:43:16, Bed motion sensor, off
+08:43:16, Bed motion sensor, on
+08:43:16, Bed motion sensor, off
+08:43:16, Bed motion sensor, on
+08:43:16, Bed motion sensor, off
+08:43:16, Lamp motion sensor, on
+08:43:16, Bed motion sensor, on
+08:43:16, Bed motion sensor, off
+08:43:17, Bed motion sensor, on
+08:43:17, Bed motion sensor, off
+08:43:17, Bed motion sensor, on
+08:43:17, Bed motion sensor, off
+08:43:17, Bed motion sensor, on
+08:43:17, Bed motion sensor, off
+08:43:17, Bed motion sensor, on
+08:43:17, Bed motion sensor, off
+08:43:17, Bed motion sensor, on
+08:43:17, Bed motion sensor, off
+08:43:22, Bed motion sensor, on
+08:43:22, Bed motion sensor, off

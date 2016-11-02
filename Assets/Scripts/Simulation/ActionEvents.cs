@@ -39,7 +39,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				characterController.nextAction.name == "Turn off lamp" || characterController.nextAction.name == "Use TV remote" ||
 				characterController.nextAction.name == "Pick up right" || characterController.nextAction.name == "Take pills" ||
 				characterController.nextAction.name == "Drink" || characterController.nextAction.name == "Shave" ||
-				characterController.nextAction.name == "Comb hair") {
+				characterController.nextAction.name == "Comb hair" || characterController.nextAction.name == "Sleep") {
 				// Go to next animation directly
 				animator.SetInteger("nextAction", characterController.activityPlayback.actionQueue.Peek().animation);
 			}

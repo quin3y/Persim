@@ -53,7 +53,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		void LightUp() {
 			GameObject.Find("Main light").GetComponent<Light>().intensity = 0.8f;
 		}
-
+			
 		// Attach the object to character's right hand
 		void PickUpRight() {
 			string objName = characterController.nextAction.obj.name;
@@ -154,9 +154,15 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			transform.position += new Vector3(0, 0, 2f);
 		}
 
-		void MoveCharacterOnBed() {
+		void MoveCharacterIn() {
 			GameObject.FindGameObjectWithTag("Character").transform.position = new Vector3(10, 0.016f, 8.7f);
 			characterController.isLyingDown = true;
+		}
+
+
+		void MoveCharacterOut() {
+			GameObject.FindGameObjectWithTag("Character").transform.position = new Vector3(9.7f, 0.1f, 8.7f);
+			characterController.isLyingDown = false;
 		}
 
 		void LetCharacterFall() {

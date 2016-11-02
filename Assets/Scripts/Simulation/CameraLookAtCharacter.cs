@@ -20,7 +20,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				if (characterControl.nextAction != null) {
 					float distance = Vector3.Distance(characterTransform.position, characterControl.nextAction.obj.position);
 					if (characterControl.nextAction.name == "Pick up right" && distance >= 1.2f && distance <= 2.9f) {
-//						print(distance);
 						if (characterControl.nextAction.obj.name == "Razor") {
 							transform.position = new Vector3(1.38f, 1f, 3.79f);
 							transform.rotation = Quaternion.Euler(new Vector3(26f, 304f, 3f));
@@ -46,10 +45,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				if (characterTransform.position.x < 3f) {
 					transform.position = new Vector3(4.5f, 1.55f, 2.85f);
 					transform.rotation = Quaternion.Euler(new Vector3(11.2f, 296.4f, 2.86f));
-//
-//                    // For shaving only
-//                    transform.position = new Vector3(3.94f, 1.5f, 1.9f);
-//                    transform.rotation = Quaternion.Euler(new Vector3(10.5f, 306.78f, 0.855f));
 				}
 			}
 			else if (characterTransform.position.x < 5.2f && characterTransform.position.z < 2.2f) {
