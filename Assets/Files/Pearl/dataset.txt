@@ -1,36 +1,451 @@
 08:43:00, Front door contact sensor, on
-08:43:11, Bedroom door contact sensor, on
-08:43:17, Bed motion sensor, on
-08:43:17, Bed motion sensor, off
-08:43:18, Bed motion sensor, on
-08:43:18, Bed motion sensor, off
-08:43:18, Bed motion sensor, on
-08:43:18, Bed motion sensor, off
-08:43:18, Bed motion sensor, on
-08:43:18, Bed motion sensor, off
-08:43:18, Bed motion sensor, on
-08:43:18, Bed motion sensor, off
-08:43:19, Bed motion sensor, on
-08:43:19, Bed motion sensor, off
-08:43:19, Bed motion sensor, on
-08:43:19, Bed motion sensor, off
-08:43:19, Bed motion sensor, on
-08:43:19, Bed motion sensor, off
-08:43:19, Bed motion sensor, on
-08:43:19, Bed motion sensor, off
-08:43:19, Bed motion sensor, on
-08:43:19, Bed motion sensor, off
-08:43:19, Bed motion sensor, on
-08:43:19, Bed motion sensor, off
-08:43:19, Lamp motion sensor, on
-08:43:19, Bed motion sensor, on
-08:43:19, Bed motion sensor, off
-08:43:19, Bed motion sensor, on
-08:43:19, Bed motion sensor, off
-08:43:20, Bed motion sensor, on
-08:43:20, Bed motion sensor, off
-08:43:20, Bed motion sensor, on
-08:43:20, Bed motion sensor, off
-08:43:24, Bed motion sensor, on
-08:43:24, Bed motion sensor, off
-08:43:31, Bedroom door contact sensor, off
+08:43:18, Couch motion sensor, on
+08:43:18, Couch motion sensor, off
+08:43:18, Couch motion sensor, on
+08:43:18, Couch motion sensor, off
+08:43:18, Couch motion sensor, on
+08:43:18, Couch motion sensor, off
+08:43:19, Couch motion sensor, on
+08:43:19, Couch motion sensor, off
+08:43:19, Couch motion sensor, on
+08:43:19, Couch motion sensor, off
+08:43:19, Couch motion sensor, on
+08:43:19, Couch motion sensor, off
+08:43:19, Couch motion sensor, on
+08:43:19, Couch motion sensor, off
+08:43:19, Couch motion sensor, on
+08:43:19, Couch motion sensor, off
+08:43:20, Couch motion sensor, on
+08:43:21, Couch motion sensor, off
+08:43:21, Couch motion sensor, on
+08:43:21, Couch motion sensor, off
+08:43:21, Couch motion sensor, on
+08:43:21, Couch motion sensor, off
+08:43:21, Couch motion sensor, on
+08:43:21, Couch motion sensor, off
+08:43:21, Couch motion sensor, on
+08:43:21, Couch motion sensor, off
+08:43:21, Couch motion sensor, on
+08:43:21, Couch motion sensor, off
+08:43:21, Couch motion sensor, on
+08:43:21, Couch motion sensor, off
+08:43:21, Couch motion sensor, on
+08:43:21, Couch motion sensor, off
+08:43:21, Couch motion sensor, on
+08:43:21, TV remote control RFID tag, on
+08:43:21, TV remote control RFID tag, off
+08:43:21, TV remote control RFID tag, on
+08:43:21, TV remote control RFID tag, off
+08:43:24, TV remote control RFID tag, on
+08:43:24, Couch motion sensor, off
+08:43:24, Couch motion sensor, on
+08:43:24, Couch motion sensor, off
+08:43:24, TV remote control RFID tag, off
+08:43:24, Couch motion sensor, on
+08:43:24, TV remote control RFID tag, on
+08:43:24, TV remote control RFID tag, off
+08:43:25, Couch motion sensor, off
+08:43:25, Couch motion sensor, on
+08:43:25, Couch motion sensor, off
+08:43:25, Couch motion sensor, on
+08:43:25, Couch motion sensor, off
+08:43:25, Couch motion sensor, on
+08:43:26, Couch motion sensor, off
+08:43:26, Couch motion sensor, on
+08:43:26, Couch motion sensor, off
+08:43:26, Couch motion sensor, on
+08:43:26, Couch motion sensor, off
+08:43:26, Couch motion sensor, on
+08:43:27, Couch motion sensor, off
+08:43:27, Couch motion sensor, on
+08:43:27, Couch motion sensor, off
+08:43:27, Couch motion sensor, on
+08:43:27, Couch motion sensor, off
+08:43:27, Couch motion sensor, on
+08:43:27, Couch motion sensor, off
+08:43:27, Couch motion sensor, on
+08:43:28, Couch motion sensor, off
+08:43:28, Couch motion sensor, on
+08:43:28, Couch motion sensor, off
+08:43:28, Couch motion sensor, on
+08:43:28, Couch motion sensor, off
+08:43:28, Couch motion sensor, on
+08:43:28, Couch motion sensor, off
+08:43:28, Couch motion sensor, on
+08:43:29, Couch motion sensor, off
+08:43:29, Couch motion sensor, on
+08:43:29, Couch motion sensor, off
+08:43:29, Couch motion sensor, on
+08:43:29, Couch motion sensor, off
+08:43:29, Couch motion sensor, on
+08:43:29, Couch motion sensor, off
+08:43:29, Couch motion sensor, on
+08:43:30, Couch motion sensor, off
+08:43:30, Couch motion sensor, on
+08:43:30, Couch motion sensor, off
+08:43:30, Couch motion sensor, on
+08:43:30, Couch motion sensor, off
+08:43:30, Couch motion sensor, on
+08:43:31, Couch motion sensor, off
+08:43:31, Couch motion sensor, on
+08:43:31, Couch motion sensor, off
+08:43:31, Couch motion sensor, on
+08:43:31, Couch motion sensor, off
+08:43:31, Couch motion sensor, on
+08:43:31, Couch motion sensor, off
+08:43:31, Couch motion sensor, on
+08:43:31, Couch motion sensor, off
+08:43:31, Couch motion sensor, on
+08:43:32, TV remote control RFID tag, on
+08:43:32, TV remote control RFID tag, off
+08:43:32, Couch motion sensor, off
+08:43:32, Couch motion sensor, on
+08:43:34, Couch motion sensor, off
+08:43:34, Couch motion sensor, on
+08:43:34, TV remote control RFID tag, on
+08:43:34, Couch motion sensor, off
+08:43:34, TV remote control RFID tag, off
+08:43:34, Couch motion sensor, on
+08:43:34, TV remote control RFID tag, on
+08:43:35, TV remote control RFID tag, off
+08:43:35, Couch motion sensor, off
+08:43:35, Couch motion sensor, on
+08:43:36, Couch motion sensor, off
+08:43:36, Couch motion sensor, on
+08:43:36, Couch motion sensor, off
+08:43:36, Couch motion sensor, on
+08:43:36, Couch motion sensor, off
+08:43:36, Couch motion sensor, on
+08:43:36, Couch motion sensor, off
+08:43:36, Couch motion sensor, on
+08:43:36, Couch motion sensor, off
+08:43:37, Couch motion sensor, on
+08:43:37, Couch motion sensor, off
+08:43:37, TV remote control RFID tag, on
+08:43:37, TV remote control RFID tag, off
+08:43:37, TV remote control RFID tag, on
+08:43:37, TV remote control RFID tag, off
+08:43:37, TV remote control RFID tag, on
+08:43:37, TV remote control RFID tag, off
+08:43:37, TV remote control RFID tag, on
+08:43:37, TV remote control RFID tag, off
+08:43:38, TV remote control RFID tag, on
+08:43:38, TV remote control RFID tag, off
+08:43:38, TV remote control RFID tag, on
+08:43:38, TV remote control RFID tag, off
+08:43:38, TV remote control RFID tag, on
+08:43:38, TV remote control RFID tag, off
+08:43:38, TV remote control RFID tag, on
+08:43:38, TV remote control RFID tag, off
+08:43:42, Computer chair motion sensor, on
+08:43:42, Computer chair motion sensor, off
+08:43:42, Computer chair motion sensor, on
+08:43:42, Computer chair motion sensor, off
+08:43:42, Computer chair motion sensor, on
+08:43:42, Computer chair motion sensor, off
+08:43:42, Computer chair motion sensor, on
+08:43:42, Computer chair motion sensor, off
+08:43:42, Computer chair motion sensor, on
+08:43:42, Computer chair motion sensor, off
+08:43:42, Computer chair motion sensor, on
+08:43:42, Computer chair motion sensor, off
+08:43:43, Computer chair motion sensor, on
+08:43:43, Computer chair motion sensor, off
+08:43:43, Computer chair motion sensor, on
+08:43:43, Computer, on
+08:43:43, Computer chair motion sensor, off
+08:43:43, Computer chair motion sensor, on
+08:43:43, Computer chair motion sensor, off
+08:43:43, Computer chair motion sensor, on
+08:43:44, Computer chair motion sensor, off
+08:43:44, Computer chair motion sensor, on
+08:43:45, Computer chair motion sensor, off
+08:43:45, Computer chair motion sensor, on
+08:43:45, Computer chair motion sensor, off
+08:43:45, Computer chair motion sensor, on
+08:43:46, Computer chair motion sensor, off
+08:43:46, Computer chair motion sensor, on
+08:43:46, Computer chair motion sensor, off
+08:43:46, Computer chair motion sensor, on
+08:43:46, Computer chair motion sensor, off
+08:43:46, Computer chair motion sensor, on
+08:43:47, Computer chair motion sensor, off
+08:43:47, Computer chair motion sensor, on
+08:43:47, Computer chair motion sensor, off
+08:43:47, Computer chair motion sensor, on
+08:43:47, Computer chair motion sensor, off
+08:43:47, Computer chair motion sensor, on
+08:43:48, Computer chair motion sensor, off
+08:43:48, Computer chair motion sensor, on
+08:43:49, Computer chair motion sensor, off
+08:43:49, Computer chair motion sensor, on
+08:43:49, Computer chair motion sensor, off
+08:43:49, Computer chair motion sensor, on
+08:43:49, Computer chair motion sensor, off
+08:43:49, Computer chair motion sensor, on
+08:43:49, Computer chair motion sensor, off
+08:43:49, Computer chair motion sensor, on
+08:43:49, Computer chair motion sensor, off
+08:43:49, Computer chair motion sensor, on
+08:43:49, Computer chair motion sensor, off
+08:43:49, Computer chair motion sensor, on
+08:43:50, Computer chair motion sensor, off
+08:43:50, Computer chair motion sensor, on
+08:43:50, Computer chair motion sensor, off
+08:43:50, Computer chair motion sensor, on
+08:43:50, Computer chair motion sensor, off
+08:43:50, Computer chair motion sensor, on
+08:43:51, Computer chair motion sensor, off
+08:43:51, Computer chair motion sensor, on
+08:43:51, Computer chair motion sensor, off
+08:43:51, Computer chair motion sensor, on
+08:43:52, Computer chair motion sensor, off
+08:43:52, Computer chair motion sensor, on
+08:43:52, Computer chair motion sensor, off
+08:43:52, Computer chair motion sensor, on
+08:43:53, Computer chair motion sensor, off
+08:43:53, Computer chair motion sensor, on
+08:43:53, Computer chair motion sensor, off
+08:43:53, Computer chair motion sensor, on
+08:43:53, Computer chair motion sensor, off
+08:43:53, Computer chair motion sensor, on
+08:43:53, Computer chair motion sensor, off
+08:43:53, Computer chair motion sensor, on
+08:43:53, Computer chair motion sensor, off
+08:43:53, Computer chair motion sensor, on
+08:43:54, Computer chair motion sensor, off
+08:43:54, Computer chair motion sensor, on
+08:43:54, Computer chair motion sensor, off
+08:43:54, Computer chair motion sensor, on
+08:43:55, Computer chair motion sensor, off
+08:43:55, Computer chair motion sensor, on
+08:43:55, Computer chair motion sensor, off
+08:43:55, Computer chair motion sensor, on
+08:43:56, Computer chair motion sensor, off
+08:43:56, Computer chair motion sensor, on
+08:43:56, Computer chair motion sensor, off
+08:43:56, Computer chair motion sensor, on
+08:43:56, Computer chair motion sensor, off
+08:43:56, Computer chair motion sensor, on
+08:43:56, Computer chair motion sensor, off
+08:43:56, Computer chair motion sensor, on
+08:43:56, Computer chair motion sensor, off
+08:43:56, Computer chair motion sensor, on
+08:43:57, Computer chair motion sensor, off
+08:43:57, Computer chair motion sensor, on
+08:43:57, Computer chair motion sensor, off
+08:43:57, Computer chair motion sensor, on
+08:43:58, Computer chair motion sensor, off
+08:43:58, Computer chair motion sensor, on
+08:43:58, Computer chair motion sensor, off
+08:43:58, Computer chair motion sensor, on
+08:43:58, Computer chair motion sensor, off
+08:43:58, Computer chair motion sensor, on
+08:43:58, Computer chair motion sensor, off
+08:43:58, Computer chair motion sensor, on
+08:43:58, Computer chair motion sensor, off
+08:43:58, Computer chair motion sensor, on
+08:43:58, Computer chair motion sensor, off
+08:43:58, Computer chair motion sensor, on
+08:43:59, Computer, off
+08:43:59, Computer, on
+08:44:00, Computer chair motion sensor, off
+08:44:00, Computer chair motion sensor, on
+08:44:00, Computer chair motion sensor, off
+08:44:00, Computer chair motion sensor, on
+08:44:01, Computer chair motion sensor, off
+08:44:01, Computer chair motion sensor, on
+08:44:01, Computer chair motion sensor, off
+08:44:01, Computer chair motion sensor, on
+08:44:03, Computer chair motion sensor, off
+08:44:03, Computer chair motion sensor, on
+08:44:03, Computer chair motion sensor, off
+08:44:03, Computer chair motion sensor, on
+08:44:03, Computer chair motion sensor, off
+08:44:03, Computer chair motion sensor, on
+08:44:03, Computer chair motion sensor, off
+08:44:03, Computer chair motion sensor, on
+08:44:03, Computer chair motion sensor, off
+08:44:03, Computer chair motion sensor, on
+08:44:03, Computer chair motion sensor, off
+08:44:03, Computer chair motion sensor, on
+08:44:04, Computer chair motion sensor, off
+08:44:04, Computer chair motion sensor, on
+08:44:06, Computer chair motion sensor, off
+08:44:06, Computer chair motion sensor, on
+08:44:06, Computer chair motion sensor, off
+08:44:06, Computer chair motion sensor, on
+08:44:06, Computer chair motion sensor, off
+08:44:06, Computer chair motion sensor, on
+08:44:07, Computer chair motion sensor, off
+08:44:07, Computer chair motion sensor, on
+08:44:07, Computer chair motion sensor, off
+08:44:07, Computer chair motion sensor, on
+08:44:07, Computer chair motion sensor, off
+08:44:07, Computer chair motion sensor, on
+08:44:07, Computer chair motion sensor, off
+08:44:07, Computer chair motion sensor, on
+08:44:07, Computer chair motion sensor, off
+08:44:07, Computer chair motion sensor, on
+08:44:08, Computer chair motion sensor, off
+08:44:08, Computer chair motion sensor, on
+08:44:08, Computer chair motion sensor, off
+08:44:08, Computer chair motion sensor, on
+08:44:08, Computer chair motion sensor, off
+08:44:08, Computer chair motion sensor, on
+08:44:08, Computer chair motion sensor, off
+08:44:08, Computer chair motion sensor, on
+08:44:08, Computer chair motion sensor, off
+08:44:08, Computer chair motion sensor, on
+08:44:08, Computer chair motion sensor, off
+08:44:08, Computer chair motion sensor, on
+08:44:09, Computer chair motion sensor, off
+08:44:09, Computer chair motion sensor, on
+08:44:10, Computer chair motion sensor, off
+08:44:10, Computer chair motion sensor, on
+08:44:10, Computer chair motion sensor, off
+08:44:10, Computer chair motion sensor, on
+08:44:10, Computer chair motion sensor, off
+08:44:10, Computer chair motion sensor, on
+08:44:10, Computer chair motion sensor, off
+08:44:10, Computer chair motion sensor, on
+08:44:11, Computer chair motion sensor, off
+08:44:11, Computer chair motion sensor, on
+08:44:11, Computer chair motion sensor, off
+08:44:11, Computer chair motion sensor, on
+08:44:11, Computer chair motion sensor, off
+08:44:11, Computer chair motion sensor, on
+08:44:12, Computer chair motion sensor, off
+08:44:12, Computer chair motion sensor, on
+08:44:13, Computer chair motion sensor, off
+08:44:13, Computer chair motion sensor, on
+08:44:13, Computer chair motion sensor, off
+08:44:13, Computer chair motion sensor, on
+08:44:14, Computer chair motion sensor, off
+08:44:14, Computer chair motion sensor, on
+08:44:14, Computer chair motion sensor, off
+08:44:14, Computer chair motion sensor, on
+08:44:14, Computer chair motion sensor, off
+08:44:14, Computer chair motion sensor, on
+08:44:14, Computer chair motion sensor, off
+08:44:14, Computer chair motion sensor, on
+08:44:16, Computer chair motion sensor, off
+08:44:16, Computer chair motion sensor, on
+08:44:16, Computer chair motion sensor, off
+08:44:16, Computer chair motion sensor, on
+08:44:16, Computer, off
+08:44:16, Computer, on
+08:44:17, Computer chair motion sensor, off
+08:44:17, Computer chair motion sensor, on
+08:44:17, Computer chair motion sensor, off
+08:44:17, Computer chair motion sensor, on
+08:44:17, Computer chair motion sensor, off
+08:44:17, Computer chair motion sensor, on
+08:44:18, Computer chair motion sensor, off
+08:44:18, Computer chair motion sensor, on
+08:44:18, Computer chair motion sensor, off
+08:44:18, Computer chair motion sensor, on
+08:44:18, Computer chair motion sensor, off
+08:44:18, Computer chair motion sensor, on
+08:44:19, Computer chair motion sensor, off
+08:44:19, Computer chair motion sensor, on
+08:44:19, Computer chair motion sensor, off
+08:44:19, Computer chair motion sensor, on
+08:44:19, Computer chair motion sensor, off
+08:44:19, Computer chair motion sensor, on
+08:44:20, Computer chair motion sensor, off
+08:44:20, Computer chair motion sensor, on
+08:44:20, Computer chair motion sensor, off
+08:44:20, Computer chair motion sensor, on
+08:44:20, Computer chair motion sensor, off
+08:44:20, Computer chair motion sensor, on
+08:44:21, Computer chair motion sensor, off
+08:44:21, Computer chair motion sensor, on
+08:44:21, Computer chair motion sensor, off
+08:44:21, Computer chair motion sensor, on
+08:44:21, Computer chair motion sensor, off
+08:44:21, Computer chair motion sensor, on
+08:44:22, Computer chair motion sensor, off
+08:44:22, Computer chair motion sensor, on
+08:44:23, Computer chair motion sensor, off
+08:44:23, Computer chair motion sensor, on
+08:44:23, Computer chair motion sensor, off
+08:44:23, Computer chair motion sensor, on
+08:44:23, Computer chair motion sensor, off
+08:44:23, Computer chair motion sensor, on
+08:44:23, Computer chair motion sensor, off
+08:44:23, Computer chair motion sensor, on
+08:44:24, Computer chair motion sensor, off
+08:44:24, Computer chair motion sensor, on
+08:44:24, Computer chair motion sensor, off
+08:44:24, Computer chair motion sensor, on
+08:44:24, Computer chair motion sensor, off
+08:44:24, Computer chair motion sensor, on
+08:44:24, Computer chair motion sensor, off
+08:44:24, Computer chair motion sensor, on
+08:44:24, Computer chair motion sensor, off
+08:44:24, Computer chair motion sensor, on
+08:44:25, Computer chair motion sensor, off
+08:44:25, Computer chair motion sensor, on
+08:44:25, Computer chair motion sensor, off
+08:44:25, Computer chair motion sensor, on
+08:44:25, Computer chair motion sensor, off
+08:44:26, Computer chair motion sensor, on
+08:44:26, Computer chair motion sensor, off
+08:44:26, Computer chair motion sensor, on
+08:44:27, Computer chair motion sensor, off
+08:44:27, Computer chair motion sensor, on
+08:44:27, Computer chair motion sensor, off
+08:44:27, Computer chair motion sensor, on
+08:44:27, Computer chair motion sensor, off
+08:44:27, Computer chair motion sensor, on
+08:44:27, Computer chair motion sensor, off
+08:44:27, Computer chair motion sensor, on
+08:44:28, Computer chair motion sensor, off
+08:44:28, Computer chair motion sensor, on
+08:44:28, Computer chair motion sensor, off
+08:44:28, Computer chair motion sensor, on
+08:44:29, Computer chair motion sensor, off
+08:44:29, Computer chair motion sensor, on
+08:44:30, Computer chair motion sensor, off
+08:44:30, Computer chair motion sensor, on
+08:44:30, Computer chair motion sensor, off
+08:44:30, Computer chair motion sensor, on
+08:44:30, Computer chair motion sensor, off
+08:44:30, Computer chair motion sensor, on
+08:44:30, Computer chair motion sensor, off
+08:44:30, Computer chair motion sensor, on
+08:44:31, Computer chair motion sensor, off
+08:44:31, Computer chair motion sensor, on
+08:44:31, Computer chair motion sensor, off
+08:44:31, Computer chair motion sensor, on
+08:44:31, Computer chair motion sensor, off
+08:44:31, Computer chair motion sensor, on
+08:44:32, Computer, off
+08:44:33, Computer chair motion sensor, off
+08:44:33, Computer chair motion sensor, on
+08:44:33, Computer chair motion sensor, off
+08:44:33, Computer chair motion sensor, on
+08:44:33, Computer chair motion sensor, off
+08:44:33, Computer chair motion sensor, on
+08:44:33, Computer chair motion sensor, off
+08:44:33, Computer chair motion sensor, on
+08:44:33, Computer chair motion sensor, off
+08:44:33, Computer chair motion sensor, on
+08:44:33, Computer chair motion sensor, off
+08:44:33, Computer chair motion sensor, on
+08:44:33, Computer chair motion sensor, off
+08:44:33, Computer chair motion sensor, on
+08:44:33, Computer chair motion sensor, off
+08:44:33, Computer chair motion sensor, on
+08:44:33, Computer chair motion sensor, off
+08:44:35, Computer chair motion sensor, on
+08:44:35, Computer chair motion sensor, off
+08:44:35, Computer chair motion sensor, on
+08:44:35, Computer chair motion sensor, off
+08:44:35, Computer chair motion sensor, on
+08:44:35, Computer chair motion sensor, off
+08:44:35, Computer chair motion sensor, on
+08:44:35, Computer chair motion sensor, off
+08:44:35, Computer chair motion sensor, on
+08:44:35, Computer chair motion sensor, off

@@ -24,7 +24,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
         private void Start() {
 			Init();
-//			PlayActivity(playlist.Pop());
         }
 
         private void Update() {
@@ -56,16 +55,13 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 			if (nextAction != null && !arrivedAtDestination) {
 				character.Move(navAgent.desiredVelocity, false, false);
-//				print("1111111111");
 				if (!navAgent.pathPending) {
 					if (navAgent.remainingDistance <= navAgent.stoppingDistance) {
 						if (Vector3.Distance(transform.position, nextAction.location) > 0.25f) {
 							character.Move((nextAction.location - transform.position), false, false);
-//							print("22222222");
 						}
 					    else {
 							arrivedAtDestination = true;
-//							print("33333333");
 
 //							transform.position = nextAction.obj.characterPosition;
 							transform.rotation = Quaternion.LookRotation(nextAction.obj.characterRotation);
@@ -79,7 +75,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			else {
 				// We still need to call the character's move function, but we send zeroed input as the move param.
 				character.Move(Vector3.zero, false, false);
-//				print("4444444");
 			}
         }
 
@@ -89,17 +84,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 			playlist = new ActivityPlaylist();
 //			playlist.AddActivity(3);
-
-//			PlayerPrefs.DeleteAll();
-//			Debug.Log("Cleared PlayerPrefs");
-//
-//			//adding activites that weren't finished previous run
-//			if (PlayerPrefs.GetInt("prevRun") == 1) {
-//				for (int i = 0; i <= PlayerPrefs.GetInt("previousLastIndex"); i++) {
-//					Debug.Log("Adding activity " + PlayerPrefs.GetInt("playlistIndex" + i) + " to playlist because it wasn't finished last run");
-//					playlist.AddActivity(PlayerPrefs.GetInt ("playlistIndex" + i));
-//				}
-//			}
 				
 			character = GetComponent<ThirdPersonCharacter>();
 			animator = GetComponentInChildren<Animator>();

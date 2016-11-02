@@ -21,7 +21,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			lastIndexInPlaylist++;
 			PlayerPrefs.SetInt("lastIndexInPlaylist", lastIndexInPlaylist);
 			PlayerPrefs.SetInt("playlistIndex" + lastIndexInPlaylist, id);
-			//Debug.Log("playlistIndex" + lastIndexInPlaylist + " set to " + PlayerPrefs.GetInt ("playlistIndex" + lastIndexInPlaylist));
 		}
 
 		// Delete the element at index
@@ -50,7 +49,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 		// Returns the first activity's id and removes it
 		public int Pop() {
-			//Debug.Log ("Pop Called");
 			popped = true;
 			if (playlist.Count > 0) {
 				int n = playlist[0];

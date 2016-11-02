@@ -25,10 +25,10 @@
   	</contextconditions>
   	<contextactivities>
   		<contextactivity id="3" prob="0.0" />
-  		<contextactivity id="13" prob="0.0" />
-  		<contextactivity id="17" prob="0.0" />
-  		<contextactivity id="22" prob="0.0" />
-  		<contextactivity id="23" prob="0.0" />
+  		<contextactivity id="10" prob="0.0" />
+  		<contextactivity id="14" prob="0.0" />
+  		<contextactivity id="19" prob="0.0" />
+  		<contextactivity id="20" prob="0.0" />
   	</contextactivities>
   	<nextcontexts>
   		<nextcontext id="2" prob="0.8" />
@@ -36,14 +36,16 @@
   	</nextcontexts>
   </context>
 
-  <context id="2" name="Work" status="start">
+  <context id="2" name="Leisure" status="start">
   	<contextconditions>
   		<contextcondition object="Mobile phone" status="maybe" />
   		<contextcondition object="Computer" status="always" />
+  		<contextcondition object="Couch" status="always" />
   	</contextconditions>
   	<contextactivities>
-  		<contextactivity id="18" prob="0.3" />
-  		<contextactivity id="19" prob="0.7" />
+  		<contextactivity id="15" prob="0.3" />
+  		<contextactivity id="16" prob="0.3" />
+  		<contextactivity id="21" prob="0.4" />
   	</contextactivities>
   	<nextcontexts>
   		<nextcontext id="1" prob="0.2" />
@@ -51,12 +53,12 @@
   	</nextcontexts>
   </context>
 
-  <context id="3" name="healthcare" status="end">
+  <context id="3" name="Health Care" status="end">
   	<contextconditions>
   		<contextcondition object="Kitchen cup" status="always" />
   	</contextconditions>
   	<contextactivities>
-  		<contextactivity id="14" prob="1.0" />
+  		<contextactivity id="12" prob="1.0" />
   	</contextactivities>
   	<nextcontexts>
   		<nextcontext id="0" prob="1" />
