@@ -25,6 +25,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson {
 		public Vector2 scrollPosition = Vector2.zero;
 		public Vector2 scrollPositionToDoList = Vector2.zero;
 		public AICharacterControl characterControl;
+		public SimulationEntity simEntity;
 
 		public bool play;
 		bool contextTabActive;
@@ -44,6 +45,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson {
 		void Start() {
 			stateSpaceManager = GameObject.Find("Camera").GetComponent<StateSpaceManager>();
 			characterControl = GameObject.FindGameObjectWithTag("Character").GetComponent<AICharacterControl>();
+			simEntity = GameObject.FindGameObjectWithTag("Character").GetComponent<SimulationEngine>().SimEntity;
+
 			Screen.SetResolution(1280, 800, false);
 			play = true; // Play button is visible, so it is currently paused
 			contextTabActive = false;
@@ -116,22 +119,10 @@ namespace UnityStandardAssets.Characters.ThirdPerson {
 				// Context tab is active - hard coded build button
 				if (contextTabActive) {
 					if (GUI.Button (new Rect (Screen.width-185, 190, 90, 33), "Build", "buildButton")) {
-						toDoList.Add(characterControl.activityPlayback.activities[14].name);
-						characterControl.playlist.AddActivity(14);
-						toDoList.Add(characterControl.activityPlayback.activities[19].name);
-						characterControl.playlist.AddActivity(19);
-						toDoList.Add(characterControl.activityPlayback.activities[3].name);
-						characterControl.playlist.AddActivity(3);
-
-						toDoList.Add(characterControl.activityPlayback.activities[15].name);
-						characterControl.playlist.AddActivity(15);
-						toDoList.Add(characterControl.activityPlayback.activities[16].name);
-						characterControl.playlist.AddActivity(16);
-						toDoList.Add(characterControl.activityPlayback.activities[21].name);
-						characterControl.playlist.AddActivity(21);
-
-						toDoList.Add(characterControl.activityPlayback.activities[12].name);
-						characterControl.playlist.AddActivity(12);
+						for (int i = 0; i < simEntity.contextActivities.Length; i++) {
+							toDoList.Add(characterControl.activityPlayback.activities[simEntity.contextActivities[i]].name);
+							characterControl.playlist.AddActivity(simEntity.contextActivities[i]);
+						}
 					}
 					// Labels for "Current" and "Next"
 					GUI.Label(new Rect(screenWidth-255, 250, 260, 270), "Current: ", "fontMedium");
