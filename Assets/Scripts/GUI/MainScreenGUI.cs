@@ -215,9 +215,9 @@ namespace UnityStandardAssets.Characters.ThirdPerson {
 					}
 				}
 
-				String[] dataRecords = stateSpaceManager.GetLastNDataRecords(5);
-				for (int i = 0; i < 5; i++) {
-					GUI.Label(new Rect(20, 550 + i * 25, 300, 20), dataRecords[i], "fontMedium");
+				String[] dataRecords = stateSpaceManager.GetLastNDataRecords(10);
+				for (int i = 0; i < 10; i++) {
+					GUI.Label(new Rect(20, 540 + i * 25, 300, 20), dataRecords[i], "fontMedium");
 				}
 			}
 		}

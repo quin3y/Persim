@@ -1,169 +1,77 @@
 08:43:00, Front door contact sensor, on
-08:43:21, Toilet motion sensor, on
-08:43:21, Toilet motion sensor, off
-08:43:21, Toilet motion sensor, on
-08:43:22, Toilet motion sensor, off
-08:43:22, Toilet motion sensor, on
-08:43:22, Toilet motion sensor, off
-08:43:22, Toilet motion sensor, on
-08:43:24, Toilet motion sensor, off
-08:43:24, Toilet motion sensor, on
-08:43:25, Toilet motion sensor, off
-08:43:25, Toilet motion sensor, on
-08:43:26, Toilet motion sensor, off
-08:43:26, Toilet motion sensor, on
-08:43:26, Toilet motion sensor, off
-08:43:29, Razor RFID tag, on
-08:43:29, Razor RFID tag, off
-08:43:29, Razor RFID tag, on
-08:43:29, Razor RFID tag, off
-08:43:29, Razor RFID tag, on
-08:43:29, Razor RFID tag, off
-08:43:29, Razor RFID tag, on
-08:43:29, Razor RFID tag, off
-08:43:29, Razor RFID tag, on
-08:43:29, Razor RFID tag, off
-08:43:29, Razor RFID tag, on
-08:43:29, Razor RFID tag, off
-08:43:29, Razor RFID tag, on
-08:43:29, Razor RFID tag, off
-08:43:29, Razor RFID tag, on
-08:43:29, Razor RFID tag, off
-08:43:29, Razor RFID tag, on
-08:43:29, Razor RFID tag, off
-08:43:29, Razor RFID tag, on
-08:43:29, Razor RFID tag, off
-08:43:30, Razor RFID tag, on
-08:43:30, Razor RFID tag, off
-08:43:30, Razor RFID tag, on
-08:43:30, Razor RFID tag, off
-08:43:30, Razor RFID tag, on
-08:43:30, Razor RFID tag, off
-08:43:30, Razor RFID tag, on
-08:43:30, Razor RFID tag, off
-08:43:30, Razor RFID tag, on
-08:43:30, Razor RFID tag, off
-08:43:30, Razor RFID tag, on
-08:43:30, Razor RFID tag, off
-08:43:30, Razor RFID tag, on
-08:43:30, Razor RFID tag, off
-08:43:30, Razor RFID tag, on
-08:43:30, Razor RFID tag, off
-08:43:30, Razor RFID tag, on
-08:43:30, Razor RFID tag, off
-08:43:30, Razor RFID tag, on
-08:43:30, Razor RFID tag, off
-08:43:30, Razor RFID tag, on
-08:43:30, Razor RFID tag, off
-08:43:30, Razor RFID tag, on
-08:43:30, Razor RFID tag, off
-08:43:30, Razor RFID tag, on
-08:43:30, Razor RFID tag, off
-08:43:30, Razor RFID tag, on
-08:43:30, Razor RFID tag, off
-08:43:30, Razor RFID tag, on
-08:43:30, Razor RFID tag, off
-08:43:30, Razor RFID tag, on
-08:43:30, Razor RFID tag, off
-08:43:30, Razor RFID tag, on
-08:43:30, Razor RFID tag, off
-08:43:30, Razor RFID tag, on
-08:43:30, Razor RFID tag, off
-08:43:30, Razor RFID tag, on
-08:43:30, Razor RFID tag, off
-08:43:30, Razor RFID tag, on
-08:43:30, Razor RFID tag, off
-08:43:30, Razor RFID tag, on
-08:43:30, Razor RFID tag, off
-08:43:30, Razor RFID tag, on
-08:43:30, Bathroom sink IR sensor, on
-08:43:30, Razor RFID tag, off
-08:43:35, Bathroom sink IR sensor, off
-08:43:37, Razor RFID tag, on
-08:43:37, Razor RFID tag, off
-08:43:38, Towel motion sensor, on
-08:43:38, Towel motion sensor, off
-08:43:38, Towel motion sensor, on
-08:43:38, Towel motion sensor, off
-08:43:38, Towel motion sensor, on
-08:43:38, Towel motion sensor, off
-08:43:38, Towel motion sensor, on
-08:43:38, Towel motion sensor, off
-08:43:38, Towel motion sensor, on
-08:43:38, Towel motion sensor, off
-08:43:38, Towel motion sensor, on
-08:43:38, Towel motion sensor, off
-08:43:38, Towel motion sensor, on
-08:43:38, Towel motion sensor, off
-08:43:39, Towel motion sensor, on
-08:43:39, Towel motion sensor, off
-08:43:39, Towel motion sensor, on
-08:43:39, Towel motion sensor, off
-08:43:39, Towel motion sensor, on
-08:43:39, Towel motion sensor, off
-08:43:39, Towel motion sensor, on
-08:43:39, Towel motion sensor, off
-08:43:39, Towel motion sensor, on
-08:43:39, Towel motion sensor, off
-08:43:39, Towel motion sensor, on
-08:43:39, Towel motion sensor, off
-08:43:39, Towel motion sensor, on
-08:43:39, Towel motion sensor, off
-08:43:39, Towel motion sensor, on
-08:43:39, Towel motion sensor, off
-08:43:39, Towel motion sensor, on
-08:43:39, Towel motion sensor, off
-08:43:39, Towel motion sensor, on
-08:43:39, Towel motion sensor, off
-08:43:39, Towel motion sensor, on
-08:43:39, Towel motion sensor, off
-08:43:39, Towel motion sensor, on
-08:43:39, Towel motion sensor, off
-08:43:39, Towel motion sensor, on
-08:43:39, Towel motion sensor, off
-08:43:39, Towel motion sensor, on
-08:43:39, Towel motion sensor, off
-08:43:39, Towel motion sensor, on
-08:43:39, Towel motion sensor, off
-08:43:39, Towel motion sensor, on
-08:43:39, Towel motion sensor, off
-08:43:39, Towel motion sensor, on
-08:43:39, Towel motion sensor, off
-08:43:39, Towel motion sensor, on
-08:43:39, Towel motion sensor, off
-08:43:39, Towel motion sensor, on
-08:43:39, Towel motion sensor, off
-08:43:39, Towel motion sensor, on
-08:43:39, Towel motion sensor, off
-08:43:39, Towel motion sensor, on
-08:43:39, Towel motion sensor, off
-08:43:39, Towel motion sensor, on
-08:43:39, Towel motion sensor, off
-08:43:39, Towel motion sensor, on
-08:43:39, Towel motion sensor, off
-08:43:39, Towel motion sensor, on
-08:43:39, Towel motion sensor, off
-08:43:39, Towel motion sensor, on
-08:43:39, Towel motion sensor, off
-08:43:39, Towel motion sensor, on
-08:43:39, Towel motion sensor, off
-08:43:39, Towel motion sensor, on
-08:43:39, Towel motion sensor, off
-08:43:39, Towel motion sensor, on
-08:43:39, Towel motion sensor, off
-08:43:39, Towel motion sensor, on
-08:43:39, Towel motion sensor, off
-08:43:39, Towel motion sensor, on
-08:43:39, Towel motion sensor, off
-08:43:39, Towel motion sensor, on
-08:43:39, Towel motion sensor, off
-08:43:39, Towel motion sensor, on
-08:43:39, Towel motion sensor, off
-08:43:39, Towel motion sensor, on
-08:43:39, Towel motion sensor, off
-08:43:39, Towel motion sensor, on
-08:43:39, Towel motion sensor, off
-08:43:40, Towel motion sensor, on
-08:43:40, Towel motion sensor, off
-08:43:40, Towel motion sensor, on
-08:43:40, Towel motion sensor, off
+08:43:18, TV remote control RFID tag, on
+08:43:18, TV remote control RFID tag, off
+08:43:19, Couch motion sensor, on
+08:43:20, Couch motion sensor, off
+08:43:20, Couch motion sensor, on
+08:43:21, Couch motion sensor, off
+08:43:21, Couch motion sensor, on
+08:43:21, TV remote control RFID tag, on
+08:43:21, Couch motion sensor, off
+08:43:21, Couch motion sensor, on
+08:43:21, TV remote control RFID tag, off
+08:43:21, Couch motion sensor, off
+08:43:21, Couch motion sensor, on
+08:43:23, TV remote control RFID tag, on
+08:43:24, TV remote control RFID tag, off
+08:43:24, Couch motion sensor, off
+08:43:24, Couch motion sensor, on
+08:43:24, Couch motion sensor, off
+08:43:24, Couch motion sensor, on
+08:43:25, Couch motion sensor, off
+08:43:25, Couch motion sensor, on
+08:43:25, Couch motion sensor, off
+08:43:25, Couch motion sensor, on
+08:43:26, Couch motion sensor, off
+08:43:26, Couch motion sensor, on
+08:43:27, TV remote control RFID tag, on
+08:43:28, Couch motion sensor, off
+08:43:28, TV remote control RFID tag, off
+08:43:28, TV remote control RFID tag, on
+08:43:28, Couch motion sensor, on
+08:43:28, Couch motion sensor, off
+08:43:28, TV remote control RFID tag, off
+08:43:28, Couch motion sensor, on
+08:43:28, TV remote control RFID tag, on
+08:43:28, Couch motion sensor, off
+08:43:28, TV remote control RFID tag, off
+08:43:28, TV remote control RFID tag, on
+08:43:28, Couch motion sensor, on
+08:43:28, TV remote control RFID tag, off
+08:43:30, TV remote control RFID tag, on
+08:43:30, TV remote control RFID tag, off
+08:43:30, TV remote control RFID tag, on
+08:43:30, TV remote control RFID tag, off
+08:43:30, Couch motion sensor, off
+08:43:30, Couch motion sensor, on
+08:43:31, Couch motion sensor, off
+08:43:31, Couch motion sensor, on
+08:43:31, Couch motion sensor, off
+08:43:31, Couch motion sensor, on
+08:43:31, Couch motion sensor, off
+08:43:31, Couch motion sensor, on
+08:43:32, Couch motion sensor, off
+08:43:32, Couch motion sensor, on
+08:43:32, Couch motion sensor, off
+08:43:32, TV remote control RFID tag, on
+08:43:32, TV remote control RFID tag, off
+08:43:32, Couch motion sensor, on
+08:43:32, Couch motion sensor, off
+08:43:32, TV remote control RFID tag, on
+08:43:32, TV remote control RFID tag, off
+08:43:32, Couch motion sensor, on
+08:43:32, Couch motion sensor, off
+08:43:32, TV remote control RFID tag, on
+08:43:32, TV remote control RFID tag, off
+08:43:32, Couch motion sensor, on
+08:43:32, Couch motion sensor, off
+08:43:32, TV remote control RFID tag, on
+08:43:32, TV remote control RFID tag, on
+08:43:32, TV remote control RFID tag, off
+08:43:32, TV remote control RFID tag, off
+08:43:33, TV remote control RFID tag, on
+08:43:33, TV remote control RFID tag, on
+08:43:33, TV remote control RFID tag, off
+08:43:33, TV remote control RFID tag, off
+08:43:33, TV remote control RFID tag, on
+08:43:33, TV remote control RFID tag, off
