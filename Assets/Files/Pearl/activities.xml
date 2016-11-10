@@ -24,7 +24,7 @@
     <action id="12" object="Kitchen cup" importance="1" max-occur="1" prereq="-1" />
     <action id="20" object="Kitchen cup" importance="1" max-occur="1" prereq="-1" />
   </activity>
-  <activity id="6" name="Eat a Meal">
+  <activity id="6" name="Eat A Meal">
     <action id="0" object="Bathroom light switch" importance="1" max-occur="1" prereq="-1" />
   </activity>
   <activity id="7" name="Fall">
@@ -36,7 +36,7 @@
     <action id="24" object="Front door outside" importance="1" max-occur="1" prereq="-1" />
     <action id="0" object="Front entrance" importance="1" max-occur="1" prereq="-1" />
   </activity>
-  <activity id="9" name="Prepare a Meal">
+  <activity id="9" name="Prepare A Meal">
     <action id="0" object="Bathroom light switch" importance="1" max-occur="1" prereq="-1" />
   </activity>
   <activity id="10" name="Shave">
