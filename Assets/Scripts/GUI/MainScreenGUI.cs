@@ -130,15 +130,15 @@ namespace UnityStandardAssets.Characters.ThirdPerson {
 
 					String curContext = "";
 					String nextContext = "";
-					if (currActivity == "Use bathroom" || currActivity == "Wash face" || currActivity == "Comb hair") {
+					if (currActivity == "Use Bathroom" || currActivity == "Wash Face" || currActivity == "Comb Hair") {
 						curContext = "Personal Hygiene";
 						nextContext = "Leisure";
 					}
-					else if (currActivity == "Use cellphone" || currActivity == "Watch TV" || currActivity == "Use computer") {
+					else if (currActivity == "Use Cellphone" || currActivity == "Watch TV" || currActivity == "Use Computer") {
 						curContext = "Leisure";
 						nextContext = "Health Care";
 					}
-					else if (currActivity == "Take medication") {
+					else if (currActivity == "Take Medication") {
 						curContext = "Health Care";
 						nextContext = "None";
 					}

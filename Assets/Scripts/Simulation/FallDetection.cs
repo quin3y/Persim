@@ -8,7 +8,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 	public class FallDetection : MonoBehaviour {
 
 		public float fallVelocityThreshold;
-		public bool characterCouldFall;
+        public bool characterCouldFall = true;
 
 		float currentHeadPositionY;
 		float previousHeadPositionY;
@@ -31,9 +31,12 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		void Update () {
 			currentHeadPositionY = head.transform.position.y;
 			headVelocity = (currentHeadPositionY - previousHeadPositionY) / Time.deltaTime; //calculating the head's velocity
+            if (headVelocity < -1.5f) {
+                print(headVelocity);
+            }
 
 			if (headCloseToGround && headVelocity < fallVelocityThreshold && characterCouldFall) { //conditions for falling
-				ReportFall();
+                ReportFall();
 				characterCouldFall = false;
 				headCloseToGround = false;
 			}
@@ -43,6 +46,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		void OnTriggerEnter(Collider c) {
 			if (c.tag == "Head") { //if the head is close to the ground
 				headCloseToGround = true;
+                print("trigger enter");
 			}
 		}
 
