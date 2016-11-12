@@ -50,7 +50,7 @@
     <action id="24" object="Bedroom door" importance="1" max-occur="1" prereq="-1" />
     <action id="26" object="Bed" importance="1" max-occur="1" prereq="-1" />
     <action id="27" object="Bed" importance="1" max-occur="1" prereq="-1" />
-    <action id="28" object="Bed" importance="1" max-occur="50" prereq="-1" />
+    <action id="28" object="Bed" importance="1" max-occur="3" prereq="-1" />
     <action id="29" object="Bed" importance="1" max-occur="1" prereq="-1" />
     <action id="23" object="Bedroom door" importance="1" max-occur="1" prereq="-1" />
   </activity>
@@ -66,7 +66,7 @@
     <action id="0" object="Bathroom light switch" importance="1" max-occur="1" prereq="-1" />
   </activity>
   <activity id="14" name="Use Bathroom">
-    <action id="1" object="Bathroom light switch on" importance="0" max-occur="1" prereq="-1" />
+    <action id="1" object="Bathroom light switch on" importance="0" max-occur="0" prereq="-1" />
     <action id="8" object="Toilet" importance="1" max-occur="1" prereq="-1" />
     <action id="10" object="Toilet" importance="1" max-occur="3" prereq="-1" />
     <action id="9" object="Toilet" importance="1" max-occur="1" prereq="-1" />
@@ -79,7 +79,7 @@
   </activity>
   <activity id="16" name="Use Computer">
     <action id="8" object="Computer chair" importance="1" max-occur="1" prereq="-1" />
-    <action id="11" object="Computer" importance="1" max-occur="3" prereq="-1" />
+    <action id="11" object="Computer" importance="1" max-occur="2" prereq="-1" />
     <action id="9" object="Computer chair" importance="1" max-occur="1" prereq="-1" />
   </activity>
   <activity id="17" name="Vacuum Floors">
@@ -89,7 +89,7 @@
     <action id="0" object="Bathroom light switch" importance="1" max-occur="1" prereq="-1" />
   </activity>
   <activity id="19" name="Wash Face">
-    <action id="1" object="Bathroom light switch on" importance="0" max-occur="1" prereq="-1" />
+    <action id="1" object="Bathroom light switch on" importance="0" max-occur="0" prereq="-1" />
     <action id="5" object="Bathroom sink" importance="1" max-occur="1" prereq="-1" />
     <action id="6" object="Towel" importance="1" max-occur="1" prereq="-1" />
     <action id="2" object="Bathroom light switch" importance="0" max-occur="1" prereq="1" />
