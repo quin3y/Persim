@@ -18,7 +18,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		int endContextId;																// ending context id
 
 		List<int> scheduledActivities = new List<int>();								// list of performed activities
-		public int[] contextActivities = {14, 19, 3, 16, 21, 12};
+		public int[] contextActivities = {19, 3, 16, 21, 12};
 
 		public SimulationEntity() {			
 			conditionStatus = new List<string> {"always", "maybe", "never"};

@@ -32,7 +32,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			currentHeadPositionY = head.transform.position.y;
 			headVelocity = (currentHeadPositionY - previousHeadPositionY) / Time.deltaTime; //calculating the head's velocity
             if (headVelocity < -1.5f) {
-                print(headVelocity);
+//                print(headVelocity);
             }
 
 			if (headCloseToGround && headVelocity < fallVelocityThreshold && characterCouldFall) { //conditions for falling
@@ -46,7 +46,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		void OnTriggerEnter(Collider c) {
 			if (c.tag == "Head") { //if the head is close to the ground
 				headCloseToGround = true;
-                print("trigger enter");
 			}
 		}
 
