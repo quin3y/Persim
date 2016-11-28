@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEditor;
 using System;
 using System.Collections.Generic;
 
@@ -32,7 +33,10 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		}
 
 		public void DeleteAction(int index) {
-			if (actionIds.Count == 0)    return;
+			if (actionIds.Count == 1) {
+				EditorUtility.DisplayDialog ("PerSim 3D", "The last action cannot be deleted", "OK", ""); // Popup error message
+				return;
+			}
 
 			actionIds.RemoveAt(index);
 			objectNames.RemoveAt(index);
