@@ -5,15 +5,14 @@ using System.Collections;
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
 	public class ContactSensor : MonoBehaviour {
-		AICharacterControl characterController;
 		StateSpaceManager stateSpaceManager;
 
 		// Use this for initialization
 		void Start () {
-			characterController = GetComponent<AICharacterControl>();
 			stateSpaceManager = GameObject.Find("Camera").GetComponent<StateSpaceManager>();
 		}
 
+        // Called when contact sensor part A and B collide
 		void OnTriggerEnter(Collider col) {
 			if (col.gameObject.name == "Contact Sensor B") {
 				stateSpaceManager.AddDataRecord(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))),

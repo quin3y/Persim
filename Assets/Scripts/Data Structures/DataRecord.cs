@@ -2,6 +2,8 @@
 using System;
 using System.Collections;
 
+// Data structure for sensor event.
+
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
 	public class DataRecord {

@@ -4,9 +4,13 @@ using System.Xml;
 using System.Collections.Generic;
 using System.Text;
 
+// Utility functions for reading data from configuration files and saving data to files.
+
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
 	public class Utils {
+
+        // Read action data from character's action.xml
 		public static List<Action> ReadActionXml(string characterName) {
 			List<Action> actionList = new List<Action>();
 			XmlReader reader = XmlReader.Create("Assets/Files/" + characterName + "/actions.xml");
@@ -25,6 +29,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			return actionList;
 		}
 
+        // Read object data from character's objects.xml
 		public static Dictionary<string, ObjectInfo> ReadObjectXml(string characterName) {
 			Dictionary<string, ObjectInfo> objects = new Dictionary<string, ObjectInfo>();
 			XmlReader reader = XmlReader.Create("Assets/Files/" + characterName + "/objects.xml");
@@ -77,6 +82,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			return objects;
 		}
 
+        // Read activity data from character's activities.xml
 		public static List<Activity> ReadActivityXml(string characterName) {
 			List<Activity> activityList = new List<Activity>();
 			XmlReader reader = XmlReader.Create("Assets/Files/" + characterName + "/activities.xml");
@@ -104,9 +110,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			return activityList;
 		}
 
-		//writes new xml file called activitesCopy according to list of activities passed in
+        // Write activity data to character's activities.xml
 		public static void SaveActivityConfiguration(string characterName, List<Activity> activities) {
-//			Debug.Log ("Saving Activity Configuration");
 			XmlTextWriter writer = new XmlTextWriter("Assets/Files/" + characterName + "/activities.xml", Encoding.UTF8); //making XmlWriter
 			writer.Formatting = Formatting.Indented; //making the sure the xml file will be indented
 			writer.WriteStartDocument(); //writes <?xml version="1.0" encoding="utf-8"?>
@@ -133,6 +138,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			writer.Close(); //close file
 		}
 
+        // Write sensor data
 		public static void SaveSensorConfiguration(string characterName) {
 			XmlTextWriter writer = new XmlTextWriter("Assets/Files/" + characterName + "/sensor info.xml", Encoding.UTF8);
             writer.Formatting = Formatting.Indented;
@@ -187,6 +193,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             writer.Close();
         }
 
+        // Write space data
 		public static void SaveSpaceInfo(string characterName) {
 			XmlTextWriter writer = new XmlTextWriter("Assets/Files/" + characterName + "/space info.xml", Encoding.UTF8);
 			writer.Formatting = Formatting.Indented;

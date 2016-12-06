@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// Data structure for object. Refer to objects.xml.
+
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
 	public class ObjectInfo {

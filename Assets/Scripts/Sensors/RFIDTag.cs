@@ -19,6 +19,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			distances.Add(Vector3.Distance(transform.position, hand.position).ToString());
 		}
 
+        // Called when character's hand collides with RFID tag's collider.
 		void OnTriggerEnter(Collider col) {
 			if (col.gameObject.tag == "LeftHand" || col.gameObject.tag == "RightHand") {
 				stateSpaceManager.AddDataRecord(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))),

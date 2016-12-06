@@ -2,6 +2,8 @@ using System;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
+// This is Unity's built-in third person character user control code.
+
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
     [RequireComponent(typeof (ThirdPersonCharacter))]

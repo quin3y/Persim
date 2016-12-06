@@ -2,7 +2,9 @@
 using System;
 using System.Collections;
 
-//script to be attached to the floor to detect when the player has fallen.  floor must have box collider
+// Script to be attached to the floor to detect when the player has fallen.
+// Floor must have box collider
+
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
 	public class FallDetection : MonoBehaviour {
@@ -17,7 +19,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		GameObject head;
 		StateSpaceManager stateSpaceManager;
 
-		//initializing everything
 		void Start() {
 			//Debug.Log("saved from player prefs:" + PlayerPrefs.GetFloat("vel"));
 			head = GameObject.FindGameObjectWithTag("Head");
@@ -31,9 +32,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		void Update () {
 			currentHeadPositionY = head.transform.position.y;
 			headVelocity = (currentHeadPositionY - previousHeadPositionY) / Time.deltaTime; //calculating the head's velocity
-            if (headVelocity < -1.5f) {
-//                print(headVelocity);
-            }
 
 			if (headCloseToGround && headVelocity < fallVelocityThreshold && characterCouldFall) { //conditions for falling
                 ReportFall();
@@ -43,12 +41,14 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			previousHeadPositionY = currentHeadPositionY;
 		}
 
+        // Called when collision event occurs.
 		void OnTriggerEnter(Collider c) {
 			if (c.tag == "Head") { //if the head is close to the ground
 				headCloseToGround = true;
 			}
 		}
 
+        // Report the fall event with character's location.
 		void ReportFall() {
 			Vector3 pos = GameObject.FindGameObjectWithTag("Character").transform.position;
 			string loc;

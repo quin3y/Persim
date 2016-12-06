@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// Change camera's position and rotation based on character's position.
+
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
 	public class CameraLookAtCharacter : MonoBehaviour {
@@ -16,7 +18,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 		// Change camera's position and rotation based on the character's position
 		void LateUpdate () {
-			if (closeUpEnabled) {
+			if (closeUpEnabled) {  // Close up shots on objects
 				if (characterControl.nextAction != null) {
 					float distance = Vector3.Distance(characterTransform.position, characterControl.nextAction.obj.position);
 					if (characterControl.nextAction.name == "Pick up right" && distance >= 1.2f && distance <= 2.9f) {
@@ -54,8 +56,9 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			else if ((characterTransform.position.x >= 4.8f && characterTransform.position.x < 8.2f && characterTransform.position.z >= 3.6f && characterTransform.position.z < 7f) || 
 				characterTransform.position.x >= 5f && characterTransform.position.x < 8.8f && characterTransform.position.z < 3.6f) {
 				transform.position = new Vector3(6.7f, 2f, 1.94f);
-				transform.LookAt(characterTransform);
+				transform.LookAt(characterTransform);  // Camera rotates
 			}
+
 			// Bedroom
 			else if ((characterTransform.position.x >= 8f && characterTransform.position.z >= 3.72f && characterTransform.position.z < 9.7f) ||
 				(characterTransform.position.x >= 9f && characterTransform.position.z < 3.7f)) {
@@ -65,12 +68,12 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				}
 				else {
 					transform.position = new Vector3(13.143f, 2f, 4.984f);
-					transform.LookAt(characterTransform);
+                    transform.LookAt(characterTransform);  // Camera rotates
 				}
 			}
 			else {
 				transform.position = new Vector3(5.4f, 2f, 13f);
-				transform.LookAt(characterTransform);
+                transform.LookAt(characterTransform);  // Camera rotates
 			}
 		}
 	}

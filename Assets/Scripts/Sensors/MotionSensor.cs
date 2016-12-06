@@ -12,6 +12,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			stateSpaceManager = GameObject.Find("Camera").GetComponent<StateSpaceManager>();
 		}
 
+        // Called when character's hip or head collides with object
 		void OnTriggerEnter(Collider col) {
 			if (col.gameObject.tag == "Hip" || col.gameObject.tag == "Head") {
 				stateSpaceManager.AddDataRecord(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))),

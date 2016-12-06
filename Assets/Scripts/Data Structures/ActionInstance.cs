@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// Data structure for actions created by ActivityPlayback.
+
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
 	public class ActionInstance {

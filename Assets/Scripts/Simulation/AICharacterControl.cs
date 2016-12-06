@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// This script controls character's movement
+
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
     [RequireComponent(typeof (NavMeshAgent))]
@@ -27,43 +29,18 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         }
 
         private void Update() {
-//			if (nextAction != null) {
-//				character.Move(navAgent.desiredVelocity, false, false);
-//				if (!navAgent.pathPending) {
-//					if (navAgent.remainingDistance <= navAgent.stoppingDistance) {
-//						if (Vector3.Distance(transform.position, nextAction.location) > 0.25f && !arrivedAtDestination) {
-//							character.Move((nextAction.location - transform.position), false, false);
-//						}
-//					    else {
-//							arrivedAtDestination = true;
-//
-//							// Rotate the character
-//							Quaternion lookRotation = Quaternion.LookRotation(nextAction.obj.characterRotation);
-//							transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, 20 * Time.deltaTime);
-//
-//							// Play animation
-//							animator.SetInteger("nextAction", nextAction.animation);
-//						}
-//					}
-//				}
-//			}
-//			else {
-//				// We still need to call the character's move function, but we send zeroed input as the move param.
-//				character.Move(Vector3.zero, false, false);
-//			}
-
-
 			if (nextAction != null && !arrivedAtDestination) {
 				character.Move(navAgent.desiredVelocity, false, false);
 				if (!navAgent.pathPending) {
 					if (navAgent.remainingDistance <= navAgent.stoppingDistance) {
+                        // Move character to destination when he is near the destination but has stopped moving
 						if (Vector3.Distance(transform.position, nextAction.location) > 0.25f) {
 							character.Move((nextAction.location - transform.position), false, false);
 						}
 					    else {
 							arrivedAtDestination = true;
 
-//							transform.position = nextAction.obj.characterPosition;
+                            // Rotate character
 							transform.rotation = Quaternion.LookRotation(nextAction.obj.characterRotation);
 
 							// Play animation
@@ -78,12 +55,12 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			}
         }
 
+        // Init character's components
 		private void Init() {
 			activityPlayback = new ActivityPlayback();
 			activityPlayback.Init(this.name);
 
 			playlist = new ActivityPlaylist();
-//			playlist.AddActivity(3);
 				
 			character = GetComponent<ThirdPersonCharacter>();
 			animator = GetComponentInChildren<Animator>();
@@ -98,6 +75,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			mobilePhone.SetActive(false);
 		}
 
+        // Use ActivityPlayback to create an action sequence and then play all actions
 		public void PlayActivity(int id) {
 			if (id < 0) {
 				print("Illegal activity id, less than 0?"+ id);

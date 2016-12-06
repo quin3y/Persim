@@ -3,6 +3,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
+// ActivityPlayback creates action sequences for activities.
+
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
 	public class ActivityPlayback {

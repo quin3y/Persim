@@ -27,17 +27,19 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			get { return stateSpaceEvaluator; }
 		}
 
+        // Add sensor event to dataset
 		public void AddDataRecord(TimeSpan time, string objName, string status) {
 			dataset.Add(new DataRecord(time, objName, status));
-//			print("sensor " + time + ", " + objName + ", " + status);
 		}
 
+        // Print dataset
 		public void PrintDataset() {
 			foreach (DataRecord record in dataset) {
 				record.Print(); 
 			}
 		}
 
+        // Save sensor data to file
 		public void SaveSensorData(string characterName) {
 			using (System.IO.StreamWriter file = 
 				new System.IO.StreamWriter(@"Assets/Files/" + characterName + "/dataset.txt")) {
@@ -59,6 +61,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			}
 		}
 
+        // Get last n sensor events
 		public String[] GetLastNDataRecords(int n) {
 			String[] records = new String[n];
 			if (n > dataset.Count) {
@@ -78,7 +81,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			return records;
 		}
 
-		// initialize state space
+		// Initialize state space
 		public void InitializeStateSpace() {
 			stateSpaceHistory = new List<StateSpace> ();
 			stateSpaceEvaluator = new StateSpace ();
@@ -117,7 +120,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			}
 		}
 
-		// update state space
+		// Update state space
 		public void UpdateStateSpace(TimeSpan time, int objId, string newStatus) {	
 			StateSpace newStateSpace = GetLatestStateSpace ();
 
@@ -163,11 +166,11 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			stateSpaceEvaluator = GetLatestStateSpace();
 		}
 
+        // Called when program is closed
 		void OnApplicationQuit() {
 			GameObject[] characters = GameObject.FindGameObjectsWithTag("Character");
 			foreach (GameObject character in characters) {
 				// Save sensor data to file
-//				PrintDataset();
 				SaveSensorData(character.name);
 				
 				// Save activity configuration to file

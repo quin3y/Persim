@@ -2,6 +2,8 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
+// Data structure for the activity queue on GUI.
+
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
 	public class ActivityPlaylist {

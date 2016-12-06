@@ -14,8 +14,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			isOn = false;
 		}
 		
-		// Update is called once per frame
 		void Update () {
+            // React when character's hand is in IR sensor's range
 			if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("RightHand").transform.position) < 0.35f && !isOn) {
 				isOn = true;
 				stateSpaceManager.AddDataRecord(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))),

@@ -2,6 +2,8 @@
 using System;
 using System.Collections;
 
+// Define events to happen when certain animations are playing.
+
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
 	public class AnimationEvents : MonoBehaviour {
@@ -26,10 +28,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             frontDoorAnimator = frontDoor.GetComponent<Animator>();
 		}
 
-		// Works for bathroom light only
+		// Turn on/off bathroom light when turn on light animation is playing
 		void TurnOnOffLight() {
-//			string lightName = characterController.nextAction.obj.name;
-
 			if (characterController.nextAction.name == "Turn on light") {
 				GameObject.Find("Bathroom light").GetComponent<Light>().intensity = 4;
 				stateSpaceManager.AddDataRecord(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))),
@@ -42,7 +42,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			}
 		}
 
-		// Turn off the main light instead
+		// Turn off the main light when character is lying on bed and turninng off lamp
 		void TurnOffLamp() {
 			GameObject.Find("Main light").GetComponent<Light>().intensity = 0;
 			stateSpaceManager.AddDataRecord(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))),
@@ -74,6 +74,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			obj.transform.rotation = Quaternion.Euler(characterController.activityPlayback.objects[obj.name].rotation);
 		}
 
+        // Attach TV remote control to character's left hand
         void PickUpTVRemote() {
             GameObject obj = GameObject.Find("TV remote control");
 			obj.transform.parent = GameObject.FindGameObjectWithTag("LeftHand").transform;
@@ -84,6 +85,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
                 characterController.activityPlayback.objects["TV remote control"].id, "on");
         }
 
+        // Detach TV remote control from character's left hand
         void PutDownRemote() {
             GameObject obj = GameObject.Find("TV remote control");
             obj.transform.parent = null;
@@ -93,7 +95,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
                 characterController.activityPlayback.objects["TV remote control"].id, "off");
         }
 
-		// Closes bedroom door
+		// Close bedroom door
 		void CloseDoor() {
             if (characterController.nextAction.obj.name == "Bedroom door") {
                 bedroomDoorAnimator.SetBool("bedroomDoorOpen", false);
@@ -103,7 +105,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             }
 		}
 
-		// Opens bedroom door
+		// Open bedroom door
 		void OpenDoor() {
             if (characterController.nextAction.obj.name == "Bedroom door") {
                 bedroomDoorAnimator.SetBool("bedroomDoorOpen", true);
@@ -165,6 +167,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			characterController.isLyingDown = false;
 		}
 
+        // Allow character to fall again after getting up
 		void LetCharacterFall() {
 			FallDetection fall = GameObject.Find("Plane").GetComponent<FallDetection>();
 			fall.characterCouldFall = true;

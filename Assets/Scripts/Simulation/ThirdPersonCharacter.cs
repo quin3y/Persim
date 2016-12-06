@@ -1,5 +1,7 @@
 using UnityEngine;
 
+// This is Unity's built-in third person character code.
+
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
 	[RequireComponent(typeof(Rigidbody))]

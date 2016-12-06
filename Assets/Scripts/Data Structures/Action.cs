@@ -1,6 +1,8 @@
 using UnityEngine;
 using System;
 
+// Data structure for action. Refer to actions.xml.
+
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
 	public class Action {

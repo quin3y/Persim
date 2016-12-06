@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 
+// This relates to character's animator state machine.
 
 namespace UnityStandardAssets.Characters.ThirdPerson
 {

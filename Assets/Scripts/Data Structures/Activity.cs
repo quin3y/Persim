@@ -3,6 +3,8 @@ using UnityEditor;
 using System;
 using System.Collections.Generic;
 
+// Data structure for activity. Refer to activities.xml.
+
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
 	public class Activity {
