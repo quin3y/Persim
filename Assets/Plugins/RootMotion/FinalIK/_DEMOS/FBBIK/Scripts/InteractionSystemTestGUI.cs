@@ -28,7 +28,7 @@ namespace RootMotion.Demos {
 				if (effectors.Length == 0) Debug.Log("Please select the effectors to interact with.");
 
 				foreach (FullBodyBipedEffector e in effectors) {
-					interactionSystem.StartInteraction(e, interactionObject, true);
+					interactionSystem.StartInteraction(e, interactionObject, false);
 				}
 			}
 
