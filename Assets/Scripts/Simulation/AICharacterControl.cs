@@ -22,10 +22,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		public GameObject leftObject = null;
 		public GameObject rightObject = null;
 		public GameObject mobilePhone;
-		public double drinkTime = 0.0f;
-		private double pauseTime = 0.0f;
 
-		//Final IK Variables
+		//===Final IK Variables===//
 		private InteractionSystem interactionSystem;
 		private GameObject cup;
 		private FullBodyBipedEffector effector;
@@ -34,6 +32,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		private bool firstAnimationStarted;
 		private bool secondAnimationStarted;
 		private Vector3[] pr;
+		public double drinkTime = 0.0f;
+		private double pauseTime = 0.0f;
 
         private void Start() {
 			Init();
@@ -68,20 +68,24 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 			//=======================================================
 			if (interactionSystem.IsPaused()) {
-				// Play First Animation
+				float animTime = 0.8f;
+				// Play First Animation (Picking up animation)
 				if (!animation.isPlaying && !firstAnimationStarted) {
-					gameObject.GetComponent<LimbIK> ().enabled = true;
+					gameObject.GetComponent<LimbIK> ().enabled = true;  // Enable LimbIK so arm movement looks biometrically correct
 					GameObject[] charHeads = GameObject.FindGameObjectsWithTag ("Head");
-					GameObject charHead = charHeads [1];
-					pr = FinalIKAnimations.AnimateObject (cup, charHead);
+					GameObject charHead = charHeads [1];  // chardHead's transform will be used as the end location for the animation
+					pr = FinalIKAnimations.AnimateObject (cup, charHead, animTime);  
+					// pr is the original start and end postion and rotation for the cup
+					// this is used later to reverse the animation
 					firstAnimationStarted = true;
 				}
-				// Play Second Animation
+				// Play Second Animation (Putting down animation)
 				else if (!animation.isPlaying && firstAnimationStarted && !secondAnimationStarted) {
+					// Pause starting the "put down" animation for the given amount of time
 					if (pauseTime > 0.0f) {
 						pauseTime -= Time.deltaTime;
 					} else {
-						FinalIKAnimations.ReverseAnimateObject (cup, pr);
+						FinalIKAnimations.ReverseAnimateObject (cup, pr, animTime);
 						secondAnimationStarted = true;
 					}
 				}

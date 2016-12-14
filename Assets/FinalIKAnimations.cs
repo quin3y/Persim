@@ -1,8 +1,28 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/*
+ * Class for animating objects using the legacy Animation component: https://docs.unity3d.com/ScriptReference/Animation.html 
+ */
 public class FinalIKAnimations : MonoBehaviour {
-	public static Vector3[] AnimateObject(GameObject animationObject, GameObject endObject) {
+	/// <summary>
+	/// Animates a GameObject that contains an Animation component
+	/// so that it moves from its start location to the specified end location.
+	/// </summary>
+	/// <param name="animationObject">
+	/// animationObject: The object to be animated using animation curves
+	/// </param>
+	/// <param name="endObject">
+	/// endObject: A placeholder gameobject which defines the transform where the animation should end
+	/// </param>
+	/// <param name="animTime">
+	/// The length of time in seconds the animation should play
+	/// </param>
+	/// <returns>
+	/// Returns a Vector3[] which contains the original start and end positions and rotations:
+	/// {startPosition, endPosition, startRotation, endRotation}
+	/// </returns>
+	public static Vector3[] AnimateObject(GameObject animationObject, GameObject endObject, float animTime) {
 		// Start & End Positions
 		Vector3 startPosition = animationObject.transform.position;
 		Vector3 endPosition = endObject.transform.position;
@@ -10,27 +30,28 @@ public class FinalIKAnimations : MonoBehaviour {
 		// Start & End Rotations
 		Vector3 startRotation = animationObject.transform.eulerAngles;
 		Vector3 endRotation = endObject.transform.localEulerAngles;
-		endRotation.z = endRotation.z-360.0f;
+		endRotation.z = endRotation.z-360.0f;  //-360.0f prevents weird spinning during animation
 
 		// Position Curves
-		AnimationCurve x_curve = AnimationCurve.EaseInOut (0.0f, startPosition.x, 1.5f, endPosition.x);
-		AnimationCurve y_curve = AnimationCurve.EaseInOut (0.0f, startPosition.y, 1.5f, endPosition.y);
-		AnimationCurve z_curve = AnimationCurve.EaseInOut (0.0f, startPosition.z, 1.5f, endPosition.z);
+		AnimationCurve x_curve = AnimationCurve.EaseInOut (0.0f, startPosition.x, animTime, endPosition.x);
+		AnimationCurve y_curve = AnimationCurve.EaseInOut (0.0f, startPosition.y, animTime, endPosition.y);
+		AnimationCurve z_curve = AnimationCurve.EaseInOut (0.0f, startPosition.z, animTime, endPosition.z);
 
 		// Rotation Curves
-		AnimationCurve roll_curve  = AnimationCurve.Linear(0.0f, startRotation.x, 1.5f, endRotation.x);
-		AnimationCurve yaw_curve   = AnimationCurve.Linear(0.0f, startRotation.y, 1.5f, endRotation.y);
-		AnimationCurve pitch_curve = AnimationCurve.Linear(0.0f, startRotation.z, 1.5f, endRotation.z);
+		AnimationCurve roll_curve  = AnimationCurve.Linear(0.0f, startRotation.x, animTime, endRotation.x);
+		AnimationCurve yaw_curve   = AnimationCurve.Linear(0.0f, startRotation.y, animTime, endRotation.y);
+		AnimationCurve pitch_curve = AnimationCurve.Linear(0.0f, startRotation.z, animTime, endRotation.z);
 
 		// Create a new AnimationClip
 		AnimationClip clip = new AnimationClip();
 		clip.legacy = true;
-		clip.wrapMode = WrapMode.Once;
+		clip.wrapMode = WrapMode.Once;  // will only ploy this animation clip once
 
 		// Position Curves
 		clip.SetCurve ("", typeof(Transform), "localPosition.x", x_curve);
 		clip.SetCurve ("", typeof(Transform), "localPosition.y", y_curve);
 		clip.SetCurve ("", typeof(Transform), "localPosition.z", z_curve);
+
 		// Rotation Curves
 		clip.SetCurve ("", typeof(Transform), "localEulerAngles.z", pitch_curve);
 		clip.SetCurve ("", typeof(Transform), "localEulerAngles.y", yaw_curve);
@@ -40,11 +61,25 @@ public class FinalIKAnimations : MonoBehaviour {
 		Animation anim = animationObject.GetComponent<Animation> ();
 		anim.AddClip (clip, "AnimateObject");
 		anim.Play ("AnimateObject");
+
 		Vector3[] pr = new Vector3[] {startPosition, endPosition, startRotation, endRotation};
 		return pr;
 	}
-
-	public static void ReverseAnimateObject(GameObject animationObject, Vector3[] pr) {
+	/// <summary>
+	/// Given original start and end positions and rotations, reverses the animation of the animation object
+	/// by moving it from the original end position to the original start position.
+	/// </summary>
+	/// <param name="animationObject">
+	/// animationObject: The object to be animated using animation curves
+	/// </param>
+	/// <param name="pr">
+	/// The original Vector3 start and end positions and rotations from the forward playing animation:
+	/// {startPosition, endPosition, startRotation, endRotation}
+	/// </param>
+	/// <param name="animTime">
+	/// The length of time in seconds the animation should play
+	/// </param>
+	public static void ReverseAnimateObject(GameObject animationObject, Vector3[] pr, float animTime) {
 		// Start & End Positions
 		Vector3 startPosition = pr[1];
 		Vector3 endPosition = pr[0];
@@ -54,14 +89,14 @@ public class FinalIKAnimations : MonoBehaviour {
 		Vector3 endRotation = pr[2];
 
 		// Position Curves
-		AnimationCurve x_curve = AnimationCurve.EaseInOut (0.0f, startPosition.x, 1.5f, endPosition.x);
-		AnimationCurve y_curve = AnimationCurve.EaseInOut (0.0f, startPosition.y, 1.5f, endPosition.y);
-		AnimationCurve z_curve = AnimationCurve.EaseInOut (0.0f, startPosition.z, 1.5f, endPosition.z);
+		AnimationCurve x_curve = AnimationCurve.EaseInOut (0.0f, startPosition.x, animTime, endPosition.x);
+		AnimationCurve y_curve = AnimationCurve.EaseInOut (0.0f, startPosition.y, animTime, endPosition.y);
+		AnimationCurve z_curve = AnimationCurve.EaseInOut (0.0f, startPosition.z, animTime, endPosition.z);
 
 		// Rotation Curves
-		AnimationCurve roll_curve  = AnimationCurve.Linear(0.0f, startRotation.x, 1.5f, endRotation.x);
-		AnimationCurve yaw_curve   = AnimationCurve.Linear(0.0f, startRotation.y, 1.5f, endRotation.y);
-		AnimationCurve pitch_curve = AnimationCurve.Linear(0.0f, startRotation.z, 1.5f, endRotation.z);
+		AnimationCurve roll_curve  = AnimationCurve.Linear(0.0f, startRotation.x, animTime, endRotation.x);
+		AnimationCurve yaw_curve   = AnimationCurve.Linear(0.0f, startRotation.y, animTime, endRotation.y);
+		AnimationCurve pitch_curve = AnimationCurve.Linear(0.0f, startRotation.z, animTime, endRotation.z);
 
 		// Create a new AnimationClip
 		AnimationClip clip = new AnimationClip();
@@ -81,6 +116,5 @@ public class FinalIKAnimations : MonoBehaviour {
 		Animation anim = animationObject.GetComponent<Animation> ();
 		anim.AddClip (clip, "AnimateObjectRev");
 		anim.Play ("AnimateObjectRev");
-		
 	}
 }
