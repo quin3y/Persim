@@ -2,11 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using RootMotion.FinalIK;
 
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
     [RequireComponent(typeof (NavMeshAgent))]
     [RequireComponent(typeof (ThirdPersonCharacter))]
+	[RequireComponent(typeof(InteractionSystem))]
     public class AICharacterControl : MonoBehaviour {
 		public ActivityPlayback activityPlayback;
 		public ActivityPlaylist playlist;
@@ -20,6 +22,18 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		public GameObject leftObject = null;
 		public GameObject rightObject = null;
 		public GameObject mobilePhone;
+
+		//===Final IK Variables===//
+		private InteractionSystem interactionSystem;
+		private GameObject cup;
+		private FullBodyBipedEffector effector;
+		[SerializeField] InteractionObject interactionObject;
+		private Animation animation;
+		private bool firstAnimationStarted;
+		private bool secondAnimationStarted;
+		private Vector3[] pr;
+		public double drinkTime = 0.0f;
+		private double pauseTime = 0.0f;
 
         private void Start() {
 			Init();
@@ -53,8 +67,40 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 //			}
 
 			//=======================================================
+			if (interactionSystem.IsPaused()) {
+				float animTime = 0.8f;
+				// Play First Animation (Picking up animation)
+				if (!animation.isPlaying && !firstAnimationStarted) {
+					gameObject.GetComponent<LimbIK> ().enabled = true;  // Enable LimbIK so arm movement looks biometrically correct
+					GameObject[] charHeads = GameObject.FindGameObjectsWithTag ("Head");
+					GameObject charHead = charHeads [1];  // chardHead's transform will be used as the end location for the animation
+					pr = FinalIKAnimations.AnimateObject (cup, charHead, animTime);  
+					// pr is the original start and end postion and rotation for the cup
+					// this is used later to reverse the animation
+					firstAnimationStarted = true;
+				}
+				// Play Second Animation (Putting down animation)
+				else if (!animation.isPlaying && firstAnimationStarted && !secondAnimationStarted) {
+					// Pause starting the "put down" animation for the given amount of time
+					if (pauseTime > 0.0f) {
+						pauseTime -= Time.deltaTime;
+					} else {
+						FinalIKAnimations.ReverseAnimateObject (cup, pr, animTime);
+						secondAnimationStarted = true;
+					}
+				}
+				// Retract hand
+				else if (!animation.isPlaying && firstAnimationStarted && secondAnimationStarted) {
+					interactionSystem.ResumeAll ();
+					gameObject.GetComponent<LimbIK> ().enabled = false;
+					firstAnimationStarted = false;
+					secondAnimationStarted = false;
+					pauseTime = drinkTime;
+					animator.SetInteger("nextAction", 0);
+				}
+			}
 
-			if (nextAction != null && !arrivedAtDestination) {
+			else if (nextAction != null && !arrivedAtDestination) {
 				character.Move(navAgent.desiredVelocity, false, false);
 				print("====================");
 				if (!navAgent.pathPending) {
@@ -70,7 +116,12 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 							transform.rotation = Quaternion.LookRotation(nextAction.obj.characterRotation);
 
 							// Play animation
-							animator.SetInteger("nextAction", nextAction.animation);
+							if (nextAction.name == "Drink") {
+								interactionSystem.StartInteraction (effector, interactionObject, true);
+							} 
+							else {	
+								animator.SetInteger ("nextAction", nextAction.animation);
+							}
 						}
 					}
 				}
@@ -110,6 +161,17 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			// Hide the mobile phone
 			mobilePhone = GameObject.Find("Mobile phone");
 			mobilePhone.SetActive(false);
+
+			//Final IK Initializations
+			interactionSystem = GetComponent<InteractionSystem>();
+			cup = GameObject.Find ("Kitchen cup");
+			animation = cup.GetComponent<Animation> ();
+			interactionObject = cup.GetComponent<InteractionObject>();
+			effector = FullBodyBipedEffector.RightHand;
+			firstAnimationStarted = false;
+			secondAnimationStarted = false;
+			pr = new Vector3[4];
+			pauseTime = drinkTime;
 		}
 
 		public void PlayActivity(int id) {

@@ -2,7 +2,7 @@
 <sensors>
   <sensor type="motion" attachTo="Couch" x="9.966999" y="0.406" z="13.22512" />
   <sensor type="motion" attachTo="Toilet" x="1.362" y="0.3570499" z="1.116" />
-  <sensor type="motion" attachTo="Computer chair" x="12.388" y="0.3304" z="15.103" />
+  <sensor type="motion" attachTo="Computer chair" x="12.317" y="0.4130001" z="15.102" />
   <sensor type="motion" attachTo="Bed" x="9.9337" y="0.4584903" z="9.255199" />
   <sensor type="motion" attachTo="Towel" x="0.704" y="0.918" z="2.782" />
   <sensor type="IR" attach-to="Bathroom sink" x="0.6660001" y="0.749" z="4.597" />
