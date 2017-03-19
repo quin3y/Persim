@@ -27,6 +27,7 @@ public class MenuGUI : MonoBehaviour {
 	public Vector2 scrollPositionToDoList = Vector2.zero;
 	public AICharacterControl Playlist;
 	bool play = true;
+	bool contextMode = false;
 	string timeText ="";
 	public float prevTime = 1;
 	bool needsPlay = false;
@@ -51,9 +52,10 @@ public class MenuGUI : MonoBehaviour {
 
 	TimeSpan timeSpan;
 	DateTime todayTime; //= DateTime.Today.Add(timeSpan);
-	StateSpaceManager stateSpaceManager;	
+	StateSpaceManager stateSpaceManager;
+	SimulationEngine simEngine;
 	SimulationEntity simEntity;
-
+	
 	
 	void Start()
 		{
@@ -63,7 +65,9 @@ public class MenuGUI : MonoBehaviour {
 			}*/
 			Screen.SetResolution(1280, 800, false);
 			stateSpaceManager = GameObject.Find("Camera").GetComponent<StateSpaceManager>();
-			simEntity = GameObject.FindGameObjectWithTag("Character").GetComponent<SimulationEngine>().SimEntity;
+			simEngine = GameObject.FindGameObjectWithTag ("Character").GetComponent<SimulationEngine> ();
+			simEntity = simEngine.SimEntity;
+
 
 			Playlist = GameObject.FindGameObjectWithTag("Character").GetComponent<AICharacterControl>();
 
@@ -91,38 +95,68 @@ public class MenuGUI : MonoBehaviour {
 		string hover = GUI.tooltip;
 			/*hours + ":" + timer + " AM  " + currActivity*/
 
-		if (!menu) {  //Only show this GUI if the main menu is not up
-				if (Playlist.playlist.Count () == 0&& Playlist.activityPlayback.actionQueue.Count == 0) {
-				needsPlay = true;
-			}
+			if (!menu) {  //Only show this GUI if the main menu is not up
+				if (Playlist.playlist.Count () == 0 && Playlist.activityPlayback.actionQueue.Count == 0) {
+					needsPlay = true;
+				}
 		
-				//Activity box
-				GUI.Box (new Rect (Screen.width - 218, 70, 215, 518), "");
+				// Model Panel
+				GUI.Label (new Rect (250, 10, 100, 30), " Mode ");
+				if (GUI.Button (new Rect (400, 10, 80, 30), "activity")) {
+					contextMode = false;
+					Playlist.playlist.Clear ();
+					toDoList.Clear ();
+				}
+				if (GUI.Button (new Rect (500, 10, 100, 30), "context")) {
+					contextMode = true;
+					Playlist.playlist.Clear ();
+					toDoList.Clear ();
+				}
+
 				//Up next Panel
 				GUI.Label (new Rect (3, 10, 200, 30), "  Up Next: " + Playlist.playlist.Count () + " Activities");
 				//The panel behind the time and play buttons
-				GUI.Label (new Rect (Screen.width-219, 10, 216, 55), "", "timer");
+				GUI.Label (new Rect (Screen.width - 219, 10, 216, 55), "", "timer");
 				//prints the Time. SHould be changed to TimeSPan
-				GUI.Button (new Rect (Screen.width-253, 15, 242, 30), timeText +"     "+ currActivity, "nothing");
-				GUI.Label (new Rect (Screen.width-65, 42, 201, 30), "x"+Time.timeScale, "nothing");
+				GUI.Button (new Rect (Screen.width - 253, 15, 242, 30), timeText + "     " + currActivity, "nothing");
+				GUI.Label (new Rect (Screen.width - 65, 42, 201, 30), "x" + Time.timeScale, "nothing");
 
 				//Clear Button
 				if (GUI.Button (new Rect (160, 17, 30, 14), "", "clear")) {
 					Playlist.playlist.Clear ();
 					toDoList.Clear ();
 				}
+
 		
 				//Creates Scroll view box of buttons of the activities
-				int scrollViewHeight = 42 + Playlist.activityPlayback.activities.Count * 36;
-				scrollPosition = GUI.BeginScrollView (new Rect (Screen.width - 220, 100, 230, 460), scrollPosition, new Rect (Screen.width - 110, 40, 200, scrollViewHeight));
-				for (int i = 0; i < Playlist.activityPlayback.activities.Count; i++) {
-					if (GUI.Button (new Rect (Screen.width - 90, 52 + 36 * i, 186, 30), Playlist.activityPlayback.activities[i].name)) {
-						toDoList.Add (Playlist.activityPlayback.activities[i].name);
-						Playlist.playlist.AddActivity (i);
-//						Debug.Log ("i is " +i);
+				if (!contextMode) {
+					//Activity box
+					GUI.Box (new Rect (Screen.width - 218, 70, 215, 518), "");
+
+					int scrollViewHeight = 42 + Playlist.activityPlayback.activities.Count * 36;
+					scrollPosition = GUI.BeginScrollView (new Rect (Screen.width - 220, 100, 230, 460), scrollPosition, new Rect (Screen.width - 110, 40, 200, scrollViewHeight));
+					for (int i = 0; i < Playlist.activityPlayback.activities.Count; i++) {
+						if (GUI.Button (new Rect (Screen.width - 90, 52 + 36 * i, 186, 30), Playlist.activityPlayback.activities [i].name)) {
+							toDoList.Add (Playlist.activityPlayback.activities [i].name);
+							Playlist.playlist.AddActivity (i);
+//							Debug.Log ("i is " +i);
+						}
 					}
+					GUI.EndScrollView ();
 				}
-				GUI.EndScrollView ();
+
+				//Creates Scroll view box of the context
+				if (contextMode) {
+					//Context box
+					GUI.Box (new Rect (Screen.width - 218, 70, 215, 318), "");
+
+					int scrollViewHeight = 42 + simEntity.CountContexts() * 36;
+					scrollPosition = GUI.BeginScrollView (new Rect (Screen.width - 220, 100, 230, 460), scrollPosition, new Rect (Screen.width - 110, 40, 200, scrollViewHeight));
+					for (int i = 0; i < simEntity.CountContexts(); i++) {
+						GUI.Button (new Rect (Screen.width - 90, 52 + 36 * i, 186, 30), simEntity.GetContextName(i));
+					}
+					GUI.EndScrollView ();
+				}
 
 				// Creates the top left playlist of deletable activities
 				int scrollViewHeightToDoList = 48 + toDoList.Count * 32;
@@ -165,13 +199,18 @@ public class MenuGUI : MonoBehaviour {
 						}
 						// IF NOTHING PLAYING
 						if (needsPlay) {
-							if (Time.timeScale == 0) {
-								Time.timeScale = prevTime;
+							if (!contextMode) {
+								if (Time.timeScale == 0) {
+									Time.timeScale = prevTime;
+								}
+								Playlist.PlayActivity (NameList.IndexOf (toDoList [0]));
+								Playlist.playlist.Pop ();
+								play = false;
+								needsPlay = false;
+							} 
+							else {
+								simEngine.RunSimulation ();
 							}
-							Playlist.PlayActivity (NameList.IndexOf(toDoList [0]));
-							Playlist.playlist.Pop();
-							play = false;
-							needsPlay = false;
 						}
 					}
 				}

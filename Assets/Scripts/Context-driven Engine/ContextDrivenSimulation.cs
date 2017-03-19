@@ -25,13 +25,15 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		// select all possible activities from the current context and the next contexts
 		public void SelectContextActivities() {
 //			if (selectedContextActivities.Count == 0) {
-				AddContextActivities (simEntity.CurContext);
+			// add activities of the context
+			AddContextActivities (simEntity.CurContext);
 
+			// add activities of the next contexts
 			foreach (Context.NextContext nc in simEntity.CurContext.NextContexts) {
-					int contextID = nc.ID;
+				int contextID = nc.ID;
 				Context cont = simEntity.ContextGraph.GetContext (contextID);
-					AddContextActivities (cont);
-				}
+				AddContextActivities (cont);
+			}
 //			}
 			Debug.Log (selectedContextActivities.Count + " activities are selected");
 		}
@@ -52,6 +54,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		// check whether the context activity is available
 		public bool IsAvailable(int activityID) {
 			string objName;
+
 			for (int j = 0; j < simEntity.Activities [activityID].objectNames.Count; j++) {
 				objName = simEntity.Activities [activityID].objectNames [j];
 //				Debug.Log (activityID + " with " + objName + " " + stateSpaceManager.GetLatestStateSpace ().ObjectsStatus [j]);

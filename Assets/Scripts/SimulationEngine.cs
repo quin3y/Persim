@@ -1,6 +1,3 @@
-//#define CONTEXTSIM
-#undef CONTEXTSIM
-
 using UnityEngine;
 using System;
 using System.Collections.Generic;
@@ -23,7 +20,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			simEntity.ReadContextXml(this.name);
 
 			// TODO AICharacterControl is located on another character
-			characterController = GameObject.Find("Ethan").GetComponent<AICharacterControl>();	
+			//characterController = GameObject.Find("Ethan").GetComponent<AICharacterControl>();	
+			characterController = GameObject.FindGameObjectWithTag("Character").GetComponent<AICharacterControl>();
 
 			// initialize state space
 			// TODO StateSpaceManager is located on another GameObject
@@ -31,22 +29,18 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			stateSpaceManager.InitializeStateSpace();
 
 			contextDrvSimulation = new ContextDrivenSimulation (characterController, stateSpaceManager, simEntity);
-			#if CONTEXTSIM
-			RunSimulation ();
-			#endif
+
 		}
 
-		void Update() { 
-			#if CONTEXTSIM
+		void Update() { 			
 			if (characterController.activityFinished) {
 				characterController.activityFinished = false;
 				TransitionContext ();
 			}
-			#endif
 		}
 			
 		// run simulation loop: WITHIN a context
-		void RunSimulation() {
+		public void RunSimulation() {
 			// Run context-driven simulation engine
 			contextDrvSimulation.SelectContextActivities ();
 			contextDrvSimulation.ScheduleContextActivities ();
