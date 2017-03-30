@@ -32,5 +32,6 @@
   <action id="29" name="Get up" animation="29" />
   <action id="30" name="Use TV remote" animation="30" />
   <action id="31" name="Get up off ground" animation="31" />
+  <action id="32" name="Clean counter" animation="32" />
   
 </actions>

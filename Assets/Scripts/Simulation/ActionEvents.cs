@@ -29,7 +29,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				characterController.nextAction.name == "Turn on light" || characterController.nextAction.name == "Turn off light" ||
 				characterController.nextAction.name == "Wash hands" || characterController.nextAction.name == "Dry hands" ||
 				characterController.nextAction.name == "Wash face" || characterController.nextAction.name == "Dry face" ||
-				characterController.nextAction.name == "Get up off ground") {
+				characterController.nextAction.name == "Get up off ground" || characterController.nextAction.name == "Clean counter") {
 				characterController.arrivedAtDestination = false;
 			}
 
@@ -78,7 +78,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			string actionName = action.name;
 
 			if (actionName == "Wash hands" || actionName == "Dry hands" || actionName == "Wash face" || actionName == "Dry face" ||
-				actionName == "Use computer" || actionName == "Text" || actionName == "Flush toilet") {
+				actionName == "Use computer" || actionName == "Text" || actionName == "Flush toilet" || actionName == "Clean counter") {
 				stateSpaceManager.UpdateStateSpace(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))), action.obj.id, "on");
 //				Debug.Log(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))) + ", " + action.obj.name + ", on");
 			}
@@ -91,7 +91,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			if (actionName == "Turn off light" || actionName == "Wash hands" || actionName == "Dry hands" || actionName == "Wash face" ||
 				actionName == "Dry face" || actionName == "Stand up" || actionName == "Use computer" || actionName == "Text" ||
 				actionName == "Put down right" || actionName == "Flush toilet" || actionName == "Open door" || actionName == "Turn off lamp" ||
-				actionName == "Get up") {
+				actionName == "Get up" || actionName == "Clean counter") {
 				stateSpaceManager.UpdateStateSpace(stateSpaceManager.startTime.Add(TimeSpan.FromSeconds(Mathf.Round(Time.time))), action.obj.id, "off");
 			}
 			else if (actionName == "Turn on light" || actionName == "Sit down" || actionName == "Pick up right" ||
