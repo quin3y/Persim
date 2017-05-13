@@ -7,7 +7,7 @@
     <action id="0" object="Bathroom light switch" importance="1" max-occur="1" prereq="-1" />
   </activity>
   <activity id="2" name="Clean Countertops">
-    <action id="0" object="Bathroom light switch" importance="1" max-occur="1" prereq="-1" />
+    <action id="32" object="Kitchen counter 1" importance="1" max-occur="1" prereq="-1" />
   </activity>
   <activity id="3" name="Comb Hair">
     <action id="1" object="Bathroom light switch on" importance="1" max-occur="1" prereq="-1" />

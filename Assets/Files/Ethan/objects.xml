@@ -184,5 +184,14 @@
     <character-position x="4.5" y="0" z="3.3" />
     <character-rotation x="2" y="0" z="-1" />
   </object>
-  
+
+  <object id="20" name="Kitchen counter 1" status="off">
+    <position x="1.8" y="-0.037577" z="7.2" />
+    <rotation x="0" y="0" z="0" />
+    <in-hand-position x="-0.05" y="0.335" z="0.138" />
+    <in-hand-rotation x="346" y="136" z="331.2" />
+    <character-position x="1.55" y="0" z="7.07" />
+    <character-rotation x="-99" y="0" z="1" />
+  </object>
+
 </objects>
